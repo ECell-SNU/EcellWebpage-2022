@@ -4,7 +4,7 @@ Repository for Ecell 2022 webpage
 ## BEM convention
 Follow the below code snippit of code to adapt BEM convention
 
-![code snippit](../D:\All Web Projects\EcellWebPage-2022\EcellWebpage-2022\src\ReadMEimages\cdsn.png)
+![code snippit](https://github.com/ECell-SNU/EcellWebpage-2022/blob/f48737c854f9b52bf0c41113e1d470d0961bc59d/src/ReadMEimages/cdsn.png)
 
 ## Folder Allocation and some key points
 - Components go inside the components folder
