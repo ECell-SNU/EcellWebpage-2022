@@ -9,9 +9,9 @@ export default function Home() {
       <ul className="links-container">
         <p classname="links-container__link">Hi</p>
         <li><Link classname="links-container__link" to={`/home`}>Visit main HomePage</Link></li>
-        <li><Link classname="links-container__link" to={`/home`}>Visit main BlogPage</Link></li>
-        <li><Link classname="links-container__link" to={`/home`}>Visit EventPage</Link></li>
-        <li><Link classname="links-container__link" to={`/home`}>Visit TeamPage</Link></li>
+        <li><Link classname="links-container__link" to={`/blogs`}>Visit main BlogPage</Link></li>
+        <li><Link classname="links-container__link" to={`/events`}>Visit EventPage</Link></li>
+        <li><Link classname="links-container__link" to={`/teams`}>Visit TeamPage</Link></li>
         </ul>
     </div>
   );
