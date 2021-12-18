@@ -1,1 +1,5 @@
 export {default as Home} from "./Home/Home"
+export {default as LandingPage} from "./LandingPage/LandingPage"
+export {default as BlogPage} from "./BlogPage/BlogPage"
+export {default as TeamPage} from "./TeamPage/TeamPage"
+export {default as EventPage} from "./EventPage/EventPage"
