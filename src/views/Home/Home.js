@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import logo from "../../logo.svg";
 import "./Home.scss";
+import testcomponent from "../../components/testcomp";
 
 export default function Home() {
   return (
