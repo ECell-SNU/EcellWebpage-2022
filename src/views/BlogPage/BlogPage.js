@@ -6,7 +6,7 @@ import "../BlogPage/BlogPage.scss";
 export default function BlogPage() {
   return (
     <div className="BlogPageWrapper">
-      <div>NavBar goes here <NavBar1></NavBar1> </div>
+      <div><NavBar1></NavBar1> </div>
       <div>
         <TextComponent
           subheading="Hello"
