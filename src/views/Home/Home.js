@@ -1,19 +1,33 @@
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import logo from "../../logo.svg";
+import { Link } from "react-router-dom";
 import "./Home.scss";
-import testcomponent from "../../components/testcomp";
 
 export default function Home() {
   return (
-    <div className="App">
+    <div className="HomeWrapper">
       Use Links Here
       <ul className="links-container">
-        <p classname="links-container__link">Hi</p>
-        <li><Link classname="links-container__link" to={`/home`}>Visit main HomePage</Link></li>
-        <li><Link classname="links-container__link" to={`/blogs`}>Visit main BlogPage</Link></li>
-        <li><Link classname="links-container__link" to={`/events`}>Visit EventPage</Link></li>
-        <li><Link classname="links-container__link" to={`/teams`}>Visit TeamPage</Link></li>
-        </ul>
+        <p className="links-container__link">Routes</p>
+        <li>
+          <Link className="links-container__link" to={`/home`}>
+            Visit main HomePage
+          </Link>
+        </li>
+        <li>
+          <Link className="links-container__link" to={`/blogs`}>
+            Visit main BlogPage
+          </Link>
+        </li>
+        <li>
+          <Link className="links-container__link" to={`/events`}>
+            Visit EventPage
+          </Link>
+        </li>
+        <li>
+          <Link className="links-container__link" to={`/teams`}>
+            Visit TeamPage
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 }

@@ -1,7 +1,14 @@
+@import "../../styles/mixins";
 
-.links-container{
-  list-style: none;
-  &__link {
-   text-decoration: none;
+.HomeWrapper {
+  padding: 30px;
+  gap: 10px;
+  @include make-flex($just: flex-start, $align: flex-start);
+  .links-container {
+    list-style: none;
+    &__link {
+      text-decoration: none;
+      font-size: x-large;
+    }
   }
 }

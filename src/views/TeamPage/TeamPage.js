@@ -1,6 +1,9 @@
-import "../TeamPage/TeamPage.scss";
-export default function TeamPage(){
-    return <div>
-    Start TeamPage Work here
-</div>
+import "./TeamPage.scss";
+
+export default function TeamPage() {
+  return (
+    <div className="TeamPageWrapper">
+      <p>Start TeamPage Work here</p>
+    </div>
+  );
 }
