@@ -1,7 +1,11 @@
 @import "../../styles/mixins";
-
+@import "../../index.scss";
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  background: var(--background-color);
+}
 .LandingPageWrapper {
-  height: 100%;
-  width: 100%;
-  @include make-flex();
+  
 }

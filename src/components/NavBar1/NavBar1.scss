@@ -1,0 +1,42 @@
+.Nav-container {
+    display: flex;
+    font-size: 15px;
+    width: 1062px;
+    justify-content: space-between;
+  
+    &__primary-nav{
+      display: flex;
+      list-style: none;
+    }
+  
+    &__secondary-nav{
+      display: flex;
+      gap: 10px;
+      list-style: none;
+  
+      &__social-medias {
+        display: flex;
+        list-style: none;
+      }
+    }
+  
+    &__primary-nav li a{
+      text-decoration: none;
+      color: #CCCC;
+    }
+  
+    &__secondary-nav li a{
+      text-decoration: none;
+      color: #CCCC;
+  
+  
+      &__social-medias li a{
+        text-decoration: none;
+        gap: 10px;
+        color: #CCCC;
+  
+      }
+    }
+  
+    
+  }
