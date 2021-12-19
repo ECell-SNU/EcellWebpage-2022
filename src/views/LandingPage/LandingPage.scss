@@ -3,22 +3,20 @@
 
 .LandingPageWrapper {
   padding-top: 60px;
-  // margin-left: auto;
-  // margin-right: auto;
-  // width: 1230px;
-  width: 100%;
-  @include make-flex();
+  margin-left: auto;
+  margin-right: auto;
+  width: 1190px;
 }
 
 .hero-section {
   &__content-container {
-    padding-top: 45px;
+    padding-top: 95px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    &__illustrtion {
-      width: 630px;
+    &__illustrtion{
+      width: 430px;
     }
   }
 }
