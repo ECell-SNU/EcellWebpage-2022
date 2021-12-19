@@ -12,13 +12,13 @@
     grid-auto-flow: column;
     position: relative;
     justify-content: space-between;
-    width: 100%;
+    width: 200px;
     &--TabButton {
       width: 100px;
       height: 35px;
       @include make-flex();
       border-radius: 7px;
-      border: 2px solid whitesmoke;
+      border: none;
       font-size: 16px;
       cursor: pointer;
       background-color: unset;
