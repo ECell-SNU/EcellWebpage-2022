@@ -9,6 +9,7 @@
   box-sizing: border-box;
   font-family: var(--text-font);
   background-color: var(--background-color);
+  // border: 1px solid green;
 }
 
 :root {
@@ -21,12 +22,6 @@
   --desc-text-size: 14px;
   --desc-heading-size: 43px;
   --text-font: "Poppins";
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 #root,

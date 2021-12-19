@@ -20,8 +20,9 @@ export default function LandingPage() {
         </section>
 
         <section className="aboutus-section">
-          <div className="aboutus-section__content-container">
-          </div>
+          {/* <div className="aboutus-section__content-container">
+            <p>Hello</p>
+          </div> */}
         </section>
       </main>
     </section>

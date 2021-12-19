@@ -3,9 +3,11 @@
 
 .LandingPageWrapper {
   padding-top: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1230px;
+  // margin-left: auto;
+  // margin-right: auto;
+  // width: 1230px;
+  width: 100%;
+  @include make-flex();
 }
 
 .hero-section {
@@ -15,7 +17,7 @@
     align-items: center;
     justify-content: space-between;
 
-    &__illustrtion{
+    &__illustrtion {
       width: 630px;
     }
   }
