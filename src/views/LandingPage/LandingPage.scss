@@ -5,11 +5,18 @@
   padding-top: 60px;
   margin-left: auto;
   margin-right: auto;
-  width: 1180px;
+  width: 1230px;
 }
 
 .hero-section {
   &__content-container {
-    padding-top: 100px;
+    padding-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__illustrtion{
+      width: 630px;
+    }
   }
 }
