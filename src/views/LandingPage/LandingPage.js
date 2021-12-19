@@ -18,6 +18,11 @@ export default function LandingPage() {
           <img className="hero-section__content-container__illustrtion"src={LandingIllustration}></img>
           </div>
         </section>
+
+        <section className="aboutus-section">
+          <div className="aboutus-section__content-container">
+          </div>
+        </section>
       </main>
     </section>
   );
