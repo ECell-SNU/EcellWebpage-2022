@@ -16,7 +16,7 @@ export default function BlogPage() {
       <hr />
 
       <div className="BlogPageWrapper__card">
-        <BlogArchive title="Content team plis halp🙄" author="Prabhav Pandey" />
+        <BlogArchive title="Content team plis halp" author="Prabhav Pandey" />
       </div>
     </div>
   );

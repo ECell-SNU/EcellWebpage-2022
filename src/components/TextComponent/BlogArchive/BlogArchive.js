@@ -5,14 +5,19 @@ import { Link } from "react-router-dom";
 
 function BlogArchive({ title, author }) {
   return (
-    <Link
-      to={`${title}/${author}`}
-      style={{ textDecoration: "none" }}
-      className="BlogArchiveWrapper"
-    >
-      <div className="BlogArchiveWrapper__title">{title}</div>
-      <div className="BlogArchiveWrapper__author">{author}</div>
-    </Link>
+    <div className="BlogArchiveContainer">
+      <p className="BlogArchiveContainer__tag">Archive</p>
+      <Link
+        to={`${title}/${author}`}
+        style={{ textDecoration: "none" }}
+        className="BlogArchiveRouting"
+      >
+        <div className="BlogArchiveRouting__title">{title}</div>
+        <div className="BlogArchiveRouting__author">Written By: {author}</div>
+      </Link>
+
+      <div className="BlogArchiveRouting__redirect">Read Now</div>
+    </div>
   );
 }
 
