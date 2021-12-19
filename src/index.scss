@@ -9,7 +9,6 @@
   box-sizing: border-box;
   font-family: var(--text-font);
   background-color: var(--background-color);
-  
 }
 
 :root {
@@ -19,16 +18,25 @@
   --title-txt-color: #ffff;
   --latest-blog-card: #ffd24d;
   --archive-blog-card: #ff3326;
+  --archive-card-background: #1c3145;
+  --archive-card-secondary: #9bcefd;
+  --archive-card-tertiary: #dceeff;
   --desc-text-size: 14px;
   --desc-heading-size: 43px;
   --text-font: "Poppins";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #root,
 html,
 body {
   height: 100vh;
-  width: 99vw;
+  width: 100vw;
 }
 
 body {
