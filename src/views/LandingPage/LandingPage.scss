@@ -1,0 +1,7 @@
+@import "../../styles/mixins";
+
+.LandingPageWrapper {
+  height: 100%;
+  width: 100%;
+  @include make-flex();
+}

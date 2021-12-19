@@ -1,23 +1,33 @@
-import logo from "../../logo.svg";
+import { Link } from "react-router-dom";
 import "./Home.scss";
 
 export default function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/views/Home/Home.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="HomeWrapper">
+      Use Links Here
+      <ul className="links-container">
+        <p className="links-container__link">Routes</p>
+        <li>
+          <Link className="links-container__link" to={`/home`}>
+            Visit main HomePage
+          </Link>
+        </li>
+        <li>
+          <Link className="links-container__link" to={`/blogs`}>
+            Visit main BlogPage
+          </Link>
+        </li>
+        <li>
+          <Link className="links-container__link" to={`/events`}>
+            Visit EventPage
+          </Link>
+        </li>
+        <li>
+          <Link className="links-container__link" to={`/teams`}>
+            Visit TeamPage
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 }
