@@ -7,7 +7,9 @@
   padding: 10px;
   margin: 50px;
   border-radius: 8px;
-  width: 22%;
+  // width: 30%;
+  width: 390px;
+  height: 190x;
   background-color: var(--archive-card-background);
 }
 
@@ -16,13 +18,14 @@
   &__title {
     color: var(--archive-card-tertiary);
     margin-left: 10px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 22px;
     background-color: var(--archive-card-background);
     font-size: 18px;
   }
   &__author {
     margin-left: 10px;
+    font-size: 14px;
     background-color: var(--archive-card-background);
     color: var(--archive-card-tertiary);
   }

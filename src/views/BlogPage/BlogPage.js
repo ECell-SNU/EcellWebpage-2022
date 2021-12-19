@@ -6,7 +6,9 @@ import "../BlogPage/BlogPage.scss";
 export default function BlogPage() {
   return (
     <div className="BlogPageWrapper">
-      <div><NavBar1></NavBar1> </div>
+      <div>
+        <NavBar1></NavBar1>{" "}
+      </div>
       <div>
         <TextComponent
           subheading="Hello"
@@ -17,8 +19,34 @@ export default function BlogPage() {
       </div>
       <hr />
 
-      <div className="BlogPageWrapper__card">
-        <BlogArchive title="Content team plis halp" author="Prabhav Pandey" />
+      <div className="BlogPageGrid">
+        <div className="BlogPageWrapper__card">
+          <BlogArchive title="Content team plis halp" author="Prabhav Pandey" />
+        </div>
+        <div className="BlogPageWrapper__card">
+          <BlogArchive title="Content team plis halp" author="Prabhav Pandey" />
+        </div>
+        <div className="BlogPageWrapper__card">
+          <BlogArchive title="Content team plis halp" author="Prabhav Pandey" />
+        </div>
+        <div className="BlogPageWrapper__card">
+          <BlogArchive title="Content team plis halp" author="Prabhav Pandey" />
+        </div>
+        <div className="BlogPageWrapper__card">
+          <BlogArchive title="Content team plis halp" author="Prabhav Pandey" />
+        </div>
+        <div className="BlogPageWrapper__card">
+          <BlogArchive title="Content team plis halp" author="Prabhav Pandey" />
+        </div>
+        <div className="BlogPageWrapper__card">
+          <BlogArchive title="Content team plis halp" author="Prabhav Pandey" />
+        </div>
+        <div className="BlogPageWrapper__card">
+          <BlogArchive title="Content team plis halp" author="Prabhav Pandey" />
+        </div>
+        <div className="BlogPageWrapper__card">
+          <BlogArchive title="Content team plis halp" author="Prabhav Pandey" />
+        </div>
       </div>
     </div>
   );
