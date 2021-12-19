@@ -1,18 +1,21 @@
 
 .Nav-container {
     display: flex;
-    font-size: 15px;
+    font-size: 14px;
     justify-content: space-between;
   
     &__primary-nav{
       display: flex;
       list-style: none;
+      width: 423px;
+      justify-content: space-between;
     }
   
     &__secondary-nav{
       display: flex;
-      gap: 10px;
       list-style: none;
+      gap: 50px;
+      justify-content: space-between;
   
       &__social-medias {
         display: flex;
@@ -23,11 +26,21 @@
     &__primary-nav li a{
       text-decoration: none;
       color: #CCCC;
+
+      &:hover {
+        color: #FFFF;
+        transition: all 0.3s;
+    }
     }
   
     &__secondary-nav li a{
       text-decoration: none;
       color: #CCCC;
+
+      &:hover {
+          color: #FFFF;
+          transition: all 0.3s;
+      }
   
   
       &__social-medias li a{

@@ -4,13 +4,13 @@ export default function NavBar1(){
         <div className="Nav-container">
           <ul className="Nav-container__primary-nav">
             <li>
-              <a href="/">Home</a>
+              <a href="/home">Home</a>
             </li>
             <li>
               <a href="/">About us</a>
             </li>
             <li>
-              <a href="/">Team</a>
+              <a href="/teams">Team</a>
             </li>
             <li>
               <a href="/">Think Tank</a>
