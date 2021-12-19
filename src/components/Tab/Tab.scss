@@ -1,0 +1,60 @@
+@import "../../styles/mixins";
+
+.TabWrapper {
+  margin-top: 50px;
+  color: white;
+  width: 500px;
+  @include make-flex();
+  gap: 20px;
+
+  &__TabButtonContainer {
+    display: grid;
+    grid-auto-flow: column;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    &--TabButton {
+      width: 100px;
+      height: 35px;
+      @include make-flex();
+      border-radius: 7px;
+      border: 2px solid whitesmoke;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: unset;
+      z-index: 1;
+    }
+    &--indicator {
+      position: absolute;
+      background: blue;
+      width: 100px;
+      height: 35px;
+      z-index: 0;
+      border-radius: 7px;
+
+      transition: all 0.5s;
+    }
+  }
+  &__ContentContainer {
+    width: 500px;
+    height: auto;
+    border-radius: 7px;
+    background-color: blue;
+    padding: 20px;
+    &--TabContent {
+      background-color: unset;
+    }
+  }
+}
+
+@keyframes TabFadein {
+  0% {
+    opacity: 0%;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}

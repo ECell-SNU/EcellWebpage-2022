@@ -17,12 +17,14 @@ export default function NavBar1(){
             </li>
           </ul>
           <ul className="Nav-container__secondary-nav">
+            <ul className="Nav-container__secondary-nav__nav-btns">
             <li>
               <a href="/">Blogs</a>
             </li>{" "}
             <li>
               <a href="/">Events</a>
             </li>
+            </ul>
             <ul className="Nav-container__secondary-nav__social-medias">
               <li>
                 <a href="/">IN</a>
