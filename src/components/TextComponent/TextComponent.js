@@ -5,9 +5,9 @@ import "./TextComponent.scss";
 function TextComponent(props) {
   return (
     <div className="TextComponentWrapper">
-      <h5>{props.subheading}</h5>
-      <h1>{props.heading}</h1>
-      <p>{props.content}</p>
+      <h4 className="TextComponentSubHeading">{props.subheading}</h4>
+      <h1 className="TextComponentHeading">{props.heading}</h1>
+      <p className="TextComponentContent">{props.content}</p>
     </div>
   );
 }
