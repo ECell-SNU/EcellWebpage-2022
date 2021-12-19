@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import * as views from "./views"
-import LandingPage from "./views/LandingPage/LandingPage";
 import React from 'react'
 
 export default function Router() {
