@@ -1,0 +1,10 @@
+@import "../../index.scss";
+
+.Title-container{
+    &__Title{
+        color: var(--title-txt-color);
+        font-weight: 500;
+        font-size: 40px;
+        width: 516px;
+    }
+}

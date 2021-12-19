@@ -7,3 +7,9 @@
   margin-right: auto;
   width: 1180px;
 }
+
+.hero-section {
+  &__content-container {
+    padding-top: 110px;
+  }
+}

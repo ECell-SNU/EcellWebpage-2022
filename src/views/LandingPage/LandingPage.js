@@ -9,6 +9,14 @@ export default function LandingPage() {
         <NavBar1 />
       </nav>
       </header>
+
+      <main>
+        <section className ="hero-section" >
+          <div className="hero-section__content-container">
+          <LandingComponent />
+          </div>
+        </section>
+      </main>
     </section>
   );
 }
