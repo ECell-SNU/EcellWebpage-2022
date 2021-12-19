@@ -2,7 +2,7 @@
 .Nav-container {
     display: flex;
     font-size: 14px;
-    gap: 400px;
+    gap: 380px;
   
     &__primary-nav{
       display: flex;
@@ -14,12 +14,19 @@
     &__secondary-nav{
       display: flex;
       list-style: none;
-      gap: 50px;
+      gap: 90px;
       justify-content: space-between;
+
+      &__nav-btns{
+        display: flex;
+        gap: 60px;
+      }
   
       &__social-medias {
         display: flex;
         list-style: none;
+        gap: 30px
+        ;
       }
     }
   
