@@ -2,6 +2,7 @@ import "../LandingPage/LandingPage.scss";
 import LandingComponent from "../../components/LandingComponent/LandingComponent";
 import LandingIllustration from "../../assests/Illustration/Landing-Illustration.svg";
 import LandingSectionTexts from "../../components/LandingSectionTexts/LandingSectionTexts";
+import Tab from "../../components/Tab/Tab"
 import NavBar1 from "../../components/NavBar1/NavBar1";
 export default function LandingPage() {
   return (
@@ -28,6 +29,8 @@ export default function LandingPage() {
         tempor incididunt ut labore et dolore magna aliqua. Mauris augue neque
         gravida in fermentum et sollicitudin ac. Sit amet volutpat consequat
         mauris nunc congue nisi vitae."/>
+
+        <Tab />
           </div>
         </section>
       </main>

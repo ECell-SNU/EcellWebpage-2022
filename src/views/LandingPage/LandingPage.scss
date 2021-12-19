@@ -27,6 +27,9 @@
 
   &__content-container {
     position: absolute;
+    display: flex;
+    width: 1190px;
+    justify-content: space-between;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
