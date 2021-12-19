@@ -1,39 +1,39 @@
 * {
-  color: white;
+  color: var(--title-txt-color);
 }
 
 .BlogArchiveContainer {
-  color: white;
+  color: var(--title-txt-color);
   padding: 10px;
   margin: 50px;
   border-radius: 8px;
   width: 22%;
-  background-color: #1c3145;
+  background-color: var(--archive-card-background);
 }
 
 .BlogArchiveRouting {
   margin: 40px;
   &__title {
-    color: #dceeff;
+    color: var(--archive-card-tertiary);
     margin-left: 10px;
     font-weight: 700;
     margin-bottom: 22px;
-    background-color: #1c3145;
+    background-color: var(--archive-card-background);
     font-size: 18px;
   }
   &__author {
     margin-left: 10px;
-    background-color: #1c3145;
-    color: #dceeff;
+    background-color: var(--archive-card-background);
+    color: var(--archive-card-tertiary);
   }
   &__redirect {
     margin-left: 10px;
     margin-top: 18px;
     margin-bottom: 8px;
     display: inline-flex;
-    color: #9ccefd;
+    color: var(--archive-card-secondary);
     font-size: 12px;
-    border: 1px solid #9bcefd;
+    border: 1px solid var(--archive-card-secondary);
     border-radius: 8px;
     padding: 4px 22px 4px 22px;
   }
@@ -45,8 +45,8 @@
   font-weight: 580;
   letter-spacing: 1px;
   border-radius: 4px;
-  background-color: rgb(255, 0, 0);
-  color: white;
+  background-color: var(--archive-blog-card);
+  color: var(--title-txt-color);
   display: inline-block;
   position: relative;
   left: -38px;
