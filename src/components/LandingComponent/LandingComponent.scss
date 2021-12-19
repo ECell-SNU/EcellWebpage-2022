@@ -33,10 +33,7 @@
             font-size: 14px;
             cursor: pointer;
 
-            padding-top: .7rem;
-            padding-bottom: .7rem;
-            padding-left: 2rem;
-            padding-right: 2rem;
+            padding: .7rem 2rem .7rem 2rem;
 
             &:hover {
                 background: var(--primary-color);
