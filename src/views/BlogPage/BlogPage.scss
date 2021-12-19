@@ -10,6 +10,5 @@ $backgroundColour: #161c22;
 
 .BlogPageGrid {
   display: grid;
-  grid-gap: 1px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 2fr);
 }
