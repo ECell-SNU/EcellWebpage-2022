@@ -1,7 +1,22 @@
 @import "../../styles/mixins";
+@import "../../index.scss";
 
 .LandingPageWrapper {
-  height: 100%;
-  width: 100%;
-  @include make-flex();
+  padding-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1230px;
+}
+
+.hero-section {
+  &__content-container {
+    padding-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__illustrtion{
+      width: 630px;
+    }
+  }
 }
