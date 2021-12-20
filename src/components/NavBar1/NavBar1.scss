@@ -1,3 +1,5 @@
+@import "../../index.scss";
+
 
 .Nav-container {
     display: flex;
@@ -26,8 +28,13 @@
       &__social-medias {
         display: flex;
         list-style: none;
-        gap: 30px
-        ;
+        gap: 30px;
+
+        .navbarIcons {
+          height: 1rem;
+          width: 1rem;
+          fill:var(--primary-color);
+        }
       }
     }
   

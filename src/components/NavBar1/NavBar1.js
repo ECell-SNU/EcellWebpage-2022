@@ -1,7 +1,11 @@
 import "../NavBar1/NavBar1.scss";
+import instagram from "../../assests/icons/logo-instagram.svg";
+import twitter from "../../assests/icons/logo-twitter.svg";
+import meta from "../../assests/icons/logo-facebook.svg";
 export default function NavBar1(){
     return (
         <div className="Nav-container">
+          
           <ul className="Nav-container__primary-nav">
             <li>
               <a href="/home">Home</a>
@@ -27,13 +31,19 @@ export default function NavBar1(){
             </ul>
             <ul className="Nav-container__secondary-nav__social-medias">
               <li>
-                <a href="/">IN</a>
+                <a  href="/" target="_blank">
+                 <img class="navbarIcons" src={instagram}></img>
+                </a>
               </li>{" "}
               <li>
-                <a href="/">TW</a>
+              <a class="navbarIcons" href="/" target="_blank">
+                    <img class="navbarIcons" src={twitter}></img>
+                </a>
               </li>{" "}
               <li>
-                <a href="/">ME</a>
+              <a href="/" target="_blank">
+                    <img class="navbarIcons" src={meta}></img>
+                </a>
               </li>
             </ul>
           </ul>
