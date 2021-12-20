@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 // import PropTypes from 'prop-types';
 import "./Tab.scss";
+import innovate from "../../assests/icons/bulb.svg";
+import create from "../../assests/icons/create.svg";
+import incubate from "../../assests/icons/flask.svg";
 
 function Tab() {
   const list = [
@@ -13,7 +16,8 @@ function Tab() {
     {
       title: "Innovate",
       content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-  praesentium incidunt quia aspernatur`,
+      praesentium incidunt quia aspernatur quasi quidem facilis quo nihil
+      vel voluptatum?`,
     },
     {
       title: "Incubate",

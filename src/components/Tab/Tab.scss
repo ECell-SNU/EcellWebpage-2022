@@ -11,6 +11,7 @@
     display: grid;
     grid-auto-flow: column;
     position: relative;
+    
     justify-content: space-between;
     width: 200px;
     &--TabButton {
@@ -26,7 +27,7 @@
     }
     &--indicator {
       position: absolute;
-      background: blue;
+      background: var(--archive-card-background);
       width: 100px;
       height: 35px;
       z-index: 0;
@@ -38,11 +39,31 @@
   &__ContentContainer {
     width: 500px;
     height: auto;
-    border-radius: 7px;
-    background-color: blue;
+    border-radius: 10px;
+    background-color: var(--archive-card-background);
     padding: 20px;
+    position: relative;
+    margin-top: 2rem;
+
+    &::before {
+    content: url("../../assests/icons/bulb.svg");
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    position: absolute; 
+    top: -20%;
+    left: 3%;
+    // background: url("../../assests/icons/flask.svg");
+    // background: url("../../assests/icons/create.svg");
+    // background: url("../../assests/icons/bulb.svg");
+    background-color: var(--archive-card-icon-background);
+    display: block;
+    margin-bottom: 1rem;
+    }
+
     &--TabContent {
       background-color: unset;
+      padding: 5px;
     }
   }
 }
