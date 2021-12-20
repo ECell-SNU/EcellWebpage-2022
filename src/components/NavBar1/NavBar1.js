@@ -23,7 +23,7 @@ export default function NavBar1(){
           <ul className="Nav-container__secondary-nav">
             <ul className="Nav-container__secondary-nav__nav-btns">
             <li>
-              <a href="/">Blogs</a>
+              <a href="/blogs">Blogs</a>
             </li>{" "}
             <li>
               <a href="/">Events</a>
