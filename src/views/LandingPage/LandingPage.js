@@ -45,11 +45,12 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className="session1-section">
-          <div className="session1-section__content-container">
+        <section className="session-section">
+          <div className="session-section__content-container">
             <LandingSectionTexts classifier="Think Tank Session # 1"
             title="Ecell SNU’s USP"
             content1="It takes us through multiple modules ranging from all aspects of entrepreneurship where the members contribute to the pool through interactive and lively sessions."/>
+            <img className="session-section__content-container__illustration"src={Session1Illustration}></img>
           </div>
         </section>
       </main>

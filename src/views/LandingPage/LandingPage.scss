@@ -30,6 +30,7 @@
     display: flex;
     width: 1190px;
     justify-content: space-between;
+    align-items: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -45,13 +46,14 @@
     display: flex;
     width: 1190px;
     justify-content: space-between;
+    align-items: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
   }
 }
 
-.session1-section {
+.session-section {
   height: 100vh;
   position: relative;
 
@@ -60,8 +62,13 @@
     display: flex;
     width: 1190px;
     justify-content: space-between;
+    align-items: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+
+    &__illustration {
+      width: 400px;
+    }
   }
 }
