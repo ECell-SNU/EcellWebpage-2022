@@ -3,9 +3,14 @@ $backgroundColour: #161c22;
 .BlogPageWrapper {
   background-color: $backgroundColour;
   padding-top: 60px;
-  margin-left: 40px;
-  margin-right: auto;
-  // width: 1230px;
+  margin: auto;
+  width:80%;
+  .BlogsReadUp{
+    color: #57abfb;
+  }
+  &__TextComponentWrapper{
+    margin-left: -10%;
+  }
 }
 
 .BlogPageGrid {
