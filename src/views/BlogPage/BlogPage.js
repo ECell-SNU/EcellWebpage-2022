@@ -6,19 +6,18 @@ import "../BlogPage/BlogPage.scss";
 export default function BlogPage() {
   return (
     <div className="BlogPageWrapper">
-      <div>
+      <div className="BlogPageWrapper__NavBarWrapper">
         <NavBar1></NavBar1>{" "}
       </div>
-      <div>
+      <div className="BlogPageWrapper__TextComponentWrapper">
         <TextComponent
-          subheading="Hello"
-          heading="Bois"
+          subheading="Our Blogs"
+          heading="Made for tomorrow's entrepreneurs"
           content="Incididunt ut nostrud nulla veniam ullamco eu id exercitation non nostrud reprehenderit. Elit elit laboris consequat
           Lorem laborum veniam aliqua non. Incididunt et eiusmod commodo magna commodo. Pariatur elit in laborum eiusmod deserunt."
         />
       </div>
-      <hr />
-
+      <h3 className="BlogsReadUp">Read Up</h3>
       <div className="BlogPageGrid">
         <div className="BlogPageWrapper__card">
           <BlogArchive title="Content team plis halp" author="Prabhav Pandey" />
