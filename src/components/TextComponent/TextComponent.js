@@ -2,7 +2,7 @@ import React from "react";
 // import PropTypes from "prop-types";
 import "./TextComponent.scss";
 
-function TextComponent(props) {
+export default function TextComponent(props) {
   return (
     <div className="TextComponentWrapper">
       <h4 className="TextComponentSubHeading">{props.subheading}</h4>
@@ -11,13 +11,3 @@ function TextComponent(props) {
     </div>
   );
 }
-
-TextComponent.propTypes = {
-  // bla: PropTypes.string,
-};
-
-TextComponent.defaultProps = {
-  // bla: 'test',
-};
-
-export default TextComponent;
