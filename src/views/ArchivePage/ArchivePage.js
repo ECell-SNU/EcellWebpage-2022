@@ -5,7 +5,14 @@ export default function ArchivePage() {
   return (
     <div className="ArchivePageWrapper">
       <header>
-        <nav>hi</nav>
+        <nav className="ArchivePageNavbar">
+          <button className="ArchivePageNavbar__button">&larr; Go Back</button>
+          <input
+            type="text"
+            placeholder="Search Here"
+            className="ArchivePageNavbar__search"
+          ></input>
+        </nav>
       </header>
       <main>
         <div className="ArchivePageWrapper__grid">

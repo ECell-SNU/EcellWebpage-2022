@@ -1,0 +1,31 @@
+.ArchivePageWrapper {
+  padding-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1170px;
+  &__grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 65px;
+  }
+}
+
+.ArchivePageNavbar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 365px;
+  &__button {
+    background-color: transparent;
+    border: none;
+    color: #ccccccb8;
+    font-size: 18px;
+  }
+  &__search {
+    border-radius: 24px;
+    padding: 10px;
+    padding-left: 20px;
+    font-weight: 600;
+    border: 1px solid var(--archive-card-secondary);
+  }
+}
