@@ -14,9 +14,13 @@
     }
 
     &__para {
-        width: 490px;
+        width: 480px;
         font-size: var(--desc-text-size);
         line-height: 167.5%;
         color: #cccccc;
+    }
+
+    .para1 {
+        margin-bottom: 20px;
     }
 }
