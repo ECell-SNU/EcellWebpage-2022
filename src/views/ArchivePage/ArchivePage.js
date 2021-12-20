@@ -1,12 +1,13 @@
 import "../ArchivePage/ArchivePage.scss";
 import BlogData from "../../DataFiles/BlogData.json";
 import BlogArchive from "../../components/TextComponent/BlogArchive/BlogArchive";
+
 export default function ArchivePage() {
   return (
     <div className="ArchivePageWrapper">
       <header>
         <nav className="ArchivePageNavbar">
-          <button className="ArchivePageNavbar__button">&larr; Go Back</button>
+          <a href="/blogs" className="ArchivePageNavbar__button">&larr; &nbsp; &nbsp;Go Back</a>
           <input
             type="text"
             placeholder="Search Here"

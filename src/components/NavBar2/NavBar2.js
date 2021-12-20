@@ -16,7 +16,7 @@ export default function NavBar2() {
         <a href="/teams">Team</a>
       </li>
       <li>
-        <a href="/">Archive</a>
+        <a href="/blogs_archive">Archive</a>
       </li>
     </ul>
       <ul className="Nav-container__social-medias">
