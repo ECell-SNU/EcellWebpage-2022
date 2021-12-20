@@ -31,17 +31,17 @@ export default function NavBar1(){
             </ul>
             <ul className="Nav-container__secondary-nav__social-medias">
               <li>
-                <a  href="/" target="_blank">
+                <a  href="https://www.instagram.com/ecellsnu/?utm_medium=copy_link" target="_blank">
                  <img class="navbarIcons" src={instagram}></img>
                 </a>
               </li>{" "}
               <li>
-              <a class="navbarIcons" href="/" target="_blank">
+              <a class="navbarIcons" href="https://twitter.com/ecellsnu?t=BDaPBAN7cuAqcLAJnpP-Uw&s=09" target="_blank">
                     <img class="navbarIcons" src={twitter}></img>
                 </a>
               </li>{" "}
               <li>
-              <a href="/" target="_blank">
+              <a href="https://www.facebook.com/ecellsnu/" target="_blank">
                     <img class="navbarIcons" src={meta}></img>
                 </a>
               </li>
