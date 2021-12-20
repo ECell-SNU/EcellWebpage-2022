@@ -3,6 +3,7 @@ import LandingComponent from "../../components/LandingComponent/LandingComponent
 import LandingIllustration from "../../assests/Illustration/Landing-Illustration.svg";
 import LandingSectionTexts from "../../components/LandingSectionTexts/LandingSectionTexts";
 import Tab from "../../components/Tab/Tab"
+import Session1Illustration from "../../assests/Illustration/Session-1-illustration.svg";
 import NavBar1 from "../../components/NavBar1/NavBar1";
 export default function LandingPage() {
   return (
@@ -41,6 +42,14 @@ export default function LandingPage() {
             title="What is the think tank ?"
             content1="Its a session that takes members through multiple modules ranging from all aspects of entrepreneurship where the members contribute to the pool through interactive and lively sessions. "
             content2="Upcoming events and ideas are first displayed during our think tank sessions for feedback and further improvements before being released. have a look at some of them below"/>
+          </div>
+        </section>
+
+        <section className="session1-section">
+          <div className="session1-section__content-container">
+            <LandingSectionTexts classifier="Think Tank Session # 1"
+            title="Ecell SNU’s USP"
+            content1="It takes us through multiple modules ranging from all aspects of entrepreneurship where the members contribute to the pool through interactive and lively sessions."/>
           </div>
         </section>
       </main>
