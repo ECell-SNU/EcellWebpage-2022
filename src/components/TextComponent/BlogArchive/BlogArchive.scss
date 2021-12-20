@@ -4,12 +4,13 @@
 
 .BlogArchiveContainer {
   color: var(--title-txt-color);
-  padding: 10px;
-  margin: 50px 12px 18px 10px;
+  //padding: 10px;
+  padding-bottom: 170px;
+  margin: 50px 0px 18px 0px;
   border-radius: 8px;
   // width: 30%;
-  width: 320px;
-  height: 130x;
+  width: 340px;
+  height: 130px;
   background-color: var(--archive-card-background);
 }
 
@@ -28,7 +29,7 @@
     color: var(--archive-card-tertiary);
   }
   &__redirect {
-    margin: 26px auto 14px 24px;
+    margin: 26px auto 14px 20px;
     display: inline-flex;
     color: var(--archive-card-secondary);
     background-color: var(--archive-card-background);

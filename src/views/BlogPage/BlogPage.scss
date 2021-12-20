@@ -6,14 +6,17 @@ $backgroundColour: #161c22;
   margin-right: auto;
   width: 1170px;
   .BlogsReadUp{
-    color: #57abfb;
+    color: var(--primary-color);
+    font-size: 17px;
   }
   &__TextComponentWrapper{
-    
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 
 .BlogPageGrid {
   display: grid;
-  grid-template-columns: repeat(3, 2fr);
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 65px;
 }
