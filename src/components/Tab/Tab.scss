@@ -12,7 +12,9 @@
     grid-auto-flow: column;
     position: relative;
     
-    justify-content: space-between;
+    justify-content:flex-start;
+    align-self: flex-start;
+    margin-left: 2.5rem;
     width: 200px;
     &--TabButton {
       width: 100px;
