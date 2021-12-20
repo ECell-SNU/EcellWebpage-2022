@@ -27,6 +27,11 @@ export default function Home() {
             Visit TeamPage
           </Link>
         </li>
+        <li>
+          <Link className="links-container__link" to={`/blogs_archive`}>
+            Visit ArchivePage
+          </Link>
+        </li>
       </ul>
     </div>
   );

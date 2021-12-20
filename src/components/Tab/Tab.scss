@@ -1,0 +1,83 @@
+@import "../../styles/mixins";
+
+.TabWrapper {
+  margin-top: 50px;
+  color: white;
+  width: 500px;
+  @include make-flex();
+  gap: 20px;
+
+  &__TabButtonContainer {
+    display: grid;
+    grid-auto-flow: column;
+    position: relative;
+    
+    justify-content:flex-start;
+    align-self: flex-start;
+    margin-left: 2.5rem;
+    width: 200px;
+    &--TabButton {
+      width: 100px;
+      height: 35px;
+      @include make-flex();
+      border-radius: 7px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: unset;
+      z-index: 1;
+    }
+    &--indicator {
+      position: absolute;
+      background: var(--archive-card-background);
+      width: 100px;
+      height: 35px;
+      z-index: 0;
+      border-radius: 7px;
+
+      transition: all 0.5s;
+    }
+  }
+  &__ContentContainer {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    background-color: var(--archive-card-background);
+    padding: 20px;
+    position: relative;
+    margin-top: 2rem;
+
+    &::before {
+    content: url("../../assests/icons/bulb.svg");
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    position: absolute; 
+    top: -20%;
+    left: 3%;
+    // background: url("../../assests/icons/flask.svg");
+    // background: url("../../assests/icons/create.svg");
+    // background: url("../../assests/icons/bulb.svg");
+    background-color: var(--archive-card-icon-background);
+    display: block;
+    margin-bottom: 1rem;
+    }
+
+    &--TabContent {
+      background-color: unset;
+      padding: 5px;
+    }
+  }
+}
+
+@keyframes TabFadein {
+  0% {
+    opacity: 0%;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}

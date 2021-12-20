@@ -1,4 +1,32 @@
 /* your css code */
+$font: Poppins;
 
 .TextComponentWrapper {
+  width: 80%;
+  margin: 10%;
+  font-family: $font;
+  .TextComponentSubHeading {
+    display: flex;
+    font-size: 18px;
+    margin-left: auto;
+    color: #57abfb;
+    font-weight: 600;
+  }
+  .TextComponentHeading {
+    display: flex;
+    //margin-top: -10px;
+    margin-left: 0;
+    font-weight: 600;
+    font-size: 42px;
+    width: 500px;
+    color: #ffffff;
+  }
+  .TextComponentContent {
+    display: flex;
+    width: 535px;
+    font-size: 16px;
+    color: #cccccc;
+  }
 }
+
+

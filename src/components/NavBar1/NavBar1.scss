@@ -1,0 +1,69 @@
+@import "../../index.scss";
+
+
+.Nav-container {
+    display: flex;
+    font-size: 14px;
+    gap: 380px;
+    
+    &__primary-nav{
+      display: flex;
+      list-style: none;
+      width: 423px;
+      justify-content: space-between;
+    }
+  
+    &__secondary-nav{
+      display: flex;
+      list-style: none;
+      gap: 90px;
+      justify-content: space-between;
+
+      &__nav-btns{
+        display: flex;
+        list-style: none;
+        gap: 60px;
+      }
+  
+      &__social-medias {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+
+        .navbarIcons {
+          height: 1.2rem;
+          width: 1.2rem;
+        }
+      }
+    }
+  
+    &__primary-nav li a{
+      text-decoration: none;
+      color: #CCCC;
+
+      &:hover {
+        color: #FFFF;
+        transition: all 0.3s;
+    }
+    }
+  
+    &__secondary-nav li a{
+      text-decoration: none;
+      color: #CCCC;
+
+      &:hover {
+          color: #FFFF;
+          transition: all 0.3s;
+      }
+  
+  
+      &__social-medias li a{
+        text-decoration: none;
+        gap: 10px;
+        color: #CCCC;
+  
+      }
+    }
+  
+    
+  }

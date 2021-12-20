@@ -1,0 +1,17 @@
+.Nav-container {
+    display: flex;
+    justify-content: space-between;
+
+    
+    &__social-medias{
+        list-style: none;
+        display: flex;
+        gap: 30px;
+
+        &__navbarIcons{
+            height: 1.2rem;
+            width: 1.2rem;
+        }
+
+    }
+}

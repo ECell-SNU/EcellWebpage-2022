@@ -1,6 +1,22 @@
+$backgroundColour: #161c22;
 
+.BlogPageWrapper {
+  padding-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1170px;
+  .BlogsReadUp{
+    color: var(--primary-color);
+    font-size: 17px;
+  }
+  &__TextComponentWrapper{
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
 
-.BlogPageWrapper{
-    height: 100%;
-    width: 100%;
+.BlogPageGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 65px;
 }
