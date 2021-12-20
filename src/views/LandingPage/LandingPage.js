@@ -4,6 +4,7 @@ import LandingIllustration from "../../assests/Illustration/Landing-Illustration
 import LandingSectionTexts from "../../components/LandingSectionTexts/LandingSectionTexts";
 import Tab from "../../components/Tab/Tab"
 import Session1Illustration from "../../assests/Illustration/Session-1-illustration.svg";
+import Session2Illustration from "../../assests/Illustration/Session-2-illustration(to be updated).svg";
 import NavBar1 from "../../components/NavBar1/NavBar1";
 export default function LandingPage() {
   return (
@@ -53,6 +54,16 @@ export default function LandingPage() {
             <img className="session-section__content-container__illustration"src={Session1Illustration}></img>
           </div>
         </section>
+
+        <section className="session-section">
+          <div className="session-section__content-container">
+          <img className="session-section__content-container__illustration"src={Session2Illustration}></img>
+            <LandingSectionTexts classifier="Think Tank Session # 2"
+            title="Second Title"
+            content1="Sit amet volutpat consequat mauris nunc congue nisi vitae. Elit eget gravida cum sociis natoque penatibus et magnis dis. Turpis egestas maecenas  convallis posuere morbi leo urna molestie. "/>
+          </div>
+        </section>
+
       </main>
     </section>
   );
