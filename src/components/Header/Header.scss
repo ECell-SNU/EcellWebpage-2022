@@ -6,7 +6,6 @@
   margin-top: 60px;
   position: absolute;
   width: 100%;
-  padding: 0 30px;
 
   #NavBarInput,
   .hamButton {
@@ -82,7 +81,8 @@
     position: static;
     margin-top: 0;
     width: 100vw;
-
+    padding: 0 30px;
+  
     &__secondary-nav,
     &__primary-nav {
       @include make-flex();
