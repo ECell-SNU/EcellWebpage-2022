@@ -18,7 +18,7 @@ export default function BlogPage() {
       </div>
       <h3 className="BlogsReadUp">Read Up</h3>
       <div className="BlogPageGrid">
-        {BlogData.map((data, index) => (
+        {BlogData.filter((data) => {return data["Type"] === "Archive"}).map((data, index) => (
           <BlogArchive
             tag={data["Type"] === "Archive" ? "BlogArchiveContainer__tag tag__archive" : "BlogArchiveContainer__tag tag__latest"}
             key={index}
