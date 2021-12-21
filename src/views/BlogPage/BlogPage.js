@@ -1,6 +1,5 @@
-import NavBar1 from "../../components/NavBar1/NavBar1";
 import HeroText from "../../components/LandingSectionTexts/LandingSectionTexts";
-import NavBar2 from "../../components/NavBar2/NavBar2";
+import Header from "../../components/Header/Header";
 import BlogArchive from "../../components/TextComponent/BlogArchive/BlogArchive";
 import BlogData from "../../DataFiles/BlogData.json";
 import "../BlogPage/BlogPage.scss";
@@ -8,9 +7,7 @@ import "../BlogPage/BlogPage.scss";
 export default function BlogPage() {
   return (
     <div className="BlogPageWrapper">
-      <div className="BlogPageWrapper__NavBarWrapper">
-        <NavBar2 />
-      </div>
+      <Header />
       <div className="BlogPageWrapper__TextComponentWrapper">
         <HeroText
           classifier="Our Blogs"

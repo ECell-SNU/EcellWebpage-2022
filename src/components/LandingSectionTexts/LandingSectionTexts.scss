@@ -1,4 +1,7 @@
+@import "../../styles/mixins";
+
 .text-container {
+  width: 490px;
   &__classifier {
     font-size: 15px;
     color: var(--primary-color);
@@ -9,12 +12,12 @@
   &__title {
     font-weight: 600;
     font-size: var(--desc-heading-size);
-    width: 490px;
+    width: 100%;
     margin-bottom: 10px;
   }
 
   &__para {
-    width: 480px;
+    width: 100%;
     font-size: var(--desc-text-size);
     line-height: 167.5%;
     color: #cccccc;
@@ -22,5 +25,13 @@
 
   .para1 {
     margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .text-container {
+    width: 100%;
+    &__title {
+      font-size: 38px;
+    }
   }
 }

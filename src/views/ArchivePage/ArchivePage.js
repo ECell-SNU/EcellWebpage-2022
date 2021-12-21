@@ -1,4 +1,4 @@
-import "../ArchivePage/ArchivePage.scss";
+import "./ArchivePage.scss";
 import BlogData from "../../DataFiles/BlogData.json";
 import BlogArchive from "../../components/TextComponent/BlogArchive/BlogArchive";
 

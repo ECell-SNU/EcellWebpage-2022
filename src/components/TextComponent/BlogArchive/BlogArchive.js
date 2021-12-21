@@ -16,7 +16,7 @@ function BlogArchive({ title, author }) {
         <div className="BlogArchiveRouting__author">Written By: {author}</div>
       </Link>
 
-      <div className="BlogArchiveRouting__redirect">Read Now</div>
+      <button className="BlogArchiveRouting__redirect">Read Now</button>
     </div>
   );
 }
