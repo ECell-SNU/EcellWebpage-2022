@@ -1,0 +1,66 @@
+@import "../../../../styles/mixins";
+
+.HomeHeaderContainer {
+  @include make-flex($just: space-between, $dir: row);
+  font-size: 14px;
+  gap: 380px;
+
+  &__primary-nav {
+    list-style: none;
+    @include make-flex($just: space-between, $dir: row);
+    gap: 60px;
+  }
+
+  &__secondary-nav {
+    list-style: none;
+    gap: 90px;
+    @include make-flex($just: space-between, $dir: row);
+
+    &__nav-btns {
+      @include make-flex($just: space-between, $dir: row);
+      list-style: none;
+      gap: 60px;
+    }
+
+    &__social-medias {
+      @include make-flex($just: space-between, $dir: row);
+      list-style: none;
+      gap: 30px;
+      li {
+        a {
+          @include make-flex();
+        }
+      }
+      .navbarIcons {
+        height: 1.2rem;
+        width: 1.2rem;
+      }
+    }
+  }
+
+  &__primary-nav li a {
+    text-decoration: none;
+    color: #cccc;
+
+    &:hover {
+      color: #ffff;
+      transition: all 0.3s;
+    }
+  }
+
+  &__secondary-nav li a {
+    text-decoration: none;
+    color: #cccc;
+
+    &:hover {
+      color: #ffff;
+      transition: all 0.3s;
+    }
+
+    &__social-medias li a {
+      text-decoration: none;
+      gap: 10px;
+      color: #cccc;
+    }
+  }
+}
