@@ -14,12 +14,14 @@
 .ArchivePageNavbar {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   gap: 365px;
   &__button {
     background-color: transparent;
     border: none;
     color: #ccccccb8;
-    font-size: 18px;
+    font-size: 15px;
+    text-decoration: none;
   }
   &__search {
     border-radius: 24px;
@@ -27,5 +29,8 @@
     padding-left: 20px;
     font-weight: 600;
     border: 1px solid var(--archive-card-secondary);
+    padding-left: 42px;
+    background: url("../../Assets/icons/search.svg") no-repeat 16px;
+    background-size: 16px;
   }
 }

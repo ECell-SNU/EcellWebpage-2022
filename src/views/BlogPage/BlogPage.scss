@@ -1,16 +1,18 @@
 $backgroundColour: #161c22;
 
 .BlogPageWrapper {
-  padding-top: 60px;
+  // padding-top: 60px;
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   width: 1170px;
-  .BlogsReadUp{
+  .BlogsReadUp {
     color: var(--primary-color);
     font-size: 17px;
   }
-  &__TextComponentWrapper{
-    padding-top: 100px;
+  &__TextComponentWrapper {
+    // margin-top: 81px;
+    padding-top: 181px;
     padding-bottom: 100px;
   }
 }
