@@ -7,7 +7,9 @@ export default function ArchivePage() {
     <div className="ArchivePageWrapper">
       <header>
         <nav className="ArchivePageNavbar">
-          <a href="/blogs" className="ArchivePageNavbar__button">&larr; &nbsp; &nbsp;Go Back</a>
+          <a href="/blogs" className="ArchivePageNavbar__button">
+            &larr; &nbsp; &nbsp;Go Back
+          </a>
           <input
             type="text"
             placeholder="Search Here"
@@ -17,8 +19,12 @@ export default function ArchivePage() {
       </header>
       <main>
         <div className="ArchivePageWrapper__grid">
-          {BlogData.map((data) => (
-            <BlogArchive title={data["Title"]} author={data["Author"]} />
+          {BlogData.map((data, index) => (
+            <BlogArchive
+              key={index}
+              title={data["Title"]}
+              author={data["Author"]}
+            />
           ))}
         </div>
       </main>
