@@ -9,7 +9,7 @@
   box-sizing: border-box;
   font-family: var(--text-font);
   background-color: var(--background-color);
- //border: 2px solid green;
+  //border: 2px solid green;
 }
 
 :root {
@@ -20,7 +20,7 @@
   --latest-blog-card: #ffd24d;
   --archive-blog-card: #ff3326;
   --archive-card-background: #1c3145;
-  --archive-card-icon-background: #18232D;
+  --archive-card-icon-background: #18232d;
   --archive-card-secondary: #9bcefd;
   --archive-card-tertiary: #dceeff;
   --desc-text-size: 14px;
@@ -37,7 +37,8 @@
 #root,
 html,
 body {
-  height: 100vh;
+  // height: 100vh;
+  max-width:100%;
   width: 100vw;
 }
 
