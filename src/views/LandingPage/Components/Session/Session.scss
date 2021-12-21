@@ -1,13 +1,51 @@
 @import "../../../../styles/mixins";
 .SessionWrapper {
   height: 100vh;
+  @include make-flex();
 
   &__content-container {
     @include make-flex($dir: row, $just: space-between);
-    width: 1190px;
+    width: 100%;
 
     &__illustration {
       width: 400px;
+    }
+  }
+}
+@media only screen and (max-width: 580px) {
+  .SessionWrapper {
+    &__content-container {
+      width: 100%;
+      &__illustration {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1075px) {
+  .SessionWrapper {
+    @include make-flex();
+    &__content-container {
+      width: unset;
+    }
+  }
+  .SessionWrapper:nth-child(even) {
+    .SessionWrapper {
+      &__content-container {
+        @include make-flex($dir: column);
+        gap: 30px;
+        width: unset;
+      }
+    }
+  }
+  .SessionWrapper:nth-child(odd) {
+    .SessionWrapper {
+      &__content-container {
+        @include make-flex($dir: column-reverse);
+        gap: 30px;
+        width: unset;
+      }
     }
   }
 }

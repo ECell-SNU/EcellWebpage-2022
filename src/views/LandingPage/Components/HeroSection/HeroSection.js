@@ -1,12 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { useMediaQuery } from "react-responsive";
 import "./HeroSection.scss";
 import LandingIllustration from "../../../../Assets/Illustration/Landing-Illustration.svg";
 
 function HeroSection(props) {
   const thousandPixels = useMediaQuery({
-    query: "(max-width: 1000px)",
+    query: "(max-width: 1075px)",
   });
 
   return (

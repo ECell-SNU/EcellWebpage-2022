@@ -11,7 +11,7 @@ function Session({ children }) {
 }
 
 Session.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired, 
 };
 
 Session.defaultProps = {

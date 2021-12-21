@@ -12,21 +12,26 @@
     }
   }
 
+  &__content {
+    width: 500px;
+  }
+
   &__Title {
     color: var(--title-txt-color);
     font-weight: 600;
     font-size: 48px;
-    width: 500px;
+    width: 100%;
 
     &__Rotator {
       color: var(--primary-color);
+      white-space: nowrap;
     }
   }
 
   &__Description {
     color: var(--paragraph-txt-color);
     line-height: 167.5%;
-    width: 440px;
+    width: 90%;
     margin-top: 25px;
     font-size: 14px;
     margin-bottom: 25px;
@@ -51,6 +56,32 @@
         color: black;
         transition: all 0.5s;
       }
+    }
+  }
+}
+@media only screen and (max-width: 1075px) {
+  .HeroSectionWrapper {
+    @include make-flex();
+    &__content-container {
+      width: unset;
+    }
+  }
+}
+@media only screen and (max-width: 570px) {
+  .HeroSectionWrapper {
+    @include make-flex();
+    &__content-container {
+      width: unset;
+    }
+    &__content {
+      width: 100%;
+    }
+    &__Title {
+      font-size: 38px;
+    }
+
+    &__Description {
+      width: 100%;
     }
   }
 }

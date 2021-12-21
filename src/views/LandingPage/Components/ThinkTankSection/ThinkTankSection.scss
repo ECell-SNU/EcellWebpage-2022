@@ -6,7 +6,17 @@
   @include make-flex();
 
   &__content-container {
-    @include make-flex($align: flex-end);
-    width: 1190px;
+    @include make-flex($dir: row, $just: space-between);
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1075px) {
+  .ThinkTankSectionWrapper {
+    &__content-container {
+      @include make-flex($dir: column-reverse);
+      gap: 30px;
+      width: 100%;
+    }
   }
 }

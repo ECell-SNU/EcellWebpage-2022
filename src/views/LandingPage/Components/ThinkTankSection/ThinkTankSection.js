@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import "./ThinkTankSection.scss";
 import LandingSectionTexts from "../../../../components/LandingSectionTexts/LandingSectionTexts";
 
@@ -7,7 +7,7 @@ function ThinkTankSection(props) {
   return (
     <section className="ThinkTankSectionWrapper">
       <div className="ThinkTankSectionWrapper__content-container">
-        <div className="temporary-placeholder"></div>
+        <div className="temporary-placeholder">hello</div>
         <LandingSectionTexts
           classifier="Think Tank"
           title="What is the think tank ?"

@@ -7,18 +7,18 @@
   position: relative;
 }
 
-
-
 @media only screen and (max-width: 1290px) {
   .LandingPageWrapper {
     width: 100%;
-    padding: 0 30px;
+    main {
+      padding: 0 30px;
+    }
   }
 }
-
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 510px) {
   .LandingPageWrapper {
-    width: 100%;
-    padding: 0 30px;
+    main {
+      padding: 0 20px;
+    }
   }
 }

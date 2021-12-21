@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import "./AboutUsSection.scss";
 import LandingSectionTexts from "../../../../components/LandingSectionTexts/LandingSectionTexts";
 import Tab from "../../../../components/Tab/Tab";

@@ -3,10 +3,17 @@
 .AboutUsSectionWrapper {
   height: 100vh;
   @include make-flex();
-  scroll-snap-align: start;
 
   &__content-container {
     width: 100%;
     @include make-flex($just: space-between, $dir: row);
+  }
+}
+
+@media only screen and (max-width: 1075px) {
+  .AboutUsSectionWrapper {
+    &__content-container {
+      @include make-flex($dir: column);
+    }
   }
 }
