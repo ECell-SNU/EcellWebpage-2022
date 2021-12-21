@@ -56,28 +56,28 @@ export default function Header({
       >
         <ul className="HeaderContainer__primary-nav">
           <li>
-            <a href="/home">Home</a>
+            <a href="/home">{navItem1}</a>
           </li>
           <li>
-            <a href="/">About us</a>
+            <a href="/">{navItem2}</a>
           </li>
           <li>
-            <a href="/teams">Team</a>
+            <a href="/teams">{navItem3}</a>
           </li>
           <li>
-            <a href="/">Think Tank</a>
+            <a href="/">{navItem4}</a>
           </li>
           <li>
-            <a href="/">Archive</a>
+            <a href="/">{navItem5}</a>
           </li>
         </ul>
         <ul className="HeaderContainer__secondary-nav">
           <ul className="HeaderContainer__secondary-nav__nav-btns">
             <li>
-              <a href="/blogs">Blogs</a>
+              <a href="/blogs">{navItem6}</a>
             </li>
             <li>
-              <a href="/">Events</a>
+              <a href="/">{navItem7}</a>
             </li>
           </ul>
           <ul className="HeaderContainer__secondary-nav__social-medias">
