@@ -76,13 +76,18 @@
   }
 }
 
+@media only screen and (max-width: 1290px) {
+  .HeaderContainer {
+    padding: 0 30px;
+  }
+}
+
 @media only screen and (max-width: 1075px) {
   .HeaderContainer {
     position: static;
     margin-top: 0;
     width: 100vw;
-    padding: 0 30px;
-  
+
     &__secondary-nav,
     &__primary-nav {
       @include make-flex();
