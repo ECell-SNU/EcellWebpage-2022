@@ -23,6 +23,7 @@ export default function BlogPage() {
             key={index}
             title={data["Title"]}
             author={data["Author"]}
+            status={data["Type"]}
           />
         ))}
       </div>
