@@ -6,7 +6,15 @@ import meta from "../../Assets/icons/logo-facebook.svg";
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
-export default function Header() {
+export default function Header({
+  navItem1,
+  navItem2,
+  navItem3,
+  navItem4,
+  navItem5,
+  navItem6,
+  navItem7,
+}) {
   const [navState, setNavState] = useState(false);
   const thousandPixels = useMediaQuery({
     query: "(max-width: 1075px)",
@@ -19,7 +27,6 @@ export default function Header() {
       document.getElementById("root").style.overflow = "hidden";
     }
   }
-
 
   return (
     <div className="HeaderContainer">
@@ -59,6 +66,9 @@ export default function Header() {
           </li>
           <li>
             <a href="/">Think Tank</a>
+          </li>
+          <li>
+            <a href="/">Archive</a>
           </li>
         </ul>
         <ul className="HeaderContainer__secondary-nav">
