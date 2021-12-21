@@ -28,17 +28,12 @@
   --text-font: "Poppins";
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 #root,
 html,
 body {
-  // height: 100vh;
-  max-width:100%;
+  height: 100vh;
+  overflow-x: hidden;
+  max-width: 100%;
   width: 100vw;
 }
 
