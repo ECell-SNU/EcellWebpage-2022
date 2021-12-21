@@ -26,11 +26,13 @@
   }
   
   .tag__archive{
+    font-weight: 600;
     background-color: var(--archive-blog-card);
     color: var(--title-txt-color);
   }
   
   .tag__latest {
+    font-weight: 600;
     background-color: var(--latest-blog-card);
     color: var(--background-color);
   }
