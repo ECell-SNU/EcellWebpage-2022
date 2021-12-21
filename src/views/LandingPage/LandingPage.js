@@ -1,18 +1,18 @@
 import "../LandingPage/LandingPage.scss";
 import LandingComponent from "../../components/LandingComponent/LandingComponent";
-import LandingIllustration from "../../assests/Illustration/Landing-Illustration.svg";
+import LandingIllustration from "../../Assets/Illustration/Landing-Illustration.svg";
 import LandingSectionTexts from "../../components/LandingSectionTexts/LandingSectionTexts";
 import Tab from "../../components/Tab/Tab";
-import Session1Illustration from "../../assests/Illustration/Session-1-illustration.svg";
-import Session2Illustration from "../../assests/Illustration/Session-2-illustration(to be updated).svg";
-import NavBar1 from "../../components/NavBar1/NavBar1";
+import Session1Illustration from "../../Assets/Illustration/Session-1-illustration.svg";
+import Session2Illustration from "../../Assets/Illustration/Session-2-illustration(to be updated).svg";
+import Header from "../../components/Header/Header";
 
 export default function LandingPage() {
   return (
     <section className="LandingPageWrapper">
       <header>
         <nav>
-          <NavBar1 />
+          <Header />
         </nav>
       </header>
 
@@ -22,7 +22,7 @@ export default function LandingPage() {
             <LandingComponent />
             <img
               alt="hero"
-              className="hero-section__content-container__illustrtion"
+              className="hero-section__content-container__illustration"
               src={LandingIllustration}
             ></img>
           </div>

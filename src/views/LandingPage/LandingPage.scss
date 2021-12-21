@@ -1,21 +1,20 @@
 @import "../../styles/mixins";
-@import "../../index.scss";
 
 .LandingPageWrapper {
-  padding-top: 60px;
   margin-left: auto;
   margin-right: auto;
   width: 1170px;
+  position: relative;
 }
 
 .hero-section {
+  height: 100vh;
+  @include make-flex();
+  scroll-snap-align: start;
   &__content-container {
-    padding-top: 95px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    &__illustrtion{
+    width: 100%;
+    @include make-flex($just: space-between, $dir: row);
+    &__illustration {
       width: 430px;
     }
   }
@@ -23,23 +22,19 @@
 
 .aboutus-section {
   height: 100vh;
-  position: relative;
+  @include make-flex();
+  scroll-snap-align: start;
 
   &__content-container {
-    position: absolute;
-    display: flex;
-    width: 1190px;
-    justify-content: space-between;
-    align-items: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    width: 100%;
+    @include make-flex($just: space-between, $dir: row);
   }
 }
 
 .thinktank-section {
   height: 100vh;
   position: relative;
+  scroll-snap-align: start;
 
   &__content-container {
     position: absolute;
@@ -49,13 +44,14 @@
     align-items: center;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 }
 
 .session-section {
   height: 100vh;
   position: relative;
+  scroll-snap-align: start;
 
   &__content-container {
     position: absolute;
@@ -65,7 +61,7 @@
     align-items: center;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
     &__illustration {
       width: 400px;

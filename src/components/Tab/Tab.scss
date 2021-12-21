@@ -11,8 +11,8 @@
     display: grid;
     grid-auto-flow: column;
     position: relative;
-    
-    justify-content:flex-start;
+
+    justify-content: flex-start;
     align-self: flex-start;
     margin-left: 2.5rem;
     width: 200px;
@@ -48,19 +48,21 @@
     margin-top: 2rem;
 
     &::before {
-    content: url("../../assests/icons/bulb.svg");
-    border-radius: 50%;
-    height: 3rem;
-    width: 3rem;
-    position: absolute; 
-    top: -20%;
-    left: 3%;
-    // background: url("../../assests/icons/flask.svg");
-    // background: url("../../assests/icons/create.svg");
-    // background: url("../../assests/icons/bulb.svg");
-    background-color: var(--archive-card-icon-background);
-    display: block;
-    margin-bottom: 1rem;
+      content: url("../../Assets/icons/bulb.svg");
+      border-radius: 50%;
+      height: 3rem;
+      width: 3rem;
+      position: absolute;
+      top: -20%;
+      left: 3%;
+      padding: 8px;
+      box-sizing: border-box;
+      // background: url("../../Assets/icons/flask.svg");
+      // background: url("../../Assets/icons/create.svg");
+      // background: url("../../Assets/icons/bulb.svg");
+      background-color: var(--archive-card-icon-background);
+      display: block;
+      margin-bottom: 1rem;
     }
 
     &--TabContent {
