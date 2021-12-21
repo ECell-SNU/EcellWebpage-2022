@@ -13,7 +13,14 @@ import Session from "./Components/Session/Session";
 export default function LandingPage() {
   return (
     <section className="LandingPageWrapper">
-      <Header />
+      <Header
+        navItem1="Home"
+        navItem2="About Us"
+        navItem3="Team"
+        navItem4="Think Tank"
+        navItem6="Blogs"
+        navItem7="Events"
+      />
 
       <main>
         <HeroSection />
