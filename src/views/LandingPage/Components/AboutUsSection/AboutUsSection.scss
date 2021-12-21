@@ -1,0 +1,12 @@
+@import "../../../../styles/mixins";
+
+.AboutUsSectionWrapper {
+  height: 100vh;
+  @include make-flex();
+  scroll-snap-align: start;
+
+  &__content-container {
+    width: 100%;
+    @include make-flex($just: space-between, $dir: row);
+  }
+}

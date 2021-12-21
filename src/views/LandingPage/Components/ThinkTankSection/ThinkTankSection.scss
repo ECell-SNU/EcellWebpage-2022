@@ -1,0 +1,12 @@
+@import "../../../../styles/mixins";
+
+.ThinkTankSectionWrapper {
+  height: 100vh;
+  scroll-snap-align: start;
+  @include make-flex();
+
+  &__content-container {
+    @include make-flex($align: flex-end);
+    width: 1190px;
+  }
+}

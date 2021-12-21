@@ -1,0 +1,13 @@
+@import "../../../../styles/mixins";
+.SessionWrapper {
+  height: 100vh;
+
+  &__content-container {
+    @include make-flex($dir: row, $just: space-between);
+    width: 1190px;
+
+    &__illustration {
+      width: 400px;
+    }
+  }
+}

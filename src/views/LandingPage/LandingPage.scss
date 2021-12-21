@@ -7,64 +7,18 @@
   position: relative;
 }
 
-.hero-section {
-  height: 100vh;
-  @include make-flex();
-  scroll-snap-align: start;
-  &__content-container {
+
+
+@media only screen and (max-width: 1290px) {
+  .LandingPageWrapper {
     width: 100%;
-    @include make-flex($just: space-between, $dir: row);
-    &__illustration {
-      width: 430px;
-    }
+    padding: 0 30px;
   }
 }
 
-.aboutus-section {
-  height: 100vh;
-  @include make-flex();
-  scroll-snap-align: start;
-
-  &__content-container {
+@media only screen and (max-width: 630px) {
+  .LandingPageWrapper {
     width: 100%;
-    @include make-flex($just: space-between, $dir: row);
-  }
-}
-
-.thinktank-section {
-  height: 100vh;
-  position: relative;
-  scroll-snap-align: start;
-
-  &__content-container {
-    position: absolute;
-    display: flex;
-    width: 1190px;
-    justify-content: space-between;
-    align-items: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-.session-section {
-  height: 100vh;
-  position: relative;
-  scroll-snap-align: start;
-
-  &__content-container {
-    position: absolute;
-    display: flex;
-    width: 1190px;
-    justify-content: space-between;
-    align-items: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    &__illustration {
-      width: 400px;
-    }
+    padding: 0 30px;
   }
 }

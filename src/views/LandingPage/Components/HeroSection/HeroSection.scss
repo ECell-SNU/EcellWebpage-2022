@@ -1,11 +1,24 @@
-.Title-container {
+@import "../../../../styles/mixins";
+
+.HeroSectionWrapper {
+  height: 100vh;
+  @include make-flex();
+  scroll-snap-align: start;
+  &__content-container {
+    width: 100%;
+    @include make-flex($just: space-between, $dir: row);
+    &__illustration {
+      width: 430px;
+    }
+  }
+
   &__Title {
     color: var(--title-txt-color);
     font-weight: 600;
     font-size: 48px;
     width: 500px;
 
-    &__Rotater {
+    &__Rotator {
       color: var(--primary-color);
     }
   }
