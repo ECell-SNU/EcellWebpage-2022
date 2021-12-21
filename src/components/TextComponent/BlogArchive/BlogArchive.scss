@@ -37,6 +37,14 @@
     border: 1.4px solid var(--archive-card-secondary);
     border-radius: 8px;
     padding: 4px 22px 4px 22px;
+    cursor: pointer;
+    font-weight: 600;
+
+    &:hover {
+      background-color: var(--archive-card-secondary);
+      color: black;
+      transition: all 0.5s;
+    }
   }
 }
 
