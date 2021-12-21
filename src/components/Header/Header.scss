@@ -1,15 +1,20 @@
 @import "../../styles/mixins";
 
 .HeaderContainer {
-  @include make-flex($just: space-between, $dir: row);
   font-size: 14px;
   gap: 380px;
   margin-top: 60px;
   position: absolute;
+  width: 100%;
+  padding: 0 30px;
 
   #NavBarInput,
   .hamButton {
     display: none;
+  }
+  &__Menu {
+    @include make-flex($just: space-between, $dir: row);
+    width: 100%;
   }
 
   &__primary-nav {
@@ -89,7 +94,6 @@
         @include make-flex($align: flex-start);
       }
     }
-
 
     &__Menu {
       position: absolute;
