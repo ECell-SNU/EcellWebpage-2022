@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function BlogArchive({ title, author, status }) {
   return (
     <div className="BlogArchiveContainer">
-      <p className="BlogArchiveContainer__tag">{status}</p>
+      <p className="BlogArchiveContainer__tag tag__archive">{status}</p>
       <Link
         to={`${title}/${author}`}
         style={{ textDecoration: "none" }}
