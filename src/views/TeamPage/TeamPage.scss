@@ -2,7 +2,7 @@
 
 .TeamPageHeading {
   padding-top: 3rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: center;
   font-weight: 600;
 }
@@ -18,7 +18,7 @@
     margin-top: 6rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 3rem;
+    grid-row-gap: 4.5rem;
     justify-items: center;
 
     
@@ -27,20 +27,21 @@
     &__members {
       @include make-flex();
       &__Image {
-        height: 15rem;
-        width: 15rem;
+        height: 10rem;
+        width: 10rem;
         border-radius: 50%;
       }
 
       &__Name {
-        font-size: 1.5rem;
+        margin-top: 25px;
+        font-size: 18px;
         text-align: center;
         font-weight: 600;
       }
 
       &__Pos {  
         color: var(--primary-color);
-        font-size: 1rem;
+        font-size: 15px;
         font-weight: 500;
       }
     }
