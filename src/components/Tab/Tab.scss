@@ -47,8 +47,7 @@
     position: relative;
     margin-top: 2rem;
 
-    &::before {
-      content: url("../../Assets/icons/bulb.svg");
+    img {
       border-radius: 50%;
       height: 3rem;
       width: 3rem;
@@ -57,9 +56,6 @@
       left: 3%;
       padding: 8px;
       box-sizing: border-box;
-      // background: url("../../Assets/icons/flask.svg");
-      // background: url("../../Assets/icons/create.svg");
-      // background: url("../../Assets/icons/bulb.svg");
       background-color: var(--archive-card-icon-background);
       display: block;
       margin-bottom: 1rem;
