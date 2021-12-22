@@ -1,7 +1,59 @@
 @import "../../styles/mixins";
 
+.TeamPageHeading {
+  padding-top: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
 .TeamPageWrapper {
-  height: 100%;
-  width: 100%;
-  @include make-flex();
+
+  padding: 5rem 8rem;
+  &__grid {
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 3rem;
+    justify-items: center;
+    
+    
+
+    &__members {
+      @include make-flex();
+      &__Image {
+        height: 10rem;
+        width: 10rem;
+        border-radius: 50%;
+      }
+
+      &__Name {
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      &__Pos {  
+        color: var(--primary-color);
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+
+  }
+
+}
+
+.TeamPageNavbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 365px;
+  &__button {
+    background-color: transparent;
+    border: none;
+    color: #ccccccb8;
+    font-size: 15px;
+    text-decoration: none;
+  }
 }
