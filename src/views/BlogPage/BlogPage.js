@@ -7,7 +7,13 @@ import "../BlogPage/BlogPage.scss";
 export default function BlogPage() {
   return (
     <div className="BlogPageWrapper">
-      <Header />
+      <Header
+        navItem1="Home"
+        navItem2="About Us"
+        navItem3="Team"
+        navItem4="Think Tank"
+        navItem5="Archive"
+      />
       <div className="BlogPageWrapper__TextComponentWrapper">
         <HeroText
           classifier="Our Blogs"
@@ -18,11 +24,19 @@ export default function BlogPage() {
       </div>
       <h3 className="BlogsReadUp">Read Up</h3>
       <div className="BlogPageGrid">
-        {BlogData.map((data, index) => (
+        {BlogData.filter((data) => {
+          return data["Type"] === "Latest";
+        }).map((data, index) => (
           <BlogArchive
+            tag={
+              data["Type"] === "Archive"
+                ? "BlogArchiveContainer__tag tag__archive"
+                : "BlogArchiveContainer__tag tag__latest"
+            }
             key={index}
             title={data["Title"]}
             author={data["Author"]}
+            status={data["Type"]}
           />
         ))}
       </div>
