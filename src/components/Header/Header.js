@@ -6,7 +6,15 @@ import meta from "../../Assets/icons/logo-facebook.svg";
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
-export default function Header() {
+export default function Header({
+  navItem1,
+  navItem2,
+  navItem3,
+  navItem4,
+  navItem5,
+  navItem6,
+  navItem7,
+}) {
   const [navState, setNavState] = useState(false);
   const thousandPixels = useMediaQuery({
     query: "(max-width: 1075px)",
@@ -19,7 +27,6 @@ export default function Header() {
       document.getElementById("root").style.overflow = "hidden";
     }
   }
-
 
   return (
     <div className="HeaderContainer">
@@ -49,25 +56,28 @@ export default function Header() {
       >
         <ul className="HeaderContainer__primary-nav">
           <li>
-            <a href="/home">Home</a>
+            <a href="/home">{navItem1}</a>
           </li>
           <li>
-            <a href="/">About us</a>
+            <a href="/">{navItem2}</a>
           </li>
           <li>
-            <a href="/teams">Team</a>
+            <a href="/teams">{navItem3}</a>
           </li>
           <li>
-            <a href="/">Think Tank</a>
+            <a href="/">{navItem4}</a>
+          </li>
+          <li>
+            <a href="/">{navItem5}</a>
           </li>
         </ul>
         <ul className="HeaderContainer__secondary-nav">
           <ul className="HeaderContainer__secondary-nav__nav-btns">
             <li>
-              <a href="/blogs">Blogs</a>
+              <a href="/blogs">{navItem6}</a>
             </li>
             <li>
-              <a href="/">Events</a>
+              <a href="/">{navItem7}</a>
             </li>
           </ul>
           <ul className="HeaderContainer__secondary-nav__social-medias">

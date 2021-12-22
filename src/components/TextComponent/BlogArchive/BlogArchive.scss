@@ -12,6 +12,31 @@
   width: 340px;
   height: 130px;
   background-color: var(--archive-card-background);
+
+  &__tag {
+    padding: 4px 8px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    left: -26px;
+    top: -18px;
+  }
+  
+  .tag__archive{
+    font-weight: 600;
+    background-color: var(--archive-blog-card);
+    color: var(--title-txt-color);
+  }
+  
+  .tag__latest {
+    font-weight: 600;
+    background-color: var(--latest-blog-card);
+    color: var(--background-color);
+  }
+  
 }
 
 .BlogArchiveRouting {
@@ -48,16 +73,3 @@
   }
 }
 
-.BlogArchiveContainer__tag {
-  padding: 4px 8px;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  border-radius: 4px;
-  background-color: var(--archive-blog-card);
-  color: var(--title-txt-color);
-  display: inline-block;
-  position: relative;
-  left: -26px;
-  top: -18px;
-}

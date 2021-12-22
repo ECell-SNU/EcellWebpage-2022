@@ -19,13 +19,15 @@ export default function ArchivePage() {
       </header>
       <main>
         <div className="ArchivePageWrapper__grid">
-          {BlogData.map((data, index) => (
-            <BlogArchive
-              key={index}
-              title={data["Title"]}
-              author={data["Author"]}
-            />
-          ))}
+        {BlogData.filter((data) => {return data["Type"] === "Archive"}).map((data, index) => (
+          <BlogArchive
+            tag={data["Type"] === "Archive" ? "BlogArchiveContainer__tag tag__archive" : "BlogArchiveContainer__tag tag__latest"}
+            key={index}
+            title={data["Title"]}
+            author={data["Author"]}
+            status={data["Type"]}
+          />
+        ))}
         </div>
       </main>
     </div>

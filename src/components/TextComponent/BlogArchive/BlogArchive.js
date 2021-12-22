@@ -3,10 +3,10 @@ import propTypes from "prop-types";
 import "./BlogArchive.scss";
 import { Link } from "react-router-dom";
 
-function BlogArchive({ title, author }) {
+function BlogArchive({ title, author, status, tag }) {
   return (
     <div className="BlogArchiveContainer">
-      <p className="BlogArchiveContainer__tag">Archive</p>
+      <p className={tag}>{status}</p>
       <Link
         to={`${title}/${author}`}
         style={{ textDecoration: "none" }}
