@@ -68,7 +68,7 @@ export default function Header({
             <a href="/">{navItem4}</a>
           </li>
           <li>
-            <a href="/">{navItem5}</a>
+            <a href="/blogs_archive">{navItem5}</a>
           </li>
         </ul>
         <ul className="HeaderContainer__secondary-nav">
@@ -77,7 +77,7 @@ export default function Header({
               <a href="/blogs">{navItem6}</a>
             </li>
             <li>
-              <a href="/">{navItem7}</a>
+              <a href="/events">{navItem7}</a>
             </li>
           </ul>
           <ul className="HeaderContainer__secondary-nav__social-medias">
