@@ -20,13 +20,13 @@ export default function TeamPage() {
           </a>
           <ul className="TeamPageNavbar__social-media">
             <li>
-              <a href="/" className="TeamPageNavbar__social-media__icon"><img src={instagram}></img></a>
+              <a href="https://www.instagram.com/ecellsnu/?utm_medium=copy_link" className="TeamPageNavbar__social-media__icon"><img src={instagram}></img></a>
             </li>
             <li>
-              <a href="/" className="TeamPageNavbar__social-media__icon"><img src={twitter}></img></a>
+              <a href="https://twitter.com/ecellsnu?t=BDaPBAN7cuAqcLAJnpP-Uw&s=09" className="TeamPageNavbar__social-media__icon"><img src={twitter}></img></a>
             </li>
             <li>
-              <a href="/" className="TeamPageNavbar__social-media__icon"><img src={facebook}></img></a>
+              <a href="https://www.facebook.com/ecellsnu/" className="TeamPageNavbar__social-media__icon"><img src={facebook}></img></a>
             </li>
           </ul>
         </nav>
