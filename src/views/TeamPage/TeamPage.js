@@ -6,6 +6,7 @@ import abhaTrea from "../../Assets/image/abhaTreas.jpeg";
 import shauFc from "../../Assets/image/shaurFc.jpg";
 import sample1 from "../../Assets/image/sampleImages/sample1.jpg";
 import TeamMember from "../../components/TeamComponents/TeamMember";
+import TeamLeads from "../../DataFiles/TeamLeads.json";
 export default function TeamPage() {
   return (
     <div className="TeamPageWrapper">
@@ -54,147 +55,16 @@ export default function TeamPage() {
       <div className="SectionWrapper">
         <div className="TeamPageHeading">Team Leads</div>
         <div className="TeamPageWrapper__grid">
-          <div className="TeamPageWrapper__grid__members">
-            <img
-              className="TeamPageWrapper__grid__members__Image"
-              alt="profile"
-              src={sample1}
-            ></img>
-            <div className="TeamPageWrapper__grid__members__Name">
-              Pratham Agarwal
-            </div>
-            <h4 className="TeamPageWrapper__grid__members__Pos">
-              Web Development
-            </h4>
-          </div>
-
-          <div className="TeamPageWrapper__grid__members">
-            <img
-              className="TeamPageWrapper__grid__members__Image"
-              alt="profile"
-              src={sample1}
-            ></img>
-            <div className="TeamPageWrapper__grid__members__Name">
-              Lavanya Kaushik
-            </div>
-            <h4 className="TeamPageWrapper__grid__members__Pos">Content</h4>
-          </div>
-          <div className="TeamPageWrapper__grid__members">
-            <img
-              className="TeamPageWrapper__grid__members__Image"
-              alt="profile"
-              src={sample1}
-            ></img>
-            <div className="TeamPageWrapper__grid__members__Name">
-              Aryaman Gupta
-            </div>
-            <h4 className="TeamPageWrapper__grid__members__Pos">PR</h4>
-          </div>
-          <div className="TeamPageWrapper__grid__members">
-            <img
-              className="TeamPageWrapper__grid__members__Image"
-              alt="profile"
-              src={sample1}
-            ></img>
-            <div className="TeamPageWrapper__grid__members__Name">
-              Akshat Sabavat
-            </div>
-            <h4 className="TeamPageWrapper__grid__members__Pos">
-              Web Development
-            </h4>
-          </div>
-          <div className="TeamPageWrapper__grid__members">
-            <img
-              className="TeamPageWrapper__grid__members__Image"
-              alt="profile"
-              src={sample1}
-            ></img>
-            <div className="TeamPageWrapper__grid__members__Name">
-              Lavanya Kaushik
-            </div>
-            <h4 className="TeamPageWrapper__grid__members__Pos">Content</h4>
-          </div>
-          <div className="TeamPageWrapper__grid__members">
-            <img
-              className="TeamPageWrapper__grid__members__Image"
-              alt="profile"
-              src={sample1}
-            ></img>
-            <div className="TeamPageWrapper__grid__members__Name">
-              Aryaman Gupta
-            </div>
-            <h4 className="TeamPageWrapper__grid__members__Pos">PR</h4>
-          </div>
+          {TeamLeads.map((data, index) => {
+            <TeamMember 
+            key={index}
+            MemberName={data["LeadName"]}
+            Memberposition={data["LeadPosition"]}
+            imageSrc={shauFc}
+            imageSrcAlt={data["LeadPicAlt"]}/>
+          })}
         </div>
-        <div className="TeamPageWrapper__grid">
-          <div className="TeamPageWrapper__grid__members">
-            <img
-              className="TeamPageWrapper__grid__members__Image"
-              alt="profile"
-              src={sample1}
-            ></img>
-            <div className="TeamPageWrapper__grid__members__Name">
-              Nirmit Jindal
-            </div>
-            <h4 className="TeamPageWrapper__grid__members__Pos">Videography</h4>
-          </div>
-          <div className="TeamPageWrapper__grid__members">
-            <img
-              className="TeamPageWrapper__grid__members__Image"
-              alt="profile"
-              src={sample1}
-            ></img>
-            <div className="TeamPageWrapper__grid__members__Name">
-              John Smith
-            </div>
-            <h4 className="TeamPageWrapper__grid__members__Pos">Sponsorship</h4>
-          </div>
-          <div className="TeamPageWrapper__grid__members">
-            <img
-              className="TeamPageWrapper__grid__members__Image"
-              alt="profile"
-              src={sample1}
-            ></img>
-            <div className="TeamPageWrapper__grid__members__Name">
-              John Smith
-            </div>
-            <h4 className="TeamPageWrapper__grid__members__Pos">Marketing</h4>
-          </div>
-          <div className="TeamPageWrapper__grid__members">
-            <img
-              className="TeamPageWrapper__grid__members__Image"
-              alt="profile"
-              src={sample1}
-            ></img>
-            <div className="TeamPageWrapper__grid__members__Name">
-              Nirmit Jindal
-            </div>
-            <h4 className="TeamPageWrapper__grid__members__Pos">Videography</h4>
-          </div>
-          <div className="TeamPageWrapper__grid__members">
-            <img
-              className="TeamPageWrapper__grid__members__Image"
-              alt="profile"
-              src={sample1}
-            ></img>
-            <div className="TeamPageWrapper__grid__members__Name">
-              John Smith
-            </div>
-            <h4 className="TeamPageWrapper__grid__members__Pos">Sponsorship</h4>
-          </div>
-          <div className="TeamPageWrapper__grid__members">
-            <img
-              className="TeamPageWrapper__grid__members__Image"
-              alt="profile"
-              src={sample1}
-            ></img>
-            <div className="TeamPageWrapper__grid__members__Name">
-              John Smith
-            </div>
-            <h4 className="TeamPageWrapper__grid__members__Pos">Marketing</h4>
-          </div>
-        </div>
-      </div>
+    </div>
     </div>
   );
 }
