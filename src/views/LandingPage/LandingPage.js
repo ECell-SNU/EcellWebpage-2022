@@ -22,6 +22,8 @@ export default function LandingPage() {
         navItem7="Events"
         routeItem1="/home"
         routeItem3="/teams"
+        routeItem6="/blogs"
+        routeItem7="/events"
       />
 
       <main>
