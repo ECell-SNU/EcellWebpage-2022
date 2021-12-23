@@ -14,12 +14,24 @@
 .TeamPageWrapper {
   
   padding: 5rem 8rem;
-  &__grid {
+
+  
+
+  &__grid1 {
     margin-top: 6rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 4.5rem;
     justify-items: center;
+
+  }
+  
+  
+  &__grid2 {
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: repeat(2, .3fr);
+    justify-items: center;
+    justify-content: center;
 
   }
 
@@ -46,5 +58,7 @@
         width: 1.2rem;
       }
     }
+
+    
   }
 }

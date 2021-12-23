@@ -34,7 +34,7 @@ export default function TeamPage() {
 
       <div className="SectionWrapper">
         <div className="TeamPageHeading">The Core</div>
-        <div className="TeamPageWrapper__grid">
+        <div className="TeamPageWrapper__grid1">
          <TeamMember 
           MemberName={"Krishna Madhur"}
           Memberposition={"Seceratry"}
@@ -52,7 +52,8 @@ export default function TeamPage() {
           Memberposition={"A.sec"}
           imageSrc={aarAsec}
           imageSrcAlt={"ASec"}/>
-
+        </div>
+        <div className="TeamPageWrapper__grid2">       
          <TeamMember 
           MemberName={"Abharika Mohanty"}
           Memberposition={"Treasurer"}
