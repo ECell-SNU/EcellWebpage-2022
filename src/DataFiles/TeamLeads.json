@@ -1,6 +1,6 @@
 [{
     "LeadName":"Rando",
     "LeadPosition":"Rando",
-    "LeadPic":"Rando",
+    "LeadPic":"../../Assets/image/sampleImages/sample1.jpg",
     "LeadPicAlt":"Rando"
 }]
