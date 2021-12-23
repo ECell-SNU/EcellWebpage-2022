@@ -1,7 +1,50 @@
 @import "../../styles/mixins";
 
+.TeamPageHeading {
+  padding-top: 3rem;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.SectionWrapper{
+  height:100vh;
+}
+
 .TeamPageWrapper {
-  height: 100%;
-  width: 100%;
-  @include make-flex();
+  
+  padding: 5rem 8rem;
+  &__grid {
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 4.5rem;
+    justify-items: center;
+
+  }
+
+}
+
+.TeamPageNavbar {
+  @include make-flex($just: space-between, $dir: row, $align: center);
+  gap: 365px;
+  &__button {
+    background-color: transparent;
+    border: none;
+    color: #ccccccb8;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  &__social-media{
+    list-style: none;
+    @include make-flex($just: space-between, $dir: row);
+    gap: 30px;
+    &__icon {
+      img {
+        height: 1.2rem;
+        width: 1.2rem;
+      }
+    }
+  }
 }
