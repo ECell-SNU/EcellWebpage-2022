@@ -67,17 +67,46 @@ export default function TeamPage() {
           imageSrcAlt={"Fc"}/>
         </div>
       </div>
-      <div className="SectionWrapper">
-        <div className="TeamPageHeading">Team Leads</div>
-        <div className="TeamPageWrapper__grid">
-          {TeamLeads.map((data, index) => {
-            <TeamMember 
-            key={index}
-            MemberName={data["LeadName"]}
-            Memberposition={data["LeadPosition"]}
-            imageSrc={shauFc}
-            imageSrcAlt={data["LeadPicAlt"]}/>
-          })}
+      <div className="SectionWrapper__leads">
+        <div className="TeamPageHeading leadsTitle">Team Leads</div>
+        <div className="TeamPageWrapper__grid-leads">
+        <TeamMember 
+          MemberName={"Spiderman"}
+          Memberposition={"No way Home"}
+          imageSrc={sample1}
+          imageSrcAlt={"Fc"}/>
+
+<TeamMember 
+          MemberName={"Spiderman"}
+          Memberposition={"No way Home"}
+          imageSrc={sample1}
+          imageSrcAlt={"Fc"}/>
+
+<TeamMember 
+          MemberName={"Spiderman"}
+          Memberposition={"No way Home"}
+          imageSrc={sample1}
+          imageSrcAlt={"Fc"}/>
+
+<TeamMember 
+          MemberName={"Spiderman"}
+          Memberposition={"No way Home"}
+          imageSrc={sample1}
+          imageSrcAlt={"Fc"}/>
+
+<TeamMember 
+          MemberName={"Spiderman"}
+          Memberposition={"No way Home"}
+          imageSrc={sample1}
+          imageSrcAlt={"Fc"}/>
+
+<TeamMember 
+          MemberName={"Spiderman"}
+          Memberposition={"No way Home"}
+          imageSrc={sample1}
+          imageSrcAlt={"Fc"}/>
+          
+          
         </div>
     </div>
     </div>

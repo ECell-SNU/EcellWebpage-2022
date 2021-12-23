@@ -7,15 +7,23 @@
   font-weight: 600;
 }
 
+
 .SectionWrapper{
-  height:100vh;
+  &__leads {
+    margin-top: 150px;
+  }
 }
 
 .TeamPageWrapper {
   
   padding: 5rem 8rem;
 
-  
+  &__grid-leads {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 6rem;
+    row-gap: 5rem;
+  }
 
   &__grid1 {
     margin-top: 6rem;
