@@ -5,6 +5,7 @@ import aarAsec from "../../Assets/image/aarAsec.jpeg";
 import abhaTrea from "../../Assets/image/abhaTreas.jpeg";
 import shauFc from "../../Assets/image/shaurFc.jpg";
 import sample1 from "../../Assets/image/sampleImages/sample1.jpg";
+import TeamMember from "../../components/TeamComponents/TeamMember";
 export default function TeamPage() {
   return (
     <div className="TeamPageWrapper">

@@ -1,0 +1,23 @@
+@import "../../styles/mixins";
+
+.memberContainer {
+    @include make-flex();
+    &__Image {
+        height: 10rem;
+        width: 10rem;
+        border-radius: 50%;
+      }
+
+      &__Name {
+        margin-top: 25px;
+        font-size: 18px;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      &__Pos {  
+        color: var(--primary-color);
+        font-size: 15px;
+        font-weight: 500;
+      }
+}
