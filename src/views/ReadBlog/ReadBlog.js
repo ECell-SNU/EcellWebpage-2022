@@ -1,4 +1,6 @@
 import "../ReadBlog/ReadBlog.scss";
+import data from "../../DataFiles/BlogData.json";
+import Blog from "../../components/Blog/Blog";
 
 export default function BlogRead() {
   return (
@@ -8,11 +10,21 @@ export default function BlogRead() {
         <br></br>
         <hr />
         <br></br>
-        <br></br>
       </header>
 
       <main>
-        <div>Content, title and byline goes here</div>
+        <div className="ContentContainer">
+          <div className="ContentContainer__byline">
+            <Blog
+              author={"JJ Watts"}
+              title={"Incubators"}
+              content={"Lorem ipsum dolor sit amet, tempor elit ipsum sunt"}
+              date={"12/12/2021"}
+              day={"Monday"}
+              credential={"2nd Year EEE"}
+            />
+          </div>
+        </div>
       </main>
     </section>
   );
