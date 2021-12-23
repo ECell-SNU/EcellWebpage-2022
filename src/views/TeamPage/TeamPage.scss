@@ -26,9 +26,7 @@
 }
 
 .TeamPageNavbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include make-flex($just: space-between, $dir: row, $align: center);
   gap: 365px;
   &__button {
     background-color: transparent;
