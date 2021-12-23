@@ -8,7 +8,7 @@ function BlogArchive({ title, author, status, tag }) {
     <div className="BlogArchiveContainer">
       <p className={tag}>{status}</p>
       <Link
-        to={`${title}/${author}`}
+        to={`${author}/${title}`}
         style={{ textDecoration: "none" }}
         className="BlogArchiveRouting"
       >

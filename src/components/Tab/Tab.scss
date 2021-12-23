@@ -2,7 +2,7 @@
 
 .TabWrapper {
   margin-top: 50px;
-  color: white;
+  color: #ffffff;
   width: 500px;
   @include make-flex();
   gap: 20px;
@@ -14,7 +14,7 @@
 
     justify-content: flex-start;
     align-self: flex-start;
-    margin-left: 2.5rem;
+    margin-left: 1.5rem;
     width: 200px;
     &--TabButton {
       width: 100px;
@@ -22,7 +22,7 @@
       @include make-flex();
       border-radius: 7px;
       border: none;
-      font-size: 16px;
+      font-size: 14px;
       cursor: pointer;
       background-color: unset;
       z-index: 1;
@@ -33,7 +33,7 @@
       width: 100px;
       height: 35px;
       z-index: 0;
-      border-radius: 7px;
+      border-radius: 12px;
 
       transition: all 0.5s;
     }
@@ -41,25 +41,22 @@
   &__ContentContainer {
     width: 500px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 30px;
     background-color: var(--archive-card-background);
-    padding: 20px;
+    padding: 2.8rem;
     position: relative;
     margin-top: 2rem;
+    font-size: 14px;
 
-    &::before {
-      content: url("../../Assets/icons/bulb.svg");
+    img {
       border-radius: 50%;
-      height: 3rem;
-      width: 3rem;
+      height: 2.7rem;
+      width: 2.7rem;
       position: absolute;
-      top: -20%;
+      top: -15%;
       left: 3%;
       padding: 8px;
       box-sizing: border-box;
-      // background: url("../../Assets/icons/flask.svg");
-      // background: url("../../Assets/icons/create.svg");
-      // background: url("../../Assets/icons/bulb.svg");
       background-color: var(--archive-card-icon-background);
       display: block;
       margin-bottom: 1rem;

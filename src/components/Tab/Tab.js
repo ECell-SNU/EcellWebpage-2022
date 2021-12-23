@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 // import PropTypes from 'prop-types';
 import "./Tab.scss";
-// import innovate from "../../Assets/icons/bulb.svg";
-// import create from "../../Assets/icons/create.svg";
-// import incubate from "../../Assets/icons/flask.svg";
+import innovate from "../../Assets/icons/bulb.svg";
+import create from "../../Assets/icons/create.svg";
+import incubate from "../../Assets/icons/flask.svg";
 
 function Tab() {
   const list = [
@@ -12,18 +12,21 @@ function Tab() {
       content: `Create Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
   praesentium incidunt quia aspernatur quasi quidem facilis quo nihil
   vel voluptatum?`,
+      icon: create,
     },
     {
       title: "Innovate",
       content: `Innovate Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
       praesentium incidunt quia aspernatur quasi quidem facilis quo nihil
       vel voluptatum?`,
+      icon: innovate,
     },
     {
       title: "Incubate",
       content: `Incubate Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
   praesentium incidunt quia aspernatur quasi quidem facilis quo nihil
   vel voluptatum?`,
+      icon: incubate,
     },
   ];
   const [activeTab, setActiveTab] = useState("Create");
@@ -74,18 +77,23 @@ function Tab() {
         ))}
       </div>
       <div className="TabWrapper__ContentContainer">
-        {list.map((item, index) => (
-          <>
-            {activeTab === item.title && (
-              <div
-                key={index}
-                className="TabWrapper__ContentContainer--TabContent"
-              >
-                {item.content}
-              </div>
-            )}
-          </>
-        ))}
+        {list.map((item, index) => {
+          return (
+            <>
+              {activeTab === item.title && (
+                <img alt="tabIndicator" src={item.icon} />
+              )}
+              {activeTab === item.title && (
+                <div
+                  key={index}
+                  className="TabWrapper__ContentContainer--TabContent"
+                >
+                  {item.content}
+                </div>
+              )}
+            </>
+          );
+        })}
       </div>
     </div>
   );
