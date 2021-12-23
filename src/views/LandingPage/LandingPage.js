@@ -20,6 +20,8 @@ export default function LandingPage() {
         navItem4="Think Tank"
         navItem6="Blogs"
         navItem7="Events"
+        routeItem1="/home"
+        routeItem3="/teams"
       />
 
       <main>

@@ -9,6 +9,22 @@
         border-radius: 50%;
       }
 
+      @media only screen and (max-width: 1075px) {
+        &__Image {
+          height: 8rem;
+          width: 8rem;
+       
+        }
+      }
+
+      @media only screen and (max-width: 900px) {
+        &__Image {
+          height: 7rem;
+          width: 7rem;
+    
+        }
+      }
+
       &__Name {
         margin-top: 25px;
         font-size: 18px;
@@ -16,9 +32,21 @@
         font-weight: 600;
       }
 
+      @media only screen and (max-width: 900px) {
+        &__Name {
+          font-size: 12px;
+        }
+      }
+
       &__Pos {  
         color: var(--primary-color);
         font-size: 15px;
         font-weight: 500;
+      }
+
+      @media only screen and (max-width: 900px) {
+        &__Pos {  
+          font-size: 10px;
+        }
       }
 }
