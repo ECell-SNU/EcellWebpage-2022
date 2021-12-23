@@ -32,6 +32,11 @@ export default function Home() {
             Visit ArchivePage
           </Link>
         </li>
+        <li>
+          <Link className="links-container__link" to={`/blog_read`}>
+            Read a Blog
+          </Link>
+        </li>
       </ul>
     </div>
   );
