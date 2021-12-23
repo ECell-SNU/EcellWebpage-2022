@@ -12,16 +12,17 @@ export default function Blog({
 }) {
   return (
     <div className="BlogContainer">
-      <div className="BlogContainer__byline">
-        <div className="BlogContainer__byline__author">{author}</div>
-        <div className="BlogContainer__byline__credential">{credential}</div>
-        <div className="BlogContainer__byline__date">{date}</div>
-        <div className="BlogContainer__byline__day">{day}</div>
+      <div className="BlogByline">
+        <div className="BlogByline__author">{author}</div>
+        <div className="BlogByline__credential">{credential}</div>
+        <div className="BlogByline__date">
+          {date}, {day}
+        </div>
       </div>
 
-      <div className="BlogContainer__blog">
-        <div className="BlogContainer__blog__title">{title}</div>
-        <div className="BlogContainer__blog__content">{content}</div>
+      <div className="BlogContent">
+        <div className="BlogContent__title">{title}</div>
+        <div className="BlogContent__content">{content}</div>
       </div>
     </div>
   );

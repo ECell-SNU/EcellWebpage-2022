@@ -17,8 +17,10 @@ export default function BlogRead() {
           <div className="ContentContainer__byline">
             <Blog
               author={"JJ Watts"}
-              title={"Incubators"}
-              content={"Lorem ipsum dolor sit amet, tempor elit ipsum sunt"}
+              title={"Incubators vs Accelarators"}
+              content={
+                "If you ask anyone what an incubator is, they will most likely envision an\n apparatus in which  "
+              }
               date={"12/12/2021"}
               day={"Monday"}
               credential={"2nd Year EEE"}

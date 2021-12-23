@@ -1,0 +1,32 @@
+@import "../../styles/mixins";
+
+.BlogContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.BlogByline {
+  justify-self: flex-start;
+  margin-right: 30px;
+  &__author {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  &__credential {
+    font-size: 15px;
+  }
+  &__date {
+    font-size: 15px;
+    letter-spacing: 0.6px;
+  }
+}
+
+.BlogContent {
+  &__title {
+    font-weight: 500;
+    font-size: 50px;
+  }
+  &__content {
+    font-size: 15px;
+  }
+}
