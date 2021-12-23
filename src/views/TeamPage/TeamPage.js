@@ -7,6 +7,9 @@ import shauFc from "../../Assets/image/shaurFc.jpg";
 import sample1 from "../../Assets/image/sampleImages/sample1.jpg";
 import TeamMember from "../../components/TeamComponents/TeamMember";
 import TeamLeads from "../../DataFiles/TeamLeads.json";
+import instagram from "../../Assets/icons/logo-instagram.svg"
+import twitter from "../../Assets/icons/logo-twitter.svg";
+import facebook from "../../Assets/icons/logo-facebook.svg"
 export default function TeamPage() {
   return (
     <div className="TeamPageWrapper">
@@ -15,6 +18,17 @@ export default function TeamPage() {
           <a href="/blogs" className="TeamPageNavbar__button">
             &larr; &nbsp; &nbsp;Go Back
           </a>
+          <ul className="TeamPageNavbar__social-media">
+            <li>
+              <a href="/" className="TeamPageNavbar__social-media__icon"><img src={instagram}></img></a>
+            </li>
+            <li>
+              <a href="/" className="TeamPageNavbar__social-media__icon"><img src={twitter}></img></a>
+            </li>
+            <li>
+              <a href="/" className="TeamPageNavbar__social-media__icon"><img src={facebook}></img></a>
+            </li>
+          </ul>
         </nav>
       </header>
 

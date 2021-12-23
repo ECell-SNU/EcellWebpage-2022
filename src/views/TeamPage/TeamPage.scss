@@ -27,8 +27,8 @@
 
 .TeamPageNavbar {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   gap: 365px;
   &__button {
     background-color: transparent;
@@ -36,5 +36,17 @@
     color: #ccccccb8;
     font-size: 15px;
     text-decoration: none;
+  }
+
+  &__social-media{
+    list-style: none;
+    @include make-flex($just: space-between, $dir: row);
+    gap: 30px;
+    &__icon {
+      img {
+        height: 1.2rem;
+        width: 1.2rem;
+      }
+    }
   }
 }
