@@ -2,6 +2,7 @@
 
 .memberContainer {
     @include make-flex();
+    position: relative;
     &__Image {
         height: 10rem;
         width: 10rem;

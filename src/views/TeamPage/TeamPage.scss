@@ -12,7 +12,7 @@
 }
 
 .TeamPageWrapper {
-
+  
   padding: 5rem 8rem;
   &__grid {
     margin-top: 6rem;
@@ -20,7 +20,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 4.5rem;
     justify-items: center;
-    
+
   }
 
 }

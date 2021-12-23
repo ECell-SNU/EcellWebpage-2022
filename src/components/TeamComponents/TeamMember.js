@@ -1,4 +1,5 @@
 import "../TeamComponents/TeamMember.scss";
+import memberIllustration from "../../Assets/Illustration/memberillustration.svg"
 export default function TeamMember({imageSrc, imageSrcAlt, MemberName, Memberposition}){
     return <div className="memberContainer">
     <img
