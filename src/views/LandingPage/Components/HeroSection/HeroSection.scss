@@ -91,3 +91,30 @@
     }
   }
 }
+
+@keyframes animate{
+  0%{
+    top:0px;
+  }
+  5%{
+    top:0px;
+  }  
+  33%{
+    top:-100px;
+  }
+  38%{
+    top:-100px;
+  }
+  66%{
+    top:-200px;
+  }
+  71%{
+    top:-200px;
+  }
+  90%{
+    top: -300px;
+  }
+  100% {
+      top: -309px;
+  }
+}
