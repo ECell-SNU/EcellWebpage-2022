@@ -54,6 +54,12 @@
     color: #ccccccb8;
     font-size: 15px;
     text-decoration: none;
+
+  
+    &:hover {
+      color: #ffff;
+      transition: all 0.3s;
+    }
   }
 
   &__social-media{
