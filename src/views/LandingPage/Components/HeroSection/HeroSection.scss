@@ -25,7 +25,7 @@
     &__Rotator {
       white-space: nowrap;
       display: flex;
-      height: 80px;
+      height: 1.68em;
       overflow: hidden;
       span {
       color: var(--primary-color);
@@ -96,29 +96,28 @@
 
 @keyframes animate{
   0%{
-    top:0px;
+    top: 0em;
   }
-  5%{
-    top:0px;
-  }  
-  33%{
-    top:-70px;
+  10%{
+    top: 0em;
   }
-  38% {
-    top: -70px;
+  33% {
+    top: -1.5em;
   }
-  66% {
-    top: -140px;
+  44% {
+    top: -1.5em;
   }
-  71% {
-    top: -140px;
+  67% {
+    top: -3em;
   }
-  90% {
-    top: -216px;
+  77% {
+    top: -3em;
   }
-
+  95% {
+    top: -4.505em;
+  }
   100% {
-    top: -216px;
-  }
+    top: -4.505em;
+  }  
 
 }
