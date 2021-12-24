@@ -14,6 +14,11 @@ export default function Header({
   navItem5,
   navItem6,
   navItem7,
+  routeItem1,
+  routeItem3,
+  routeItem5,
+  routeItem6,
+  routeItem7,
 }) {
   const [navState, setNavState] = useState(false);
   const thousandPixels = useMediaQuery({
@@ -56,28 +61,28 @@ export default function Header({
       >
         <ul className="HeaderContainer__primary-nav">
           <li>
-            <a href="/home">{navItem1}</a>
+            <a href={routeItem1}>{navItem1}</a>
           </li>
           <li>
             <a href="/">{navItem2}</a>
           </li>
           <li>
-            <a href="/teams">{navItem3}</a>
+            <a href={routeItem3}>{navItem3}</a>
           </li>
           <li>
             <a href="/">{navItem4}</a>
           </li>
           <li>
-            <a href="/blogs_archive">{navItem5}</a>
+            <a href={routeItem5}>{navItem5}</a>
           </li>
         </ul>
         <ul className="HeaderContainer__secondary-nav">
           <ul className="HeaderContainer__secondary-nav__nav-btns">
             <li>
-              <a href="/blogs">{navItem6}</a>
+              <a href={routeItem6}>{navItem6}</a>
             </li>
             <li>
-              <a href="/events">{navItem7}</a>
+              <a href={routeItem7}>{navItem7}</a>
             </li>
           </ul>
           <ul className="HeaderContainer__secondary-nav__social-medias">

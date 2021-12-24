@@ -7,19 +7,33 @@
   font-weight: 600;
 }
 
+
 .SectionWrapper{
-  height:100vh;
+  &__leads {
+    margin-top: 150px;
+  }
 }
 
 .TeamPageWrapper {
   
   padding: 5rem 8rem;
-  &__grid {
+
+  &__grid1 {
     margin-top: 6rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 4.5rem;
+    grid-row-gap: 4rem;
     justify-items: center;
+
+  }
+  
+  
+  &__grid2 {
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: repeat(2, .3fr);
+    justify-items: center;
+    justify-content: center;
 
   }
 
@@ -34,6 +48,12 @@
     color: #ccccccb8;
     font-size: 15px;
     text-decoration: none;
+
+  
+    &:hover {
+      color: #ffff;
+      transition: all 0.3s;
+    }
   }
 
   &__social-media{
@@ -46,5 +66,7 @@
         width: 1.2rem;
       }
     }
+
+    
   }
 }

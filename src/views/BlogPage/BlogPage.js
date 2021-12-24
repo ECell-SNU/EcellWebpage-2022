@@ -13,6 +13,9 @@ export default function BlogPage() {
         navItem3="Team"
         navItem4="Think Tank"
         navItem5="Archive"
+        routeItem1="/home"
+        routeItem5="/blogs_archive"
+        routeItem3="/teams"
       />
       <div className="BlogPageWrapper__TextComponentWrapper">
         <HeroText
