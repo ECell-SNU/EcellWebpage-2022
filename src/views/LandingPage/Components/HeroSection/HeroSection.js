@@ -14,10 +14,16 @@ function HeroSection(props) {
       <div className="HeroSectionWrapper__content-container">
         <div className="HeroSectionWrapper__content">
           <h1 className="HeroSectionWrapper__Title">
-            A platform for students and faculty to
-            <span className="HeroSectionWrapper__Title__Rotator">
-              &nbsp;create .
-            </span>
+            A platform for students and
+            <div className="HeroSectionWrapper__Title__Rotator">
+            faculty to 
+              <span>
+              create .<br/>
+              innovate .<br/>
+              incubate .<br/>
+              create .
+              </span>
+            </div>
           </h1>
           <p className="HeroSectionWrapper__Description">
             E-cell Shiv Nadar University strives to provide a platform for
