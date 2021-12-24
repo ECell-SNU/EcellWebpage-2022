@@ -69,7 +69,7 @@ export default function TeamPage() {
       </div>
       <div className="SectionWrapper__leads">
         <div className="TeamPageHeading leadsTitle">Team Leads</div>
-        <div className="TeamPageWrapper__grid-leads">
+        <div className="TeamPageWrapper__grid1">
         <TeamMember 
           MemberName={"Spiderman"}
           Memberposition={"No way Home"}
