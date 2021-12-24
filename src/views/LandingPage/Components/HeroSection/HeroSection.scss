@@ -30,6 +30,8 @@
       span {
       color: var(--primary-color);
       margin-left: 10px;
+      animation: animate 5s ease-in-out infinite;
+      position: relative;
       }
     }
   }
