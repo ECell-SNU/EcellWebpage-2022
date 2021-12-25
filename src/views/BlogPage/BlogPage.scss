@@ -23,10 +23,12 @@ $backgroundColour: #161c22;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 65px;
 
-  &__animationWrapper{
+  &__animationWrapper {
     background-color: rgba(0, 255, 255, 0);
-    &:hover{
-      transform: translateY(-5%);
+    will-change: transform;
+    transition: transform 480ms;
+    &:hover {
+      transform: translateY(-3.7%);
       transition: ease-in-out 0.3s;
     }
   }
