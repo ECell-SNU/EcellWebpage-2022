@@ -12,10 +12,6 @@
       will-change: transform;
       transition: transform 650ms;
     }
-    &__illustration:hover {
-      transition: transform 600ms;
-      transform: translateY(-16px);
-    }
   }
 
   &__content {
