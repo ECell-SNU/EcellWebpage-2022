@@ -9,6 +9,12 @@
     @include make-flex($just: space-between, $dir: row);
     &__illustration {
       width: 430px;
+      will-change: transform;
+      transition: transform 650ms;
+    }
+    &__illustration:hover {
+      transition: transform 600ms;
+      transform: translateY(-16px);
     }
   }
 
@@ -28,10 +34,10 @@
       height: 1.68em;
       overflow: hidden;
       span {
-      color: var(--primary-color);
-      margin-left: 10px;
-      animation: animate 5s ease-in-out infinite;
-      position: relative;
+        color: var(--primary-color);
+        margin-left: 10px;
+        animation: animate 5s ease-in-out infinite;
+        position: relative;
       }
     }
   }
@@ -94,11 +100,11 @@
   }
 }
 
-@keyframes animate{
-  0%{
+@keyframes animate {
+  0% {
     top: 0em;
   }
-  10%{
+  10% {
     top: 0em;
   }
   33% {
@@ -118,6 +124,5 @@
   }
   100% {
     top: -4.505em;
-  }  
-
+  }
 }
