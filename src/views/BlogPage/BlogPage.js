@@ -30,7 +30,8 @@ export default function BlogPage() {
         {BlogData.filter((data) => {
           return data["Type"] === "Latest";
         }).map((data, index) => (
-          <BlogArchive
+          <div className="BlogPageGrid__animationWrapper">
+            <BlogArchive
             tag={
               data["Type"] === "Archive"
                 ? "BlogArchiveContainer__tag tag__archive"
@@ -41,6 +42,7 @@ export default function BlogPage() {
             author={data["Author"]}
             status={data["Type"]}
           />
+          </div>
         ))}
       </div>
     </div>
