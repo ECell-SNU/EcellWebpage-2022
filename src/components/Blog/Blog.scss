@@ -14,10 +14,12 @@
   }
   &__credential {
     font-size: 15px;
+    width: max-content;
   }
   &__date {
     font-size: 15px;
     letter-spacing: 0.6px;
+    width: max-content;
   }
 }
 
@@ -29,10 +31,12 @@
     font-weight: 500;
     font-size: 50px;
     text-align: center;
+    position: relative;
+    left: -18px;
   }
   &__content {
     margin-top: 70px;
     font-size: 15px;
-    padding: 10px 60px 140px 20px;
+    padding: 10px 86px 140px 48px;
   }
 }

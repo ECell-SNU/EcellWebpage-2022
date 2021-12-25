@@ -1,15 +1,32 @@
 import "../ReadBlog/ReadBlog.scss";
 import data from "../../DataFiles/BlogData.json";
+import Header from "../../components/Header/Header";
 import Blog from "../../components/Blog/Blog";
+import DarkMode from "../../Assets/icons/dark.svg";
+import Insta from "../../Assets/icons/logo-instagram.svg";
+import FB from "../../Assets/icons/logo-facebook.svg";
+import Twitter from "../../Assets/icons/logo-twitter.svg";
 
 export default function BlogRead() {
   return (
     <section className="LandingPageWrapper">
       <header>
-        <div>Nav Bar Goes Here</div>
-        <br></br>
+        <div className="navbar">
+          <div className="navbar__darkToggle">
+            <img src={DarkMode}></img>
+            <p>Dark Mode</p>
+          </div>
+          <div className="navbar__nav">
+            <p>Other Blogs</p>
+            <p>Archive</p>
+          </div>
+          <div className="navbar__share">
+            <img src={Insta} height="30px"></img>
+            <img src={FB} height="30px"></img>
+            <img src={Twitter} height="30px"></img>
+          </div>
+        </div>
         <hr />
-        <br></br>
       </header>
 
       <main>
@@ -19,7 +36,7 @@ export default function BlogRead() {
               author={"JJ Watts"}
               title={"Incubators vs Accelarators"}
               content={
-                "If you ask anyone what an incubator is, they will most likely envision an\n apparatus in which jhd j hkshdkj shk hkh kh WJDHAkjsdh jkajhd whd whd jadj ahhf hw ehf j"
+                "Generating random paragraphs can be an excellent way for writers to get their creative flow going at the beginning of the day. The writer has no idea what topic the random paragraph will be about when it appears. This forces the writer to use creativity to complete one of three common writing challenges. The writer can use the paragraph as the first one of a short story and build upon it. A second option is to use the random paragraph somewhere in a short story they create. The third option is to have the random paragraph be the ending \nparagraph in a short story. No matter which of these challenges is undertaken, the writer is forced to use creativity to incorporate the paragraph into their writing"
               }
               date={"12/12/2021"}
               day={"Monday"}
