@@ -2,13 +2,13 @@
 
 .BlogContainer {
   display: flex;
-  justify-content: space-between;
 }
 
 .BlogByline {
-  justify-self: flex-start;
-  margin-right: 30px;
+  position: relative;
+  top: 172px;
   &__author {
+    padding-top: 10px;
     font-weight: bold;
     font-size: 16px;
   }
@@ -22,11 +22,17 @@
 }
 
 .BlogContent {
+  position: relative;
+  left: 80px;
+
   &__title {
     font-weight: 500;
     font-size: 50px;
+    text-align: center;
   }
   &__content {
+    margin-top: 70px;
     font-size: 15px;
+    padding: 10px 60px 140px 20px;
   }
 }

@@ -19,7 +19,7 @@ export default function BlogRead() {
               author={"JJ Watts"}
               title={"Incubators vs Accelarators"}
               content={
-                "If you ask anyone what an incubator is, they will most likely envision an\n apparatus in which  "
+                "If you ask anyone what an incubator is, they will most likely envision an\n apparatus in which jhd j hkshdkj shk hkh kh WJDHAkjsdh jkajhd whd whd jadj ahhf hw ehf j"
               }
               date={"12/12/2021"}
               day={"Monday"}
