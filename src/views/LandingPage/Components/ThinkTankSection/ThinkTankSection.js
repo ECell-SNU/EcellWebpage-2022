@@ -9,13 +9,7 @@ function ThinkTankSection(props) {
   return (
     <section className="ThinkTankSectionWrapper">
       <div className="ThinkTankSectionWrapper__content-container">
-        <motion.div
-          animate={{ x: 100, y: -100 }}
-          transition={{ duration: 3, yoyo: Infinity }}
-          className="temporary-placeholder"
-        >
-          <img src={icon} height="500px" alt="icon" />
-        </motion.div>
+          <img className="animation-holder" src={icon} height="500px" alt="icon" />
         <LandingSectionTexts
           classifier="Think Tank"
           title="What is the think tank ?"

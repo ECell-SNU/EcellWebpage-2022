@@ -14,9 +14,12 @@
 @media only screen and (max-width: 1075px) {
   .ThinkTankSectionWrapper {
     &__content-container {
-      @include make-flex($dir: column-reverse);
-      gap: 30px;
+      @include make-flex($dir: column-reverse, $align: center);
       width: 100%;
     }
   }
+}
+
+.animation-holder{
+  width: 38rem;
 }
