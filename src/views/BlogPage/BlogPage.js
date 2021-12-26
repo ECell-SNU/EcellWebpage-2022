@@ -14,7 +14,7 @@ export default function BlogPage() {
         navItem4="Think Tank"
         navItem5="Archive"
         routeItem1="/home"
-        routeItem5="/blogs_archive"
+        routeItem5="/blogs/archive"
         routeItem3="/teams"
       />
       <div className="BlogPageWrapper__TextComponentWrapper">
@@ -32,16 +32,16 @@ export default function BlogPage() {
         }).map((data, index) => (
           <div className="BlogPageGrid__animationWrapper">
             <BlogArchive
-            tag={
-              data["Type"] === "Archive"
-                ? "BlogArchiveContainer__tag tag__archive"
-                : "BlogArchiveContainer__tag tag__latest"
-            }
-            key={index}
-            title={data["Title"]}
-            author={data["Author"]}
-            status={data["Type"]}
-          />
+              tag={
+                data["Type"] === "Archive"
+                  ? "BlogArchiveContainer__tag tag__archive"
+                  : "BlogArchiveContainer__tag tag__latest"
+              }
+              key={index}
+              title={data["Title"]}
+              author={data["Author"]}
+              status={data["Type"]}
+            />
           </div>
         ))}
       </div>

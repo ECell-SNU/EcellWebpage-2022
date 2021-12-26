@@ -2,12 +2,20 @@ import React from "react";
 // import PropTypes from "prop-types";
 import "./ThinkTankSection.scss";
 import LandingSectionTexts from "../../../../components/LandingSectionTexts/LandingSectionTexts";
+import icon from "../../../../Assets/Illustration/Desgin-frame.svg";
+import { motion, useMotionValue, useTransform } from "framer-motion";
 
 function ThinkTankSection(props) {
   return (
     <section className="ThinkTankSectionWrapper">
       <div className="ThinkTankSectionWrapper__content-container">
-        <div className="temporary-placeholder">hello</div>
+        <motion.div
+          animate={{ x: 100, y: -100 }}
+          transition={{ duration: 3, yoyo: Infinity }}
+          className="temporary-placeholder"
+        >
+          <img src={icon} height="500px" alt="icon" />
+        </motion.div>
         <LandingSectionTexts
           classifier="Think Tank"
           title="What is the think tank ?"

@@ -10,6 +10,8 @@ export default function Blog({
   credential,
   shareLink,
 }) {
+  console.log("Blog");
+  author = credential = date = day = title = content = "asdAsdasdasdasd";
   return (
     <div className="BlogContainer">
       <div className="BlogByline">

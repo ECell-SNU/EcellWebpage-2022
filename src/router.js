@@ -14,7 +14,7 @@ export default function Router() {
         <Route exact path="/events" component={views.EventPage} />
         <Route exact path="/teams" component={views.TeamPage} />
         <Route exact path="/blogMuskan" component={Blog} />
-        <Route exact path="/blogs_archive" component={views.ArchivePage} />
+        <Route exact path="/blogs/archive" component={views.ArchivePage} />
         <Route exact path="/blog_read" component={read} />
       </Switch>
     </BrowserRouter>
