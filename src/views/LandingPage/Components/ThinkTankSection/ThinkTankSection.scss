@@ -19,7 +19,18 @@
     }
   }
 }
-
-.animation-holder{
-  width: 38rem;
+.animationWrapper{
+  position: relative;
 }
+.animation-holder{
+  width: 35rem;
+}
+
+.animation-motion{
+  position: absolute;
+  width: 13.8rem;
+  background: rgba(0, 0, 0, 0);
+  top: 235px;
+  left: 265px;
+}
+

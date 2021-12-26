@@ -3,13 +3,17 @@ import React from "react";
 import "./ThinkTankSection.scss";
 import LandingSectionTexts from "../../../../components/LandingSectionTexts/LandingSectionTexts";
 import icon from "../../../../Assets/Illustration/Desgin-frame.svg";
+import movingicon from "../../../../Assets/Illustration/Bigboy-animation.svg"
 import { motion, useMotionValue, useTransform } from "framer-motion";
 
 function ThinkTankSection(props) {
   return (
     <section className="ThinkTankSectionWrapper">
       <div className="ThinkTankSectionWrapper__content-container">
-          <img className="animation-holder" src={icon} height="500px" alt="icon" />
+        <div className="animationWrapper">
+        <img className="animation-holder" src={icon} alt="icon" />
+        <img className="animation-motion" src={movingicon} alt="movingicon"/>
+        </div>
         <LandingSectionTexts
           classifier="Think Tank"
           title="What is the think tank ?"
