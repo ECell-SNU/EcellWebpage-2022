@@ -4340,6 +4340,18 @@
     "minimalistic-assert" "^1.0.1"
     "minimalistic-crypto-utils" "^1.0.1"
 
+"embla-carousel-react@^6.0.2":
+  "integrity" "sha512-oHNicBXb1V3o8KmKzgw38hf4SBy1i//7WY6dsHr7KAyrhyg9vGJck4h3S93TeIFtWJuctrxonlm6zlYzV9LYMQ=="
+  "resolved" "https://registry.npmjs.org/embla-carousel-react/-/embla-carousel-react-6.0.2.tgz"
+  "version" "6.0.2"
+  dependencies:
+    "embla-carousel" "6.0.2"
+
+"embla-carousel@6.0.2":
+  "integrity" "sha512-6unBWN0u6ryxwHxTafQs2z9VnvOT3J7FGzLlmISFWw+kPEi8k8rlReRcqvotg6BTYRjsPmpH909xhPe/7DsUYw=="
+  "resolved" "https://registry.npmjs.org/embla-carousel/-/embla-carousel-6.0.2.tgz"
+  "version" "6.0.2"
+
 "emittery@^0.7.1":
   "integrity" "sha512-A8OG5SR/ij3SsJdWDJdkkSYUjQdCUx6APQXem0SaEePBSRg4eymGYwBkKo1Y6DU+af/Jn2dBQqDBvjnr9Vi8nQ=="
   "resolved" "https://registry.npmjs.org/emittery/-/emittery-0.7.2.tgz"
