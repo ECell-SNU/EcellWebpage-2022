@@ -94,7 +94,7 @@ export default function TeamPage() {
           />
         </div>
       </div>
-      <div className="SectionWrapper__leads">
+      <section className="SectionWrapper__leads">
         <div className="TeamPageHeading leadsTitle">Team Leads</div>
         <div className="TeamPageWrapper__grid1">
           <TeamMember
@@ -182,7 +182,7 @@ export default function TeamPage() {
             imageSrcAlt={"WdLead2"}
           />
         </div>
-      </div>
+      </section>
       
       <section>
         <h1>Other members</h1>
