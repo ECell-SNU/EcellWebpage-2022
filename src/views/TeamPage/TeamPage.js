@@ -183,6 +183,11 @@ export default function TeamPage() {
           />
         </div>
       </div>
+      
+      <section>
+        <h1>Other members</h1>
+        <p>Content</p>
+      </section>
     </div>
   );
 }
