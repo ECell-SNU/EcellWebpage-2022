@@ -19,7 +19,8 @@ export default function ReadBlog() {
             <div className="blogContent__container__bot__writtenBy">
               <hr />
               <p>
-                Written By <br></br>JJ Watts,2nd Year EEE<br></br>
+                Written By: <br></br>JJ Watts, 2nd Year EEE<br></br>
+                15 /10 /2021 , Monday
               </p>
             </div>
             <p className="blogContent__container__bot__text">
