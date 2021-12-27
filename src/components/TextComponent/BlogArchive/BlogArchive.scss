@@ -1,7 +1,3 @@
-* {
-  color: var(--title-txt-color);
-}
-
 .BlogArchiveContainer {
   color: var(--title-txt-color);
   //padding: 10px;
@@ -24,19 +20,18 @@
     left: -26px;
     top: -18px;
   }
-  
-  .tag__archive{
+
+  .tag__archive {
     font-weight: 600;
     background-color: var(--archive-blog-card);
     color: var(--title-txt-color);
   }
-  
+
   .tag__latest {
     font-weight: 600;
     background-color: var(--latest-blog-card);
     color: var(--background-color);
   }
-  
 }
 
 .BlogArchiveRouting {
@@ -72,4 +67,3 @@
     }
   }
 }
-
