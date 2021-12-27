@@ -15,13 +15,13 @@ export default function Footer() {
                     <h4>E-Cell</h4>
                 </li>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="/home">Home</a>
                     </li>
                     <li>
                         <a href="#">About us</a>
                     </li>
                     <li>
-                        <a href="#">Members</a>
+                        <a href="/teams">Members</a>
                     </li>
                     <li>
                         <a href="#">Think Tank</a>
