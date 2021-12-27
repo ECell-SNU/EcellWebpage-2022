@@ -13,7 +13,7 @@ export default function ReachOut() {
       </div>
       <form className="ReachOutContainer__form">
         <input type="text" placeholder="Send a message..." />
-        <button>&#8594;</button>
+        <a href="mailto:ecellsnu@snu.edu.in">&#8594;</a>
       </form>
       <hr></hr>
       <p>© 2022 E-Cell Shiv Nadar University, Noida, All Rights Reserved.</p>
