@@ -14,6 +14,7 @@ header {
   }
 }
 .blogContent {
+  font-family: Poppins;
   width: 100vw;
   color: white;
   &__container {
@@ -21,6 +22,11 @@ header {
     width: 80%;
     display: flex;
     flex-direction: column;
+    h1 {
+      text-align: center;
+      font-size: 46px;
+    }
+
     &__bot {
       display: flex;
       padding: 30px;
