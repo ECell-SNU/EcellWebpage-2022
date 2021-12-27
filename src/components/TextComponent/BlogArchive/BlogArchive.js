@@ -2,10 +2,13 @@ import React from "react";
 import propTypes from "prop-types";
 import "./BlogArchive.scss";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function BlogArchive({ title, author, status, tag }) {
   return (
-    <div className="BlogArchiveContainer">
+    <motion.div 
+    whileHover={{y: -10}}
+    className="BlogArchiveContainer">
       <p className={tag}>{status}</p>
       <Link
         to={`${author}/${title}`}
@@ -17,7 +20,7 @@ function BlogArchive({ title, author, status, tag }) {
       </Link>
 
       <button className="BlogArchiveRouting__redirect">Read Now</button>
-    </div>
+    </motion.div>
   );
 }
 
