@@ -14,12 +14,12 @@ export default function ReadBlog() {
       <hr />
       <main className="blogContent">
         <article className="blogContent__container">
-          <h1 className="blogContet__container__top">Heading</h1>
+          <h1 className="blogContet__container__top">Incubators vs Accelarators</h1>
           <div className="blogContent__container__bot">
             <div className="blogContent__container__bot__writtenBy">
-              <hr />
+              <div className="blogContent__container__bot__writtenBy__line"></div>
               <p>
-                Written By: <br></br>JJ Watts, 2nd Year EEE<br></br>
+                written by <br></br><span>JJ Watts ,</span> 2nd Year EEE<br></br>
                 15 /10 /2021 , Monday
               </p>
             </div>
