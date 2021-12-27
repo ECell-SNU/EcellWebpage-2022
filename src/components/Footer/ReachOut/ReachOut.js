@@ -13,10 +13,10 @@ export default function ReachOut() {
                 </h3>
             </div>
             <form className="ReachOutContainer__form">
-                <input type="text" value="Send a message..." />
-                <button>&rarr;</button>
-                <hr></hr>
+                <input type="text" placeholder="Send a message..." />
+                <button><img src={arrow}></img></button>
             </form>
+                <hr></hr>
             <p>© 2022 E-Cell Shiv Nadar University, Noida, All Rights Reserved.</p>
 
         </div>
