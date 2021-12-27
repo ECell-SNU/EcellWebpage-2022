@@ -1,0 +1,29 @@
+@import "../../styles/mixins";
+.FooterContainer {
+  @include make-flex($just: space-evenly, $dir: row);
+  
+
+  height: 30%;
+  ul{
+      list-style: none;
+  }
+
+  &__elements {
+    display: inline;
+    &__socials {
+      @include make-flex($just: space-evenly, $dir: row);
+      width: 10%;
+      list-style: none;
+      gap: 30px;
+      li {
+        a {
+          @include make-flex();
+        }
+      }
+      .navbarIcons {
+        height: 1.2rem;
+        width: 1.2rem;
+      }
+    }
+  }
+}

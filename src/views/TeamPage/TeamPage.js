@@ -114,7 +114,7 @@ export default function TeamPage() {
           <TeamMember
             MemberName={"Agaash S.B."}
             Memberposition={"Engagement"}
-            imageSrc={AgaashEngagement}
+              imageSrc={AgaashEngagement}
             imageSrcAlt={"EngLead1"}
           />
 
