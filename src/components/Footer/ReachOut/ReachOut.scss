@@ -1,0 +1,36 @@
+
+.ReachOutContainer{
+    
+    
+
+    &__heading{
+        display: inline-flex;
+        &__text{
+            color: #000;
+            font-weight: 600;
+            font-size: 40px;
+            margin: auto;
+        }
+        &__logo{
+          width: 60px;
+          margin-right: 10px;
+        }
+    }
+    &__form{
+        margin-left: 60px;
+        input{
+            
+            width: 400px;
+            font-weight: 400;
+            height: 20px;
+            border: 0;
+            
+        }
+        button{
+            border: 0;
+            width: 60px;
+            height: 30px;
+            background-color: #fff;
+        }
+    }
+}

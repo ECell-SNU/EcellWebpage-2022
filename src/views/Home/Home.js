@@ -37,6 +37,11 @@ export default function Home() {
             Read a Blog
           </Link>
         </li>
+        <li>
+          <Link className="links-container__link" to={`/test`}>
+            DevTest (Currently holds Footer)
+          </Link>
+        </li>
       </ul>
     </div>
   );
