@@ -2,14 +2,31 @@
 .ReachOutContainer{
     
     
-    
-    
+
     &__heading{
+        display: inline-flex;
         &__text{
-            color: #ffffff;
+            color: #000;
+            font-weight: 600;
+            font-size: 40px;
+            margin: auto;
         }
         &__logo{
-          width: 80px;
+          width: 60px;
+          margin-right: 10px;
+        }
+    }
+    &__form{
+        margin: auto;
+        input{
+            
+            width: 400px;
+            font-weight: 400;
+            height: 20px;
+            border: 0;
+        }
+        hr{
+            width: 440px;
         }
     }
 }
