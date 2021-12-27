@@ -9,11 +9,11 @@ import Twitter from "../../Assets/icons/logo-twitter.svg";
 
 export default function BlogRead() {
   return (
-    <section className="LandingPageWrapper">
+    <>
       <header>
         <div className="navbar">
           <div className="navbar__darkToggle">
-            <img src={DarkMode}></img>
+            <img src={DarkMode} alt="mode toggle"></img>
             <p>Dark Mode</p>
           </div>
           <div className="navbar__nav">
@@ -21,9 +21,9 @@ export default function BlogRead() {
             <p>Archive</p>
           </div>
           <div className="navbar__share">
-            <img src={Insta} height="30px"></img>
-            <img src={FB} height="30px"></img>
-            <img src={Twitter} height="30px"></img>
+            <img src={Insta} alt="insta logo" height="30px"></img>
+            <img src={FB} alt="facebook logo" height="30px"></img>
+            <img src={Twitter} alt="twitter logo" height="30px"></img>
           </div>
         </div>
         <hr />
@@ -45,6 +45,6 @@ export default function BlogRead() {
           </div>
         </div>
       </main>
-    </section>
+    </>
   );
 }
