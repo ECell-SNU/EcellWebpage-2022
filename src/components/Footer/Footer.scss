@@ -1,31 +1,39 @@
 @import "../../styles/mixins";
+
 .FooterContainer {
   @include make-flex($just: space-evenly, $dir: row);
   background-color: white;
   font-family: var(--text-font);
-  height: 30%;
-  ul{
-      list-style: none;
-      a{
-          text-decoration: none;
-          color: black;
-      }
+  height: 40%;
+  ul {
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: black;
+    }
   }
 
   &__elements {
-    display: inline-flex;
-    
-    ul{
-        li{
-            h4{
-                font-size: 18px;
-            }
-            font-size: 15px;
+    display: flex;
+
+    &__contact {
+      position: relative;
+      top: -25px;
+    }
+
+    ul {
+      li {
+        h4 {
+          font-size: 18px;
         }
+        font-size: 15px;
+      }
     }
     &__socials {
       @include make-flex($just: space-evenly, $dir: row);
       width: 10%;
+      position: relative;
+      top: -54px;
       list-style: none;
       gap: 30px;
       li {

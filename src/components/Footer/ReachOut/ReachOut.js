@@ -1,4 +1,4 @@
-import logoECell from "../../../Assets/icons/logo-ecell.svg";
+import logoECell from "../../../Assets/icons/ecell-bw.svg";
 import arrow from "../../../Assets/icons/arrow.svg";
 import "./ReachOut.scss";
 
@@ -13,9 +13,7 @@ export default function ReachOut() {
       </div>
       <form className="ReachOutContainer__form">
         <input type="text" placeholder="Send a message..." />
-        <button>
-          <img src={arrow}></img>
-        </button>
+        <button>&#8594;</button>
       </form>
       <hr></hr>
       <p>© 2022 E-Cell Shiv Nadar University, Noida, All Rights Reserved.</p>
