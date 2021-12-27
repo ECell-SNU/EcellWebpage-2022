@@ -1,15 +1,28 @@
 @import "../../styles/mixins";
 .FooterContainer {
   @include make-flex($just: space-evenly, $dir: row);
-  
-
+  background-color: white;
+  font-family: var(--text-font);
   height: 30%;
   ul{
       list-style: none;
+      a{
+          text-decoration: none;
+          color: black;
+      }
   }
 
   &__elements {
-    display: inline;
+    display: inline-flex;
+    
+    ul{
+        li{
+            h4{
+                font-size: 18px;
+            }
+            font-size: 15px;
+        }
+    }
     &__socials {
       @include make-flex($just: space-evenly, $dir: row);
       width: 10%;
