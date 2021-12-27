@@ -19,18 +19,31 @@
     }
   }
 }
-.animationWrapper{
+.animationWrapper {
   position: relative;
 }
-.animation-holder{
+.animation-holder {
   width: 35rem;
 }
 
-.animation-motion{
+.animation-motion {
   position: absolute;
   width: 13.8rem;
   background: rgba(0, 0, 0, 0);
   top: 235px;
   left: 265px;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
-
+@keyframes example {
+  0% {
+    top: 235px;
+    left: 265px;
+  }
+  100% {
+    left: 200px;
+    top: 0;
+  }
+}
