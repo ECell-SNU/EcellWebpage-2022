@@ -13,3 +13,21 @@ header {
     display: flex;
   }
 }
+.blogContent {
+  width: 100vw;
+  color: white;
+  &__container {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    &__bot {
+      display: flex;
+      padding: 30px;
+      &__writtenBy {
+        height: 100px;
+        width: 400px;
+      }
+    }
+  }
+}
