@@ -27,7 +27,8 @@ export default function DropDown() {
             <motion.div
             initial={{opacity: 0, height: 0}}
             animate={{opacity: 1, height: "auto"}}
-            transition={{deay: 5}} 
+            transition={{deay: 5}}
+            exit={{opacity: 0, height: 0}} 
             className="membersContainer__studentNames">
                   <p>Rani Vani</p>
                   <p>Rani Vani</p>
