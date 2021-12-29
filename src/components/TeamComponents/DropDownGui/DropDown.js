@@ -5,6 +5,22 @@ import StudentData from "../../../DataFiles/Members.json";
 
 import "../DropDownGui/DropDown.scss"
 
+const containerVariants = {
+    initial : {
+        opacity: 0,
+        height : 0
+    },
+    animate : {
+        opacity: 1,
+        height: "auto",
+
+        transition: {
+            type : "spring",
+            stiffness : 55
+        }
+    }
+}
+
 export default function DropDown() {
 
     const [containerState, setcontainerState] = useState(false);
@@ -27,7 +43,7 @@ export default function DropDown() {
             <motion.div
             initial={{opacity: 0, height: 0}}
             animate={{opacity: 1, height: "auto"}}
-            transition={{deay: 5}}
+            transition={{ type: "spring" ,stiffness: 50}}
             exit={{opacity: 0, height: 0}} 
             className="membersContainer__studentNames">
                   <p>Rani Vani</p>
