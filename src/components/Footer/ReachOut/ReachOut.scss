@@ -1,4 +1,13 @@
 .ReachOutContainer {
+  &__p {
+    padding-top: 20px;
+    position: relative;
+    bottom: -20px;
+    color: #787777;
+  }
+  &__a {
+    text-decoration: none;
+  }
   &__heading {
     display: inline-flex;
     position: relative;
@@ -40,15 +49,4 @@
     width: 460px;
     margin-left: 60px;
   }
-}
-
-p {
-  padding-top: 20px;
-  position: relative;
-  bottom: -20px;
-  color: #787777;
-}
-
-a {
-  text-decoration: none;
 }
