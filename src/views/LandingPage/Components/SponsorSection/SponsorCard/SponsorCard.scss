@@ -1,0 +1,16 @@
+@import "../../../../../styles/mixins";
+.SponsorCard {
+  @include make-flex();
+  border-radius: 10px;
+  position: relative;
+  flex: 0 0 350px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: auto;
+  width: auto;
+  padding: 20px;
+  img {
+    height: 100px;
+    width: 200px;
+  }
+}

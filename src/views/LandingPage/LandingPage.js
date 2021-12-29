@@ -9,6 +9,7 @@ import HeroSection from "./Components/HeroSection/HeroSection";
 import AboutUsSection from "./Components/AboutUsSection/AboutUsSection";
 import ThinkTankSection from "./Components/ThinkTankSection/ThinkTankSection";
 import Session from "./Components/Session/Session";
+import SponsorSection from "./Components/SponsorSection/SponsorSection";
 
 export default function LandingPage() {
   return (
@@ -58,6 +59,7 @@ export default function LandingPage() {
             content1="Sit amet volutpat consequat mauris nunc congue nisi vitae. Elit eget gravida cum sociis natoque penatibus et magnis dis. Turpis egestas maecenas  convallis posuere morbi leo urna molestie. "
           />
         </Session>
+        <SponsorSection />
       </main>
     </section>
   );
