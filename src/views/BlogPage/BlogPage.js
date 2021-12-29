@@ -44,11 +44,11 @@ export default function BlogPage() {
       <div className="BlogPageGrid">
         {BlogData.filter((data) => {
           return data["Type"] === "Latest";
-        }).map((data, index) => (
+        }).map((data, index, i) => (
           <motion.div 
           initial={{opacity : 0, y: -10}}
           animate={{opacity : 1, y: 0}}
-          transition={{delay : 0.1 ,duration : 0.6}}
+          transition={{delay : 0.6 * i ,duration : 0.6}}
           className="BlogPageGrid__animationWrapper">
             <BlogArchive
               tag={

@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 
 function BlogArchive({ title, author, status, tag }) {
   return (
-    <motion.div 
-    whileHover={{y: -10}}
+    <div 
+    // whileHover={{y: -10}}
     className="BlogArchiveContainer">
       <p className={tag}>{status}</p>
       <Link
@@ -20,7 +20,7 @@ function BlogArchive({ title, author, status, tag }) {
       </Link>
 
       <button className="BlogArchiveRouting__redirect">Read Now</button>
-    </motion.div>
+    </div>
   );
 }
 
