@@ -1,12 +1,9 @@
 .ReachOutContainer {
-  &__p {
-    padding-top: 20px;
+  p {
     position: relative;
-    bottom: -20px;
+    bottom: -40px;
+    left: 50px;
     color: #787777;
-  }
-  &__a {
-    text-decoration: none;
   }
   &__heading {
     display: inline-flex;
@@ -26,6 +23,9 @@
     }
   }
   &__form {
+    a {
+      text-decoration: none;
+    }
     margin-left: 60px;
     input {
       width: 400px;
