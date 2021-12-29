@@ -11,6 +11,7 @@ import ThinkTankSection from "./Components/ThinkTankSection/ThinkTankSection";
 import Session from "./Components/Session/Session";
 import SponsorSection from "./Components/SponsorSection/SponsorSection";
 import { motion } from "framer-motion";
+import { useInView } from "react-hook-inview";
 
 export default function LandingPage() {
   return (
