@@ -5,7 +5,6 @@ import aarAsec from "../../Assets/image/aarAsec.jpeg";
 import abhaTrea from "../../Assets/image/abhaTreas.jpeg";
 import shauFc from "../../Assets/image/shaurFc.jpg";
 import sample1 from "../../Assets/image/sampleImages/sample1.jpg";
-import TeamMember from "../../components/TeamComponents/TeamMember";
 import instagram from "../../Assets/icons/logo-instagram.svg";
 import twitter from "../../Assets/icons/logo-twitter.svg";
 import facebook from "../../Assets/icons/logo-facebook.svg";
@@ -17,6 +16,9 @@ import PalakDesVid from "../../Assets/image/teamLeads/PalakDesVid.jpeg";
 import SakshamMarketing from "../../Assets/image/teamLeads/SakshamMarketing.jpg";
 import SmritiEngagement from "../../Assets/image/teamLeads/SmritiEngagement.jpg";
 import PrathamWebDev from "../../Assets/image/teamLeads/Pratham.jpg";
+
+import TeamMember from "../../components/TeamComponents/TeamMember";
+import DropDown from "../../components/TeamComponents/DropDownGui/DropDown";
 
 
 export default function TeamPage() {
@@ -188,6 +190,7 @@ export default function TeamPage() {
       
       <section className="SectionWrapper__members">
         <h1 className="TeamPageHeading">Other Members</h1>
+        <DropDown/>
       </section>
     </div>
   );
