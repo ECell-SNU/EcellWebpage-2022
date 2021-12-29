@@ -7,17 +7,21 @@ import "../DropDownGui/DropDown.scss"
 
 const containerVariants = {
     initial : {
-        opacity: 0,
+        opacity : 0,
         height : 0
     },
     animate : {
-        opacity: 1,
-        height: "auto",
+        opacity : 1,
+        height : "auto",
 
         transition: {
             type : "spring",
             stiffness : 55
         }
+    },
+    exit : {
+        opacity : 0,
+        height : 0
     }
 }
 
@@ -41,10 +45,11 @@ export default function DropDown() {
       {
           containerState && (
             <motion.div
-            initial={{opacity: 0, height: 0}}
-            animate={{opacity: 1, height: "auto"}}
-            transition={{ type: "spring" ,stiffness: 50}}
-            exit={{opacity: 0, height: 0}} 
+            variants={containerVariants}
+            initial="initial"
+            animate="animate"
+            transition="transition"
+            exit="exit"
             className="membersContainer__studentNames">
                   <p>Rani Vani</p>
                   <p>Rani Vani</p>
