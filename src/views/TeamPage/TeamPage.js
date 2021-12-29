@@ -17,8 +17,8 @@ import PalakDesVid from "../../Assets/image/teamLeads/PalakDesVid.jpeg";
 import SakshamMarketing from "../../Assets/image/teamLeads/SakshamMarketing.jpg";
 import SmritiEngagement from "../../Assets/image/teamLeads/SmritiEngagement.jpg";
 import PrathamWebDev from "../../Assets/image/teamLeads/Pratham.jpg";
+import LandingSectionTexts from"../../components/LandingSectionTexts/LandingSectionTexts"
 
-import memberDrop from "./Components/memberDrop";
 
 export default function TeamPage() {
   return (
@@ -189,18 +189,8 @@ export default function TeamPage() {
       
       <section className="SectionWrapper__members">
         <h1 className="TeamPageHeading">Other Members</h1>
-        <div className="membersContainer">
-        <button className="membersContainer__yearTitle">
-          Class of 2022
-        </button>
-        <div className="membersContainer__studentNames">
-          <p>Rani Vani</p>
-          <p>Rani Vani</p>
-          <p>Rani Vani</p>
-          <p>Rani Vani</p>
-          <p>Rani Vani</p>
-        </div>
-        </div>
+        <LandingSectionTexts
+        classifier="Heo" />
       </section>
     </div>
   );
