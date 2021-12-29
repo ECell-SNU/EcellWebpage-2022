@@ -1,12 +1,13 @@
 import "./ArchivePage.scss";
 import BlogData from "../../DataFiles/BlogData.json";
 import BlogArchive from "../../components/TextComponent/BlogArchive/BlogArchive";
+import { motion } from "framer-motion";
 
 export default function ArchivePage() {
   return (
     <div className="ArchivePageWrapper">
       <header>
-        <nav className="ArchivePageNavbar">
+        <motion.nav className="ArchivePageNavbar">
           <a href="/blogs" className="ArchivePageNavbar__button">
             &larr; &nbsp; &nbsp;Go Back
           </a>
@@ -15,7 +16,7 @@ export default function ArchivePage() {
             placeholder="Search Here"
             className="ArchivePageNavbar__search"
           ></input>
-        </nav>
+        </motion.nav>
       </header>
       <main>
         <div className="ArchivePageWrapper__grid">
