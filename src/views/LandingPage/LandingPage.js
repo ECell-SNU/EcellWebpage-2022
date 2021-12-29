@@ -10,10 +10,15 @@ import AboutUsSection from "./Components/AboutUsSection/AboutUsSection";
 import ThinkTankSection from "./Components/ThinkTankSection/ThinkTankSection";
 import Session from "./Components/Session/Session";
 import SponsorSection from "./Components/SponsorSection/SponsorSection";
+import { motion } from "framer-motion";
 
 export default function LandingPage() {
   return (
     <section className="LandingPageWrapper">
+      <motion.div
+      initial={{opacity : 0, y: -10}}
+      animate={{opacity : 1, y: 0}}
+      transition={{type : "spring", stiffness : 120 ,delay : 1 ,duration : 1.5}}>
       <Header
         navItem1="Home"
         navItem2="About Us"
@@ -27,9 +32,16 @@ export default function LandingPage() {
         routeItem6="/blogs"
         routeItem7="/events"
       />
+      </motion.div>
 
       <main>
+        <motion.div 
+        initial={{opacity : 0, y: -10}}
+        animate={{opacity : 1, y: 0}}
+        transition={{delay : 0.5 ,duration : 0.6}}
+        >
         <HeroSection />
+        </motion.div>
 
         <AboutUsSection />
 
