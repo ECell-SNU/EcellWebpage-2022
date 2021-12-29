@@ -50,9 +50,11 @@ export default function DropDown() {
             transition="transition"
             exit="exit"
             className="membersContainer__studentNames">
-               {StudentData.map((student) => {return (
-                   <p>{student.name}</p>
-               )})}
+             {StudentData.filter((data) => {return (data["year"] == "2024")}).map(
+                 (student) => {return (
+                     <p>{student.name}</p>
+                 )}
+             )}
             </motion.div>
           )
       }
