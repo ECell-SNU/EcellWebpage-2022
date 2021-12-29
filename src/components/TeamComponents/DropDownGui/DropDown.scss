@@ -1,31 +1,38 @@
-
-.membersContainer{
-    &__yearTitle {
-      background: none;
-      cursor: pointer;
-      color: var(--primary-color);
-      border: none;
-      font-size: 16px;
-      font-weight: 700;
-      margin-top: 120px;
+.membersContainer {
+  height: fit-content;
+  &__button {
+    img {
+      position: relative;
+      // top: 2px;
+      left: 2px;
     }
-  
-    &__studentNames {
-      display: grid;
-      padding: 0px 0px 0px 3px;
-      grid-template-columns: repeat(5,1fr);
-      row-gap: 40px;
-      height: auto;
-  
-      p {
-        font-weight: 500;
-        color: var(--paragraph-txt-color);
-        font-size: 14px;
-  
-        &:hover {
-          color: var(--title-txt-color);
-          transition: all 0.3s;
-        }
+  }
+  &__yearTitle {
+    background: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    border: none;
+    font-size: 17.4px;
+    font-weight: 700;
+    margin-top: 120px;
+  }
+
+  &__studentNames {
+    display: grid;
+    padding: 26px 0px 0px 6px;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 40px;
+    height: auto;
+
+    p {
+      font-weight: 500;
+      color: var(--paragraph-txt-color);
+      font-size: 14px;
+
+      &:hover {
+        color: var(--title-txt-color);
+        transition: all 0.3s;
       }
     }
   }
+}

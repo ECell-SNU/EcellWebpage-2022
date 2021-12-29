@@ -33,14 +33,21 @@ export default function DropDown(props) {
   }
   return (
     <div className="membersContainer">
-      <button
-        onClick={() => {
-          OpenSaysMe();
-        }}
-        className="membersContainer__yearTitle"
-      >
-        Class of {props.year}
-      </button>
+      <div className="membersContainer__button">
+        <button
+          onClick={() => {
+            OpenSaysMe();
+          }}
+          className="membersContainer__yearTitle"
+        >
+          Class of {props.year}
+        </button>
+        <img
+          src="https://img.icons8.com/ios-glyphs/30/4a90e2/sort-down.png"
+          height="15px"
+          className="icon"
+        />
+      </div>
       <AnimatePresence>
         {containerState && (
           <motion.div
