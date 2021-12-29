@@ -15,8 +15,7 @@ const containerVariants = {
         height : "auto",
 
         transition: {
-            type : "spring",
-            stiffness : 55
+            duration : 0.8
         }
     },
     exit : {
@@ -51,16 +50,9 @@ export default function DropDown() {
             transition="transition"
             exit="exit"
             className="membersContainer__studentNames">
-                  <p>Rani Vani</p>
-                  <p>Rani Vani</p>
-                  <p>Rani Vani</p>
-                  <p>Rani Vani</p>
-                  <p>Rani Vani</p>
-                  <p>Rani Vani</p>
-                  <p>Rani Vani</p>
-                  <p>Rani Vani</p>
-                  <p>Rani Vani</p>
-                  <p>Rani Vani</p>
+               {StudentData.map((student) => {return (
+                   <p>{student.name}</p>
+               )})}
             </motion.div>
           )
       }
