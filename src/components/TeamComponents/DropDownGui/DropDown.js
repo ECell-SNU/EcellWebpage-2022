@@ -3,64 +3,62 @@ import React from "react";
 import { useState } from "react";
 import StudentData from "../../../DataFiles/Members.json";
 
-import "../DropDownGui/DropDown.scss"
+import "../DropDownGui/DropDown.scss";
 
 const containerVariants = {
-    initial : {
-        opacity : 0,
-        height : 0
-    },
-    animate : {
-        opacity : 1,
-        height : "auto",
+  initial: {
+    opacity: 0,
+    height: 0,
+  },
+  animate: {
+    opacity: 1,
+    height: "auto",
 
-        transition: {
-            duration : 0.5
-        }
+    transition: {
+      duration: 0.5,
     },
-    exit : {
-        opacity : 0,
-        height : 0
-    }
-}
+  },
+  exit: {
+    opacity: 0,
+    height: 0,
+  },
+};
 
 export default function DropDown(props) {
+  const [containerState, setContainerState] = useState(false);
 
-    const [containerState, setcontainerState] = useState(false);
-
-    function OpenSaysme(){
-        setcontainerState(!containerState);
-        console.log(containerState);
-    }
+  function OpenSaysMe() {
+    setContainerState(!containerState);
+    console.log(containerState);
+  }
   return (
-
-  <div className="membersContainer">
-       <button onClick={() => {
-           OpenSaysme();
-       }} className="membersContainer__yearTitle">
-          Class of {props.year}
+    <div className="membersContainer">
+      <button
+        onClick={() => {
+          OpenSaysMe();
+        }}
+        className="membersContainer__yearTitle"
+      >
+        Class of {props.year}
       </button>
       <AnimatePresence>
-      {
-          containerState && (
-            <motion.div
+        {containerState && (
+          <motion.div
             variants={containerVariants}
             initial="initial"
             animate="animate"
             transition="transition"
             exit="exit"
-            className="membersContainer__studentNames">
-             {StudentData.filter((data) => {return (data["year"] == props.year)}).map(
-                 (student) => {return (
-                     <p>{student.name}</p>
-                 )}
-             )}
-            </motion.div>
-          )
-      }
+            className="membersContainer__studentNames"
+          >
+            {StudentData.filter((data) => {
+              return data["year"] === props.year;
+            }).map((student) => {
+              return <p>{student.name}</p>;
+            })}
+          </motion.div>
+        )}
       </AnimatePresence>
-   </div>
-  
+    </div>
   );
-
 }

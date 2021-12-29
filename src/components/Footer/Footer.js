@@ -17,13 +17,13 @@ export default function Footer() {
             <a href="/home">Home</a>
           </li>
           <li>
-            <a href="#">About us</a>
+            <a href="/">About us</a>
           </li>
           <li>
             <a href="/teams">Members</a>
           </li>
           <li>
-            <a href="#">Think Tank</a>
+            <a href="/">Think Tank</a>
           </li>
         </ul>
       </div>
@@ -33,7 +33,7 @@ export default function Footer() {
           <h4>Contact Us</h4>
         </li>
         <li>
-          <a href="#">+919678829992</a>
+          <a href="/">+919678829992</a>
         </li>
         <li>
           <a href="mailto:ecellsnu@snu.edu.in">ecellsnu@snu.edu.in</a>
