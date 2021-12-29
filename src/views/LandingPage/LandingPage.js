@@ -10,16 +10,31 @@ import AboutUsSection from "./Components/AboutUsSection/AboutUsSection";
 import ThinkTankSection from "./Components/ThinkTankSection/ThinkTankSection";
 import Session from "./Components/Session/Session";
 import SponsorSection from "./Components/SponsorSection/SponsorSection";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-hook-inview";
 import { useEffect } from "react";
 
 export default function LandingPage() {
 
   const  [ref, inView] = useInView();
-
+  const animationTrigger = useAnimation();
   useEffect(() => {
-    console.log("im in view") ;
+    if(inView){
+      animationTrigger.start({
+        opacity : 1,
+        y : 0,
+        transition : {
+          delay : 0.5 ,duration : 0.6
+        }
+      })
+    }
+
+    if(!inView){
+      animationTrigger.start({
+        opacity : 0,
+        y : 10
+      })
+    }
   }, [inView]);
 
   return (
@@ -47,14 +62,17 @@ export default function LandingPage() {
         <motion.div 
         initial={{opacity : 0, y: -10}}
         animate={{opacity : 1, y: 0}}
-        transition={{delay : 0.5 ,duration : 0.6}}
+        transition={{delay : 0.1 ,duration : 0.6}}
         >
         <HeroSection />
         </motion.div>
 
-        <div ref={ref}>
+        <motion.div 
+        animate={animationTrigger}
+        ref={ref}
+        >
         <AboutUsSection />
-        </div>
+        </motion.div>
 
         <ThinkTankSection />
 
