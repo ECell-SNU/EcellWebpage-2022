@@ -184,9 +184,20 @@ export default function TeamPage() {
         </div>
       </section>
       
-      <section>
-        <h1>Other members</h1>
-        <p>Content</p>
+      <section className="SectionWrapper__members">
+        <h1 className="TeamPageHeading">Other Members</h1>
+        <div className="membersContainer">
+        <button className="membersContainer__yearTitle">
+          Class of 2022
+        </button>
+        <div className="membersContainer__studentNames">
+          <p>Rani Vani</p>
+          <p>Rani Vani</p>
+          <p>Rani Vani</p>
+          <p>Rani Vani</p>
+          <p>Rani Vani</p>
+        </div>
+        </div>
       </section>
     </div>
   );
