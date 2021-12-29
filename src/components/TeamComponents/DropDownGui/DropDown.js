@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
 import { useState } from "react";
 import StudentData from "../../../DataFiles/Members.json";
@@ -21,18 +21,28 @@ export default function DropDown() {
        }} className="membersContainer__yearTitle">
           Class of 2022
       </button>
-      <div className="membersContainer__studentNames">
-            <p>Rani Vani</p>
-            <p>Rani Vani</p>
-            <p>Rani Vani</p>
-            <p>Rani Vani</p>
-            <p>Rani Vani</p>
-            <p>Rani Vani</p>
-            <p>Rani Vani</p>
-            <p>Rani Vani</p>
-            <p>Rani Vani</p>
-            <p>Rani Vani</p>
-      </div>
+      <AnimatePresence>
+      {
+          containerState && (
+            <motion.div
+            initial={{opacity: 0, height: 0}}
+            animate={{opacity: 1, height: "auto"}}
+            transition={{deay: 5}} 
+            className="membersContainer__studentNames">
+                  <p>Rani Vani</p>
+                  <p>Rani Vani</p>
+                  <p>Rani Vani</p>
+                  <p>Rani Vani</p>
+                  <p>Rani Vani</p>
+                  <p>Rani Vani</p>
+                  <p>Rani Vani</p>
+                  <p>Rani Vani</p>
+                  <p>Rani Vani</p>
+                  <p>Rani Vani</p>
+            </motion.div>
+          )
+      }
+      </AnimatePresence>
    </div>
   
   );

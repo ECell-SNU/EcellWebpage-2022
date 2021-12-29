@@ -191,6 +191,8 @@ export default function TeamPage() {
       <section className="SectionWrapper__members">
         <h1 className="TeamPageHeading">Other Members</h1>
         <DropDown/>
+        <DropDown/>
+        <DropDown/>
       </section>
     </div>
   );
