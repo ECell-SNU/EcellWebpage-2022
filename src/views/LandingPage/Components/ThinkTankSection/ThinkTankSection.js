@@ -3,8 +3,8 @@ import React from "react";
 import "./ThinkTankSection.scss";
 import LandingSectionTexts from "../../../../components/LandingSectionTexts/LandingSectionTexts";
 import icon from "../../../../Assets/Illustration/Desgin-frame.svg";
-import movingicon from "../../../../Assets/Illustration/Bigboy-animation.svg";
-import { motion } from "framer-motion";
+import movingIcon from "../../../../Assets/Illustration/Bigboy-animation.svg";
+// import { motion } from "framer-motion";
 
 function ThinkTankSection(props) {
   return (
@@ -17,9 +17,9 @@ function ThinkTankSection(props) {
             animate={{ x: 100, y: -100 }}
             transition={{ duration: 3, yoyo: Infinity }}
           >
-            <img src={movingicon} alt="movingicon" />
+            <img src={movingIcon} alt="movingIcon" />
 					</motion.div> */}
-          <img src={movingicon} className="animation-motion" alt="movingicon" />
+          <img src={movingIcon} className="animation-motion" alt="movingIcon" />
         </div>
         <LandingSectionTexts
           classifier="Think Tank"

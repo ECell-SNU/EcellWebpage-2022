@@ -1,0 +1,38 @@
+.membersContainer {
+  height: fit-content;
+  &__button {
+    img {
+      position: relative;
+      // top: 2px;
+      left: 2px;
+    }
+  }
+  &__yearTitle {
+    background: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    border: none;
+    font-size: 17.4px;
+    font-weight: 700;
+    margin-top: 120px;
+  }
+
+  &__studentNames {
+    display: grid;
+    padding: 30px 0px 0px 2px;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 40px;
+    height: auto;
+
+    p {
+      font-weight: 500;
+      color: var(--paragraph-txt-color);
+      font-size: 14px;
+
+      &:hover {
+        color: var(--title-txt-color);
+        transition: all 0.3s;
+      }
+    }
+  }
+}
