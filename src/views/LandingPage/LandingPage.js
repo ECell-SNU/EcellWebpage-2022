@@ -37,6 +37,36 @@ export default function LandingPage() {
       })
     }
 
+    if(inView__TTS){
+      animationTrigger__TTS.start({
+        opacity : 1,
+        y : 0,
+        transition : {
+          delay : 0.3 ,duration : 0.6
+        }
+      })
+    }
+
+    if(inView__SS1){
+      animationTrigger__SS1.start({
+        opacity : 1,
+        y : 0,
+        transition : {
+          delay : 0.3 ,duration : 0.6
+        }
+      })
+    }
+
+    if(inView__SS2){
+      animationTrigger__SS2.start({
+        opacity : 1,
+        y : 0,
+        transition : {
+          delay : 0.3 ,duration : 0.6
+        }
+      })
+    }
+
 
     if(!inView__ATS){
       animationTrigger__ATS.start({
@@ -44,7 +74,28 @@ export default function LandingPage() {
         y : 10
       })
     }
-  }, [inView__ATS]);
+
+    if(!inView__TTS){
+      animationTrigger__TTS.start({
+        opacity : 0,
+        y : 10
+      })
+    }
+
+    if(!inView__SS1){
+      animationTrigger__SS1.start({
+        opacity : 0,
+        y : 10
+      })
+    }
+
+    if(!inView__SS2){
+      animationTrigger__SS2.start({
+        opacity : 0,
+        y : 10
+      })
+    }
+  }, [inView__ATS], [inView__TTS], [inView__SS1], [inView__SS2]);
 
   return (
     <section className="LandingPageWrapper">
