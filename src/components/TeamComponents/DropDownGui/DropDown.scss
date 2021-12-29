@@ -2,6 +2,7 @@
 .membersContainer{
     &__yearTitle {
       background: none;
+      cursor: pointer;
       color: var(--primary-color);
       border: none;
       font-size: 18px;
