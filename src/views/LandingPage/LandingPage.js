@@ -12,8 +12,16 @@ import Session from "./Components/Session/Session";
 import SponsorSection from "./Components/SponsorSection/SponsorSection";
 import { motion } from "framer-motion";
 import { useInView } from "react-hook-inview";
+import { useEffect } from "react";
 
 export default function LandingPage() {
+
+  const  [ref, inView] = useInView();
+
+  useEffect(() => {
+    console.log("im in view") ;
+  }, [inView]);
+
   return (
     <section className="LandingPageWrapper">
       <motion.div
@@ -44,7 +52,9 @@ export default function LandingPage() {
         <HeroSection />
         </motion.div>
 
+        <div ref={ref}>
         <AboutUsSection />
+        </div>
 
         <ThinkTankSection />
 
