@@ -16,33 +16,42 @@ import { useEffect } from "react";
 
 export default function LandingPage() {
 
-  const  [ref, inView] = useInView();
-  const animationTrigger = useAnimation();
+  const  [ref__ATS, inView__ATS] = useInView();
+  const  [ref__TTS, inView__TTS] = useInView();
+  const  [ref__SS1, inView__SS1] = useInView();
+  const  [ref__SS2, inView__SS2] = useInView();
+
+  const animationTrigger__ATS = useAnimation();
+  const animationTrigger__TTS = useAnimation();
+  const animationTrigger__SS1 = useAnimation();
+  const animationTrigger__SS2 = useAnimation();
+
   useEffect(() => {
-    if(inView){
-      animationTrigger.start({
+    if(inView__ATS){
+      animationTrigger__ATS.start({
         opacity : 1,
         y : 0,
         transition : {
-          delay : 0.5 ,duration : 0.6
+          delay : 0.3 ,duration : 0.6
         }
       })
     }
 
-    if(!inView){
-      animationTrigger.start({
+
+    if(!inView__ATS){
+      animationTrigger__ATS.start({
         opacity : 0,
         y : 10
       })
     }
-  }, [inView]);
+  }, [inView__ATS]);
 
   return (
     <section className="LandingPageWrapper">
       <motion.div
       initial={{opacity : 0, y: -10}}
       animate={{opacity : 1, y: 0}}
-      transition={{type : "spring", stiffness : 120 ,delay : 1 ,duration : 1.5}}>
+      transition={{type : "spring", stiffness : 120 ,delay : 0.6 ,duration : 1.2}}>
       <Header
         navItem1="Home"
         navItem2="About Us"
@@ -68,8 +77,8 @@ export default function LandingPage() {
         </motion.div>
 
         <motion.div 
-        animate={animationTrigger}
-        ref={ref}
+        animate={animationTrigger__ATS}
+        ref={ref__ATS}
         >
         <AboutUsSection />
         </motion.div>
