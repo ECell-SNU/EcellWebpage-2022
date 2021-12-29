@@ -15,7 +15,7 @@ const containerVariants = {
         height : "auto",
 
         transition: {
-            duration : 0.8
+            duration : 0.5
         }
     },
     exit : {
@@ -24,7 +24,7 @@ const containerVariants = {
     }
 }
 
-export default function DropDown() {
+export default function DropDown(props) {
 
     const [containerState, setcontainerState] = useState(false);
 
@@ -38,7 +38,7 @@ export default function DropDown() {
        <button onClick={() => {
            OpenSaysme();
        }} className="membersContainer__yearTitle">
-          Class of 2022
+          Class of {props.year}
       </button>
       <AnimatePresence>
       {
@@ -50,7 +50,7 @@ export default function DropDown() {
             transition="transition"
             exit="exit"
             className="membersContainer__studentNames">
-             {StudentData.filter((data) => {return (data["year"] == "2024")}).map(
+             {StudentData.filter((data) => {return (data["year"] == props.year)}).map(
                  (student) => {return (
                      <p>{student.name}</p>
                  )}

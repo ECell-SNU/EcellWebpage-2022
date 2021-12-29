@@ -190,9 +190,9 @@ export default function TeamPage() {
       
       <section className="SectionWrapper__members">
         <h1 className="TeamPageHeading">Other Members</h1>
-        <DropDown/>
-        <DropDown/>
-        <DropDown/>
+        <DropDown year="2023" />
+        <DropDown year="2024" />
+        <DropDown year="2025" />
       </section>
     </div>
   );
