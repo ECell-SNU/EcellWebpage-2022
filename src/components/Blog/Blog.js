@@ -13,6 +13,7 @@ export default function Blog({
   return (
     <div className="BlogContainer">
       <div className="BlogByline">
+        <hr></hr>
         <div className="BlogByline__author">{author}</div>
         <div className="BlogByline__credential">{credential}</div>
         <div className="BlogByline__date">

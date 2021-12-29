@@ -8,6 +8,16 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 65px;
+
+    &__animationWrapper {
+      background-color: rgba(0, 255, 255, 0);
+      will-change: transform;
+      transition: transform 480ms;
+      &:hover {
+        transform: translateY(-3.7%);
+        transition: ease-in-out 0.3s;
+      }
+    }
   }
 }
 

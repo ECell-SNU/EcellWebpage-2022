@@ -1,3 +1,68 @@
 header {
   margin-top: 30px;
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  &__darkToggle {
+    display: flex;
+    width: 200px;
+  }
+  &__nav {
+    display: flex;
+  }
+}
+.blogContent {
+  font-family: Poppins;
+  width: 100vw;
+  color: white;
+  &__container {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      text-align: center;
+      font-size: 45px;
+      font-weight: 500;
+      margin-bottom: 5%;
+      position: relative;
+      left: 3%;
+    }
+
+    &__bot {
+      &__writtenBy {
+        width: 20%;
+        min-width: 20%;
+      }
+      p {
+        line-height: 167.5%;
+        margin: 0;
+        width: 71%;
+      }
+      display: flex;
+      padding: 4px;
+      &__writtenBy {
+        margin-right: 7%;
+    &__line {
+      width: 210px;
+      height: 2px;
+      background: #ffff;
+      margin-top: 8px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+        height: 100px;
+        p {
+          line-height: 167.5%;
+          width: clamp(450px, 20%, 150px);
+        }
+
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

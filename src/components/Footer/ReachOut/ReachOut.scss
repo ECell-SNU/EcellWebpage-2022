@@ -1,0 +1,54 @@
+.ReachOutContainer {
+  &__heading {
+    display: inline-flex;
+    position: relative;
+    left: -13px;
+    margin-bottom: 30px;
+    bottom: -8px;
+    &__text {
+      color: #000;
+      font-weight: 600;
+      font-size: 30px;
+      margin: auto;
+    }
+    &__logo {
+      width: 42px;
+      margin-right: 30px;
+    }
+  }
+  &__form {
+    margin-left: 60px;
+    input {
+      width: 400px;
+      font-weight: 400;
+      height: 20px;
+      border: 0;
+      font-family: var(--text-font);
+      font-size: 16px;
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      border: 0;
+      width: 60px;
+      height: 30px;
+      background-color: #fff;
+    }
+  }
+  hr {
+    width: 460px;
+    margin-left: 60px;
+  }
+}
+
+p {
+  padding-top: 20px;
+  position: relative;
+  bottom: -20px;
+  color: #787777;
+}
+
+a {
+  text-decoration: none;
+}

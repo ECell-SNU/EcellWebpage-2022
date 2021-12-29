@@ -1,33 +1,37 @@
-import "../ReadBlog/ReadBlog.scss";
-import data from "../../DataFiles/BlogData.json";
-import Blog from "../../components/Blog/Blog";
+import "./ReadBlog.scss";
+/*
+import instagram from "../../Assets/icons/logo-instagram.svg";
+import twitter from "../../Assets/icons/logo-twitter.svg";
+import meta from "../../Assets/icons/logo-facebook.svg";
+import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
-export default function BlogRead() {
+*/
+export default function ReadBlog() {
   return (
-    <section className="LandingPageWrapper">
-      <header>
-        <div>Nav Bar Goes Here</div>
-        <br></br>
-        <hr />
-        <br></br>
-      </header>
-
-      <main>
-        <div className="ContentContainer">
-          <div className="ContentContainer__byline">
-            <Blog
-              author={"JJ Watts"}
-              title={"Incubators vs Accelarators"}
-              content={
-                "If you ask anyone what an incubator is, they will most likely envision an\n apparatus in which  "
-              }
-              date={"12/12/2021"}
-              day={"Monday"}
-              credential={"2nd Year EEE"}
-            />
+    <>
+      <nav>Navbar goes here</nav>
+      <hr />
+      <main className="blogContent">
+        <article className="blogContent__container">
+          <h1 className="blogContet__container__top">Incubators vs Accelarators</h1>
+          <div className="blogContent__container__bot">
+            <div className="blogContent__container__bot__writtenBy">
+              <div className="blogContent__container__bot__writtenBy__line"></div>
+              <p>
+                written by <br></br><span>JJ Watts ,</span> 2nd Year EEE<br></br>
+                15 /10 /2021 , Monday
+              </p>
+            </div>
+            <p className="blogContent__container__bot__text">
+              Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem
+              IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
+              IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
+              Ipsum
+            </p>
           </div>
-        </div>
+        </article>
       </main>
-    </section>
+    </>
   );
 }
