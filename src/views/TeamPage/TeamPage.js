@@ -19,13 +19,17 @@ import PrathamWebDev from "../../Assets/image/teamLeads/Pratham.jpg";
 
 import TeamMember from "../../components/TeamComponents/TeamMember";
 import DropDown from "../../components/TeamComponents/DropDownGui/DropDown";
-
+import { motion } from "framer-motion";
 
 export default function TeamPage() {
   return (
     <div className="TeamPageWrapper">
       <header>
-        <nav className="TeamPageNavbar">
+        <motion.nav
+          initial={{opacity : 0, y: -10}}
+          animate={{opacity : 1, y: 0}}
+          transition={{type : "spring", stiffness : 120 ,delay : 0.6 ,duration : 1.2}}
+          className="TeamPageNavbar">
           <a href="/home" className="TeamPageNavbar__button">
             &larr; &nbsp; &nbsp;Go Back
           </a>
@@ -55,7 +59,7 @@ export default function TeamPage() {
               </a>
             </li>
           </ul>
-        </nav>
+        </motion.nav>
       </header>
 
       <div className="SectionWrapper">
