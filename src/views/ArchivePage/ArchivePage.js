@@ -24,7 +24,7 @@ export default function ArchivePage() {
       </header>
       <main>
         <div className="ArchivePageWrapper__grid">
-        {BlogData.filter((data) => {return data["Type"] === "Archive"}).map((data, index, i) => (
+        {BlogData.filter((data) => {return data["Type"] === "Archive"}).map((data, index) => (
           <motion.div
           initial={{opacity : 0, y: 10}}
           animate={{opacity : 1, y: 0}}
