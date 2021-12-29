@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import React from "react";
+import StudentData from "../../../DataFiles/Members.json";
 
 import "../DropDownGui/DropDown.scss"
 
