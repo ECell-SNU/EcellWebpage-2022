@@ -44,7 +44,7 @@ export default function DropDown(props) {
         </button>
         <img
           src="https://img.icons8.com/ios-glyphs/30/4a90e2/sort-down.png"
-          height="15px"
+          height="14.4px"
           className="icon"
         />
       </div>
