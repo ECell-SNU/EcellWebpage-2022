@@ -1,7 +1,6 @@
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-hook-inview";
 import { useEffect } from "react";
-import propTypes from "prop-types";
 
 export default function AnimationRender(props) {
   const [ref__ATS, inView__ATS] = useInView({
