@@ -41,6 +41,7 @@ export default function LandingPage() {
         content1="Sit amet volutpat consequat mauris nunc congue nisi vitae. Elit eget gravida cum sociis natoque penatibus et magnis dis. Turpis egestas maecenas  convallis posuere morbi leo urna molestie. "
       />
     </Session>,
+    <SponsorSection />,
   ];
 
   return (
