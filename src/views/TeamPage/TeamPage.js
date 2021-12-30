@@ -62,9 +62,14 @@ export default function TeamPage() {
         </motion.nav>
       </header>
 
-      <div className="SectionWrapper">
+      <motion.div 
+      initial={{opacity : 0, y: -10}}
+      animate={{opacity : 1, y: 0}}
+      transition={{delay : 0.1 ,duration : 0.6}}
+        className="SectionWrapper">
         <div className="TeamPageHeading">The Core</div>
-        <div className="TeamPageWrapper__grid1">
+        <motion.div
+        className="TeamPageWrapper__grid1">
           <TeamMember
             MemberName={"Krishna Madhur"}
             Memberposition={"Seceratry"}
@@ -85,7 +90,7 @@ export default function TeamPage() {
             imageSrc={aarAsec}
             imageSrcAlt={"ASec"}
           />
-        </div>
+        </motion.div>
         <div className="TeamPageWrapper__grid2">
           <TeamMember
             MemberName={"Abharika Mohanty"}
@@ -101,7 +106,7 @@ export default function TeamPage() {
             imageSrcAlt={"Fc"}
           />
         </div>
-      </div>
+      </motion.div>
       <section className="SectionWrapper__leads">
         <div className="TeamPageHeading leadsTitle">Team Leads</div>
         <div className="TeamPageWrapper__grid1">
