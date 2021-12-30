@@ -17,9 +17,7 @@ export default function Router() {
         <Route exact path="/blogMuskan" component={Blog} />
         <Route exact path="/blogs/archive" component={views.ArchivePage} />
         <Route exact path="/blog_read" component={read} />
-        
         <Route exact path="/test" component={Footer} />
-        
       </Switch>
     </BrowserRouter>
   );
