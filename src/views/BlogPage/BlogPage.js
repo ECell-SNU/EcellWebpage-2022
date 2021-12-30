@@ -5,22 +5,8 @@ import BlogData from "../../DataFiles/BlogData.json";
 import "../BlogPage/BlogPage.scss";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-hook-inview";
-import { useEffect } from "react";
 
 export default function BlogPage() {
-
-  const [ref, inView] = useInView()
-  const animationTrigger = useAnimation();
-
-  useEffect(() => {
-    if(inView){
-      //animation
-    }
-
-    if(!inView){
-      //initial
-    }
-  }, [inView])
 
   return (
     <div className="BlogPageWrapper">

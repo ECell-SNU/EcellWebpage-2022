@@ -19,9 +19,36 @@ import PrathamWebDev from "../../Assets/image/teamLeads/Pratham.jpg";
 
 import TeamMember from "../../components/TeamComponents/TeamMember";
 import DropDown from "../../components/TeamComponents/DropDownGui/DropDown";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-hook-inview";
+import { useEffect } from "react";
+
 
 export default function TeamPage() {
+
+  const [ref, inView] = useInView()
+  const animationTrigger = useAnimation();
+
+  useEffect(() => {
+    if(inView){
+      animationTrigger.start({
+        opacity : 1,
+        y : 0,
+        transition : {
+          delay : 0.1 ,duration : 0.6
+        }
+      })
+    }
+
+    if(!inView){
+      animationTrigger.start({
+        opacity : 0,
+        y : 10
+      })
+    }
+  }, [inView])
+
+
   return (
     <div className="TeamPageWrapper">
       <header>
