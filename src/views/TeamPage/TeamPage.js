@@ -35,7 +35,7 @@ export default function TeamPage() {
         opacity : 1,
         y : 0,
         transition : {
-          delay : 0.1 ,duration : 0.6
+          delay : 0.1 ,duration : 0.3
         }
       })
     }
@@ -134,7 +134,10 @@ export default function TeamPage() {
           />
         </div>
       </motion.div>
-      <section className="SectionWrapper__leads">
+      <motion.section
+      animate={animationTrigger}
+      ref={ref} 
+      className="SectionWrapper__leads">
         <div className="TeamPageHeading leadsTitle">Team Leads</div>
         <div className="TeamPageWrapper__grid1">
           <TeamMember
@@ -222,7 +225,7 @@ export default function TeamPage() {
             imageSrcAlt={"WdLead2"}
           />
         </div>
-      </section>
+      </motion.section>
       
       <section className="SectionWrapper__members">
         <h1 className="TeamPageHeading">Other Members</h1>
