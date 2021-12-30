@@ -25,8 +25,8 @@
   &__grid1 {
     margin-top: 6rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 4rem;
+    grid-template-columns: repeat(3, 3fr);
+    grid-row-gap: 5rem;
     justify-items: center;
 
   }

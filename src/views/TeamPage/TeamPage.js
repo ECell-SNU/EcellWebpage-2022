@@ -19,13 +19,44 @@ import PrathamWebDev from "../../Assets/image/teamLeads/Pratham.jpg";
 
 import TeamMember from "../../components/TeamComponents/TeamMember";
 import DropDown from "../../components/TeamComponents/DropDownGui/DropDown";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-hook-inview";
+import { useEffect } from "react";
 
 
 export default function TeamPage() {
+
+  const [ref, inView] = useInView()
+  const animationTrigger = useAnimation();
+
+  useEffect(() => {
+    if(inView){
+      animationTrigger.start({
+        opacity : 1,
+        y : 0,
+        transition : {
+          delay : 0.1 ,duration : 0.3
+        }
+      })
+    }
+
+    if(!inView){
+      animationTrigger.start({
+        opacity : 0,
+        y : 10
+      })
+    }
+  }, [inView])
+
+
   return (
     <div className="TeamPageWrapper">
       <header>
-        <nav className="TeamPageNavbar">
+        <motion.nav
+          initial={{opacity : 0, y: -10}}
+          animate={{opacity : 1, y: 0}}
+          transition={{type : "spring", stiffness : 120 ,delay : 0.6 ,duration : 1.2}}
+          className="TeamPageNavbar">
           <a href="/home" className="TeamPageNavbar__button">
             &larr; &nbsp; &nbsp;Go Back
           </a>
@@ -55,12 +86,17 @@ export default function TeamPage() {
               </a>
             </li>
           </ul>
-        </nav>
+        </motion.nav>
       </header>
 
-      <div className="SectionWrapper">
+      <motion.div 
+      initial={{opacity : 0, y: -10}}
+      animate={{opacity : 1, y: 0}}
+      transition={{delay : 0.1 ,duration : 0.6}}
+        className="SectionWrapper">
         <div className="TeamPageHeading">The Core</div>
-        <div className="TeamPageWrapper__grid1">
+        <motion.div
+        className="TeamPageWrapper__grid1">
           <TeamMember
             MemberName={"Krishna Madhur"}
             Memberposition={"Seceratry"}
@@ -81,7 +117,7 @@ export default function TeamPage() {
             imageSrc={aarAsec}
             imageSrcAlt={"ASec"}
           />
-        </div>
+        </motion.div>
         <div className="TeamPageWrapper__grid2">
           <TeamMember
             MemberName={"Abharika Mohanty"}
@@ -97,8 +133,11 @@ export default function TeamPage() {
             imageSrcAlt={"Fc"}
           />
         </div>
-      </div>
-      <section className="SectionWrapper__leads">
+      </motion.div>
+      <motion.section
+      animate={animationTrigger}
+      ref={ref} 
+      className="SectionWrapper__leads">
         <div className="TeamPageHeading leadsTitle">Team Leads</div>
         <div className="TeamPageWrapper__grid1">
           <TeamMember
@@ -186,7 +225,7 @@ export default function TeamPage() {
             imageSrcAlt={"WdLead2"}
           />
         </div>
-      </section>
+      </motion.section>
       
       <section className="SectionWrapper__members">
         <h1 className="TeamPageHeading">Other Members</h1>

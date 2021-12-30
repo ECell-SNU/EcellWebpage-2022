@@ -17,14 +17,14 @@ import { useEffect } from "react";
 export default function LandingPage() {
 
   const  [ref__ATS, inView__ATS] = useInView();
-  const  [ref__TTS, inView__TTS] = useInView();
-  const  [ref__SS1, inView__SS1] = useInView();
-  const  [ref__SS2, inView__SS2] = useInView();
+  // const  [ref__TTS, inView__TTS] = useInView();
+  // const  [ref__SS1, inView__SS1] = useInView();
+  // const  [ref__SS2, inView__SS2] = useInView();
 
   const animationTrigger__ATS = useAnimation();
-  const animationTrigger__TTS = useAnimation();
-  const animationTrigger__SS1 = useAnimation();
-  const animationTrigger__SS2 = useAnimation();
+  // const animationTrigger__TTS = useAnimation();
+  // const animationTrigger__SS1 = useAnimation();
+  // const animationTrigger__SS2 = useAnimation();
 
   useEffect(() => {
     if(inView__ATS){
@@ -32,40 +32,40 @@ export default function LandingPage() {
         opacity : 1,
         y : 0,
         transition : {
-          delay : 0.3 ,duration : 0.6
+          delay : 0.1 ,duration : 0.6
         }
       })
     }
 
-    if(inView__TTS){
-      animationTrigger__TTS.start({
-        opacity : 1,
-        y : 0,
-        transition : {
-          delay : 0.3 ,duration : 0.6
-        }
-      })
-    }
+    // if(inView__TTS){
+    //   animationTrigger__TTS.start({
+    //     opacity : 1,
+    //     y : 0,
+    //     transition : {
+    //       delay : 0.3 ,duration : 0.6
+    //     }
+    //   })
+    // }
 
-    if(inView__SS1){
-      animationTrigger__SS1.start({
-        opacity : 1,
-        y : 0,
-        transition : {
-          delay : 0.3 ,duration : 0.6
-        }
-      })
-    }
+    // if(inView__SS1){
+    //   animationTrigger__SS1.start({
+    //     opacity : 1,
+    //     y : 0,
+    //     transition : {
+    //       delay : 0.3 ,duration : 0.6
+    //     }
+    //   })
+    // }
 
-    if(inView__SS2){
-      animationTrigger__SS2.start({
-        opacity : 1,
-        y : 0,
-        transition : {
-          delay : 0.3 ,duration : 0.6
-        }
-      })
-    }
+    // if(inView__SS2){
+    //   animationTrigger__SS2.start({
+    //     opacity : 1,
+    //     y : 0,
+    //     transition : {
+    //       delay : 0.3 ,duration : 0.6
+    //     }
+    //   })
+    // }
 
 
     if(!inView__ATS){
@@ -75,27 +75,31 @@ export default function LandingPage() {
       })
     }
 
-    if(!inView__TTS){
-      animationTrigger__TTS.start({
-        opacity : 0,
-        y : 10
-      })
-    }
+    // if(!inView__TTS){
+    //   animationTrigger__TTS.start({
+    //     opacity : 0,
+    //     y : 10
+    //   })
+    // }
 
-    if(!inView__SS1){
-      animationTrigger__SS1.start({
-        opacity : 0,
-        y : 10
-      })
-    }
+    // if(!inView__SS1){
+    //   animationTrigger__SS1.start({
+    //     opacity : 0,
+    //     y : 10
+    //   })
+    // }
 
-    if(!inView__SS2){
-      animationTrigger__SS2.start({
-        opacity : 0,
-        y : 10
-      })
-    }
-  }, [inView__ATS], [inView__TTS], [inView__SS1], [inView__SS2]);
+    // if(!inView__SS2){
+    //   animationTrigger__SS2.start({
+    //     opacity : 0,
+    //     y : 10
+    //   })
+    // }
+  }, [inView__ATS] 
+  // [inView__TTS], 
+  // [inView__SS1], 
+  // [inView__SS2]
+  );
 
   return (
     <section className="LandingPageWrapper">
