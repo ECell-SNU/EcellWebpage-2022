@@ -3,6 +3,8 @@ import React from "react";
 import { useMediaQuery } from "react-responsive";
 import "./HeroSection.scss";
 import LandingIllustration from "../../../../Assets/Illustration/Landing-Illustration.svg";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
 
 function HeroSection(props) {
   const thousandPixels = useMediaQuery({
@@ -31,12 +33,12 @@ function HeroSection(props) {
             entrepreneurial dreams
           </p>
           <div className="HeroSectionWrapper__Button-container">
-            <button className="HeroSectionWrapper__Button-container__Button">
+            <Link to="/teams" className="HeroSectionWrapper__Button-container__Button">
               Our Team
-            </button>
-            <button className="HeroSectionWrapper__Button-container__Button">
+            </Link>
+            <Link className="HeroSectionWrapper__Button-container__Button">
               Learn More
-            </button>
+            </Link>
           </div>
         </div>
         {!thousandPixels && (
