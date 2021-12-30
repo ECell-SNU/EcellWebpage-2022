@@ -3,9 +3,25 @@ import Header from "../../components/Header/Header";
 import BlogArchive from "../../components/TextComponent/BlogArchive/BlogArchive";
 import BlogData from "../../DataFiles/BlogData.json";
 import "../BlogPage/BlogPage.scss";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-hook-inview";
+import { useEffect } from "react";
 
 export default function BlogPage() {
+
+  const [ref, inView] = useInView()
+  const animationTrigger = useAnimation();
+
+  useEffect(() => {
+    if(inView){
+      //animation
+    }
+
+    if(!inView){
+      //initial
+    }
+  }, [inView])
+
   return (
     <div className="BlogPageWrapper">
       <motion.div
