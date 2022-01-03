@@ -23,42 +23,49 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-hook-inview";
 import { useEffect } from "react";
 
-
 export default function TeamPage() {
-
-  const [ref, inView] = useInView()
+  const [ref, inView] = useInView();
   const animationTrigger = useAnimation();
 
   useEffect(() => {
-    if(inView){
+    if (inView) {
       animationTrigger.start({
-        opacity : 1,
-        y : 0,
-        transition : {
-          delay : 0.1 ,duration : 0.3
-        }
-      })
+        opacity: 1,
+        y: 0,
+        transition: {
+          delay: 0.1,
+          duration: 0.3,
+        },
+      });
     }
 
-    if(!inView){
+    if (!inView) {
       animationTrigger.start({
-        opacity : 0,
-        y : 10
-      })
+        opacity: 0,
+        y: 10,
+      });
     }
-  }, [inView])
-
+  }, [inView]);
 
   return (
     <div className="TeamPageWrapper">
       <header>
         <motion.nav
-          initial={{opacity : 0, y: -10}}
-          animate={{opacity : 1, y: 0}}
-          transition={{type : "spring", stiffness : 120 ,delay : 0.6 ,duration : 1.2}}
-          className="TeamPageNavbar">
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 120,
+            delay: 0.6,
+            duration: 1.2,
+          }}
+          className="TeamPageNavbar"
+        >
           <a href="/home" className="TeamPageNavbar__button">
             &larr; &nbsp; &nbsp;Go Back
+          </a>
+          <a href="/home" className="TeamPageNavbar__responsive">
+            &larr;
           </a>
           <ul className="TeamPageNavbar__social-media">
             <li>
@@ -89,14 +96,14 @@ export default function TeamPage() {
         </motion.nav>
       </header>
 
-      <motion.div 
-      initial={{opacity : 0, y: -10}}
-      animate={{opacity : 1, y: 0}}
-      transition={{delay : 0.1 ,duration : 0.6}}
-        className="SectionWrapper">
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1, duration: 0.6 }}
+        className="SectionWrapper"
+      >
         <div className="TeamPageHeading">The Core</div>
-        <motion.div
-        className="TeamPageWrapper__grid1">
+        <motion.div className="TeamPageWrapper__grid1">
           <TeamMember
             MemberName={"Krishna Madhur"}
             Memberposition={"Seceratry"}
@@ -135,9 +142,10 @@ export default function TeamPage() {
         </div>
       </motion.div>
       <motion.section
-      animate={animationTrigger}
-      ref={ref} 
-      className="SectionWrapper__leads">
+        animate={animationTrigger}
+        ref={ref}
+        className="SectionWrapper__leads"
+      >
         <div className="TeamPageHeading leadsTitle">Team Leads</div>
         <div className="TeamPageWrapper__grid1">
           <TeamMember
@@ -157,7 +165,7 @@ export default function TeamPage() {
           <TeamMember
             MemberName={"Agaash S.B."}
             Memberposition={"Engagement"}
-              imageSrc={AgaashEngagement}
+            imageSrc={AgaashEngagement}
             imageSrcAlt={"EngLead1"}
           />
 
@@ -226,7 +234,7 @@ export default function TeamPage() {
           />
         </div>
       </motion.section>
-      
+
       <section className="SectionWrapper__members">
         <h1 className="TeamPageHeading">Other Members</h1>
         <DropDown year="2023" />

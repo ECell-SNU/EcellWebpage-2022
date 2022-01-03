@@ -8,8 +8,7 @@
   color: var(--title-txt-color);
 }
 
-
-.SectionWrapper{
+.SectionWrapper {
   &__leads {
     margin-top: 150px;
   }
@@ -19,7 +18,6 @@
 }
 
 .TeamPageWrapper {
-  
   padding: 5rem 8rem;
 
   &__grid1 {
@@ -28,19 +26,15 @@
     grid-template-columns: repeat(3, 3fr);
     grid-row-gap: 5rem;
     justify-items: center;
-
   }
-  
-  
+
   &__grid2 {
     margin-top: 6rem;
     display: grid;
-    grid-template-columns: repeat(2, .3fr);
+    grid-template-columns: repeat(2, 0.3fr);
     justify-items: center;
     justify-content: center;
-
   }
-
 }
 
 .TeamPageNavbar {
@@ -53,14 +47,17 @@
     font-size: 15px;
     text-decoration: none;
 
-  
     &:hover {
       color: #ffff;
       transition: all 0.3s;
     }
+
+    &__responsive {
+      display: none;
+    }
   }
 
-  &__social-media{
+  &__social-media {
     list-style: none;
     @include make-flex($just: space-between, $dir: row);
     gap: 30px;
@@ -70,7 +67,50 @@
         width: 1.2rem;
       }
     }
+  }
+}
 
-    
+@media only screen and (max-width: 376px) {
+  header {
+    margin-top: 12px !important;
+  }
+  .TeamPageNavbar {
+    @include make-flex($just: space-between, $dir: row, $align: center);
+    gap: 100px;
+    &__button {
+      display: none;
+    }
+    &__responsive {
+      display: contents;
+      color: var(--title-txt-color);
+    }
+  }
+
+  .TeamPageWrapper {
+    padding: 2.4rem 2rem;
+    &__grid1 {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 5rem;
+      justify-items: center;
+    }
+
+    &__grid2 {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      justify-content: center;
+    }
+  }
+
+  .SectionWrapper {
+    &__leads {
+      margin-top: 50px;
+    }
+    &__members {
+      margin-top: 50px;
+    }
   }
 }
