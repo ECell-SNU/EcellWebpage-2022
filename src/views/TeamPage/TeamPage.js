@@ -119,10 +119,11 @@ export default function TeamPage() {
           />
 
           <TeamMember
-            MemberName={"Aarushi dhir"}
-            Memberposition={"A.sec"}
+            MemberName={"Aarushi Dhir"}
+            Memberposition={"A.Sec"}
             imageSrc={aarAsec}
             imageSrcAlt={"ASec"}
+            className="aarushiCard"
           />
         </motion.div>
         <div className="TeamPageWrapper__grid2">
