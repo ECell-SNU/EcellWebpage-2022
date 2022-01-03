@@ -36,3 +36,26 @@
     }
   }
 }
+
+@media only screen and (max-width: 380px) {
+  .membersContainer {
+    &__button {
+      position: relative;
+      top: -67px;
+    }
+
+    &__yearTitle {
+      font-size: 15px;
+    }
+
+    &__studentNames {
+      display: grid;
+      padding: 0;
+      position: relative;
+      top: -36px;
+
+      grid-template-columns: repeat(2, 1fr);
+      height: auto;
+    }
+  }
+}
