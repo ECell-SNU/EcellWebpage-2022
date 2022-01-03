@@ -123,7 +123,6 @@ export default function TeamPage() {
             Memberposition={"A.Sec"}
             imageSrc={aarAsec}
             imageSrcAlt={"ASec"}
-            className="aarushiCard"
           />
         </motion.div>
         <div className="TeamPageWrapper__grid2">

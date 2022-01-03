@@ -51,12 +51,10 @@
       color: #ffff;
       transition: all 0.3s;
     }
-
-    &__responsive {
-      display: none;
-    }
   }
-
+  &__responsive {
+    display: none !important;
+  }
   &__social-media {
     list-style: none;
     @include make-flex($just: space-between, $dir: row);
@@ -81,8 +79,12 @@
       display: none;
     }
     &__responsive {
-      display: contents;
-      color: var(--title-txt-color);
+      display: flex !important;
+      background-color: transparent;
+      border: none;
+      color: #ccccccb8;
+      font-size: 15px;
+      text-decoration: none;
     }
   }
 
