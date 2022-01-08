@@ -7,10 +7,20 @@
 }
 .colorSchemeDark {
   background-color: white;
-  color: white;
+
+  h1,
+  a,
+  p,
+  span {
+    color: black;
+  }
+}
+.BlogPage {
+  padding-top: 70px;
 }
 .ReadBlogNav {
-  margin: 70px auto;
+  margin: 0 auto;
+  margin-bottom: 70px;
   width: 70vw;
   font-size: var(--desc-text-size);
   font-weight: 600;
@@ -41,7 +51,6 @@
 .blogContent {
   font-family: Poppins;
   width: 100vw;
-  color: white;
   &__container {
     margin: auto;
     width: 80%;

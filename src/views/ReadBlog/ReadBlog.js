@@ -17,14 +17,18 @@ export default function ReadBlog() {
   const [Mode, setMode] = useState("light");
   return (
     <>
-      <div className="BlogPage">
+      <div
+        className={`BlogPage ${
+          Mode === "dark" ? "colorSchemeDark" : "colorSchemeLight"
+        }`}
+      >
         <div
           className={`ReadBlogNav ${
             Mode === "dark" ? "colorSchemeDark" : "colorSchemeLight"
           }`}
         >
           <div className="Mode">
-            <img src={moon} alt="moon" />
+            <img src={Mode === "light" ? moon : sun} alt="moon" />
             <a
               href="/"
               onClick={(e) => {
@@ -36,7 +40,7 @@ export default function ReadBlog() {
                 }
               }}
             >
-              Dark Mode
+              {`${Mode === "light" ? "Dark" : "Light"} Mode`}
             </a>
           </div>
           <ul>
