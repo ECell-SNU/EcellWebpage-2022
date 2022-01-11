@@ -17,7 +17,7 @@ export default function LandingPage() {
   const sections = [
     <AboutUsSection />,
     <ThinkTankSection />,
-    <Session>
+    <Session className="SessionWrapper__content--first">
       <LandingSectionTexts
         classifier="Think Tank Session # 1"
         title="Ecell SNU’s USP"
@@ -29,7 +29,7 @@ export default function LandingPage() {
         src={Session1Illustration}
       ></img>
     </Session>,
-    <Session>
+    <Session className="SessionWrapper__content--second">
       <img
         alt="session"
         className="SessionWrapper__content-container__illustration"

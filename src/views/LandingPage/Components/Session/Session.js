@@ -2,16 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Session.scss";
 
-function Session({ children }) {
+function Session({ children, className }) {
   return (
     <section className="SessionWrapper">
-      <div className="SessionWrapper__content-container">{children}</div>
+      <div className={`SessionWrapper__content-container ${className}`}>
+        {children}
+      </div>
     </section>
   );
 }
 
 Session.propTypes = {
-  children: PropTypes.node.isRequired, 
+  children: PropTypes.node.isRequired,
 };
 
 Session.defaultProps = {
