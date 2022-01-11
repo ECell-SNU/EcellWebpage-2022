@@ -14,6 +14,7 @@
   &__Menu {
     @include make-flex($just: space-between, $dir: row);
     width: 100%;
+    z-index: 2;
   }
 
   &__primary-nav {
@@ -122,7 +123,7 @@
       width: 28px;
       right: 12px;
       top: 12px;
-      z-index: 2;
+      z-index: 3;
     }
     #NavBarInput {
       position: absolute;
@@ -134,7 +135,7 @@
       width: 28px;
     }
     .hamButton {
-      z-index: 1;
+      z-index: 3;
       position: absolute;
       height: 28px;
       top: 0;

@@ -3,7 +3,7 @@ import "./Header.scss";
 import instagram from "../../Assets/icons/logo-instagram.svg";
 import twitter from "../../Assets/icons/logo-twitter.svg";
 import meta from "../../Assets/icons/logo-facebook.svg";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 export default function Header({
@@ -25,6 +25,26 @@ export default function Header({
     query: "(max-width: 1075px)",
   });
 
+  const node = useRef();
+
+  function handleClick({ target }) {
+    if (!node.current.contains(target) || !node.current === target) {
+      setNavState(false);
+      document.getElementById("NavBarInput").checked = false;
+      hideOverflow();
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClick);
+    if (!navState) {
+      document.getElementById("root").style.overflow = "unset";
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+    };
+  });
+
   function hideOverflow() {
     if (document.getElementById("root").style.overflow === "hidden") {
       document.getElementById("root").style.overflow = "unset";
@@ -34,7 +54,7 @@ export default function Header({
   }
 
   return (
-    <div className="HeaderContainer">
+    <div className="HeaderContainer" ref={node}>
       {thousandPixels && (
         <div className="HeaderContainer__Hamburger">
           <input
