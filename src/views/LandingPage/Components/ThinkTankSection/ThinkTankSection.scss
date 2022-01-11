@@ -16,6 +16,7 @@
     &__content-container {
       @include make-flex($dir: column-reverse, $align: center);
       width: 100%;
+      gap: 35px;
     }
   }
 }
