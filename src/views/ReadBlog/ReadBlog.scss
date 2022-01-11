@@ -21,14 +21,16 @@
 .ReadBlogNav {
   margin: 0 auto;
   margin-bottom: 70px;
-  width: 70vw;
+  width: 69vw;
   font-size: var(--desc-text-size);
   font-weight: 600;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   .Mode {
     display: flex;
-    gap: 10px;
+    gap: 7px;
+    align-items: center;
     a {
       text-decoration: none;
     }
@@ -37,14 +39,16 @@
     list-style-type: none;
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 43px;
     a {
       text-decoration: none;
     }
     ul {
       list-style-type: none;
       display: flex;
-      gap: 10px;
+      gap: 30px;
+      position: relative;
+      left: 60px;
     }
   }
 }
@@ -62,7 +66,7 @@
       font-weight: 500;
       margin-bottom: 5%;
       position: relative;
-      left: 3%;
+      left: 9.95%;
     }
 
     &__bot {
@@ -112,6 +116,9 @@
     }
   }
   .blogContent {
+    &__container__top {
+      left: none !important;
+    }
     &__container__bot {
       flex-direction: column;
     }

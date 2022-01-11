@@ -7,6 +7,7 @@ import twitter from "../../Assets/icons/logo-twitter.svg";
 import meta from "../../Assets/icons/logo-facebook.svg";
 import moon from "../../Assets/icons/moon.svg";
 import sun from "../../Assets/icons/sun.svg";
+import byline from "../../Assets/icons/byline-top.svg";
 import { useState } from "react";
 
 export default function ReadBlog() {
@@ -52,10 +53,10 @@ export default function ReadBlog() {
             </li>
             <ul>
               <li>
-                <img src={instagram} height="16px" alt="instagram" />
+                <img src={instagram} height="20px" alt="instagram" />
               </li>
               <li>
-                <img src={twitter} height="16px" alt="twitter" />
+                <img src={twitter} height="20px" alt="twitter" />
               </li>
             </ul>
           </ul>
@@ -69,7 +70,8 @@ export default function ReadBlog() {
             <h1 className="blogContent__container__top">{blog.Title}</h1>
             <div className="blogContent__container__bot">
               <div className="blogContent__container__bot__writtenBy">
-                <hr className="blogContent__container__bot__writtenBy__line" />
+                <img src={byline} alt="byline" />
+
                 <p>
                   written by <br></br>
                   <span>{blog.Author},</span> {blog.Creds}
