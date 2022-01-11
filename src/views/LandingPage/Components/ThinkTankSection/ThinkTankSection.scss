@@ -13,6 +13,7 @@
 
 @media only screen and (max-width: 1075px) {
   .ThinkTankSectionWrapper {
+    height: unset;
     &__content-container {
       @include make-flex($dir: column-reverse, $align: center);
       width: 100%;
