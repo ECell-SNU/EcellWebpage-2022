@@ -37,16 +37,14 @@ export default function Header({
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClick);
-    if (!navState) {
-      document.getElementById("root").style.overflow = "unset";
-    }
+    hideOverflow();
     return () => {
       document.removeEventListener("mousedown", handleClick);
     };
   });
 
   function hideOverflow() {
-    if (document.getElementById("root").style.overflow === "hidden") {
+    if (!navState) {
       document.getElementById("root").style.overflow = "unset";
     } else {
       document.getElementById("root").style.overflow = "hidden";
