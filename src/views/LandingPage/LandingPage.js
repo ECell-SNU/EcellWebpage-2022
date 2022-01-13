@@ -38,8 +38,8 @@ export default function LandingPage() {
       ></img>
       <LandingSectionTexts
         classifier="Think Tank Session # 2"
-        title="Second Title"
-        content1="Sit amet volutpat consequat mauris nunc congue nisi vitae. Elit eget gravida cum sociis natoque penatibus et magnis dis. Turpis egestas maecenas  convallis posuere morbi leo urna molestie. "
+        title="Business Model of Amazon"
+        content1=" We dissected the structure of the company through a business canvas model. Most of us barely know the specifics that go into running a company like Customer Relationships, Market Analysis, Marketing, Management, Products and much more"
       />
     </Session>,
     <SponsorSection />,
