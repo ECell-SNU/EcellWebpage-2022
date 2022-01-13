@@ -21,7 +21,7 @@ export default function LandingPage() {
     <Session className="SessionWrapper__content--first">
       <LandingSectionTexts
         classifier="Think Tank Session # 1"
-        title="Ecell SNU’s USP"
+        title="E-Cell SNU’s USP"
         content1="It takes us through multiple modules ranging from all aspects of entrepreneurship where the members contribute to the pool through interactive and lively sessions."
       />
       <img
