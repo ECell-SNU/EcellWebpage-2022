@@ -16,7 +16,6 @@ import AnimationRender from "../../components/AnimationRender/AnimationRender";
 import { useEffect } from "react";
 
 export default function LandingPage() {
-
   const sections = [
     <AboutUsSection />,
     <ThinkTankSection />,
@@ -49,36 +48,47 @@ export default function LandingPage() {
 
   return (
     <>
-    <section className="LandingPageWrapper">
-      <Header
-        navItem1="Home"
-        navItem2="About Us"
-        navItem3="Team"
-        navItem4="Think Tank"
-        navItem6="Blogs"
-        navItem7="Events"
-        routeItem1="/home"
-        routeItem3="/teams"
-        routeItem5="/blog/archive"
-        routeItem6="/blogs"
-        routeItem7="/events"
-      />
-
-      <main>
+      <section className="LandingPageWrapper">
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.6 }}
+          transition={{
+            type: "spring",
+            stiffness: 120,
+            delay: 0.6,
+            duration: 1.2,
+          }}
         >
-          <HeroSection />
+          <Header
+            navItem1="Home"
+            navItem2="About Us"
+            navItem3="Team"
+            navItem4="Think Tank"
+            navItem6="Blogs"
+            navItem7="Events"
+            routeItem1="/home"
+            routeItem3="/teams"
+            routeItem5="/blog/archive"
+            routeItem6="/blogs"
+            routeItem7="/events"
+          />
         </motion.div>
 
-        {sections.map((section, index) => (
-          <AnimationRender key={index}>{section}</AnimationRender>
-        ))}
-      </main>
-    </section>
-        <FooterSection />
+        <main>
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.6 }}
+          >
+            <HeroSection />
+          </motion.div>
+
+          {sections.map((section, index) => (
+            <AnimationRender key={index}>{section}</AnimationRender>
+          ))}
+        </main>
+      </section>
+      <FooterSection />
     </>
   );
 }

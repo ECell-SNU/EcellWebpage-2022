@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 export default function BlogPage() {
   return (
     <div className="BlogPageWrapper">
-      {/* <motion.div
+      <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -18,7 +18,7 @@ export default function BlogPage() {
           delay: 0.6,
           duration: 1.2,
         }}
-      > */}
+      >
       <Header
         navItem1="Home"
         navItem2="About Us"
@@ -29,7 +29,7 @@ export default function BlogPage() {
         routeItem5="/blogs/archive"
         routeItem3="/teams"
       />
-      {/* </motion.div> */}
+      </motion.div>
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
