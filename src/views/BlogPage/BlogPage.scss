@@ -24,7 +24,7 @@ $backgroundColour: #161c22;
 
 .BlogPageGrid {
   width: 100%;
-  @include make-flex($dir: row);
+  @include make-flex($dir: row, $just: space-between);
   gap: 30px;
   flex-wrap: wrap;
   padding: 45px 0px;
