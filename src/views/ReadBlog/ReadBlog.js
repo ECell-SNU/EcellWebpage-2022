@@ -56,17 +56,17 @@ export default function ReadBlog() {
       link: navigator.clipboard.writeText(document.location.href),
     },
   ];
-  const [Mode, setMode] = useState("dark");
+  const [Mode, setMode] = useState("light");
   return (
     <>
       <div
         className={`BlogPage ${
-          Mode === "dark" ? "colorSchemeDark" : "colorSchemeLight"
+          Mode === "light" ? "colorSchemeLight" : "colorSchemeDark"
         }`}
       >
         <div
           className={`ReadBlogNav ${
-            Mode === "dark" ? "colorSchemeDark" : "colorSchemeLight"
+            Mode === "light" ? "colorSchemeLight" : "colorSchemeDark"
           }`}
         >
           <a
