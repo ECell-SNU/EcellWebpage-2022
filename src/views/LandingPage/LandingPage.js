@@ -79,7 +79,6 @@ export default function LandingPage() {
       </main>
         <FooterSection />
     </section>
-    <FooterSection />
     </>
   );
 }
