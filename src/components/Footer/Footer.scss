@@ -4,7 +4,9 @@
   @include make-flex($just: space-evenly, $dir: row);
   background-color: white;
   font-family: var(--text-font);
-  height: 40%;
+  position: absolute;
+  padding: 50px 60px;
+
   ul {
     list-style: none;
     a {
