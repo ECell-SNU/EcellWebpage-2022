@@ -1,7 +1,7 @@
 @import "../../styles/mixins";
 
 .FooterContainer {
-  @include make-flex($just: space-evenly, $dir: row);
+  @include make-flex($just: space-between, $dir: row, $align: flex-start);
   background-color: white;
   font-family: var(--text-font);
   position: absolute;
@@ -9,11 +9,29 @@
   width: 100%;
   height: 330px;
 
+  &__right {
+    @include make-flex($dir: row, $align: flex-start, $just: space-between);
+    // gap: 30px;
+    width: 420px;
+    height: 100%;
+    // width: 30%;
+  }
+
   ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     list-style: none;
     a {
       text-decoration: none;
       color: black;
+    }
+    li {
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 
@@ -22,7 +40,9 @@
 
     &__contact {
       position: relative;
-      top: -25px;
+      // top: -25px;
+      ul {
+      }
     }
 
     ul {
@@ -37,7 +57,7 @@
       @include make-flex($just: space-evenly, $dir: row);
       width: 10%;
       position: relative;
-      top: -54px;
+      // top: -54px;
       list-style: none;
       gap: 30px;
       li {
