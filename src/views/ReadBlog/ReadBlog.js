@@ -2,20 +2,20 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import "./ReadBlog.scss";
 import BlogData from "../../DataFiles/BlogData.json";
 
-import instagram from "../../Assets/icons/logo-instagram.svg";
-import twitter from "../../Assets/icons/logo-twitter.svg";
-import meta from "../../Assets/icons/logo-facebook.svg";
-import moon from "../../Assets/icons/moon.svg";
+import moon from "../../Assets/icons/mooon.svg";
 import sun from "../../Assets/icons/sun.svg";
 import byline from "../../Assets/icons/byline-top.svg";
 import { useState } from "react";
-
+import instagram from "../../Assets/icons/instaL.svg";
+import twitter from "../../Assets/icons/twitterL.svg";
+import share from "../../Assets/icons/shareL.svg";
+import facebook from "../../Assets/icons/fbL.svg";
 export default function ReadBlog() {
   const param = useParams();
   console.log(param.id);
   const blog = BlogData[param.id];
 
-  const [Mode, setMode] = useState("light");
+  const [Mode, setMode] = useState("dark");
   return (
     <>
       <div
@@ -57,6 +57,12 @@ export default function ReadBlog() {
               </li>
               <li>
                 <img src={twitter} height="20px" alt="twitter" />
+              </li>
+              <li>
+                <img src={share} height="20px" alt="share" />
+              </li>
+              <li>
+                <img src={facebook} height="20px" alt="facebook" />
               </li>
             </ul>
           </ul>

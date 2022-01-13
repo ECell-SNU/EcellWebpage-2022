@@ -1,11 +1,4 @@
 .colorSchemeLight {
-  h1,
-  a {
-    color: var(--title-txt-color);
-  }
-  color: white;
-}
-.colorSchemeDark {
   background-color: white;
 
   h1,
@@ -14,6 +7,13 @@
   span {
     color: black;
   }
+}
+.colorSchemeDark {
+  h1,
+  a {
+    color: var(--title-txt-color);
+  }
+  color: white;
 }
 .BlogPage {
   padding-top: 70px;
