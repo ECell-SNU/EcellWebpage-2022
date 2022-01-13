@@ -69,22 +69,23 @@ export default function ReadBlog() {
             Mode === "dark" ? "colorSchemeDark" : "colorSchemeLight"
           }`}
         >
-          <div className="Mode">
-            <img src={Mode === "light" ? moon : sun} alt="moon" />
-            <a
-              href="/"
-              onClick={(e) => {
-                e.preventDefault();
-                if (Mode === "light") {
-                  setMode("dark");
-                } else if (Mode === "dark") {
-                  setMode("light");
-                }
-              }}
-            >
-              {`${Mode === "light" ? "Dark" : "Light"} Mode`}
-            </a>
-          </div>
+          <a
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              if (Mode === "light") {
+                setMode("dark");
+              } else if (Mode === "dark") {
+                setMode("light");
+              }
+            }}
+          >
+            <div className="Mode">
+              <img src={Mode === "light" ? moon : sun} alt="moon" />
+
+              <p>{`${Mode === "light" ? "Dark" : "Light"} Mode`}</p>
+            </div>
+          </a>
           <ul>
             <li>
               <a href="/"> Go Back</a>
