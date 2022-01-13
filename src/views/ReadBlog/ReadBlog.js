@@ -10,11 +10,53 @@ import instagram from "../../Assets/icons/instaL.svg";
 import twitter from "../../Assets/icons/twitterL.svg";
 import share from "../../Assets/icons/shareL.svg";
 import facebook from "../../Assets/icons/fbL.svg";
+
+import instaD from "../../Assets/icons/instaD.svg";
+import twitterD from "../../Assets/icons/twitterD.svg";
+import shareD from "../../Assets/icons/shareD.svg";
+import facebookD from "../../Assets/icons/fbD.svg";
+
 export default function ReadBlog() {
   const param = useParams();
   console.log(param.id);
   const blog = BlogData[param.id];
+  const iconsLight = [
+    {
+      icon: twitter,
+      link: "asd",
+    },
+    {
+      icon: facebook,
+      link: "asd",
+    },
+    {
+      icon: instagram,
+      link: "asd",
+    },
+    {
+      icon: share,
+      link: "asd",
+    },
+  ];
 
+  const iconsDark = [
+    {
+      icon: twitterD,
+      link: "asd",
+    },
+    {
+      icon: facebookD,
+      link: "asd",
+    },
+    {
+      icon: instaD,
+      link: "asd",
+    },
+    {
+      icon: shareD,
+      link: "asd",
+    },
+  ];
   const [Mode, setMode] = useState("dark");
   return (
     <>
@@ -52,18 +94,21 @@ export default function ReadBlog() {
               <a href="/"> Blog Archive</a>
             </li>
             <ul>
-              <li>
-                <img src={instagram} height="20px" alt="instagram" />
-              </li>
-              <li>
-                <img src={twitter} height="20px" alt="twitter" />
-              </li>
-              <li>
-                <img src={share} height="20px" alt="share" />
-              </li>
-              <li>
-                <img src={facebook} height="20px" alt="facebook" />
-              </li>
+              {Mode === "light"
+                ? iconsLight.map((icon, index) => (
+                    <li key={index}>
+                      <a href={icon.link}>
+                        <img src={icon.icon} alt="icon" height="20px" />
+                      </a>
+                    </li>
+                  ))
+                : iconsDark.map((icon, index) => (
+                    <li key={index}>
+                      <a href={icon.link}>
+                        <img src={icon.icon} alt="icon" height="20px" />
+                      </a>
+                    </li>
+                  ))}
             </ul>
           </ul>
         </div>
