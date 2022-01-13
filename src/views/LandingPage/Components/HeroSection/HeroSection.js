@@ -5,7 +5,6 @@ import "./HeroSection.scss";
 import LandingIllustration from "../../../../Assets/Illustration/Landing-Illustration.svg";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
-
 function HeroSection(props) {
   const thousandPixels = useMediaQuery({
     query: "(max-width: 1075px)",
@@ -18,22 +17,25 @@ function HeroSection(props) {
           <h1 className="HeroSectionWrapper__Title">
             A platform for students and
             <div className="HeroSectionWrapper__Title__Rotator">
-            faculty to 
+              faculty to
               <span>
-              create .<br/>
-              innovate .<br/>
-              incubate .<br/>
-              create .
+                create .<br />
+                innovate .<br />
+                incubate .<br />
+                create .
               </span>
             </div>
           </h1>
           <p className="HeroSectionWrapper__Description">
-            E-cell Shiv Nadar University strives to provide a platform for
+            E-Cell Shiv Nadar University strives to provide a platform for
             students and faculty to create, innovate, incubate and realize their
             entrepreneurial dreams
           </p>
           <div className="HeroSectionWrapper__Button-container">
-            <Link to="/teams" className="HeroSectionWrapper__Button-container__Button">
+            <Link
+              to="/teams"
+              className="HeroSectionWrapper__Button-container__Button"
+            >
               Our Team
             </Link>
             <Link className="HeroSectionWrapper__Button-container__Button">
