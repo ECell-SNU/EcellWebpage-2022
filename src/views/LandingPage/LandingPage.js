@@ -13,22 +13,9 @@ import SponsorSection from "./Components/SponsorSection/SponsorSection";
 import FooterSection from "../../components/Footer/Footer";
 import { motion } from "framer-motion";
 import AnimationRender from "../../components/AnimationRender/AnimationRender";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 export default function LandingPage() {
-  // AOS.init({
-  //   offset: 200,
-  //   duration: 800,
-  //   easing: "ease-in-back",
-  //   delay: 60,
-
-  // });
-
-  // useEffect(() => {
-  //   AOS.refresh();
-  // });
 
   const sections = [
     <AboutUsSection />,
@@ -61,6 +48,7 @@ export default function LandingPage() {
   ];
 
   return (
+    <>
     <section className="LandingPageWrapper">
       <Header
         navItem1="Home"
@@ -88,8 +76,9 @@ export default function LandingPage() {
         {sections.map((section, index) => (
           <AnimationRender key={index}>{section}</AnimationRender>
         ))}
-        <FooterSection />
       </main>
     </section>
+    <FooterSection />
+    </>
   );
 }
