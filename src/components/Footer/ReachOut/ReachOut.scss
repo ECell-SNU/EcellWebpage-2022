@@ -72,3 +72,13 @@
     margin-left: 60px;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .ReachOutContainer {
+    display: flex;
+    flex-direction: column;
+    &__form {
+      display: none;
+    }
+  }
+}

@@ -3,11 +3,12 @@
 .memberContainer {
   @include make-flex();
   position: relative;
+  width: 185px;
 
   &::before {
     content: url("../../Assets/Illustration/memberillustration.svg");
-    top: 25%;
-    left: -30%;
+    top: 20%;
+    left: -23px;
     position: absolute;
   }
 
