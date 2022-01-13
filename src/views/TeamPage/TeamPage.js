@@ -16,6 +16,12 @@ import PalakDesVid from "../../Assets/image/teamLeads/PalakDesVid.jpeg";
 import SakshamMarketing from "../../Assets/image/teamLeads/SakshamMarketing.jpg";
 import SmritiEngagement from "../../Assets/image/teamLeads/SmritiEngagement.jpg";
 import PrathamWebDev from "../../Assets/image/teamLeads/Pratham.jpg";
+import PrachiMarketing from "../../Assets/image/teamLeads/Prachi.jpg"
+import LavanyaCotent  from "../../Assets/image/teamLeads/Lavanya.jpg"
+import AryamanPr from "../../Assets/image/teamLeads/Aryaman.jpg"
+import SabavatWebDev from "../../Assets/image/teamLeads/Sabavat.jpeg"
+import SabavatWebDev2 from "../../Assets/image/teamLeads/Sabavat2.jpeg"
+
 
 import TeamMember from "../../components/TeamComponents/TeamMember";
 import DropDown from "../../components/TeamComponents/DropDownGui/DropDown";
@@ -170,9 +176,9 @@ export default function TeamPage() {
           />
 
           <TeamMember
-            MemberName={"Spiderman"}
+            MemberName={"Lavanya Kaushik"}
             Memberposition={"Content"}
-            imageSrc={sample1}
+            imageSrc={LavanyaCotent}
             imageSrcAlt={"ContentLead2"}
           />
 
@@ -213,23 +219,23 @@ export default function TeamPage() {
             imageSrcAlt={"WdLead1"}
           />
           <TeamMember
-            MemberName={"Spiderman"}
+            MemberName={"Prachi Tiwari"}
             Memberposition={"Marketing"}
-            imageSrc={sample1}
+            imageSrc={PrachiMarketing}
             imageSrcAlt={"MktLead2"}
           />
 
           <TeamMember
-            MemberName={"Spiderman"}
+            MemberName={"Aryaman Gupta"}
             Memberposition={"PR"}
-            imageSrc={sample1}
+            imageSrc={AryamanPr}
             imageSrcAlt={"PrLead2"}
           />
 
           <TeamMember
-            MemberName={"Spiderman"}
+            MemberName={"Akshat Sabavat"}
             Memberposition={"Web Development"}
-            imageSrc={sample1}
+            imageSrc={SabavatWebDev2}
             imageSrcAlt={"WdLead2"}
           />
         </div>
