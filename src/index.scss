@@ -32,7 +32,7 @@ body {
   margin: 0%;
   //margin: auto;
   padding: 0%;
-  height: 100%;
+  // height: 100%;
   width: 100vw;
   //width: 100%;
   overflow-x: hidden;
@@ -54,6 +54,23 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+}
+::-webkit-scrollbar {
+  width: 13px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+::-webkit-scrollbar-track {
+  background: #161c22;
+}
+::selection {
+  background: rgba(45, 170, 219, 0.3);
 }
 
 iframe {
