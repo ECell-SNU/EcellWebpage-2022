@@ -3,10 +3,16 @@
 .HeaderContainer {
   font-size: 14px;
   gap: 380px;
-  margin-top: 60px;
+  // margin-top: 60px;
   position: absolute;
-  width: 100%;
+  // width: 100%;
   // padding: 0 30px;
+  width: 1170px;
+  inset: 0 auto 0 auto;
+
+  margin-left: 50%;
+  margin-right: 50%;
+  transform: translate(-50%, 60px);
 
   #NavBarInput,
   .hamButton {
@@ -78,19 +84,25 @@
   }
 }
 
-@media only screen and (max-width: 1234px) {
+// @media only screen and (max-width: 1234px) {
+//   .HeaderContainer {
+//     padding: 0 30px;
+//   }
+// }
+
+@media only screen and (max-width: 1290px) {
   .HeaderContainer {
+    width: 100%;
     padding: 0 30px;
   }
 }
-
-
 
 @media only screen and (max-width: 1075px) {
   .HeaderContainer {
     position: static;
     margin-top: 0;
     width: 100vw;
+    transform: none;
 
     &__secondary-nav,
     &__primary-nav {

@@ -1,23 +1,31 @@
 @import "../../styles/mixins";
 
-.LandingPageWrapper {
-  height: 100vh;
-  position: relative;
-  width: 100%;
+// .LandingPageWrapper {
+  // height: 100vh;
+  // position: relative;
+  // width: 100%;
 
-  overflow-y: auto;
-  scroll-behavior: smooth;
+  // overflow-y: auto;
+  // scroll-behavior: smooth;
   // display: flex;
-  main {
-    width: 1170px;
-    margin: 0 auto;
+  // margin: 0 auto;
+  // main {
+    // width: 1170px;
 
     // transition: all 1.5s ease-in-out;
     // & > * {
     //   scroll-snap-align: center;
     // }
-  }
+  // }
+// }
+
+.LandingPageWrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1170px;
+  position: relative;
 }
+
 
 // @supports (scroll-snap-align: center) {
 //   .LandingPageWrapper {
