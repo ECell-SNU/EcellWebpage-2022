@@ -46,6 +46,7 @@ export default function DropDown(props) {
           src="https://img.icons8.com/ios-glyphs/30/4a90e2/sort-down.png"
           height="14.4px"
           className="icon"
+          alt="down arrow"
         />
       </div>
       <AnimatePresence>

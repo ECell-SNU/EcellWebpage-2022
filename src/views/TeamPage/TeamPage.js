@@ -4,7 +4,7 @@ import vernAsec from "../../Assets/image/verAsec.jpeg";
 import aarAsec from "../../Assets/image/aarAsec.jpeg";
 import abhaTrea from "../../Assets/image/abhaTreas.jpeg";
 import shauFc from "../../Assets/image/shaurFc.jpg";
-import sample1 from "../../Assets/image/sampleImages/sample1.jpg";
+// import sample1 from "../../Assets/image/sampleImages/sample1.jpg";
 import instagram from "../../Assets/icons/logo-instagram.svg";
 import twitter from "../../Assets/icons/logo-twitter.svg";
 import facebook from "../../Assets/icons/logo-facebook.svg";
@@ -19,7 +19,7 @@ import PrathamWebDev from "../../Assets/image/teamLeads/Pratham.jpg";
 import PrachiMarketing from "../../Assets/image/teamLeads/Prachi.jpg"
 import LavanyaCotent  from "../../Assets/image/teamLeads/Lavanya.jpg"
 import AryamanPr from "../../Assets/image/teamLeads/Aryaman.jpg"
-import SabavatWebDev from "../../Assets/image/teamLeads/Sabavat.jpeg"
+// import SabavatWebDev from "../../Assets/image/teamLeads/Sabavat.jpeg"
 import SabavatWebDev2 from "../../Assets/image/teamLeads/Sabavat2.jpeg"
 
 
@@ -51,7 +51,7 @@ export default function TeamPage() {
         y: 10,
       });
     }
-  }, [inView]);
+  }, [animationTrigger, inView]);
 
   return (
     <div className="TeamPageWrapper">

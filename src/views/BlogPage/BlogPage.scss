@@ -3,19 +3,19 @@
 $backgroundColour: #161c22;
 
 .BlogPageWrapper {
-  position: relative;
+  min-height: 100%;
+
   margin-left: auto;
   margin-right: auto;
-  width: 1135px;
-  height: 100%;
-  min-height: 100%;
+  width: 1170px;
+  position: relative;
+
   .BlogsReadUp {
     color: var(--primary-color);
     font-size: 16px;
     font-weight: 600;
   }
   &__TextComponentWrapper {
-    // margin-top: 81px;
     padding-top: 181px;
     padding-bottom: 90px;
     width: 100%;
@@ -24,36 +24,52 @@ $backgroundColour: #161c22;
 
 .BlogPageGrid {
   width: 100%;
-  @include make-flex($dir: row, $just: none);
+  @include make-flex($dir: row);
   gap: 30px;
   flex-wrap: wrap;
-  padding: 42px 0px;
-  // display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  // column-gap: 65px;
+  padding: 45px 0px;
 
   &__animationWrapper {
     height: auto;
-    //   background-color: rgba(0, 255, 255, 0);
-    //   will-change: transform;
-    //   transition: transform 480ms;
-    //   &:hover {
-    //     transform: translateY(-3.7%);
-    //     transition: ease-in-out 0.3s;
-    //   }
   }
 }
-@media only screen and (max-width: 1234px) {
-  .BlogPageWrapper {
-    width: 100%;
-    padding: 0 30px;
-  }
-}
+
 
 @media only screen and (max-width: 1075px) {
   .BlogPageWrapper {
     &__TextComponentWrapper {
       padding-top: 124px;
     }
+  }
+}
+
+@media only screen and (max-width: 1290px) {
+  .BlogPageWrapper {
+    width: 100%;
+    main {
+      padding: 0 30px;
+    }
+  }
+  .BlogPageGrid {
+    padding: 45px 0px;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .BlogPageWrapper {
+    main {
+      padding: 0 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .BlogPageGrid {
+    @include make-flex($dir: row, $just: flex-start);
+    padding: 45px 20px;
+  }
+}
+@media only screen and (max-width: 820px) {
+  .BlogPageGrid {
+    @include make-flex($dir: row);
   }
 }

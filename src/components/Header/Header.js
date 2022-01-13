@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 export default function Header({
-  navItem1,
+  navItem1, 
   navItem2,
   navItem3,
   navItem4,

@@ -14,10 +14,10 @@ function BlogArchive({ title, author, status, tag, ID }) {
         className="BlogArchiveRouting"
       >
         <div className="BlogArchiveRouting__title">{title}</div>
+        <div className="BlogArchiveRouting__author">Written By: {author}</div>
       </Link>
       <div className="BlogArchiveRouting__bottomContainer">
         <button className="BlogArchiveRouting__redirect">Read Now</button>
-        <div className="BlogArchiveRouting__author">Written By: {author}</div>
       </div>
     </motion.div>
   );

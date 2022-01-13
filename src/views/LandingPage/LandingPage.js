@@ -13,7 +13,6 @@ import SponsorSection from "./Components/SponsorSection/SponsorSection";
 import FooterSection from "../../components/Footer/Footer";
 import { motion } from "framer-motion";
 import AnimationRender from "../../components/AnimationRender/AnimationRender";
-import { useEffect } from "react";
 
 export default function LandingPage() {
   const sections = [
