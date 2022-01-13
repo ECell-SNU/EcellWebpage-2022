@@ -18,7 +18,6 @@ import facebookD from "../../Assets/icons/fbD.svg";
 
 export default function ReadBlog() {
   const param = useParams();
-  console.log(param.id);
   const blog = BlogData[param.id];
   const iconsLight = [
     {
@@ -61,12 +60,14 @@ export default function ReadBlog() {
   return (
     <>
       <div
-        className={`BlogPage ${Mode === "dark" ? "colorSchemeDark" : "colorSchemeLight"
-          }`}
+        className={`BlogPage ${
+          Mode === "dark" ? "colorSchemeDark" : "colorSchemeLight"
+        }`}
       >
         <div
-          className={`ReadBlogNav ${Mode === "dark" ? "colorSchemeDark" : "colorSchemeLight"
-            }`}
+          className={`ReadBlogNav ${
+            Mode === "dark" ? "colorSchemeDark" : "colorSchemeLight"
+          }`}
         >
           <div className="Mode">
             <img src={Mode === "light" ? moon : sun} alt="moon" />
@@ -94,59 +95,63 @@ export default function ReadBlog() {
             <ul>
               {Mode === "light"
                 ? iconsLight.map((icon, index) => {
-                  if (index != 3) return (
-                    <li key={index}>
-                      <a href={icon.link} target="_blank">
-                        <img src={icon.icon} alt="icon" height="20px" />
-                      </a>
-                    </li>
-                  )
-                  else return (
-                    <li key={index}>
-                      <a href="#"onSubmit={()=>{
-                        navigator.clipboard.writeText(document.location.href)
-                      }} >
-                        <img src={icon.icon} alt="icon" height="20px" />
-                      </a>
-                    </li>
-                  )
-                }
-                )
+                    if (index !== 3)
+                      return (
+                        <li key={index}>
+                          <a href={icon.link} rel="noreferrer" target="_blank">
+                            <img src={icon.icon} alt="icon" height="20px" />
+                          </a>
+                        </li>
+                      );
+                    else
+                      return (
+                        <li key={index}>
+                          <img src={icon.icon} alt="icon" height="20px" />
+                        </li>
+                      );
+                  })
                 : iconsDark.map((icon, index) => {
-                  if (index != 3) return (
-                    <li key={index}>
-                      <a href={icon.link} target="_blank">
-                        <img src={icon.icon} alt="icon" height="20px" />
-                      </a>
-                    </li>
-                  )
-                  else return (
-                    <li key={index}>
-                      <a href="#"onSubmit={()=>{
-                        navigator.clipboard.writeText(document.location.href)
-                      }} >
-                        <img src={icon.icon} alt="icon" height="20px" />
-                      </a>
-                    </li>
-                  )
-                })}
+                    if (index !== 3)
+                      return (
+                        <li key={index}>
+                          <a href={icon.link} rel="noreferrer" target="_blank">
+                            <img src={icon.icon} alt="icon" height="20px" />
+                          </a>
+                        </li>
+                      );
+                    else
+                      return (
+                        <li key={index}>
+                          <img src={icon.icon} alt="icon" height="20px" />
+                        </li>
+                      );
+                  })}
             </ul>
           </ul>
         </div>
         <main
-          className={`blogContent ${Mode === "dark" ? "colorSchemeDark" : "colorSchemeLight"
-            }`}
+          className={`blogContent ${
+            Mode === "dark" ? "colorSchemeDark" : "colorSchemeLight"
+          }`}
         >
           <article className="blogContent__container">
             <h1 className="blogContent__container__top">{blog.Title}</h1>
+            {/* <div className="blogContent__container__middle">
+              <p>
+                written by <br></br>
+                <span>{blog.Author}</span>
+                {blog.Creds}
+                <br></br>
+                {blog.Date}
+              </p>
+            </div> */}
             <div className="blogContent__container__bot">
               <div className="blogContent__container__bot__writtenBy">
-                <img src={byline} alt="byline" />
+                <img src={byline} width="150px" height="5" alt="byline" />
 
                 <p>
                   written by <br></br>
-                  <span>{blog.Author},</span> {blog.Creds}
-                  <br></br>
+                  <span>{blog.Author},</span> <br /> {blog.Creds},<br></br>
                   {blog.Date}
                 </p>
               </div>
