@@ -28,7 +28,11 @@ export default function Header({
   const node = useRef();
 
   function handleClick({ target }) {
-    if (!node.current.contains(target) || !node.current === target) {
+    if (
+      (!node.current.contains(target) || !node.current === target) 
+      &&
+      thousandPixels
+    ) {
       setNavState(false);
       document.getElementById("NavBarInput").checked = false;
       hideOverflow();

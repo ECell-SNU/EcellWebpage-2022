@@ -3,13 +3,13 @@ import Header from "../../components/Header/Header";
 import BlogArchive from "../../components/TextComponent/BlogArchive/BlogArchive";
 import BlogData from "../../DataFiles/BlogData.json";
 import "../BlogPage/BlogPage.scss";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-hook-inview";
+import { motion } from "framer-motion";
+// import { useInView } from "react-hook-inview";
 
 export default function BlogPage() {
   return (
     <div className="BlogPageWrapper">
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -18,18 +18,18 @@ export default function BlogPage() {
           delay: 0.6,
           duration: 1.2,
         }}
-      >
-        <Header
-          navItem1="Home"
-          navItem2="About Us"
-          navItem3="Team"
-          navItem4="Think Tank"
-          navItem5="Archive"
-          routeItem1="/home"
-          routeItem5="/blogs/archive"
-          routeItem3="/teams"
-        />
-      </motion.div>
+      > */}
+      <Header
+        navItem1="Home"
+        navItem2="About Us"
+        navItem3="Team"
+        navItem4="Think Tank"
+        navItem5="Archive"
+        routeItem1="/home"
+        routeItem5="/blogs/archive"
+        routeItem3="/teams"
+      />
+      {/* </motion.div> */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -37,6 +37,7 @@ export default function BlogPage() {
         className="BlogPageWrapper__TextComponentWrapper"
       >
         <HeroText
+          className="BlogPageWrapper__TextComponentWrapper__HeroText"
           classifier="Our Blogs"
           title="Made for tomorrow's entreprenuers"
           content1="Incididunt ut nostrud nulla veniam ullamco eu id exercitation non nostrud reprehenderit. Elit elit laboris consequat
