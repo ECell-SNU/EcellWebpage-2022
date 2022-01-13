@@ -55,6 +55,9 @@
       gap: 30px;
       position: relative;
       left: 60px;
+      li {
+        animation: fade 1s linear;
+      }
     }
   }
 }
@@ -138,5 +141,14 @@
     hr {
       display: none;
     }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

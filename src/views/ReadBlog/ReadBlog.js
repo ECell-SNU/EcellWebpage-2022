@@ -37,7 +37,7 @@ export default function ReadBlog() {
       link: navigator.clipboard.writeText(document.location.href),
     },
   ];
-
+  let text = blog.Content;
   const iconsDark = [
     {
       icon: twitterD,
@@ -151,13 +151,16 @@ export default function ReadBlog() {
                 <img src={byline} width="150px" height="5" alt="byline" />
 
                 <p>
-                  written by <br></br>
-                  <span>{blog.Author},</span> <br /> {blog.Creds},<br></br>
+                  written by <br />
+                  <span>{blog.Author},</span> <br /> {blog.Creds},<br />
                   {blog.Date}
                 </p>
               </div>
-              <p className="blogContent__container__bot__text">
-                {blog.Content}
+              <p
+                dangerouslySetInnerHTML={{ __html: text }}
+                className="blogContent__container__bot__text"
+              >
+                {/* {blog.Content} */}
               </p>
             </div>
           </article>

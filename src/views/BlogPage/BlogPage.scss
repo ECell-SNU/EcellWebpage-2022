@@ -3,13 +3,11 @@
 $backgroundColour: #161c22;
 
 .BlogPageWrapper {
-  @include make-flex($just: flex-start);
-  // padding-top: 60px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  // width: 1170px;
   width: 1135px;
+  height: 100%;
   min-height: 100%;
   .BlogsReadUp {
     color: var(--primary-color);
