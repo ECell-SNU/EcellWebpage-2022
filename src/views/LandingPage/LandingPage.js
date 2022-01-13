@@ -13,8 +13,23 @@ import SponsorSection from "./Components/SponsorSection/SponsorSection";
 import FooterSection from "../../components/Footer/Footer";
 import { motion } from "framer-motion";
 import AnimationRender from "../../components/AnimationRender/AnimationRender";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function LandingPage() {
+  // AOS.init({
+  //   offset: 200,
+  //   duration: 800,
+  //   easing: "ease-in-back",
+  //   delay: 60,
+
+  // });
+
+  // useEffect(() => {
+  //   AOS.refresh();
+  // });
+
   const sections = [
     <AboutUsSection />,
     <ThinkTankSection />,
@@ -47,30 +62,19 @@ export default function LandingPage() {
 
   return (
     <section className="LandingPageWrapper">
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          type: "spring",
-          stiffness: 120,
-          delay: 0.6,
-          duration: 1.2,
-        }}
-      >
-        <Header
-          navItem1="Home"
-          navItem2="About Us"
-          navItem3="Team"
-          navItem4="Think Tank"
-          navItem6="Blogs"
-          navItem7="Events"
-          routeItem1="/home"
-          routeItem3="/teams"
-          routeItem5="/blog/archive"
-          routeItem6="/blogs"
-          routeItem7="/events"
-        />
-      </motion.div>
+      <Header
+        navItem1="Home"
+        navItem2="About Us"
+        navItem3="Team"
+        navItem4="Think Tank"
+        navItem6="Blogs"
+        navItem7="Events"
+        routeItem1="/home"
+        routeItem3="/teams"
+        routeItem5="/blog/archive"
+        routeItem6="/blogs"
+        routeItem7="/events"
+      />
 
       <main>
         <motion.div

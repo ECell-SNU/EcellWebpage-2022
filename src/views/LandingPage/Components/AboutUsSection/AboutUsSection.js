@@ -6,7 +6,7 @@ import Tab from "../../../../components/Tab/Tab";
 
 function AboutUsSection(props) {
   return (
-    <section className="AboutUsSectionWrapper">
+    <section className="AboutUsSectionWrapper" {...props}>
       <div className="AboutUsSectionWrapper__content-container">
         <LandingSectionTexts
           classifier="About us"
