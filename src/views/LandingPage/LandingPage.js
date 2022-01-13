@@ -88,8 +88,8 @@ export default function LandingPage() {
         {sections.map((section, index) => (
           <AnimationRender key={index}>{section}</AnimationRender>
         ))}
-        <FooterSection />
       </main>
+        <FooterSection />
     </section>
   );
 }
