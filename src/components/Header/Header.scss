@@ -6,6 +6,7 @@
   margin-top: 60px;
   position: absolute;
   width: 100%;
+  // padding: 0 30px;
 
   #NavBarInput,
   .hamButton {
@@ -77,11 +78,13 @@
   }
 }
 
-@media only screen and (max-width: 1290px) {
+@media only screen and (max-width: 1234px) {
   .HeaderContainer {
     padding: 0 30px;
   }
 }
+
+
 
 @media only screen and (max-width: 1075px) {
   .HeaderContainer {

@@ -1,11 +1,16 @@
+@import "../../styles/mixins";
+
 $backgroundColour: #161c22;
 
 .BlogPageWrapper {
+  @include make-flex($just: flex-start);
   // padding-top: 60px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  width: 1170px;
+  // width: 1170px;
+  width: 1135px;
+  min-height: 100%;
   .BlogsReadUp {
     color: var(--primary-color);
     font-size: 16px;
@@ -15,21 +20,42 @@ $backgroundColour: #161c22;
     // margin-top: 81px;
     padding-top: 181px;
     padding-bottom: 100px;
+    width: 100%;
   }
 }
 
 .BlogPageGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 65px;
+  width: 100%;
+  @include make-flex($dir: row);
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 85px 20px;
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  // column-gap: 65px;
 
-  // &__animationWrapper {
-  //   background-color: rgba(0, 255, 255, 0);
-  //   will-change: transform;
-  //   transition: transform 480ms;
-  //   &:hover {
-  //     transform: translateY(-3.7%);
-  //     transition: ease-in-out 0.3s;
-  //   }
-  // }
+  &__animationWrapper {
+    height: auto;
+    //   background-color: rgba(0, 255, 255, 0);
+    //   will-change: transform;
+    //   transition: transform 480ms;
+    //   &:hover {
+    //     transform: translateY(-3.7%);
+    //     transition: ease-in-out 0.3s;
+    //   }
+  }
+}
+@media only screen and (max-width: 1234px) {
+  .BlogPageWrapper {
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 1075px) {
+  .BlogPageWrapper {
+    &__TextComponentWrapper {
+      padding-top: 124px;
+    }
+  }
 }
