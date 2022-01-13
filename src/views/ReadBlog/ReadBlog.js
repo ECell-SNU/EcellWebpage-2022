@@ -103,7 +103,9 @@ export default function ReadBlog() {
                   )
                   else return (
                     <li key={index}>
-                      <a href={icon.link}>
+                      <a href="#"onSubmit={()=>{
+                        navigator.clipboard.writeText(document.location.href)
+                      }} >
                         <img src={icon.icon} alt="icon" height="20px" />
                       </a>
                     </li>
@@ -120,7 +122,9 @@ export default function ReadBlog() {
                   )
                   else return (
                     <li key={index}>
-                      <a href={icon.link}>
+                      <a href="#"onSubmit={()=>{
+                        navigator.clipboard.writeText(document.location.href)
+                      }} >
                         <img src={icon.icon} alt="icon" height="20px" />
                       </a>
                     </li>
