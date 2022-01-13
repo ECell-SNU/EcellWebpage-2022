@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Session.scss";
 
-function Session({ children, className }) {
+function Session({ children, className, ...props }) {
   return (
-    <section className="SessionWrapper">
+    <section className="SessionWrapper" {...props}>
       <div className={`SessionWrapper__content-container ${className}`}>
         {children}
       </div>

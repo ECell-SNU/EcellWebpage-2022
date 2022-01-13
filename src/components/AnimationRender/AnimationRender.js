@@ -27,7 +27,7 @@ export default function AnimationRender(props) {
         y: 10,
       });
     }
-  }, [inView__ATS]);
+  }, [animationTrigger__ATS, inView__ATS]);
   return (
     <motion.div animate={animationTrigger__ATS} ref={ref__ATS}>
       {props.children}
