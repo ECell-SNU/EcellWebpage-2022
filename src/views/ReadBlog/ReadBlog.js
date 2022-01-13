@@ -100,14 +100,14 @@ export default function ReadBlog() {
                       return (
                         <li key={index}>
                           <a href={icon.link} rel="noreferrer" target="_blank">
-                            <img src={icon.icon} alt="icon" height="20px" />
+                            <img src={icon.icon} alt="icon" height="17px" />
                           </a>
                         </li>
                       );
                     else
                       return (
                         <li key={index}>
-                          <img src={icon.icon} alt="icon" height="20px" />
+                          <img src={icon.icon} alt="icon" height="17px" />
                         </li>
                       );
                   })
@@ -116,14 +116,14 @@ export default function ReadBlog() {
                       return (
                         <li key={index}>
                           <a href={icon.link} rel="noreferrer" target="_blank">
-                            <img src={icon.icon} alt="icon" height="20px" />
+                            <img src={icon.icon} alt="icon" height="17px" />
                           </a>
                         </li>
                       );
                     else
                       return (
                         <li key={index}>
-                          <img src={icon.icon} alt="icon" height="20px" />
+                          <img src={icon.icon} alt="icon" height="17px" />
                         </li>
                       );
                   })}
