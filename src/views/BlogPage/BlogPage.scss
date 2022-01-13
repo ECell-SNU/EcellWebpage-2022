@@ -17,17 +17,17 @@ $backgroundColour: #161c22;
   &__TextComponentWrapper {
     // margin-top: 81px;
     padding-top: 181px;
-    padding-bottom: 100px;
+    padding-bottom: 90px;
     width: 100%;
   }
 }
 
 .BlogPageGrid {
   width: 100%;
-  @include make-flex($dir: row);
+  @include make-flex($dir: row, $just: none);
   gap: 30px;
   flex-wrap: wrap;
-  padding: 85px 20px;
+  padding: 42px 0px;
   // display: grid;
   // grid-template-columns: repeat(3, 1fr);
   // column-gap: 65px;
