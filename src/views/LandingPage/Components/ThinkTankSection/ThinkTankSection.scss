@@ -35,7 +35,7 @@
   top: 235px;
   left: 265px;
   animation-name: example;
-  animation-duration: 4s;
+  animation-duration: 1.7s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
@@ -45,7 +45,7 @@
     left: 265px;
   }
   100% {
-    left: 200px;
-    top: 0;
+    top: 200px;
+    left: 265px;
   }
 }
