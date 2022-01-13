@@ -2,8 +2,21 @@ import "./ArchivePage.scss";
 import BlogData from "../../DataFiles/BlogData.json";
 import BlogArchive from "../../components/TextComponent/BlogArchive/BlogArchive";
 import { motion } from "framer-motion";
+import Fuse from "fuse.js";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function ArchivePage() {
+  const [searchResults, setSearchResults] = useState([]);
+  const fuse = new Fuse(BlogData, {
+    keys: ["Title", "Content"],
+    isCaseSensitive: false,
+  });
+
+  useEffect(() => {
+    console.log(searchResults);
+  });
+
   return (
     <div className="ArchivePageWrapper">
       <header>
@@ -21,11 +34,26 @@ export default function ArchivePage() {
           <a href="/blogs" className="ArchivePageNavbar__button">
             &larr; &nbsp; &nbsp;Go Back
           </a>
-          <input
-            type="text"
-            placeholder="Search Here"
-            className="ArchivePageNavbar__search"
-          ></input>
+          <div className="ArchivePageNavbar__searchBar">
+            <input
+              type="text"
+              placeholder="Search Here"
+              className="ArchivePageNavbar__search"
+              onChange={(e) => {
+                setSearchResults(fuse.search(e.target.value));
+                console.log(fuse.search(e.target.value.toLocaleLowerCase));
+              }}
+            ></input>
+            <ul>
+              {searchResults.map((result) => (
+                <li>
+                  <Link to={`/blog/read/${result.item.ID}`}>
+                    {result.item.Title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </motion.nav>
       </header>
       <main>
