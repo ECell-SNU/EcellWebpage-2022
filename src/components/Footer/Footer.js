@@ -7,7 +7,8 @@ import meta from "../../Assets/icons/fb-bw.svg";
 export default function Footer() {
   return (
     <div className="FooterContainer">
-      <ReachOut></ReachOut>
+      <ReachOut />
+      <div className="FooterContainer__right">
       <div className="FooterContainer__elements">
         <ul>
           <li>
@@ -69,6 +70,7 @@ export default function Footer() {
           </a>
         </li>
       </ul>
+      </div>
     </div>
   );
 }
