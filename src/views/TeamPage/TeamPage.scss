@@ -1,7 +1,7 @@
 @import "../../styles/mixins";
 
 .TeamPageHeading {
-  padding-top: 3rem;
+  // padding-top: 3rem;
   font-size: 1.3rem;
   text-align: center;
   font-weight: 600;
@@ -9,8 +9,13 @@
 }
 
 .SectionWrapper {
+  margin-top: 105px;
+  @include make-flex();
+  gap: 20px;
   &__leads {
     margin-top: 150px;
+    @include make-flex();
+    gap: 20px;
   }
   &__members {
     margin-top: 150px;
@@ -18,14 +23,29 @@
 }
 
 .TeamPageWrapper {
-  padding: 5rem 8rem;
+  // padding: 5rem 8rem;
+  @include make-flex();
 
+  main {
+    width: 1170px;
+    margin: 65px 0;
+  @include make-flex();
+
+  }
+
+  header {
+    width: 100%;
+  }
   &__grid1 {
-    margin-top: 6rem;
-    display: grid;
-    grid-template-columns: repeat(3, 3fr);
-    grid-row-gap: 5rem;
-    justify-items: center;
+    margin-top: 40px;
+    @include make-flex($dir: row, $just: space-evenly);
+    flex-wrap: wrap;
+    gap: 150px;
+    // margin-top: 6rem;
+    // display: grid;
+    // grid-template-columns: repeat(3, 3fr);
+    // grid-row-gap: 5rem;
+    // justify-items: center;
   }
 
   &__grid2 {
@@ -39,7 +59,8 @@
 
 .TeamPageNavbar {
   @include make-flex($just: space-between, $dir: row, $align: center);
-  gap: 365px;
+  // gap: 365px;
+  width: 100%;
   &__button {
     background-color: transparent;
     border: none;
@@ -68,51 +89,67 @@
   }
 }
 
-@media only screen and (max-width: 376px) {
-  header {
-    margin-top: 12px !important;
-  }
-  .TeamPageNavbar {
-    @include make-flex($just: space-between, $dir: row, $align: center);
-    gap: 100px;
-    &__button {
-      display: none;
-    }
-    &__responsive {
-      display: flex !important;
-      background-color: transparent;
-      border: none;
-      color: #ccccccb8;
-      font-size: 15px;
-      text-decoration: none;
-    }
-  }
+// @media only screen and (max-width: 376px) {
+//   header {
+//     margin-top: 12px !important;
+//   }
+//   .TeamPageNavbar {
+//     @include make-flex($just: space-between, $dir: row, $align: center);
+//     gap: 100px;
+//     &__button {
+//       display: none;
+//     }
+//     &__responsive {
+//       display: flex !important;
+//       background-color: transparent;
+//       border: none;
+//       color: #ccccccb8;
+//       font-size: 15px;
+//       text-decoration: none;
+//     }
+//   }
 
+//   .TeamPageWrapper {
+//     padding: 2.4rem 2rem;
+//     &__grid1 {
+//       margin-top: 2rem;
+//       display: grid;
+//       grid-template-columns: repeat(2, 1fr);
+//       grid-row-gap: 5rem;
+//       justify-items: center;
+//     }
+
+//     &__grid2 {
+//       margin-top: 2rem;
+//       display: grid;
+//       grid-template-columns: repeat(2, 1fr);
+//       justify-items: center;
+//       justify-content: center;
+//     }
+//   }
+
+//   .SectionWrapper {
+//     &__leads {
+//       margin-top: 50px;
+//     }
+//     &__members {
+//       margin-top: 50px;
+//     }
+//   }
+// }
+
+@media only screen and (max-width: 1290px) {
   .TeamPageWrapper {
-    padding: 2.4rem 2rem;
-    &__grid1 {
-      margin-top: 2rem;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-row-gap: 5rem;
-      justify-items: center;
-    }
-
-    &__grid2 {
-      margin-top: 2rem;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-items: center;
-      justify-content: center;
+    main {
+      width: 100%;
+      padding: 0 30px;
     }
   }
-
-  .SectionWrapper {
-    &__leads {
-      margin-top: 50px;
-    }
-    &__members {
-      margin-top: 50px;
+}
+@media only screen and (max-width: 510px) {
+  .TeamPageWrapper {
+    main {
+      padding: 0 20px;
     }
   }
 }
