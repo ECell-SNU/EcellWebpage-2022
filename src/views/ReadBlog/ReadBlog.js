@@ -23,52 +23,50 @@ export default function ReadBlog() {
   const iconsLight = [
     {
       icon: twitter,
-      link: "asd",
+      link: "https://twitter.com/ecellsnu?t=BDaPBAN7cuAqcLAJnpP-Uw&s=09",
     },
     {
       icon: facebook,
-      link: "asd",
+      link: "https://www.facebook.com/ecellsnu/",
     },
     {
       icon: instagram,
-      link: "asd",
+      link: "https://www.instagram.com/ecellsnu/?utm_medium=copy_link",
     },
     {
       icon: share,
-      link: "asd",
+      link: navigator.clipboard.writeText(document.location.href),
     },
   ];
 
   const iconsDark = [
     {
       icon: twitterD,
-      link: "asd",
+      link: "https://twitter.com/ecellsnu?t=BDaPBAN7cuAqcLAJnpP-Uw&s=09",
     },
     {
       icon: facebookD,
-      link: "asd",
+      link: "https://www.facebook.com/ecellsnu/",
     },
     {
       icon: instaD,
-      link: "asd",
+      link: "https://www.instagram.com/ecellsnu/?utm_medium=copy_link",
     },
     {
       icon: shareD,
-      link: "asd",
+      link: navigator.clipboard.writeText(document.location.href),
     },
   ];
   const [Mode, setMode] = useState("dark");
   return (
     <>
       <div
-        className={`BlogPage ${
-          Mode === "dark" ? "colorSchemeDark" : "colorSchemeLight"
-        }`}
+        className={`BlogPage ${Mode === "dark" ? "colorSchemeDark" : "colorSchemeLight"
+          }`}
       >
         <div
-          className={`ReadBlogNav ${
-            Mode === "dark" ? "colorSchemeDark" : "colorSchemeLight"
-          }`}
+          className={`ReadBlogNav ${Mode === "dark" ? "colorSchemeDark" : "colorSchemeLight"
+            }`}
         >
           <div className="Mode">
             <img src={Mode === "light" ? moon : sun} alt="moon" />
@@ -95,27 +93,45 @@ export default function ReadBlog() {
             </li>
             <ul>
               {Mode === "light"
-                ? iconsLight.map((icon, index) => (
+                ? iconsLight.map((icon, index) => {
+                  if (index != 3) return (
+                    <li key={index}>
+                      <a href={icon.link} target="_blank">
+                        <img src={icon.icon} alt="icon" height="20px" />
+                      </a>
+                    </li>
+                  )
+                  else return (
                     <li key={index}>
                       <a href={icon.link}>
                         <img src={icon.icon} alt="icon" height="20px" />
                       </a>
                     </li>
-                  ))
-                : iconsDark.map((icon, index) => (
+                  )
+                }
+                )
+                : iconsDark.map((icon, index) => {
+                  if (index != 3) return (
+                    <li key={index}>
+                      <a href={icon.link} target="_blank">
+                        <img src={icon.icon} alt="icon" height="20px" />
+                      </a>
+                    </li>
+                  )
+                  else return (
                     <li key={index}>
                       <a href={icon.link}>
                         <img src={icon.icon} alt="icon" height="20px" />
                       </a>
                     </li>
-                  ))}
+                  )
+                })}
             </ul>
           </ul>
         </div>
         <main
-          className={`blogContent ${
-            Mode === "dark" ? "colorSchemeDark" : "colorSchemeLight"
-          }`}
+          className={`blogContent ${Mode === "dark" ? "colorSchemeDark" : "colorSchemeLight"
+            }`}
         >
           <article className="blogContent__container">
             <h1 className="blogContent__container__top">{blog.Title}</h1>
