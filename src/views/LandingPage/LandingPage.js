@@ -45,6 +45,9 @@ export default function LandingPage() {
     <SponsorSection />,
   ];
 
+  document.getElementById("root").style.height = "unset";
+  document.getElementsByTagName("body")[0].style.height = "unset";
+
   return (
     <>
       <section className="LandingPageWrapper">
