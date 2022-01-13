@@ -77,6 +77,7 @@ export default function LandingPage() {
           <AnimationRender key={index}>{section}</AnimationRender>
         ))}
       </main>
+        <FooterSection />
     </section>
     <FooterSection />
     </>
