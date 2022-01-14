@@ -75,7 +75,7 @@
   .HeroSectionWrapper {
     @include make-flex();
     &__content-container {
-      width: unset;
+      // width: unset;
     }
   }
 }
@@ -83,7 +83,7 @@
   .HeroSectionWrapper {
     @include make-flex();
     &__content-container {
-      width: unset;
+      // width: unset;
     }
     &__content {
       width: 100%;
