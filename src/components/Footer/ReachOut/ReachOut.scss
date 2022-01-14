@@ -4,6 +4,10 @@
   @include make-flex($just: space-between);
   height: 100%;
 
+  &__mobile {
+    gap: 30px;
+  }
+
   &__top {
     gap: 15px;
     @include make-flex($align: flex-start, $dir: row);
@@ -13,12 +17,7 @@
     @include make-flex($just: flex-start);
     height: 100%;
   }
-  // p {
-  //   position: relative;
-  //   bottom: -40px;
-  //   left: 50px;
-  //   color: #787777;
-  // }
+
   &__heading {
     @include make-flex($just: flex-start, $align: flex-start);
     gap: 20px;
@@ -79,6 +78,19 @@
     flex-direction: column;
     &__form {
       display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .ReachOutContainer {
+    &__left {
+      width: 100%;
+      @include make-flex();
+    }
+
+    &__top {
+      flex-direction: column;
     }
   }
 }

@@ -9,17 +9,27 @@
   width: 100%;
   height: 330px;
 
+  &--mobile {
+    @include make-flex();
+    height: unset;
+  }
+
   &__right {
     @include make-flex($dir: row, $align: flex-start, $just: space-between);
     // gap: 30px;
     width: 420px;
     height: 100%;
     // width: 30%;
+    &--mobile {
+      width: 100%;
+      @include make-flex($just: space-between, $align: flex-start);
+      gap: 40px;
+    }
   }
 
   ul {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     gap: 10px;
     list-style: none;
     a {
@@ -39,9 +49,13 @@
     display: flex;
 
     &__contact {
+      @include make-flex();
       position: relative;
       // top: -25px;
       ul {
+      }
+      &--mobile {
+        @include make-flex($align: flex-start);
       }
     }
 
@@ -53,6 +67,7 @@
         font-size: 15px;
       }
     }
+
     &__socials {
       @include make-flex($just: space-evenly, $dir: row);
       width: 10%;
@@ -69,6 +84,11 @@
         height: 1.2rem;
         width: 1.2rem;
       }
+
+      &--mobile {
+        @include make-flex($dir: row);
+        gap: 25px !important;
+      }
     }
   }
 }
@@ -76,5 +96,13 @@
 @media only screen and (max-width: 380px) {
   .FooterContainer {
     padding: 10px 13px;
+  }
+}
+
+
+@media only screen and (max-width: 550px) {
+  .FooterContainer {
+    // padding: 10px 13px;
+    padding: 30px;
   }
 }

@@ -1,9 +1,10 @@
 import logoECell from "../../../Assets/icons/ecell-bw.svg";
+import propTypes from "prop-types";
 import "./ReachOut.scss";
 
-export default function ReachOut() {
+export default function ReachOut({ children, className }) {
   return (
-    <div className="ReachOutContainer">
+    <div className={`ReachOutContainer ${className}`}>
       <div className="ReachOutContainer__top">
         <div className="ReachOutContainer__left">
           <img
@@ -22,7 +23,18 @@ export default function ReachOut() {
           </form>
         </div>
       </div>
+      {children}
       <p>© 2022 E-Cell Shiv Nadar University, Noida, All Rights Reserved.</p>
     </div>
   );
 }
+
+ReachOut.propTypes = {
+  children: propTypes.node,
+  className: propTypes.string,
+};
+
+ReachOut.defaultProps = {
+  children: null,
+  className: "",
+};
