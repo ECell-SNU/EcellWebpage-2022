@@ -20,7 +20,7 @@ import PrachiMarketing from "../../Assets/image/teamLeads/Prachi.jpg";
 import LavanyaCotent from "../../Assets/image/teamLeads/Lavanya.jpg";
 import AryamanPr from "../../Assets/image/teamLeads/Aryaman.jpg";
 // import SabavatWebDev from "../../Assets/image/teamLeads/Sabavat.jpeg"
-import SabavatWebDev2 from "../../Assets/image/teamLeads/Sabavat2.jpeg";
+import SabavatWebDev2 from "../../Assets/image/teamLeads/Sabavat2.png";
 
 import TeamMember from "../../components/TeamComponents/TeamMember";
 import DropDown from "../../components/TeamComponents/DropDownGui/DropDown";
