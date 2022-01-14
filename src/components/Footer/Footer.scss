@@ -49,7 +49,7 @@
     display: flex;
 
     &__contact {
-      @include make-flex();
+      @include make-flex($align:flex-start);
       position: relative;
       // top: -25px;
       ul {
