@@ -42,8 +42,8 @@ export default function BlogPage() {
             className="BlogPageWrapper__TextComponentWrapper__HeroText"
             classifier="Our Blogs"
             title="Made for tomorrow's entreprenuers"
-            content1="Incididunt ut nostrud nulla veniam ullamco eu id exercitation non nostrud reprehenderit. Elit elit laboris consequat
-        . Pariatur elit in laborum eiusmod deserunt."
+            content1="Here's where you can find insights, ideas, inspiration about all things entrepreneurship and to guide the mind towards these topics.
+            Our students also write a weekly newsletter, stay tuned for more"
           />
         </motion.div>
         <motion.h3

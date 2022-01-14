@@ -179,9 +179,6 @@ export default function ReadBlog() {
             </div> */}
             <div className="blogContent__container__bot">
               <div className="blogContent__container__bot__writtenBy">
-                <img src={byline} width="150px" height="5" alt="byline" />
-                {/* <img src={bylineD} width="150px" height="5" alt="byline" /> */}
-
                 <p>
                   written by <br />
                   <span>{blog.Author},</span> {blog.Creds}
