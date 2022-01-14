@@ -63,13 +63,14 @@ code {
   height: 6px;
 }
 ::-webkit-scrollbar-thumb {
+  border-radius: 5px;
   background: #ffffff;
 }
 ::-webkit-scrollbar-track {
-  background: #28445f;
+  background: #161c22;
 }
 ::selection {
-  background: rgba(45, 170, 219, 0.3);
+  background: rgba(45, 170, 219, 0.021);
 }
 
 iframe {
