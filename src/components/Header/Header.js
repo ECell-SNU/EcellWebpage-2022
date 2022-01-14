@@ -15,7 +15,9 @@ export default function Header({
   navItem6,
   navItem7,
   routeItem1,
+  routeItem2,
   routeItem3,
+  routeItem4,
   routeItem5,
   routeItem6,
   routeItem7,
@@ -86,13 +88,13 @@ export default function Header({
             <a href={routeItem1}>{navItem1}</a>
           </li>
           <li>
-            <a href="/">{navItem2}</a>
+            <a href={routeItem2}>{navItem2}</a>
           </li>
           <li>
             <a href={routeItem3}>{navItem3}</a>
           </li>
           <li>
-            <a href="/">{navItem4}</a>
+            <a href={routeItem4}>{navItem4}</a>
           </li>
           <li>
             <a href={routeItem5}>{navItem5}</a>

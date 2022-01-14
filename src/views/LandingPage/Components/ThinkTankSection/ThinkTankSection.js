@@ -12,7 +12,7 @@ function ThinkTankSection(props) {
   const isMobile = useMediaQuery({ query: "(max-width: 1075px)" });
 
   return (
-    <section className="ThinkTankSectionWrapper" {...props}>
+    <section className="ThinkTankSectionWrapper" id="thinktank" {...props}>
       <div className="ThinkTankSectionWrapper__content-container">
         {!isMobile && (
           <div className="animationWrapper">
