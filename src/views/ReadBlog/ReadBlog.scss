@@ -23,12 +23,14 @@
   }
 
   .blogContent__container__bot__text {
+    padding-bottom: 50px;
     font-weight: 300;
   }
 }
 .BlogPage {
   height: 100vh;
   padding-top: 70px;
+  padding-bottom: 30px;
 }
 .ReadBlogNav {
   a {
@@ -109,6 +111,10 @@
       }
     }
   }
+}
+
+.blogContent__container__bot__text {
+  padding-bottom: 50px;
 }
 
 @media only screen and (max-width: 510px) {

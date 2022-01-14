@@ -5,6 +5,7 @@ import BlogData from "../../DataFiles/BlogData.json";
 import moon from "../../Assets/icons/mooon.svg";
 import sun from "../../Assets/icons/sun.svg";
 import byline from "../../Assets/icons/byline-top.svg";
+import bylineD from "../../Assets/icons/byline-topBlack.svg";
 import { useState } from "react";
 import instagram from "../../Assets/icons/instaL.svg";
 import twitter from "../../Assets/icons/twitterL.svg";
@@ -179,6 +180,7 @@ export default function ReadBlog() {
             <div className="blogContent__container__bot">
               <div className="blogContent__container__bot__writtenBy">
                 <img src={byline} width="150px" height="5" alt="byline" />
+                {/* <img src={bylineD} width="150px" height="5" alt="byline" /> */}
 
                 <p>
                   written by <br />
