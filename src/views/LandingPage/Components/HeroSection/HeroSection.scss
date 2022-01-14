@@ -73,8 +73,8 @@
 }
 @media only screen and (max-width: 1075px) {
   .HeroSectionWrapper {
-    @include make-flex();
     &__content-container {
+      @include make-flex();
       // width: unset;
     }
   }
