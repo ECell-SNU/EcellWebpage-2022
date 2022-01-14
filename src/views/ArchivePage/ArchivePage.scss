@@ -15,7 +15,7 @@
     margin-bottom: 45px;
     @include make-flex($dir: row);
     flex-wrap: wrap;
-    gap: 55px;
+    gap: 75px;
     width: 100%;
 
     &__animationWrapper {
