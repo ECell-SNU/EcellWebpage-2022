@@ -16,6 +16,9 @@ import twitterD from "../../Assets/icons/twitterD.svg";
 import shareD from "../../Assets/icons/shareD.svg";
 import facebookD from "../../Assets/icons/fbD.svg";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function ReadBlog() {
   const param = useParams();
   const blog = BlogData[param.id];
@@ -57,8 +60,15 @@ export default function ReadBlog() {
     },
   ];
   const [Mode, setMode] = useState("light");
+  const notify = () => {
+    toast.info("Copied to Clipboard!", {
+      position: toast.POSITION.TOP_CENTER,
+      theme: "colored",
+    });
+  };
   return (
     <>
+      <ToastContainer />
       <div
         className={`BlogPage ${
           Mode === "light" ? "colorSchemeLight" : "colorSchemeDark"
@@ -88,7 +98,7 @@ export default function ReadBlog() {
           </a>
           <ul>
             <li>
-              <a href="/"> Go Back</a>
+              <a href="/blogs"> Go Back</a>
             </li>
             <li>
               <a href="/"> Blog Archive</a>
@@ -107,7 +117,17 @@ export default function ReadBlog() {
                     else
                       return (
                         <li key={index}>
-                          <img src={icon.icon} alt="icon" height="17px" />
+                          <img
+                            onClick={() => {
+                              if (icon.icon === share) {
+                                console.log("yo");
+                                notify();
+                              }
+                            }}
+                            src={icon.icon}
+                            alt="icon"
+                            height="17px"
+                          />
                         </li>
                       );
                   })
@@ -123,7 +143,17 @@ export default function ReadBlog() {
                     else
                       return (
                         <li key={index}>
-                          <img src={icon.icon} alt="icon" height="17px" />
+                          <img
+                            onClick={() => {
+                              if (icon.icon === shareD) {
+                                console.log("yo");
+                                notify();
+                              }
+                            }}
+                            src={icon.icon}
+                            alt="icon"
+                            height="17px"
+                          />
                         </li>
                       );
                   })}
@@ -152,7 +182,8 @@ export default function ReadBlog() {
 
                 <p>
                   written by <br />
-                  <span>{blog.Author},</span> {blog.Creds}<br />
+                  <span>{blog.Author},</span> {blog.Creds}
+                  <br />
                   {blog.Date}
                 </p>
               </div>
