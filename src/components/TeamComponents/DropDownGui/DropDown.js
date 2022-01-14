@@ -33,15 +33,15 @@ export default function DropDown(props) {
     console.log(containerState);
   }
 
-  function OpenReverseSaysMe(){
-    setReverseState(!reverseState)
+  function OpenReverseSaysMe() {
+    setReverseState(!reverseState);
   }
   return (
     <div className="membersContainer">
       <div className="membersContainer__button">
         <button
           onClick={() => {
-            props.year === "2024" ? OpenReverseSaysMe() : OpenSaysMe() ;
+            props.year === "2024" ? OpenReverseSaysMe() : OpenSaysMe();
           }}
           className="membersContainer__yearTitle"
         >
@@ -55,39 +55,39 @@ export default function DropDown(props) {
         />
       </div>
       <AnimatePresence>
-        {
-          props.year === "2024" ? reverseState && (
-            <motion.div
-              variants={containerVariants}
-              initial="initial"
-              animate="animate"
-              transition="transition"
-              exit="exit"
-              className="membersContainer__studentNames"
-            >
-              {StudentData.filter((data) => {
-                return data["year"] === props.year;
-              }).map((student) => {
-                return <p>{student.name}</p>;
-              })}
-            </motion.div>
-          ) : containerState && (
-            <motion.div
-              variants={containerVariants}
-              initial="initial"
-              animate="animate"
-              transition="transition"
-              exit="exit"
-              className="membersContainer__studentNames"
-            >
-              {StudentData.filter((data) => {
-                return data["year"] === props.year;
-              }).map((student) => {
-                return <p>{student.name}</p>;
-              })}
-            </motion.div>
-          )
-        }
+        {props.year === "2024"
+          ? reverseState && (
+              <motion.div
+                variants={containerVariants}
+                initial="initial"
+                animate="animate"
+                transition="transition"
+                exit="exit"
+                className="membersContainer__studentNames"
+              >
+                {StudentData.filter((data) => {
+                  return data["year"] === props.year;
+                }).map((student) => {
+                  return <p>{student.name}</p>;
+                })}
+              </motion.div>
+            )
+          : containerState && (
+              <motion.div
+                variants={containerVariants}
+                initial="initial"
+                animate="animate"
+                transition="transition"
+                exit="exit"
+                className="membersContainer__studentNames"
+              >
+                {StudentData.filter((data) => {
+                  return data["year"] === props.year;
+                }).map((student) => {
+                  return <p>{student.name}</p>;
+                })}
+              </motion.div>
+            )}
       </AnimatePresence>
     </div>
   );

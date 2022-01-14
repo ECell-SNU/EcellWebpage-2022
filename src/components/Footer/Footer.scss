@@ -49,11 +49,9 @@
     display: flex;
 
     &__contact {
-      @include make-flex($align:flex-start);
+      @include make-flex($align: flex-start);
       position: relative;
       // top: -25px;
-      ul {
-      }
       &--mobile {
         @include make-flex($align: flex-start);
       }
@@ -98,7 +96,6 @@
     padding: 10px 13px;
   }
 }
-
 
 @media only screen and (max-width: 550px) {
   .FooterContainer {
