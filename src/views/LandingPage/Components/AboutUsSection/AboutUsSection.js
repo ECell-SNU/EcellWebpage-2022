@@ -11,10 +11,7 @@ function AboutUsSection(props) {
         <LandingSectionTexts
           classifier="About us"
           title="Venture Beyond the Norm"
-          content1="  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Mauris augue neque
-  gravida in fermentum et sollicitudin ac. Sit amet volutpat consequat
-  mauris nunc congue nisi vitae."
+          content1="The E-Cell at SNU is a collective of like minded induviduals with an intention to bring change, brainstorm and build products to solve real world problems. The club provides a very conducive environment which helps all members connect and grow together."
         />
 
         <Tab />
