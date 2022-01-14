@@ -112,21 +112,21 @@ export default function TeamPage() {
           <motion.div className="TeamPageWrapper__grid1">
             <TeamMember
               MemberName={"Krishna Madhur"}
-              Memberposition={"Seceratry"}
+              Memberposition={"Secretary"}
               imageSrc={krishSec}
               imageSrcAlt={"Sec"}
             />
 
             <TeamMember
               MemberName={"Vernika Samadhiya"}
-              Memberposition={"A.Sec"}
+              Memberposition={"Associate Secretary"}
               imageSrc={vernAsec}
               imageSrcAlt={"ASec"}
             />
 
             <TeamMember
               MemberName={"Aarushi Dhir"}
-              Memberposition={"A.Sec"}
+              Memberposition={"Associate Secretary"}
               imageSrc={aarAsec}
               imageSrcAlt={"ASec"}
             />
@@ -139,7 +139,7 @@ export default function TeamPage() {
 
             <TeamMember
               MemberName={"Shaurya Vaid"}
-              Memberposition={"Freshman Co."}
+              Memberposition={"Freshman Co-ordinator"}
               imageSrc={shauFc}
               imageSrcAlt={"Fc"}
             />
