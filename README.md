@@ -1,6 +1,9 @@
 # EcellWebpage-2022
 Repository for Ecell 2022 webpage
 
+## Netlify status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/54b2e6b0-246d-4449-ba7b-a88079d6821a/deploy-status)](https://app.netlify.com/sites/snuyellowpages/deploys)
+
 ## BEM convention
 Follow the below code snippit of code to adapt BEM convention
 
