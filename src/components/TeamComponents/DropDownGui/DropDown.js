@@ -41,7 +41,7 @@ export default function DropDown(props) {
       <div className="membersContainer__button">
         <button
           onClick={() => {
-            OpenSaysMe();
+            props.year === "2024" ? OpenReverseSaysMe() : OpenSaysMe() ;
           }}
           className="membersContainer__yearTitle"
         >
