@@ -89,11 +89,18 @@
       width: 100%;
     }
     &__Title {
-      font-size: 38px;
+      font-size: 33px;
     }
 
     &__Description {
       width: 100%;
+      font-size: 13px;
+    }
+
+    &__Button-container {
+      &__Button {
+        font-size: 13px;
+      }
     }
   }
 }
