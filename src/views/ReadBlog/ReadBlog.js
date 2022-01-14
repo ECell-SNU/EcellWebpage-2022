@@ -152,7 +152,7 @@ export default function ReadBlog() {
 
                 <p>
                   written by <br />
-                  <span>{blog.Author},</span> <br /> {blog.Creds},<br />
+                  <span>{blog.Author},</span> {blog.Creds}<br />
                   {blog.Date}
                 </p>
               </div>
