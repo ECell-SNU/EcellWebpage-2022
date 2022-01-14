@@ -26,10 +26,15 @@ const containerVariants = {
 
 export default function DropDown(props) {
   const [containerState, setContainerState] = useState(false);
+  const [reverseState, setReverseState] = useState(true);
 
   function OpenSaysMe() {
     setContainerState(!containerState);
     console.log(containerState);
+  }
+
+  function OpenReverseSaysMe(){
+    setReverseState(!reverseState)
   }
   return (
     <div className="membersContainer">
@@ -50,22 +55,39 @@ export default function DropDown(props) {
         />
       </div>
       <AnimatePresence>
-        {containerState && (
-          <motion.div
-            variants={containerVariants}
-            initial="initial"
-            animate="animate"
-            transition="transition"
-            exit="exit"
-            className="membersContainer__studentNames"
-          >
-            {StudentData.filter((data) => {
-              return data["year"] === props.year;
-            }).map((student) => {
-              return <p>{student.name}</p>;
-            })}
-          </motion.div>
-        )}
+        {
+          props.year === "2024" ? reverseState && (
+            <motion.div
+              variants={containerVariants}
+              initial="initial"
+              animate="animate"
+              transition="transition"
+              exit="exit"
+              className="membersContainer__studentNames"
+            >
+              {StudentData.filter((data) => {
+                return data["year"] === props.year;
+              }).map((student) => {
+                return <p>{student.name}</p>;
+              })}
+            </motion.div>
+          ) : containerState && (
+            <motion.div
+              variants={containerVariants}
+              initial="initial"
+              animate="animate"
+              transition="transition"
+              exit="exit"
+              className="membersContainer__studentNames"
+            >
+              {StudentData.filter((data) => {
+                return data["year"] === props.year;
+              }).map((student) => {
+                return <p>{student.name}</p>;
+              })}
+            </motion.div>
+          )
+        }
       </AnimatePresence>
     </div>
   );
