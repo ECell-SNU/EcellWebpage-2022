@@ -10,7 +10,7 @@ function AboutUsSection(props) {
       <div className="AboutUsSectionWrapper__content-container">
         <LandingSectionTexts
           classifier="About us"
-          title="Venture Beyond the norm"
+          title="Venture Beyond the Norm"
           content1="  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Mauris augue neque
   gravida in fermentum et sollicitudin ac. Sit amet volutpat consequat
