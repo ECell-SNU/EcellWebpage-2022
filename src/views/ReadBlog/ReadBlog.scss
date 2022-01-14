@@ -73,6 +73,7 @@
     display: flex;
     flex-direction: column;
     h1 {
+      padding-left: 15%;
       text-align: center;
       font-size: 45px;
       font-weight: 500;
@@ -86,7 +87,7 @@
         margin: 0;
       }
       display: flex;
-      gap: 30px;
+      gap: 120px;
       &__writtenBy {
         p {
           line-height: 167.5%;
