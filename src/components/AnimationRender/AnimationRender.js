@@ -10,7 +10,7 @@ export default function AnimationRender(props) {
   const [triggered, setTriggered] = useState(false);
   const animationTrigger__ATS = useAnimation();
   if (inView__ATS && !triggered) {
-    console.log(triggered);
+    // console.log(triggered);
     setTriggered(true);
     animationTrigger__ATS.start({
       opacity: 1,
