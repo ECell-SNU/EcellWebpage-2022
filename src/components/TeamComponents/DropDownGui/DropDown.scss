@@ -37,6 +37,17 @@
   }
 }
 
+@media only screen and (max-width: 787px) {
+  .membersContainer {
+    &__studentNames {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      font-size: 8px;
+      height: auto;
+    }
+  }
+}
+
 @media only screen and (max-width: 380px) {
   .membersContainer {
     &__button {
@@ -52,8 +63,7 @@
       display: grid;
       padding: 0;
       position: relative;
-      top: -36px;
-
+      // top: -36px;   
       grid-template-columns: repeat(2, 1fr);
       height: auto;
     }
