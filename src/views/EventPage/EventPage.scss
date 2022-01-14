@@ -9,10 +9,11 @@
   font-family: "Space Mono", monospace;
   p {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 167.5%;
     font-family: "Space Mono", monospace;
     font-weight: 700;
-    padding: 60px 270px 30px 270px;
+    padding: 10px 270px 30px 270px;
     text-align: center;
   }
 
@@ -23,14 +24,15 @@
   }
 
   button {
-    padding: 8px 22px;
+    padding: 8px 32px;
     border-radius: 8px;
     border: 2px solid #00ffaa;
     font-size: 18px;
     color: #00ffaa;
     background-color: #c4c4c407;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 15px;
     font-family: "Space Mono", monospace;
   }
 
@@ -40,12 +42,12 @@
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 520px) {
   .EventPageWrapper {
     margin: auto;
     p {
       padding: 50px 20px 40px 20px;
-      font-size: 14px;
+      font-size: 13px;
     }
 
     img {
@@ -53,7 +55,7 @@
     }
 
     button {
-      font-size: 14px;
+      font-size: 13px;
     }
   }
 }
