@@ -24,7 +24,7 @@ export default function ReachOut({ children, className }) {
         </div>
       </div>
       {children}
-      <p>© 2022 E-Cell Shiv Nadar University, Noida, All Rights Reserved.</p>
+      <p className="CRIP">© 2022 E-Cell Shiv Nadar University, Noida, All Rights Reserved.</p>
     </div>
   );
 }

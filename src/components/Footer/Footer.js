@@ -38,7 +38,7 @@ export default function Footer() {
 
             <ul className="FooterContainer__elements__contact">
               <li>
-                <h4>Contact Us</h4>
+                <h4 style={{marginBottom:"20px", fontWeight: "600"}}>Contact Us</h4>
               </li>
               <li>
                 <a href="/">+919678829992</a>
