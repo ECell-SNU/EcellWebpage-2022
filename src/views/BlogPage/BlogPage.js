@@ -25,8 +25,10 @@ export default function BlogPage() {
           navItem4="Think Tank"
           navItem5="Archive"
           routeItem1="/home"
-          routeItem5="/blogs/archive"
+          routeItem2="/home/#aboutus"
           routeItem3="/teams"
+          routeItem4="/home/#thinktank"
+          routeItem5="/blogs/archive"
         />
       </motion.div>
       <main>
