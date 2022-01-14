@@ -1,7 +1,7 @@
 @import "../../styles/mixins";
 
 .FooterContainer {
-  @include make-flex($just: space-between, $dir: row, $align: flex-start);
+  @include make-flex($just: space-evenly, $dir: row, $align: flex-start);
   background-color: white;
   font-family: var(--text-font);
   position: absolute;
