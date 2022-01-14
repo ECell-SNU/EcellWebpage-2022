@@ -2,6 +2,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
 import { useState } from "react";
 import StudentData from "../../../DataFiles/Members.json";
+import OpenIcon from "../../../Assets/icons/OpenIcon.svg"
+import CloseIcon from "../../../Assets/icons/CloseIcon.svg"
+
 
 import "../DropDownGui/DropDown.scss";
 
@@ -47,12 +50,8 @@ export default function DropDown(props) {
         >
           Class of {props.year}
         </button>
-        <img
-          src="https://img.icons8.com/ios-glyphs/30/4a90e2/sort-down.png"
-          height="14.4px"
-          className="icon"
-          alt="down arrow"
-        />
+        <img className={props.year === "2024" ? reverseState == true ? "membersContainer__iconClose membersContainer__HideIcon" : "membersContainer__iconOpen" : containerState == true ? "membersContainer__iconOpen membersContainer__HideIcon" : " membersContainer__iconOpen"} src={OpenIcon}/>
+        <img className={props.year === "2024" ? reverseState == true ? "membersContainer__iconClose" : "membersContainer__iconClose membersContainer__HideIcon" : containerState == true ? "membersContainer__iconClose" : " membersContainer__iconClose membersContainer__HideIcon"}src={CloseIcon}/>
       </div>
       <AnimatePresence>
         {props.year === "2024"
