@@ -11,7 +11,7 @@
     "Type": "Archive"
   },
   {
-    "ID": 2,
+    "ID": 1,
     "Title": "Digital Marketing",
     "Author": "Shaurya Vaid",
     "Creds": "BMS 24'",
@@ -22,7 +22,7 @@
     "Type": "Latest"
   },
   {
-    "ID": 4,
+    "ID": 2,
     "Title": "Speculation or Strategy?",
     "Author": "Lavanya",
     "Creds": "Eng 24'",
@@ -33,7 +33,7 @@
     "Type": "Latest"
   },
   {
-    "ID": 6,
+    "ID": 3,
     "Title": "The New Wave Of Fashion",
     "Author": "Dhanya",
 

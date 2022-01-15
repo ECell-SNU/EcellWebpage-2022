@@ -46,7 +46,7 @@ export default function Footer() {
                 <a href="/">+919678829992</a>
               </li>
               <li>
-                <a href="mailto:ecellsnu@snu.edu.in">ecellsnu@snu.edu.in</a>
+                <a href="mailto:ecell@snu.edu.in">ecell@snu.edu.in</a>
               </li>
             </ul>
             <ul className="FooterContainer__elements__socials">
@@ -102,7 +102,7 @@ export default function Footer() {
                   <a href="/">+919678829992</a>
                 </li>
                 <li>
-                  <a href="mailto:ecellsnu@snu.edu.in">ecellsnu@snu.edu.in</a>
+                  <a href="mailto:ecell@snu.edu.in">ecell@snu.edu.in</a>
                 </li>
               </ul>
             </ul>
