@@ -6,9 +6,9 @@
   background-color: white;
   font-family: var(--text-font);
   position: absolute;
-  padding: 62px 69px 72px 0px;
+  padding: 100px 69px 19px 0px;
   width: 100%;
-  height: 390px;
+  height: 400px;
 
   &--mobile {
     @include make-flex();

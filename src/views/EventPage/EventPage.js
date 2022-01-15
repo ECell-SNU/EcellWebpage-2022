@@ -5,8 +5,9 @@ export default function EventPage() {
     <div className="EventPageWrapper">
       <img height="50%" src={image}></img>
       <p>
-        Our Team is currently hard at work to bring beautiful experiences to
-        your screen Be sure to tune in during Breeze and other events <br />
+        Our Team is currently hard at work to bring forth beautiful experiences
+        on your screens. Be sure to tune in during Breeze and other events{" "}
+        <br />
         ~The Web Dev Team
       </p>
       <a href="/">
