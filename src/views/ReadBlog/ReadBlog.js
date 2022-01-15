@@ -67,6 +67,7 @@ export default function ReadBlog() {
       theme: "colored",
     });
   };
+  document.getElementById("root").className = "rootColor";
   return (
     <>
       <ToastContainer />
@@ -86,8 +87,10 @@ export default function ReadBlog() {
               e.preventDefault();
               if (Mode === "light") {
                 setMode("dark");
+                document.getElementById("root").className = "";
               } else if (Mode === "dark") {
                 setMode("light");
+                document.getElementById("root").className = "rootColor";
               }
             }}
           >

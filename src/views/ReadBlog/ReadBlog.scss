@@ -8,6 +8,16 @@
     color: black;
   }
 }
+
+.rootColor {
+  &::-webkit-scrollbar-thumb {
+    background: #161c22 !important;
+  }
+  &::-webkit-scrollbar-track {
+    background: white !important;
+  }
+}
+
 .colorSchemeDark {
   h1,
   a {
