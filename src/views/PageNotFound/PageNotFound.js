@@ -9,7 +9,7 @@ function PageNotFound(props) {
       <img alt="Events page" height="50%" src={image} />
       <p>
         Our Team is currently hard at work to bring forth beautiful experiences
-        on your screens.Be sure to tune in during Breeze and other events <br />
+        to your screens. Be sure to tune in during Breeze and other events! <br />
         <em>
           <i>~The Web Dev Team</i>
         </em>
