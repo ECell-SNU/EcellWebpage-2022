@@ -6,7 +6,7 @@ import moon from "../../Assets/icons/mooon.svg";
 import sun from "../../Assets/icons/sun.svg";
 // import byline from "../../Assets/icons/byline-top.svg";
 // import bylineD from "../../Assets/icons/byline-topBlack.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import instagram from "../../Assets/icons/instaL.svg";
 import twitter from "../../Assets/icons/twitterL.svg";
 import share from "../../Assets/icons/shareL.svg";
@@ -67,7 +67,16 @@ export default function ReadBlog() {
       theme: "colored",
     });
   };
-  document.getElementById("root").className = "rootColor";
+
+  useEffect(() => {
+    document.getElementById("root").className = "rootColor";
+  }, [param]);
+
+  if (!window.location.hash) {
+    window.location = window.location + "#loaded";
+    window.location.reload();
+  }
+
   return (
     <>
       <ToastContainer />

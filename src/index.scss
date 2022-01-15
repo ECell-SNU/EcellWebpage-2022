@@ -76,3 +76,12 @@ code {
 iframe {
   display: none !important;
 }
+
+.rootColor {
+  &::-webkit-scrollbar-thumb {
+    background: #161c22 !important;
+  }
+  &::-webkit-scrollbar-track {
+    background: white !important;
+  }
+}
