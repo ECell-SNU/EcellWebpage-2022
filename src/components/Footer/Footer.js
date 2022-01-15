@@ -25,13 +25,13 @@ export default function Footer() {
                   <a href="/home">Home</a>
                 </li>
                 <li>
-                  <a href="/">About us</a>
+                  <a href="#aboutus">About us</a>
                 </li>
                 <li>
                   <a href="/teams">Members</a>
                 </li>
                 <li>
-                  <a href="/">Think Tank</a>
+                  <a href="#thinktank">Think Tank</a>
                 </li>
               </ul>
             </div>
