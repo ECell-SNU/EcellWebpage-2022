@@ -4,8 +4,8 @@ import BlogData from "../../DataFiles/BlogData.json";
 
 import moon from "../../Assets/icons/mooon.svg";
 import sun from "../../Assets/icons/sun.svg";
-import byline from "../../Assets/icons/byline-top.svg";
-import bylineD from "../../Assets/icons/byline-topBlack.svg";
+// import byline from "../../Assets/icons/byline-top.svg";
+// import bylineD from "../../Assets/icons/byline-topBlack.svg";
 import { useState } from "react";
 import instagram from "../../Assets/icons/instaL.svg";
 import twitter from "../../Assets/icons/twitterL.svg";

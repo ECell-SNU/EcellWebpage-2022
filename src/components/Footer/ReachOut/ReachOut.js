@@ -2,9 +2,7 @@ import logoECell from "../../../Assets/icons/ecell-bw.svg";
 import propTypes from "prop-types";
 import "./ReachOut.scss";
 
-
 export default function ReachOut({ children, className }) {
-  
   return (
     <div className={`ReachOutContainer ${className}`}>
       <div className="ReachOutContainer__top">
@@ -19,22 +17,38 @@ export default function ReachOut({ children, className }) {
           <h3 className="ReachOutContainer__heading__text">
             Reach out to us today!
           </h3>
-          <form className="ReachOutContainer__form" onSubmit={()=>{
+          <form
+            className="ReachOutContainer__form"
+            onSubmit={() => {
               //alert(document.getElementById("sub").value)
               var mailBody = document.getElementById("sub").value;
-              window.open("mailto:ecellsnu@snu.edu.in?subject=Reach%20Out%20to%20E-Cell%20SNU&body="+mailBody);
-              }} >
+              window.open(
+                "mailto:ecellsnu@snu.edu.in?subject=Reach%20Out%20to%20E-Cell%20SNU&body=" +
+                  mailBody
+              );
+            }}
+          >
             <input type="text" id="sub" placeholder="Send a message..." />
-            <a onClick={()=>{
-              //alert(document.getElementById("sub").value)
-              var mailBody = document.getElementById("sub").value;
-              window.open("mailto:ecellsnu@snu.edu.in?subject=Reach%20Out%20to%20E-Cell%20SNU&body="+mailBody);
-              }}>&#8594;</a>
+            <a
+              href="mailto:ecellsnu@snu.edu.in"
+              onClick={() => {
+                //alert(document.getElementById("sub").value)
+                var mailBody = document.getElementById("sub").value;
+                window.open(
+                  "mailto:ecellsnu@snu.edu.in?subject=Reach%20Out%20to%20E-Cell%20SNU&body=" +
+                    mailBody
+                );
+              }}
+            >
+              &#8594;
+            </a>
           </form>
-        </div>  
+        </div>
       </div>
       {children}
-      <p className="CRIP">© 2022 E-Cell Shiv Nadar University, Noida, All Rights Reserved.</p>
+      <p className="CRIP">
+        © 2022 E-Cell Shiv Nadar University, Noida, All Rights Reserved.
+      </p>
     </div>
   );
 }
