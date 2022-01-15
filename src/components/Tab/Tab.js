@@ -10,7 +10,7 @@ function Tab() {
     {
       title: "Create",
       content: `We at E-Cell believe in the power of creativity, from think tanks about business models
-      to organizing larg scale events, E-Cell is at every step of the way to provide a platform for creative minded
+      to organizing large scale events, E-Cell is at every step of the way to provide a platform for creative minded
       people and artistic liberty`,
       icon: create,
     },
