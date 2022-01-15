@@ -3,7 +3,7 @@ import image from "../../Assets/icons/events.svg";
 export default function EventPage() {
   return (
     <div className="EventPageWrapper">
-      <img height="50%" src={image}></img>
+      <img alt="Events page" height="50%" src={image} />
       <p>
         Our Team is currently hard at work to bring forth beautiful experiences
         on your screens. Be sure to tune in during Breeze and other events{" "}
