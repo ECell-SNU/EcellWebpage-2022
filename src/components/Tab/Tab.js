@@ -9,22 +9,21 @@ function Tab() {
   const list = [
     {
       title: "Create",
-      content: `We at Ecell believe in the power of creativity, from think tanks about business models
-      to organizing larg scale events, Ecell is at every step of the way to provide a platform for creative minded
+      content: `We at E-Cell believe in the power of creativity, from think tanks about business models
+      to organizing larg scale events, E-Cell is at every step of the way to provide a platform for creative minded
       people and artistic liberty`,
       icon: create,
     },
     {
       title: "Innovate",
-      content: `In a world of quick startups and hundreds of unicorns, Ecell SNU is head first to proved an
+      content: `In a world of quick startups and hundreds of unicorns, E-Cell SNU is head first to proved an
       environment for its members to innovate, bring their vision to reality and muster an entrepreneurial spirit`,
       icon: innovate,
     },
     {
       title: "Incubate",
-      content: `Incubate Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-  praesentium incidunt quia aspernatur quasi quidem facilis quo nihil
-  vel voluptatum?`,
+      content: `E-Cell SNU is designed to accelerate the growth and success of the entrepreneurial minds of
+      its members and everyone associated to it, we have an array of business support resources and services.`,
       icon: incubate,
     },
   ];
