@@ -3,11 +3,11 @@ import "./Header.scss";
 import instagram from "../../Assets/icons/logo-instagram.svg";
 import twitter from "../../Assets/icons/logo-twitter.svg";
 import meta from "../../Assets/icons/logo-facebook.svg";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 export default function Header({
-  navItem1,
+  navItem1, 
   navItem2,
   navItem3,
   navItem4,
@@ -15,7 +15,9 @@ export default function Header({
   navItem6,
   navItem7,
   routeItem1,
+  routeItem2,
   routeItem3,
+  routeItem4,
   routeItem5,
   routeItem6,
   routeItem7,
@@ -25,8 +27,30 @@ export default function Header({
     query: "(max-width: 1075px)",
   });
 
+  const node = useRef();
+
+  function handleClick({ target }) {
+    if (
+      (!node.current.contains(target) || !node.current === target) 
+      &&
+      thousandPixels
+    ) {
+      setNavState(false);
+      document.getElementById("NavBarInput").checked = false;
+      hideOverflow();
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClick);
+    hideOverflow();
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+    };
+  });
+
   function hideOverflow() {
-    if (document.getElementById("root").style.overflow === "hidden") {
+    if (!navState) {
       document.getElementById("root").style.overflow = "unset";
     } else {
       document.getElementById("root").style.overflow = "hidden";
@@ -34,7 +58,7 @@ export default function Header({
   }
 
   return (
-    <div className="HeaderContainer">
+    <div className="HeaderContainer" ref={node}>
       {thousandPixels && (
         <div className="HeaderContainer__Hamburger">
           <input
@@ -64,13 +88,13 @@ export default function Header({
             <a href={routeItem1}>{navItem1}</a>
           </li>
           <li>
-            <a href="/">{navItem2}</a>
+            <a href={routeItem2}>{navItem2}</a>
           </li>
           <li>
             <a href={routeItem3}>{navItem3}</a>
           </li>
           <li>
-            <a href="/">{navItem4}</a>
+            <a href={routeItem4}>{navItem4}</a>
           </li>
           <li>
             <a href={routeItem5}>{navItem5}</a>

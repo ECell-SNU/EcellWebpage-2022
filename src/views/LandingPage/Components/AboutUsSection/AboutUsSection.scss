@@ -14,6 +14,7 @@
   .AboutUsSectionWrapper {
     &__content-container {
       @include make-flex($dir: column);
+      gap: 26px;
     }
   }
 }

@@ -1,6 +1,70 @@
 @import "../../styles/mixins";
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 .EventPageWrapper {
+  padding-top: 12px;
   height: 100%;
   width: 100%;
   @include make-flex();
+
+  font-family: "Space Mono", monospace;
+  p {
+    color: white;
+    font-size: 18px;
+    line-height: 167.5%;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    padding: 10px 270px 30px 270px;
+    text-align: center;
+  }
+
+  img {
+    animation: bounce 1.4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+
+  button {
+    padding: 8px 32px;
+    border-radius: 8px;
+    border: 2px solid #00ffaa;
+    font-size: 18px;
+    color: #00ffaa;
+    background-color: #c4c4c407;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: "Space Mono", monospace;
+  }
+
+  button:hover {
+    color: black;
+    background-color: #00ffaa;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .EventPageWrapper {
+    margin: auto;
+    p {
+      padding: 50px 20px 40px 20px;
+      font-size: 13px;
+    }
+
+    img {
+      height: 160px;
+    }
+
+    button {
+      font-size: 13px;
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }

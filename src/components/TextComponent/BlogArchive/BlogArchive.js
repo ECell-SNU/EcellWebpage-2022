@@ -4,22 +4,21 @@ import "./BlogArchive.scss";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-function BlogArchive({ title, author, status, tag }) {
+function BlogArchive({ title, author, status, tag, ID }) {
   return (
-    <motion.div 
-    whileHover={{y: -10}}
-    className="BlogArchiveContainer">
+    <motion.div whileHover={{ y: -10 }} className="BlogArchiveContainer">
       <p className={tag}>{status}</p>
       <Link
-        to={`${author}/${title}`}
+        to={`/blog/read/${ID}`}
         style={{ textDecoration: "none" }}
         className="BlogArchiveRouting"
       >
         <div className="BlogArchiveRouting__title">{title}</div>
         <div className="BlogArchiveRouting__author">Written By: {author}</div>
       </Link>
-
-      <button className="BlogArchiveRouting__redirect">Read Now</button>
+      <div className="BlogArchiveRouting__bottomContainer">
+        <button className="BlogArchiveRouting__redirect">Read Now</button>
+      </div>
     </motion.div>
   );
 }

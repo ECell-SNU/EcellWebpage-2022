@@ -1,61 +1,76 @@
 @import "../../styles/mixins";
 
 .memberContainer {
-    @include make-flex();
-    position: relative;
+  @include make-flex();
+  position: relative;
+  width: 185px;
 
+  &::before {
+    content: url("../../Assets/Illustration/memberillustration.svg");
+    top: 20%;
+    left: -23px;
+    position: absolute;
+  }
+
+  @media only screen and (max-width: 375px) {
     &::before {
-      content: url("../../Assets/Illustration/memberillustration.svg");
-      top: 25%;
-      left: -30%;
-      position: absolute;
+      top: 17.3%;
+      left: -18%;
+      height: 3rem;
+      width: 3rem;
     }
+  }
 
+  &__Image {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+  }
+
+  @media only screen and (max-width: 1075px) {
     &__Image {
-        height: 10rem;
-        width: 10rem;
-        border-radius: 50%;
-      }
+      height: 8rem;
+      width: 8rem;
+    }
+  }
 
-      @media only screen and (max-width: 1075px) {
-        &__Image {
-          height: 8rem;
-          width: 8rem;
-       
-        }
-      }
+  @media only screen and (max-width: 900px) {
+    &__Image {
+      height: 7rem;
+      width: 7rem;
+    }
+  }
 
-      @media only screen and (max-width: 900px) {
-        &__Image {
-          height: 7rem;
-          width: 7rem;
-    
-        }
-      }
+  @media only screen and (max-width: 375px) {
+    &__Image {
+      height: 6rem;
+      width: 6rem;
+    }
+  }
 
-      &__Name {
-        margin-top: 25px;
-        font-size: 18px;
-        text-align: center;
-        font-weight: 600;
-        color: var(--title-txt-color);
-      }
+  &__Name {
+    margin-top: 25px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--title-txt-color);
+  }
 
-      @media only screen and (max-width: 900px) {
-        &__Name {
-          font-size: 12px;
-        }
-      }
+  @media only screen and (max-width: 900px) {
+    &__Name {
+      font-size: 12px;
+    }
+  }
 
-      &__Pos {  
-        color: var(--primary-color);
-        font-size: 15px;
-        font-weight: 500;
-      }
+  &__Pos {
+    color: var(--primary-color);
+    font-size: 15px;
+    font-weight: 500;
+  }
 
-      @media only screen and (max-width: 900px) {
-        &__Pos {  
-          font-size: 10px;
-        }
-      }
+  @media only screen and (max-width: 900px) {
+    &__Pos {
+      font-size: 10px;
+    }
+  }
 }

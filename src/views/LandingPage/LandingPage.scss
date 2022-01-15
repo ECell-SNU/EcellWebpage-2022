@@ -5,7 +5,11 @@
   margin-right: auto;
   width: 1170px;
   position: relative;
+  main {
+    overflow: hidden;
+  }
 }
+
 
 @media only screen and (max-width: 1290px) {
   .LandingPageWrapper {

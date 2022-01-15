@@ -33,7 +33,7 @@ export default function Home() {
           </Link>
         </li>
         <li>
-          <Link className="links-container__link" to={`/blog_read`}>
+          <Link className="links-container__link" to={`/blog/read/1`}>
             Read a Blog
           </Link>
         </li>

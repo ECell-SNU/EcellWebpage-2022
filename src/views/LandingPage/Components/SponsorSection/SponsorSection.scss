@@ -23,6 +23,13 @@
     height: 100%;
     display: flex;
   }
+  img {
+    border-radius: 13px;
+    width: 250px;
+    border: 2.5px solid var(--primary-color);
+    box-shadow: 0 4px 8px 0 var(--primary-color),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 }
 
 @media only screen and (max-width: 620px) {

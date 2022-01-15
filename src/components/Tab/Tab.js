@@ -9,9 +9,9 @@ function Tab() {
   const list = [
     {
       title: "Create",
-      content: `Create Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-  praesentium incidunt quia aspernatur quasi quidem facilis quo nihil
-  vel voluptatum?`,
+      content: `We at Ecell believe in the power of creativity, from think tanks about business models
+      to organizing larg scale events, Ecell is at every step of the way to provide a platform for creative minded
+      people and artistic liberty`,
       icon: create,
     },
     {

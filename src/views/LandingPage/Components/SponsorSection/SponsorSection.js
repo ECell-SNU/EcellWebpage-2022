@@ -17,7 +17,7 @@ for (let x in images) {
   itemsToRender.push(<SponsorCard key={x} src={images[x].default} />);
 }
 
-export default function SponsorSection() {
+export default function SponsorSection(props) {
   const AUTOPLAY_INTERVAL = 2000;
   const [sponsorSectionRef, emblaApi] = useEmblaCarousel({
     loop: true,
@@ -40,7 +40,7 @@ export default function SponsorSection() {
   }, [play]);
 
   return (
-    <section id="SponsorSection" className="SponsorSection">
+    <section id="SponsorSection" className="SponsorSection" {...props}>
       <LandingSectionTexts classifier="Sponsors" />
       <div className="SponsorSection__Container" ref={sponsorSectionRef}>
         <div className="SponsorSection__contentContainer">{itemsToRender}</div>

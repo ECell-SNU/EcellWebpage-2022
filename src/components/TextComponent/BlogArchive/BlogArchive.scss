@@ -1,12 +1,15 @@
+@import "../../../styles/mixins";
+
+
 .BlogArchiveContainer {
+  @include make-flex($just: space-between, $align: flex-start);
   color: var(--title-txt-color);
-  //padding: 10px;
-  // padding-bottom: 170px;
-  margin: 50px 0px 18px 0px;
+  gap: 16px;
+  padding: 30px 35px;
   border-radius: 8px;
-  // width: 30%;
   width: 340px;
   height: 170px;
+  position: relative;
   background-color: var(--archive-card-background);
 
   &__tag {
@@ -16,9 +19,9 @@
     letter-spacing: 1px;
     border-radius: 4px;
     display: inline-block;
-    position: relative;
-    left: -26px;
-    top: -18px;
+    position: absolute;
+    left: -25px;
+    top: -14px;
   }
 
   .tag__archive {
@@ -35,21 +38,22 @@
 }
 
 .BlogArchiveRouting {
+  @include make-flex($just: space-between, $align: flex-start);
+
+  width: 100%;
+  height: 100%;
   &__title {
     color: var(--archive-card-tertiary);
-    margin: 7px auto 16px 24px;
     font-weight: 600;
     background-color: var(--archive-card-background);
-    font-size: 14px;
+    font-size: 15px;
   }
   &__author {
-    margin-left: 24px;
-    font-size: 12px;
+    font-size: 13px;
     background-color: var(--archive-card-background);
     color: var(--archive-card-tertiary);
   }
   &__redirect {
-    margin: 26px auto 14px 20px;
     display: inline-flex;
     color: var(--archive-card-secondary);
     background-color: var(--archive-card-background);
@@ -64,6 +68,32 @@
       background-color: var(--archive-card-secondary);
       color: black;
       transition: all 0.5s;
+    }
+  }
+  &__bottomContainer {
+    width: 100%;
+    @include make-flex($just: space-between, $dir: row, $align: flex-end);
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .BlogArchiveContainer {
+    padding-top: 20px;
+    &__tag {
+      position: absolute;
+
+      inset: 10px 10px auto auto;
+    }
+  }
+}
+@media only screen and (max-width: 385px) {
+  .BlogArchiveContainer {
+    width: 320px;
+  }
+  .BlogArchiveRouting {
+    &__bottomContainer {
+      @include make-flex($dir: column-reverse, $align: flex-start);
+      gap: 10px;
     }
   }
 }

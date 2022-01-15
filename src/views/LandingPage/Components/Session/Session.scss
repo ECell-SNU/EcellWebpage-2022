@@ -14,6 +14,8 @@
 }
 @media only screen and (max-width: 580px) {
   .SessionWrapper {
+    height: unset;
+    margin-top: 55px;
     &__content-container {
       width: 100%;
       &__illustration {
@@ -29,23 +31,32 @@
     &__content-container {
       width: unset;
     }
-  }
-  .SessionWrapper:nth-child(even) {
-    .SessionWrapper {
-      &__content-container {
+
+    &__content {
+      &--first {
         @include make-flex($dir: column);
-        gap: 30px;
-        width: unset;
       }
-    }
-  }
-  .SessionWrapper:nth-child(odd) {
-    .SessionWrapper {
-      &__content-container {
+      &--second {
         @include make-flex($dir: column-reverse);
-        gap: 30px;
-        width: unset;
       }
     }
   }
+  // .SessionWrapper:nth-child(even) {
+  //   .SessionWrapper {
+  //     &__content-container {
+  //       @include make-flex($dir: column);
+  //       gap: 30px;
+  //       width: unset;
+  //     }
+  //   }
+  // }
+  // .SessionWrapper:nth-child(odd) {
+  //   .SessionWrapper {
+  //     &__content-container {
+  //       @include make-flex($dir: column-reverse);
+  //       gap: 30px;
+  //       width: unset;
+  //     }
+  //   }
+  // }
 }

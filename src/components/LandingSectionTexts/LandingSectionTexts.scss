@@ -15,6 +15,7 @@
     color: var(--title-txt-color);
     width: 100%;
     margin-bottom: 10px;
+    line-height: 129.5%;
   }
 
   &__para {
@@ -30,9 +31,16 @@
 }
 @media only screen and (max-width: 580px) {
   .text-container {
+    margin-bottom: 20px;
     width: 100%;
+    &__classifier {
+      font-size: 13px;
+    }
     &__title {
-      font-size: 38px;
+      font-size: 33px;
+    }
+    &__para {
+      font-size: 13px;
     }
   }
 }
