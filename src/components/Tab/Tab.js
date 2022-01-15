@@ -22,9 +22,8 @@ function Tab() {
     },
     {
       title: "Incubate",
-      content: `Incubate Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-  praesentium incidunt quia aspernatur quasi quidem facilis quo nihil
-  vel voluptatum?`,
+      content: `Ecell SNU is designed to accelerate the growth and success of the entrepreneurial minds of
+      its members and everyone associated to it, We have an array of business support resources and services.`,
       icon: incubate,
     },
   ];
