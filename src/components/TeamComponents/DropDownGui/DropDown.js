@@ -43,16 +43,16 @@ export default function DropDown(props) {
       <div className="membersContainer__button">
         <button
           onClick={() => {
-            props.year === "2024" ? OpenReverseSaysMe() : OpenSaysMe();
+            props.year === "2025" ? OpenReverseSaysMe() : OpenSaysMe();
           }}
           className="membersContainer__yearTitle"
         >
           Class of {props.year}
         </button>
         <img
-         alt="OpenIcon"
+          alt="OpenIcon"
           className={
-            props.year === "2024"
+            props.year === "2025"
               ? reverseState === true
                 ? "membersContainer__iconClose membersContainer__HideIcon"
                 : "membersContainer__iconOpen"
@@ -65,7 +65,7 @@ export default function DropDown(props) {
         <img
           alt="CloseIcon"
           className={
-            props.year === "2024"
+            props.year === "2025"
               ? reverseState === true
                 ? "membersContainer__iconClose"
                 : "membersContainer__iconClose membersContainer__HideIcon"
@@ -77,7 +77,7 @@ export default function DropDown(props) {
         />
       </div>
       <AnimatePresence>
-        {props.year === "2024"
+        {props.year === "2025"
           ? reverseState && (
               <motion.div
                 variants={containerVariants}
