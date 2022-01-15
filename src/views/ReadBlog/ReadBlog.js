@@ -6,7 +6,7 @@ import moon from "../../Assets/icons/mooon.svg";
 import sun from "../../Assets/icons/sun.svg";
 // import byline from "../../Assets/icons/byline-top.svg";
 // import bylineD from "../../Assets/icons/byline-topBlack.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import instagram from "../../Assets/icons/instaL.svg";
 import twitter from "../../Assets/icons/twitterL.svg";
 import share from "../../Assets/icons/shareL.svg";
@@ -67,6 +67,16 @@ export default function ReadBlog() {
       theme: "colored",
     });
   };
+
+  useEffect(() => {
+    document.getElementById("root").className = "rootColor";
+  }, [param]);
+
+  if (!window.location.hash) {
+    window.location = window.location + "#loaded";
+    window.location.reload();
+  }
+
   return (
     <>
       <ToastContainer />
@@ -86,8 +96,10 @@ export default function ReadBlog() {
               e.preventDefault();
               if (Mode === "light") {
                 setMode("dark");
+                document.getElementById("root").className = "";
               } else if (Mode === "dark") {
                 setMode("light");
+                document.getElementById("root").className = "rootColor";
               }
             }}
           >
@@ -102,7 +114,7 @@ export default function ReadBlog() {
               <a href="/blogs"> Go Back</a>
             </li>
             <li>
-              <a href="/"> Blog Archive</a>
+              <a href="/blogs/archive"> Blog Archive</a>
             </li>
             <ul>
               {Mode === "light"

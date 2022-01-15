@@ -23,7 +23,7 @@ export default function ReachOut({ children, className }) {
               //alert(document.getElementById("sub").value)
               var mailBody = document.getElementById("sub").value;
               window.open(
-                "mailto:ecellsnu@snu.edu.in?subject=Reach%20Out%20to%20E-Cell%20SNU&body=" +
+                "mailto:ecell@snu.edu.in?subject=Reach%20Out%20to%20E-Cell%20SNU&body=" +
                   mailBody
               );
             }}
@@ -35,7 +35,7 @@ export default function ReachOut({ children, className }) {
                 //alert(document.getElementById("sub").value)
                 var mailBody = document.getElementById("sub").value;
                 window.open(
-                  "mailto:ecellsnu@snu.edu.in?subject=Reach%20Out%20to%20E-Cell%20SNU&body=" +
+                  "mailto:ecell@snu.edu.in?subject=Reach%20Out%20to%20E-Cell%20SNU&body=" +
                     mailBody
                 );
               }}

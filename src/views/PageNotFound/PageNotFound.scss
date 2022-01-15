@@ -1,0 +1,49 @@
+@import "../../styles/mixins";
+
+.PageNotFoundWrapper {
+  height: 100%;
+  @include make-flex();
+  gap: 20px;
+  p {
+    font-family: "Space Mono", monospace;
+    min-width: 60%;
+    max-width: 600px;
+    color: white;
+    font-size: 18px;
+    line-height: 167.5%;
+    font-weight: 700;
+    // padding: 10px 270px 30px 270px;
+    padding: 20px 30px;
+    text-align: center;
+  }
+  i{
+    font-family: "Space Mono", monospace;
+  }
+
+  img {
+    width: 70%;
+    max-width: 500px;
+    height: auto;
+    animation: bounce 1.4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+
+  button {
+    padding: 8px 32px;
+    border-radius: 8px;
+    border: 2px solid #00ffaa;
+    font-size: 18px;
+    color: #00ffaa;
+    background-color: #c4c4c407;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: "Space Mono", monospace;
+  }
+
+  button:hover {
+    color: black;
+    background-color: #00ffaa;
+  }
+}
