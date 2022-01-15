@@ -16,9 +16,8 @@ function Tab() {
     },
     {
       title: "Innovate",
-      content: `Innovate Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-      praesentium incidunt quia aspernatur quasi quidem facilis quo nihil
-      vel voluptatum?`,
+      content: `In a world of quick startups and hundreds of unicorns, Ecell SNU is head first to proved an
+      environment for its members to innovate, bring their vision to reality and muster an entrepreneurial spirit`,
       icon: innovate,
     },
     {
