@@ -4,8 +4,8 @@
   height: 100%;
   @include make-flex();
   gap: 20px;
-  font-family: "Space Mono", monospace;
   p {
+    font-family: "Space Mono", monospace;
     min-width: 60%;
     max-width: 600px;
     color: white;
