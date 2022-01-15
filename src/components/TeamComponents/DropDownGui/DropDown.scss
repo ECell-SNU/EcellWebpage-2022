@@ -18,22 +18,23 @@
   }
 
   &__iconOpen {
+    cursor: pointer;
     width: 17px;
     margin-left: 13px;
     transition: all 0.3s;
   }
 
   &__iconClose {
+    cursor: pointer;
     width: 17px;
     margin-left: 13px;
     transition: all 0.3s;
   }
 
-  &__HideIcon{
+  &__HideIcon {
     display: none;
     transition: all 0.3s;
   }
-
 
   &__studentNames {
     margin-top: 30px;
@@ -82,7 +83,7 @@
       display: grid;
       padding: 0;
       position: relative;
-      // top: -36px;   
+      // top: -36px;
       grid-template-columns: repeat(2, 1fr);
       height: auto;
     }

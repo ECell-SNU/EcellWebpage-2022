@@ -50,6 +50,9 @@ export default function DropDown(props) {
           Class of {props.year}
         </button>
         <img
+          onClick={() => {
+            props.year === "2025" ? OpenReverseSaysMe() : OpenSaysMe();
+          }}
           alt="OpenIcon"
           className={
             props.year === "2025"
@@ -63,6 +66,9 @@ export default function DropDown(props) {
           src={OpenIcon}
         />
         <img
+          onClick={() => {
+            props.year === "2025" ? OpenReverseSaysMe() : OpenSaysMe();
+          }}
           alt="CloseIcon"
           className={
             props.year === "2025"
