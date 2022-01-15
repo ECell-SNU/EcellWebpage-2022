@@ -17,7 +17,13 @@ function BlogArchive({ title, author, status, tag, ID }) {
         <div className="BlogArchiveRouting__author">Written By: {author}</div>
       </Link>
       <div className="BlogArchiveRouting__bottomContainer">
-        <button className="BlogArchiveRouting__redirect">Read Now</button>
+        <Link
+          to={`/blog/read/${ID}`}
+          style={{ textDecoration: "none" }}
+          className="BlogArchiveRouting__redirect"
+        >
+          Read Now
+        </Link>
       </div>
     </motion.div>
   );
