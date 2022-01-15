@@ -50,24 +50,26 @@ export default function DropDown(props) {
           Class of {props.year}
         </button>
         <img
+         alt="OpenIcon"
           className={
             props.year === "2024"
-              ? reverseState == true
+              ? reverseState === true
                 ? "membersContainer__iconClose membersContainer__HideIcon"
                 : "membersContainer__iconOpen"
-              : containerState == true
+              : containerState === true
               ? "membersContainer__iconOpen membersContainer__HideIcon"
               : " membersContainer__iconOpen"
           }
           src={OpenIcon}
         />
         <img
+          alt="CloseIcon"
           className={
             props.year === "2024"
-              ? reverseState == true
+              ? reverseState === true
                 ? "membersContainer__iconClose"
                 : "membersContainer__iconClose membersContainer__HideIcon"
-              : containerState == true
+              : containerState === true
               ? "membersContainer__iconClose"
               : " membersContainer__iconClose membersContainer__HideIcon"
           }
