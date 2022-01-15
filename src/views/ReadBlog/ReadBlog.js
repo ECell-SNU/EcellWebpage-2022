@@ -114,7 +114,7 @@ export default function ReadBlog() {
               <a href="/blogs"> Go Back</a>
             </li>
             <li>
-              <a href="/"> Blog Archive</a>
+              <a href="/blogs/archive"> Blog Archive</a>
             </li>
             <ul>
               {Mode === "light"
