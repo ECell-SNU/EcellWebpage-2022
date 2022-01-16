@@ -35,7 +35,7 @@ Run the development server `http://localhost:3000/` using ```npm start``` or  ``
 
 ## 👨‍💻Languages, Frameworks and Libraries
 
-The webpage is built using __React - A JvaScript Library__ <br /><br />
+The webpage is built using __React - A JavaScript Library__ <br /><br />
  __Animations__: Framer Motion Library <br /><br />
  __Alerts__: `React-toastify`
  <hr />
