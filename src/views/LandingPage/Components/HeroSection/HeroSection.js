@@ -19,17 +19,20 @@ function HeroSection(props) {
             <div className="HeroSectionWrapper__Title__Rotator">
               faculty to
               <span>
-                create.<br />
-                innovate.<br />
-                incubate.<br />
+                create.
+                <br />
+                innovate.
+                <br />
+                incubate.
+                <br />
                 create.
               </span>
             </div>
           </h1>
           <p className="HeroSectionWrapper__Description">
             E-Cell Shiv Nadar University strives to provide a platform for
-            students and faculty to create, innovate, incubate, and realize their
-            entrepreneurial dreams.
+            students and faculty to create, innovate, incubate, and realize
+            their entrepreneurial dreams.
           </p>
           <div className="HeroSectionWrapper__Button-container">
             <Link
@@ -38,9 +41,13 @@ function HeroSection(props) {
             >
               Our Team
             </Link>
-            <Link className="HeroSectionWrapper__Button-container__Button">
+            <a
+              href="#aboutus"
+              to="/home#aboutus"
+              className="HeroSectionWrapper__Button-container__Button"
+            >
               Learn More
-            </Link>
+            </a>
           </div>
         </div>
         {!thousandPixels && (
