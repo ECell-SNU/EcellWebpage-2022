@@ -1,4 +1,5 @@
 import Header from "../../components/Header/Header";
+import { Link } from "react-router-dom";
 import "./EventPage.scss";
 // import image from "../../Assets/icons/events.svg";
 export default function EventPage() {
@@ -25,7 +26,9 @@ export default function EventPage() {
             students and faculty to create, innovate, incubate and realise their
             entrepreneurial dreams
           </div>
-          <button>Begin Game</button>
+          <Link to="/leaderboard" className="ContentWrapper__hero__button">
+            Begin Game
+          </Link>
         </div>
       </div>
     </div>

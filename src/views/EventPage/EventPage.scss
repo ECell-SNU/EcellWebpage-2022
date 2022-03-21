@@ -22,7 +22,9 @@
       margin-bottom: 30px;
       font-size: 14px;
     }
-    button {
+    &__button {
+      text-decoration: none;
+      color: #161c22;
       padding: 8px 32px;
       border-radius: 8px;
       border: 2px solid #00ffaa;
