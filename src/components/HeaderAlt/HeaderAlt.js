@@ -1,4 +1,5 @@
-import "./Header.scss";
+import "./HeaderALT.scss";
+import "./../HeaderAlt/HeaderAlt";
 
 import instagram from "../../Assets/icons/logo-instagram.svg";
 import twitter from "../../Assets/icons/logo-twitter.svg";
@@ -6,7 +7,7 @@ import meta from "../../Assets/icons/logo-facebook.svg";
 import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
-export default function Header({
+export default function HeaderALT({
   navItem1,
   navItem2,
   navItem3,
