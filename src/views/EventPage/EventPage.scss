@@ -1,17 +1,19 @@
 @import "../../styles/mixins";
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 .EventPageWrapper {
   background: rgb(255, 255, 255);
   padding-top: 12px;
   height: 100%;
   width: 100%;
 
-  @include make-flex();
-
   font-family: "Space Mono", monospace;
 
   &__hero {
-    color: #252e36;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1170px;
+    color: #161c22;
     &__title {
       left: 10%;
       max-width: 40%;
@@ -22,26 +24,21 @@
     }
 
     &__desc {
-      width: 30%;
+      line-height: 167.5%;
+      width: 40%;
       margin-bottom: 3%;
+      font-size: 14px;
     }
     button {
       padding: 8px 32px;
       border-radius: 8px;
       border: 2px solid #00ffaa;
       font-size: 18px;
-      //color: #00ffaa;
-      background-color: #c4c4c407;
+      background-color: #00ffaa;
       cursor: pointer;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 15px;
       transition: ease-in-out 0.25s;
-      font-family: "Space Mono", monospace;
-    }
-    button:hover {
-      color: black;
-
-      background-color: #00ffaa;
     }
   }
 }
