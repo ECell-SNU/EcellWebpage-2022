@@ -1,0 +1,183 @@
+@import "../../styles/mixins";
+
+.HeaderContainer {
+  font-size: 14px;
+  gap: 380px;
+  margin-top: 60px;
+  position: absolute;
+  height: 21px;
+  width: 1170px;
+  inset: 0 auto 0 auto;
+
+  #NavBarInput,
+  .hamButton {
+    display: none;
+  }
+  &__Menu {
+    @include make-flex($just: space-between, $dir: row);
+    width: 100%;
+    z-index: 2;
+  }
+
+  &__primary-nav {
+    list-style: none;
+    @include make-flex($just: space-between, $dir: row);
+    gap: 60px;
+  }
+
+  &__secondary-nav {
+    list-style: none;
+    gap: 90px;
+    @include make-flex($just: space-between, $dir: row);
+
+    &__nav-btns {
+      @include make-flex($just: space-between, $dir: row);
+      list-style: none;
+      gap: 60px;
+    }
+
+    &__social-medias {
+      @include make-flex($just: space-between, $dir: row);
+      list-style: none;
+      gap: 30px;
+      li {
+        a {
+          @include make-flex();
+        }
+      }
+      .navbarIcons {
+        height: 1.2rem;
+        width: 1.2rem;
+      }
+    }
+  }
+
+  &__primary-nav li a {
+    text-decoration: none;
+    color: #cccc;
+
+    &:hover {
+      color: #ffff;
+      transition: all 0.3s;
+    }
+  }
+
+  &__secondary-nav li a {
+    text-decoration: none;
+    color: #cccc;
+
+    &:hover {
+      color: #ffff;
+      transition: all 0.3s;
+    }
+
+    &__social-medias li a {
+      text-decoration: none;
+      gap: 10px;
+      color: #cccc;
+    }
+  }
+}
+
+@media only screen and (max-width: 1290px) {
+  .HeaderContainer {
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 1075px) {
+  .HeaderContainer {
+    position: static;
+    margin-top: 0;
+    width: 100vw;
+    transform: none;
+
+    &__secondary-nav,
+    &__primary-nav {
+      @include make-flex();
+      gap: 10px;
+      width: 100%;
+      li {
+        width: 90%;
+        height: 45px;
+        @include make-flex($align: flex-start);
+      }
+    }
+
+    &__Menu {
+      position: absolute;
+      @include make-flex();
+      right: 0;
+      top: 0;
+      width: 100%;
+      max-width: 290px;
+      height: 100vh;
+      border-left: 4px solid #57abfb;
+      background-color: #161c22;
+      transform: translateX(100%);
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+      &--open {
+        transform: translateX(0%);
+      }
+    }
+    &__Hamburger {
+      position: absolute;
+      height: 28px;
+      width: 28px;
+      right: 12px;
+      top: 12px;
+      z-index: 3;
+    }
+    #NavBarInput {
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      height: 28px;
+      margin: 0;
+      width: 28px;
+    }
+    .hamButton {
+      z-index: 3;
+      position: absolute;
+      height: 28px;
+      top: 0;
+      left: 0;
+      width: auto;
+      @include make-flex();
+      label {
+        @include make-flex($just: space-around);
+        height: 100%;
+        margin: unset;
+        span {
+          display: block;
+          width: 28px;
+
+          border-top: 4.48px solid #57abfb;
+          border-radius: 10px;
+          transform-origin: 4px 0px;
+          transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+          &:first-child {
+            transform-origin: 0% 0%;
+          }
+          &:nth-last-child(2) {
+            transform-origin: 0% 100%;
+          }
+        }
+      }
+    }
+
+    #NavBarInput:checked ~ .hamButton > label > .span.HL1 {
+      opacity: 1;
+      transform: rotate(45deg) translate(5px, -5px);
+    }
+    #NavBarInput:checked ~ .hamButton > label > .span.HL2 {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    #NavBarInput:checked ~ .hamButton > label > .span.HL3 {
+      transform: rotate(-45deg) translate(3px, 1px);
+    }
+  }
+}
