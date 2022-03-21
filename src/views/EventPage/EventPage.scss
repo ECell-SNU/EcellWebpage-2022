@@ -1,32 +1,25 @@
 @import "../../styles/mixins";
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-.EventPageWrapper {
-  background: rgb(255, 255, 255);
-  padding-top: 12px;
-  height: 100%;
-  width: 100%;
-
-  font-family: "Space Mono", monospace;
-
+.ContentWrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1170px;
   &__hero {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1170px;
+    margin-top: 190px;
     color: #161c22;
     &__title {
-      left: 10%;
-      max-width: 40%;
+      max-width: 39%;
       font-size: 60px;
       font-weight: 700;
       line-height: 127.5%;
-      margin-bottom: 3%;
     }
 
     &__desc {
+      margin-top: 30px;
       line-height: 167.5%;
       width: 40%;
-      margin-bottom: 3%;
+      margin-bottom: 30px;
       font-size: 14px;
     }
     button {
@@ -68,4 +61,11 @@
   100% {
     transform: translateY(-20px);
   }
+}
+.EventPageWrapper {
+  background: rgb(255, 255, 255);
+  padding-top: 12px;
+  height: 100%;
+  width: 100%;
+  font-family: "Space Mono", monospace;
 }
