@@ -5,9 +5,45 @@
   padding-top: 12px;
   height: 100%;
   width: 100%;
+
   @include make-flex();
 
   font-family: "Space Mono", monospace;
+
+  &__hero {
+    color: #252e36;
+    &__title {
+      left: 10%;
+      max-width: 40%;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 127.5%;
+      margin-bottom: 3%;
+    }
+
+    &__desc {
+      width: 30%;
+      margin-bottom: 3%;
+    }
+    button {
+      padding: 8px 32px;
+      border-radius: 8px;
+      border: 2px solid #00ffaa;
+      font-size: 18px;
+      //color: #00ffaa;
+      background-color: #c4c4c407;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 15px;
+      transition: ease-in-out 0.25s;
+      font-family: "Space Mono", monospace;
+    }
+    button:hover {
+      color: black;
+
+      background-color: #00ffaa;
+    }
+  }
 }
 
 @media only screen and (max-width: 520px) {

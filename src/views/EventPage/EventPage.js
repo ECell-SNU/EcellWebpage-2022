@@ -1,6 +1,5 @@
-import "./EventPage.scss";
 import Header from "../../components/Header/Header";
-import { motion } from "framer-motion";
+import "./EventPage.scss";
 // import image from "../../Assets/icons/events.svg";
 export default function EventPage() {
   return (
@@ -17,6 +16,16 @@ export default function EventPage() {
         routeItem4="/home/#thinktank"
         routeItem5="/blogs/archive"
       />
+
+      <div className="EventPageWrapper__hero">
+        <div className="EventPageWrapper__hero__title">Endure the Ragnarok</div>
+        <div className="EventPageWrapper__hero__desc">
+          E-Cell Shiv Nadar University strives to provide a platform for
+          students and faculty to create, innovate, incubate and realise their
+          entrepreneurial dreams
+        </div>
+        <button>Begin Game</button>
+      </div>
     </div>
   );
 }
