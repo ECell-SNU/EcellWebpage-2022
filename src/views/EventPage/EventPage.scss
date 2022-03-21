@@ -1,13 +1,13 @@
 @import "../../styles/mixins";
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 .EventPageWrapper {
+  background: rgb(255, 255, 255);
   padding-top: 12px;
   height: 100%;
   width: 100%;
   @include make-flex();
 
   font-family: "Space Mono", monospace;
-  
 }
 
 @media only screen and (max-width: 520px) {
