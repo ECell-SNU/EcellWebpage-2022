@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 export default function Header({
-  navItem1, 
+  navItem1,
   navItem2,
   navItem3,
   navItem4,
@@ -21,6 +21,7 @@ export default function Header({
   routeItem5,
   routeItem6,
   routeItem7,
+  textColor,
 }) {
   const [navState, setNavState] = useState(false);
   const thousandPixels = useMediaQuery({
@@ -31,8 +32,7 @@ export default function Header({
 
   function handleClick({ target }) {
     if (
-      (!node.current.contains(target) || !node.current === target) 
-      &&
+      (!node.current.contains(target) || !node.current === target) &&
       thousandPixels
     ) {
       setNavState(false);
@@ -85,28 +85,77 @@ export default function Header({
       >
         <ul className="HeaderContainer__primary-nav">
           <li>
-            <a href={routeItem1}>{navItem1}</a>
+            <a
+              style={{
+                color: textColor,
+              }}
+              href={routeItem1}
+            >
+              {navItem1}
+            </a>
           </li>
           <li>
-            <a href={routeItem2}>{navItem2}</a>
+            <a
+              style={{
+                color: textColor,
+              }}
+              href={routeItem2}
+            >
+              {navItem2}
+            </a>
           </li>
           <li>
-            <a href={routeItem3}>{navItem3}</a>
+            <a
+              style={{
+                color: textColor,
+              }}
+              href={routeItem3}
+            >
+              {navItem3}
+            </a>
           </li>
           <li>
-            <a href={routeItem4}>{navItem4}</a>
+            <a
+              style={{
+                color: textColor,
+              }}
+              href={routeItem4}
+            >
+              {navItem4}
+            </a>
           </li>
           <li>
-            <a href={routeItem5}>{navItem5}</a>
+            <a
+              style={{
+                color: textColor,
+              }}
+              href={routeItem5}
+            >
+              {navItem5}
+            </a>
           </li>
         </ul>
         <ul className="HeaderContainer__secondary-nav">
           <ul className="HeaderContainer__secondary-nav__nav-btns">
             <li>
-              <a href={routeItem6}>{navItem6}</a>
+              <a
+                style={{
+                  color: textColor,
+                }}
+                href={routeItem6}
+              >
+                {navItem6}
+              </a>
             </li>
             <li>
-              <a href={routeItem7}>{navItem7}</a>
+              <a
+                style={{
+                  color: textColor,
+                }}
+                href={routeItem7}
+              >
+                {navItem7}
+              </a>
             </li>
           </ul>
           <ul className="HeaderContainer__secondary-nav__social-medias">

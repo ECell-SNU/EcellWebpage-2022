@@ -5,20 +5,20 @@ import "./EventPage.scss";
 export default function EventPage() {
   return (
     <div className="EventPageWrapper">
+      <Header
+        navItem1="Home"
+        navItem2="About Us"
+        navItem3="Team"
+        navItem4="Think Tank"
+        navItem5="Blogs"
+        routeItem1="/home"
+        routeItem2="/home/#aboutus"
+        routeItem3="/teams"
+        routeItem4="/home/#thinktank"
+        routeItem5="/blogs"
+        textColor="black"
+      />
       <div className="ContentWrapper">
-        <Header
-          navItem1="Home"
-          navItem2="About Us"
-          navItem3="Team"
-          navItem4="Think Tank"
-          navItem5="Blogs"
-          routeItem1="/home"
-          routeItem2="/home/#aboutus"
-          routeItem3="/teams"
-          routeItem4="/home/#thinktank"
-          routeItem5="/blogs"
-        />
-
         <div className="ContentWrapper__hero">
           <div className="ContentWrapper__hero__title">Endure the Ragnarok</div>
           <div className="ContentWrapper__hero__desc">
@@ -26,9 +26,14 @@ export default function EventPage() {
             students and faculty to create, innovate, incubate and realise their
             entrepreneurial dreams
           </div>
-          <Link to="/leaderboard" className="ContentWrapper__hero__button">
-            Begin Game
-          </Link>
+          <a
+            href="https://snubreeze.live/events/technical/ragnarocked"
+            className="ContentWrapper__hero__button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Register!
+          </a>
         </div>
       </div>
     </div>

@@ -2,25 +2,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 .ContentWrapper {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1170px;
+  width: 1170px;
+  // @include make-flex();
+  @include respondAt(1290px) {
+    width: 100%;
+    padding: 0 30px;
+  }
   &__hero {
-    margin-top: 190px;
+    @include make-flex($align: flex-start);
+    gap: 30px;
+    // margin: 0 10rem;
     color: #161c22;
+
     &__title {
-      max-width: 39%;
+      width: 510px;
       font-size: 60px;
       font-weight: 700;
       line-height: 127.5%;
+
+      @include respondAt(650px) {
+        width: 100%;
+      }
+      
+      @include respondAt(391px) {
+        font-size: 55px;
+      }
     }
 
     &__desc {
-      margin-top: 30px;
       line-height: 167.5%;
-      width: 40%;
-      margin-bottom: 30px;
+      width: 595px;
       font-size: 14px;
+
+      @include respondAt(650px) {
+        width: 100%;
+      }
     }
     &__button {
       text-decoration: none;
@@ -69,4 +85,5 @@
   height: 100%;
   width: 100%;
   font-family: "Space Mono", monospace;
+  @include make-flex();
 }
