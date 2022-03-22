@@ -1,5 +1,5 @@
+import background from "../../Assets/image/background2.jpeg";
 import Header from "../../components/Header/Header";
-import { Link } from "react-router-dom";
 import "./EventPage.scss";
 // import image from "../../Assets/icons/events.svg";
 export default function EventPage() {
@@ -16,11 +16,14 @@ export default function EventPage() {
         routeItem3="/teams"
         routeItem4="/home/#thinktank"
         routeItem5="/blogs"
-        textColor="black"
+        textColor="white"
       />
       <div className="ContentWrapper">
         <div className="ContentWrapper__hero">
-          <div className="ContentWrapper__hero__title">Endure the Ragnarok</div>
+          <img src={background} className="bg"></img>
+          <div className="ContentWrapper__hero__title">
+            <span>Endure the</span>Ragnarok
+          </div>
           <div className="ContentWrapper__hero__desc">
             E-Cell Shiv Nadar University strives to provide a platform for
             students and faculty to create, innovate, incubate and realise their
