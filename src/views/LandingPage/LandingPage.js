@@ -1,18 +1,17 @@
-import "../LandingPage/LandingPage.scss";
-
-import Header from "../../components/Header/Header";
-
-import LandingSectionTexts from "../../components/LandingSectionTexts/LandingSectionTexts";
+import { motion } from "framer-motion";
 import Session1Illustration from "../../Assets/Illustration/Session-1-illustration.svg";
 import Session2Illustration from "../../Assets/Illustration/Session-2-illustration(to be updated).svg";
-import HeroSection from "./Components/HeroSection/HeroSection";
+import AnimationRender from "../../components/AnimationRender/AnimationRender";
+import FooterSection from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
+import LandingSectionTexts from "../../components/LandingSectionTexts/LandingSectionTexts";
+import "../LandingPage/LandingPage.scss";
 import AboutUsSection from "./Components/AboutUsSection/AboutUsSection";
-import ThinkTankSection from "./Components/ThinkTankSection/ThinkTankSection";
+import HeroSection from "./Components/HeroSection/HeroSection";
 import Session from "./Components/Session/Session";
 import SponsorSection from "./Components/SponsorSection/SponsorSection";
-import FooterSection from "../../components/Footer/Footer";
-import { motion } from "framer-motion";
-import AnimationRender from "../../components/AnimationRender/AnimationRender";
+import ThinkTankSection from "./Components/ThinkTankSection/ThinkTankSection";
+
 //import ecelllogo from "../../Assets/icons/logo-ecell.svg";
 export default function LandingPage() {
   const sections = [
@@ -67,7 +66,7 @@ export default function LandingPage() {
             navItem3="Team"
             navItem4="Think Tank"
             navItem6="Blogs"
-            navItem7="Events"
+            navItem7="Ragnarok '22"
             routeItem1="/home"
             routeItem2="#aboutus"
             routeItem3="/teams"

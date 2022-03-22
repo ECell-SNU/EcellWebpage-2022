@@ -17,7 +17,9 @@ export default function EventPage() {
         routeItem4="/home/#thinktank"
         routeItem5="/blogs"
         textColor="white"
+        s
       />
+
       <div className="ContentWrapper">
         <div className="ContentWrapper__hero">
           <img src={background} className="bg"></img>

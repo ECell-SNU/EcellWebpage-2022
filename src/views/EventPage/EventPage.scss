@@ -4,7 +4,9 @@
 .ContentWrapper {
   .bg {
     width: 100%;
-    height: max-content;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: repeat;
   }
   //width: 1170px;
   // @include make-flex();
@@ -13,7 +15,7 @@
     padding: 0 30px;
   }
   &__hero {
-    color: #eeeeee;
+    color: #e0e0e0;
 
     &__title {
       display: flex;
@@ -28,6 +30,7 @@
       line-height: 127.5%;
       span {
         font-size: xx-large;
+        color: #ffffff;
       }
 
       @include respondAt(650px) {
