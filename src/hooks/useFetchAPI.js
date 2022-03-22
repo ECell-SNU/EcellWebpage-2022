@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 
 export default function useFetchAPI(Endpoint) {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [apiData, setApiData] = useState(null);
 
   useEffect(() => {
     // const Endpoint = "https://nnbphj.deta.dev/get";
-    setIsLoading(true);
     console.log(isLoading);
     var myHeaders = new Headers();
     myHeaders.append("X-API-Key", "J58PETue.wUPK28VtZCNnCCVxbtoFM7-UrvAANSTQb");
@@ -24,7 +23,7 @@ export default function useFetchAPI(Endpoint) {
         .then((response) => response.text())
         .then((result) => {
           setApiData(JSON.parse(result)["allItems"]);
-          console.log(localData);
+          console.log(apiData);
           setIsLoading(false);
           console.log(isLoading);
         })
