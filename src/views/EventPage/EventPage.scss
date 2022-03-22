@@ -1,14 +1,17 @@
 @import "../../styles/mixins";
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
+* {
+  border: 2px solid red;
+}
 .ContentWrapper {
-  .bg {
-    width: 100%;
-    object-fit: cover;
-    background-size: cover;
-    background-repeat: repeat;
-  }
-  //width: 1170px;
+  background: black;
+  // .bg {
+  //   width: 100%;
+  //   object-fit: cover;
+  //   background-size: cover;
+  //   background-repeat: repeat;
+  // }
+  // //width: 1170px;
   // @include make-flex();
   @include respondAt(1290px) {
     width: 100%;
@@ -17,14 +20,16 @@
   &__hero {
     color: #e0e0e0;
 
-    &__title {
-      display: flex;
-      flex-direction: column;
-      left: 32%;
-      position: relative;
+    &__subTitle {
       text-align: center;
-      bottom: 70vh;
-      width: 510px;
+      font-size: 23px;
+      font-weight: 700;
+    }
+
+    &__title {
+      color: red;
+      text-align: center;
+      // width: 510px;
       font-size: 12vh;
       font-weight: 700;
       line-height: 127.5%;
@@ -43,24 +48,19 @@
     }
 
     &__desc {
+      color: red;
       margin-top: 2%;
       line-height: 167.5%;
       width: 595px;
       font-size: 14px;
-      left: 30%;
-      position: relative;
       text-align: center;
-      bottom: 70vh;
 
       @include respondAt(650px) {
         width: 100%;
       }
     }
     &__button {
-      left: 46%;
-      position: relative;
       text-align: center;
-      bottom: 60vh;
       text-decoration: none;
       color: #161c22;
       padding: 8px 32px;
@@ -103,7 +103,7 @@
   }
 }
 .EventPageWrapper {
-  background: rgb(255, 255, 255);
+  background: black;
   height: 100%;
   width: 100%;
   font-family: "Space Mono", monospace;

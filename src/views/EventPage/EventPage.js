@@ -22,23 +22,22 @@ export default function EventPage() {
 
       <div className="ContentWrapper">
         <div className="ContentWrapper__hero">
-          <img src={background} className="bg"></img>
-          <div className="ContentWrapper__hero__title">
-            <span>Endure the</span>Ragnarok
-          </div>
+          <h1 className="ContentWrapper__hero__subTitle">Endure the</h1>
+          <h1 className="ContentWrapper__hero__title">Ragnarok</h1>
           <div className="ContentWrapper__hero__desc">
             E-Cell Shiv Nadar University strives to provide a platform for
             students and faculty to create, innovate, incubate and realise their
             entrepreneurial dreams
           </div>
-          <a
-            href="https://snubreeze.live/events/technical/ragnarocked"
-            className="ContentWrapper__hero__button"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Register!
-          </a>
+          <button className="ContentWrapper__hero__button">
+            <a
+              href="https://snubreeze.live/events/technical/ragnarocked"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Register!
+            </a>
+          </button>
         </div>
       </div>
     </div>
