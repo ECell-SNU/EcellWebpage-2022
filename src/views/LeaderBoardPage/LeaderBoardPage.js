@@ -7,7 +7,15 @@ export default function LeaderBoardPage() {
   return (
     <div className="LeaderBoardPageWrapper">
       {/* {isLoading ? "Data Loading" : JSON.stringify(apiData)} */}
-      <LeaderBoardBar />
+      <LeaderBoardBar
+        position="1"
+        teamName="Auburn"
+        teamScore="$75000"
+        companyStock1="1"
+        companyStock2="10"
+        companyStock3="12"
+        companyStock4="18"
+      />
     </div>
   );
 }
