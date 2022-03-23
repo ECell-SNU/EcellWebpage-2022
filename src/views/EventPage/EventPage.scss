@@ -1,10 +1,10 @@
 @import "../../styles/mixins";
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-* {
-  border: 2px solid red;
+@font-face {
+  src: url(../../Fonts/BaronNeueBold.otf);
+  font-family: Ragnarok;
 }
 .ContentWrapper {
-  background: black;
   // .bg {
   //   width: 100%;
   //   object-fit: cover;
@@ -17,26 +17,43 @@
     width: 100%;
     padding: 0 30px;
   }
+
+  &__RegBtn {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    border: 2px solid #01f0a0;
+    background: #01f0a0;
+    border-radius: 8px;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-right: 1.4rem;
+    padding-left: 1.4rem;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
   &__hero {
     color: #e0e0e0;
 
     &__subTitle {
+      font-family: Ragnarok;
       text-align: center;
-      font-size: 23px;
+      font-size: 1.2vw;
+      letter-spacing: 10px;
       font-weight: 700;
+      margin-bottom: -20px;
     }
 
     &__title {
-      color: red;
+      color: white;
+      font-family: Ragnarok;
+      letter-spacing: 10px;
       text-align: center;
       // width: 510px;
-      font-size: 12vh;
+      font-size: 9vw;
       font-weight: 700;
       line-height: 127.5%;
-      span {
-        font-size: xx-large;
-        color: #ffffff;
-      }
 
       @include respondAt(650px) {
         width: 100%;
@@ -47,65 +64,31 @@
       }
     }
 
-    &__desc {
-      color: red;
-      margin-top: 2%;
-      line-height: 167.5%;
-      width: 595px;
-      font-size: 14px;
-      text-align: center;
+    @include respondAt(650px) {
+      width: 100%;
+    }
+  }
+}
 
-      @include respondAt(650px) {
-        width: 100%;
+@media only screen and (max-width: 920px) {
+  .ContentWrapper {
+    &__RegBtn {
+      font-size: 8px;
+    }
+    &__hero {
+      &__subTitle {
+        margin-bottom: 5px;
       }
     }
-    &__button {
-      text-align: center;
-      text-decoration: none;
-      color: #161c22;
-      padding: 8px 32px;
-      border-radius: 8px;
-      border: 2px solid #00ffaa;
-      font-size: 18px;
-      background-color: #00ffaa93;
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 15px;
-      transition: ease-in-out 0.25s;
-    }
   }
 }
 
-@media only screen and (max-width: 520px) {
-  .EventPageWrapper {
-    margin: auto;
-    p {
-      padding: 50px 20px 40px 20px;
-      font-size: 13px;
-    }
-
-    img {
-      height: 160px;
-    }
-
-    button {
-      font-size: 13px;
-    }
-  }
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
-}
 .EventPageWrapper {
-  background: black;
+  background: linear-gradient(rgba(0, 0, 0, 0.808), rgba(0, 0, 0, 0.253)),
+    url("../../Assets/image/background2.jpeg");
+  object-fit: cover;
+  background-size: cover;
   height: 100%;
-  width: 100%;
   font-family: "Space Mono", monospace;
   @include make-flex();
 }
