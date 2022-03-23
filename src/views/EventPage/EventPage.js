@@ -1,4 +1,3 @@
-import background from "../../Assets/image/background2.jpeg";
 import Header from "../../components/Header/Header";
 import "./EventPage.scss";
 // import image from "../../Assets/icons/events.svg";
