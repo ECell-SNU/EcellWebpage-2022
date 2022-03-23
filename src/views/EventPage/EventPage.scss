@@ -5,14 +5,6 @@
   font-family: Ragnarok;
 }
 .ContentWrapper {
-  // .bg {
-  //   width: 100%;
-  //   object-fit: cover;
-  //   background-size: cover;
-  //   background-repeat: repeat;
-  // }
-  // //width: 1170px;
-  // @include make-flex();
   @include respondAt(1290px) {
     width: 100%;
     padding: 0 30px;
