@@ -1,59 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-export default function useFetchAPI(Endpoint) {
+export default function useFetchAPI(endpoint) {
   const [isLoading, setIsLoading] = useState(true);
   const [apiData, setApiData] = useState(null);
 
-  useEffect(() => {
-    // const Endpoint = "https://nnbphj.deta.dev/get";
-    console.log(isLoading);
-    var myHeaders = new Headers();
-    myHeaders.append("X-API-Key", "J58PETue.wUPK28VtZCNnCCVxbtoFM7-UrvAANSTQb");
-    myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("Access-Control-Allow-Origin", "*");
+  var myHeaders = new Headers();
+  myHeaders.append("X-API-Key", "kogPTe5m.eo5PBom34FAQs6GQnZKM4W-HE1WB2eBeE");
+  myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("Access-Control-Allow-Origin", "*");
 
-    var requestOptions = {
-      method: "GET",
-      headers: myHeaders,
-      redirect: "follow",
-    };
+  var requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow",
+  };
 
-    const fetchScore = () => {
-      fetch(Endpoint, requestOptions)
-        .then((response) => response.text())
-        .then((result) => {
-          setApiData(JSON.parse(result)["allItems"]);
-          console.log(apiData);
-          setIsLoading(false);
-          console.log(isLoading);
-        })
-        .catch((err) => console.log(err));
-    };
-
-    fetchScore();
-
-    //   const fetchData = async () => {
-    //     try {
-    //       const response = await fetch(Endpoint, {
-    //         method: "get",
-    //         headers: {
-    //           "X-API-Key": "J58PETue.StrongAPIKeyGeneratedByDeta",
-    //           "Content-Type": "application/json"
-    //         }
-    //       });
-    //       const data = await response.json();
-    //       console.log(data);
-    //       setApiData(data);
-    //       setIsLoading(false);
-    //     } catch (error) {
-    //       console.log(error);
-    //     }
-    //   };
-
-    //   fetchData();
-    // }, []);
-    // eslint-disable-next-line
-  }, []);
+  fetch(`https://um41uj.deta.dev/${endpoint}`, requestOptions)
+    .then((response) => response.text())
+    .then((result) => {
+      setApiData(JSON.parse(result)["allItems"]);
+      setIsLoading(false);
+    })
+    .catch((err) => console.log(err));
 
   return { isLoading, apiData };
 }
