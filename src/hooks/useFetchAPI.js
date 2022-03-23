@@ -52,6 +52,7 @@ export default function useFetchAPI(Endpoint) {
 
     //   fetchData();
     // }, []);
+    // eslint-disable-next-line
   }, []);
 
   return { isLoading, apiData };
