@@ -1,38 +1,94 @@
 @import "../../styles/mixins";
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@font-face {
+  src: url(../../Fonts/BaronNeueBold.otf);
+  font-family: Ragnarok;
+}
+.ContentWrapper {
+  // .bg {
+  //   width: 100%;
+  //   object-fit: cover;
+  //   background-size: cover;
+  //   background-repeat: repeat;
+  // }
+  // //width: 1170px;
+  // @include make-flex();
+  @include respondAt(1290px) {
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  &__RegBtn {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    border: 2px solid #01f0a0;
+    background: #01f0a0;
+    border-radius: 8px;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-right: 1.4rem;
+    padding-left: 1.4rem;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  &__hero {
+    color: #e0e0e0;
+
+    &__subTitle {
+      font-family: Ragnarok;
+      text-align: center;
+      font-size: 1.2vw;
+      letter-spacing: 10px;
+      font-weight: 700;
+      margin-bottom: -20px;
+    }
+
+    &__title {
+      color: white;
+      font-family: Ragnarok;
+      letter-spacing: 10px;
+      text-align: center;
+      // width: 510px;
+      font-size: 9vw;
+      font-weight: 700;
+      line-height: 127.5%;
+
+      @include respondAt(650px) {
+        width: 100%;
+      }
+
+      @include respondAt(391px) {
+        font-size: 55px;
+      }
+    }
+
+    @include respondAt(650px) {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .ContentWrapper {
+    &__RegBtn {
+      font-size: 8px;
+    }
+    &__hero {
+      &__subTitle {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
 .EventPageWrapper {
-  padding-top: 12px;
+  background: linear-gradient(rgba(0, 0, 0, 0.808), rgba(0, 0, 0, 0.253)),
+    url("../../Assets/image/background2.jpeg");
+  object-fit: cover;
+  background-size: cover;
   height: 100%;
-  width: 100%;
-  @include make-flex();
-
   font-family: "Space Mono", monospace;
-  
-}
-
-@media only screen and (max-width: 520px) {
-  .EventPageWrapper {
-    margin: auto;
-    p {
-      padding: 50px 20px 40px 20px;
-      font-size: 13px;
-    }
-
-    img {
-      height: 160px;
-    }
-
-    button {
-      font-size: 13px;
-    }
-  }
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
+  @include make-flex();
 }
