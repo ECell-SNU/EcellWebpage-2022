@@ -84,6 +84,8 @@
 }
 
 .EventPageWrapper {
+  overflow-x: hidden;
+  overflow-y: hidden;
   background: linear-gradient(rgba(0, 0, 0, 0.808), rgba(0, 0, 0, 0.253)),
     url("../../Assets/image/background2.jpeg");
   object-fit: cover;
