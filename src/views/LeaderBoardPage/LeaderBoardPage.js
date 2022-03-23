@@ -3,7 +3,10 @@ import LeaderBoardBar from "../LandingPage/Components/LeaderBoardBar/LeaderBoard
 import "./LeaderBoardPage.scss";
 
 export default function LeaderBoardPage() {
-  const { isLoading, apiData } = useFetchAPI("https://nnbphj.deta.dev/get");
+  const { isLoading, apiData } = useFetchAPI("fetchAll");
+
+  console.log(apiData);
+
   return (
     <div className="LeaderBoardPageWrapper">
       {/* {isLoading ? "Data Loading" : JSON.stringify(apiData)} */}
