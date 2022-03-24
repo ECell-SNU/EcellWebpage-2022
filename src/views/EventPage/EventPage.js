@@ -10,7 +10,7 @@ export default function EventPage() {
         navItem3="Resources"
         routeItem1="/home"
         routeItem2="/home/#aboutus"
-        routeItem3="/resources"
+        routeItem3="/events/resources"
       />
 
       <div className="ContentWrapper">
