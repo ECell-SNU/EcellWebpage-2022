@@ -6,3 +6,4 @@ export { default as LandingPage } from "./LandingPage/LandingPage";
 export { default as PageNotFound } from "./PageNotFound/PageNotFound";
 export { default as TeamPage } from "./TeamPage/TeamPage";
 export { default as LeaderBoardPage } from "./LeaderBoardPage/LeaderBoardPage";
+export { default as ResourcesPage } from "./Resources/ResourcesPage";

@@ -1,0 +1,53 @@
+@font-face {
+  src: url(../../Fonts/BaronNeueBold.otf);
+  font-family: Ragnarok;
+}
+
+.ResourcesPageWrapper {
+  width: 100%;
+  height: 100%;
+  background: #01211b;
+
+  &__ContentWrapper {
+    width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__Tab {
+    display: flex;
+    justify-content: space-between;
+    &__Btn1 {
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      border-bottom: 2px solid white;
+      padding-bottom: 2px;
+    }
+  }
+
+  &__TabContentContainer__TabOneContent {
+    color: white;
+  }
+
+  &__TabContentContainer__TabTwoContent {
+    color: white;
+  }
+
+  &__TabContentContainer__TabThreeContent {
+    color: white;
+  }
+}
+
+.HideContent {
+  display: none;
+}
+
+.Unselected {
+  font-weight: 400;
+  opacity: 30%;
+  border-bottom: none;
+}
