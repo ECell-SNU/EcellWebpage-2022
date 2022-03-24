@@ -1,8 +1,11 @@
+@import "../../../../styles/mixins";
+
 .LeaderBoardBarWrapper {
   display: flex;
   justify-content: space-between;
   border: 2px red solid;
   width: 450px;
+  @include make-flex();
 
   &__companyStocks {
     display: flex;
