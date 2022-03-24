@@ -40,6 +40,7 @@
 
   &__TabContentContainer__TabTwoContent {
     color: white;
+    opacity: 78%;
   }
 
   &__TabContentContainer__TabThreeContent {
@@ -59,10 +60,22 @@
 
 .ResourceContent {
   &__title {
-    color: white !important;
-    font-weight: 700;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 40px;
   }
   &__desc {
-    color: white !important;
+    color: white;
+    opacity: 78%;
+    margin-top: 10px;
+    line-height: 200.5%;
+    font-weight: 400;
+    max-width: 900px;
   }
+}
+
+.TabHeader {
+  font-family: Ragnarok;
+  letter-spacing: 5px;
 }

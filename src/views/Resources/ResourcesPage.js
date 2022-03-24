@@ -49,7 +49,7 @@ export default function Resources() {
                 : "ResourcesPageWrapper__TabContentContainer__TabOneContent HideContent"
             }
           >
-            <h2>Gameplay Design</h2>
+            <h2 className="TabHeader">GAMEPLAY DESGIN</h2>
             <div className="RecourceContent">
               <p className="ResourceContent__title">The Companies </p>
               <p className="ResourceContent__desc">
@@ -64,17 +64,12 @@ export default function Resources() {
             <div className="RecourceContent">
               <p className="ResourceContent__title">The Heroes</p>
               <p className="ResourceContent__desc">
-                <div className="RecourceContent">
-                  <p className="ResourceContent__title">The Companies </p>
-                  <p className="ResourceContent__desc">
-                    so as to allow the players of the game to develop a
-                    cognitivenderstanding of the companies from both a fandom
-                    andindustry pov. this will let us create awareness and
-                    transparencymitigating any chances of confusion based on an
-                    inability tounderstand what the game situations
-                    insinuate/demand.
-                  </p>
-                </div>
+                so as to allow the players of the game to develop a
+                cognitivenderstanding of the companies from both a fandom
+                andindustry pov. this will let us create awareness and
+                transparencymitigating any chances of confusion based on an
+                inability tounderstand what the game situations
+                insinuate/demand.
               </p>
             </div>
           </div>
