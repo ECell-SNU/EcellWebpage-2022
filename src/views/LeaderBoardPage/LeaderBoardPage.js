@@ -3,38 +3,47 @@ import LeaderBoardBar from "../LandingPage/Components/LeaderBoardBar/LeaderBoard
 import "./LeaderBoardPage.scss";
 
 export default function LeaderBoardPage() {
+  const teamDetails = function (name, revenue) {
+    this.name = name;
+    this.revenue = revenue;
+  };
+
+  teamDetails.prototype.Acquisition = function (superHero) {
+    this.revenue += 2000;
+    return this;
+  };
+
+  const Team1 = new teamDetails("Yankiees", 85000);
+  const Team2 = new teamDetails("Auburn", 85000);
+  const Team3 = new teamDetails("Texas", 85000);
+
+  const TeamArray = [Team1, Team2, Team3];
+
   const { isLoading, apiData } = useFetchAPI("fetchAll");
+  console.log(TeamArray);
 
   // eslint-disable-next-line
   // const formOutputs = apiData.Situation1Items[0].Responses;
   // console.log(JSON.parse(formOutputs)[0].Response[0]);
   console.log(apiData);
+  TeamArray.forEach((team) => {
+    console.log(team.Acquisition());
+  });
+
   return (
     <div className="LeaderBoardPageWrapper">
-      {/* {isLoading ? "Data Loading" : JSON.stringify(apiData)} */}
       <div className="LeaderBoardPageWrapper__Content">
-        {isLoading ? (
-          "Data Loading"
-        ) : (
+        {/* <LeaderBoardBar teamName={Team1.name} teamScore={Team1.revenue} />
+        <LeaderBoardBar teamName={Team2.name} teamScore={Team2.revenue} />
+        <LeaderBoardBar teamName={Team3.name} teamScore={Team3.revenue} /> */}
+        {TeamArray.map((team, index) => (
           <LeaderBoardBar
-            position="1"
-            teamName={
-              JSON.parse(apiData.Situation1Items[0].Responses)[0].Response[0]
-            }
-            teamScore={
-              JSON.parse(apiData.Situation1Items[0].Responses)[0]
-                .Response[0] === "Spiderman"
-                ? 7500 - 10
-                : 7500
-            }
-            companyStock1="1"
-            companyStock2="10"
-            companyStock3="12"
-            companyStock4="18"
+            teamName={team.name}
+            teamScore={team.revenue}
+            key={index}
           />
-        )}
+        ))}
       </div>
-      <div className="TestArea"></div>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 [
   {
     "TeamName": "Yankies",
+    "Email": "bs404@snu.edu.in",
     "TeamRevenue": 85000,
     "OscorpStocks": 3,
     "StarkStocks": 4,
@@ -10,6 +11,7 @@
 
   {
     "TeamName": "Auburn",
+    "Email": "jaiswalsakshi06@gmail.com",
     "TeamRevenue": 85000,
     "OscorpStocks": 3,
     "StarkStocks": 4,
@@ -18,6 +20,7 @@
   },
   {
     "TeamName": "Texasay",
+    "Email": "pj534@snu.edu.in",
     "TeamRevenue": 85000,
     "OscorpStocks": 3,
     "StarkStocks": 4,
@@ -26,18 +29,11 @@
   },
   {
     "TeamName": "Trengo",
+    "Email": "as342@snu.edu.in",
     "TeamRevenue": 85000,
     "OscorpStocks": 3,
     "StarkStocks": 4,
     "DailyBugleStocks": 10,
     "NelsonMurdokStocks": 8
-  },
-  {
-    "TeamName": "Yankies",
-    "TeamRevenue": 85000,
-    "OscorpStocks": 3,
-    "StarkStocks": 4,
-    "DailyBugleStocks": 10,
-    "NelsonMurdokStocks": 2
   }
 ]
