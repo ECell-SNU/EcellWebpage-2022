@@ -34,6 +34,7 @@ export default function LeaderBoardPage() {
           />
         )}
       </div>
+      <div className="TestArea"></div>
     </div>
   );
 }

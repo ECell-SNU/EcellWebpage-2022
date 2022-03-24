@@ -1,0 +1,43 @@
+[
+  {
+    "TeamName": "Yankies",
+    "TeamRevenue": 85000,
+    "OscorpStocks": 3,
+    "StarkStocks": 4,
+    "DailyBugleStocks": 10,
+    "NelsonMurdokStocks": 8
+  },
+
+  {
+    "TeamName": "Auburn",
+    "TeamRevenue": 85000,
+    "OscorpStocks": 3,
+    "StarkStocks": 4,
+    "DailyBugleStocks": 10,
+    "NelsonMurdokStocks": 8
+  },
+  {
+    "TeamName": "Texasay",
+    "TeamRevenue": 85000,
+    "OscorpStocks": 3,
+    "StarkStocks": 4,
+    "DailyBugleStocks": 10,
+    "NelsonMurdokStocks": 8
+  },
+  {
+    "TeamName": "Trengo",
+    "TeamRevenue": 85000,
+    "OscorpStocks": 3,
+    "StarkStocks": 4,
+    "DailyBugleStocks": 10,
+    "NelsonMurdokStocks": 8
+  },
+  {
+    "TeamName": "Yankies",
+    "TeamRevenue": 85000,
+    "OscorpStocks": 3,
+    "StarkStocks": 4,
+    "DailyBugleStocks": 10,
+    "NelsonMurdokStocks": 2
+  }
+]
