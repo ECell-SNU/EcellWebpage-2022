@@ -1,5 +1,12 @@
 .LeaderBoardBarWrapper {
   display: flex;
   justify-content: space-between;
-  width: 600px;
+  border: 2px red solid;
+  width: 450px;
+
+  &__companyStocks {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+  }
 }

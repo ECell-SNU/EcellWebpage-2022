@@ -9,7 +9,10 @@ export default function LeaderBoardPage() {
   };
 
   teamDetails.prototype.Acquisition = function (superHero) {
-    this.revenue += 2000;
+    switch (superHero) {
+      case "Spiderman":
+        this.revenue += 2000;
+    }
     return this;
   };
 
@@ -19,13 +22,13 @@ export default function LeaderBoardPage() {
 
   const TeamArray = [Team1, Team2, Team3];
 
-  const { isLoading, apiData } = useFetchAPI("fetchAll");
+  // const { isLoading, apiData } = useFetchAPI("fetchAll");
   console.log(TeamArray);
 
   // eslint-disable-next-line
   // const formOutputs = apiData.Situation1Items[0].Responses;
   // console.log(JSON.parse(formOutputs)[0].Response[0]);
-  console.log(apiData);
+  // console.log(apiData);
   TeamArray.forEach((team) => {
     console.log(team.Acquisition());
   });
@@ -38,6 +41,7 @@ export default function LeaderBoardPage() {
         <LeaderBoardBar teamName={Team3.name} teamScore={Team3.revenue} /> */}
         {TeamArray.map((team, index) => (
           <LeaderBoardBar
+            position={index + 1}
             teamName={team.name}
             teamScore={team.revenue}
             key={index}
