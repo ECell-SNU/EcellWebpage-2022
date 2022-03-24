@@ -2,4 +2,20 @@
   width: 100%;
   height: 100%;
   background: #01211b;
+
+  &__TabContentContainer__TabOneContent {
+    color: white;
+  }
+
+  &__TabContentContainer__TabTwoContent {
+    color: white;
+  }
+
+  &__TabContentContainer__TabThreeContent {
+    color: white;
+  }
+}
+
+.HideContent {
+  display: none;
 }
