@@ -30,7 +30,12 @@
   }
 
   &__TabContentContainer__TabOneContent {
-    color: white;
+    h2 {
+      color: #00ffaa;
+      font-size: xx-large;
+      font-weight: 700;
+      margin-top: 10vh;
+    }
   }
 
   &__TabContentContainer__TabTwoContent {
@@ -50,4 +55,14 @@
   font-weight: 400;
   opacity: 30%;
   border-bottom: none;
+}
+
+.ResourceContent {
+  &__title {
+    color: white !important;
+    font-weight: 700;
+  }
+  &__desc {
+    color: white !important;
+  }
 }

@@ -1,5 +1,5 @@
-import "./ResourcesPage.scss";
 import { useState } from "react";
+import "./ResourcesPage.scss";
 export default function Resources() {
   const [currentTab, setCurrentTab] = useState(1);
   const StateManage = function (TabValue) {
@@ -49,7 +49,34 @@ export default function Resources() {
                 : "ResourcesPageWrapper__TabContentContainer__TabOneContent HideContent"
             }
           >
-            This is OurEvent Content
+            <h2>Gameplay Design</h2>
+            <div className="RecourceContent">
+              <p className="ResourceContent__title">The Companies </p>
+              <p className="ResourceContent__desc">
+                so as to allow the players of the game to develop a
+                cognitivenderstanding of the companies from both a fandom
+                andindustry pov. this will let us create awareness and
+                transparencymitigating any chances of confusion based on an
+                inability tounderstand what the game situations
+                insinuate/demand.
+              </p>
+            </div>
+            <div className="RecourceContent">
+              <p className="ResourceContent__title">The Heroes</p>
+              <p className="ResourceContent__desc">
+                <div className="RecourceContent">
+                  <p className="ResourceContent__title">The Companies </p>
+                  <p className="ResourceContent__desc">
+                    so as to allow the players of the game to develop a
+                    cognitivenderstanding of the companies from both a fandom
+                    andindustry pov. this will let us create awareness and
+                    transparencymitigating any chances of confusion based on an
+                    inability tounderstand what the game situations
+                    insinuate/demand.
+                  </p>
+                </div>
+              </p>
+            </div>
           </div>
           <div
             className={
