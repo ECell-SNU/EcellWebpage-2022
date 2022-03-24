@@ -7,10 +7,10 @@ export default function EventPage() {
       <Header
         navItem1="Home"
         navItem2="About Us"
-        navItem3="Team"
+        navItem3="Resources"
         routeItem1="/home"
         routeItem2="/home/#aboutus"
-        routeItem3="/teams"
+        routeItem3="/resources"
       />
 
       <div className="ContentWrapper">
