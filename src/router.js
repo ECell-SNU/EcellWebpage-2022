@@ -13,13 +13,17 @@ export default function Router() {
         <Redirect exact from="/" to="/home" />
         <Route exact path="/home" component={views.LandingPage} />
         <Route exact path="/blogs" component={views.BlogPage} />
-        <Route exact path="/leaderboard" component={views.LeaderBoardPage} />
+        <Route
+          exact
+          path="/events/leaderboard"
+          component={views.LeaderBoardPage}
+        />
 
         {/* <Redirect exact from="/events" to="/404" /> */}
         <Route exact path="/events" component={views.EventPage} />
-
         <Route exact path="/teams" component={views.TeamPage} />
         <Route exact path="/blogs/archive" component={views.ArchivePage} />
+        <Route exact path="/events/resources" component={views.ResourcesPage} />
         <Route exact path="/blog/read/:id" component={read} />
 
         {/* <Route component={views.PageNotFound} /> */}

@@ -22,6 +22,7 @@ export default function Header({
   routeItem6,
   routeItem7,
   textColor,
+  style,
 }) {
   const [navState, setNavState] = useState(false);
   const thousandPixels = useMediaQuery({
@@ -58,7 +59,7 @@ export default function Header({
   }
 
   return (
-    <div className="HeaderContainer" ref={node}>
+    <div className="HeaderContainer" style={style} ref={node}>
       {thousandPixels && (
         <div className="HeaderContainer__Hamburger">
           <input

@@ -5,14 +5,6 @@
   font-family: Ragnarok;
 }
 .ContentWrapper {
-  // .bg {
-  //   width: 100%;
-  //   object-fit: cover;
-  //   background-size: cover;
-  //   background-repeat: repeat;
-  // }
-  // //width: 1170px;
-  // @include make-flex();
   @include respondAt(1290px) {
     width: 100%;
     padding: 0 30px;
@@ -23,7 +15,7 @@
     color: black;
     font-weight: 600;
     border: 2px solid #01f0a0;
-    background: #01f0a0;
+    background: #01f0a0ce;
     border-radius: 8px;
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
@@ -31,6 +23,9 @@
     padding-left: 1.4rem;
     font-size: 15px;
     margin-top: 20px;
+    @include respondAt(391px) {
+      font-size: 12px !important;
+    }
   }
 
   &__hero {
@@ -43,6 +38,9 @@
       letter-spacing: 10px;
       font-weight: 700;
       margin-bottom: -20px;
+      @include respondAt(391px) {
+        font-size: 11px;
+      }
     }
 
     &__title {
@@ -61,6 +59,7 @@
 
       @include respondAt(391px) {
         font-size: 55px;
+        letter-spacing: 2px;
       }
     }
 
@@ -84,6 +83,9 @@
 }
 
 .EventPageWrapper {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
   background: linear-gradient(rgba(0, 0, 0, 0.808), rgba(0, 0, 0, 0.253)),
     url("../../Assets/image/background2.jpeg");
   object-fit: cover;
