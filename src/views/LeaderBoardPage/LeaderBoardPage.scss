@@ -9,3 +9,37 @@
     margin-right: auto;
   }
 }
+
+.Table {
+  border-collapse: separate;
+  border-spacing: 55px 25px;
+}
+
+.LeaderBoardTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+
+tbody {
+  td {
+    text-align: center;
+  }
+}
+
+.Rank {
+  color: red;
+  font-weight: 700;
+}
+
+.MoneyGreen {
+  color: green;
+}
+
+.MoneyRed {
+  color: red;
+}
+
+.MoneyBare {
+  color: yellow;
+}
