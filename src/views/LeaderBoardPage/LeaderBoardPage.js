@@ -37,7 +37,7 @@ export default function LeaderBoardPage() {
     if (Balance > 50000) {
       return "green";
     } else if (Balance <= 50000 && Balance > 30000) {
-      return "ff9800";
+      return "  ff9800";
     } else {
       return "red";
     }
@@ -274,6 +274,8 @@ export default function LeaderBoardPage() {
                     const Responses = JSON.parse(response.Responses);
                     balanceSheet[response.Mail] =
                       balanceSheet[response.Mail] - getSpentInR1(Responses);
+
+                    if(companySheet[response.Mail]){
                     companySheet[response.Mail].forEach((element, index) => {
                       Responses.forEach((item) => {
                         if (element.Item === item.Item) {
@@ -282,7 +284,7 @@ export default function LeaderBoardPage() {
                             parseInt(item.Response);
                         }
                       });
-                    });
+                    });}
 
                     return (
                       <tr key={index}>
@@ -308,7 +310,7 @@ export default function LeaderBoardPage() {
             </>
           )}
 
-          {situation1.length > 0 && (
+          {situation2.length > 0 && (
             <>
               <br />
               <h2 className="LeaderBoardTitle">Situation 2</h2>
@@ -322,11 +324,13 @@ export default function LeaderBoardPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {situation1.map((response, index) => {
+                  {situation2.map((response, index) => {
                     let HeroName = JSON.parse(response.Responses)[0].Response;
                     HeroName = JSON.parse(
                       JSON.stringify(HeroName).replace("[", "").replace("]", "")
                     );
+
+                    
 
                     let traitEffect = 0;
 
@@ -481,7 +485,7 @@ export default function LeaderBoardPage() {
                             color: BalanceCheck(balanceSheet[response.Mail]),
                           }}
                         >
-                          {`${DisCheck(balanceSheet[response.Mail])}`}{" "}
+                          {DisCheck(balanceSheet[response.Mail])}
                         </td>
                       </tr>
                     );
