@@ -24,11 +24,8 @@ export default function EventPage() {
           </div> */}
         </div>
       </div>
-      <a
-        href="https://snubreeze.live/events/technical/ragnarocked"
-        className="ContentWrapper__RegBtn"
-      >
-        Register Now
+      <a href="/events/leaderboard" className="ContentWrapper__RegBtn">
+        Begin Now
       </a>
     </div>
   );
