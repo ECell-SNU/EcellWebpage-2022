@@ -18,6 +18,7 @@ import getSpentInR2 from "./Utils/getSpentInR2";
 
 export default function LeaderBoardPage() {
   const BALANCE = 100000;
+  const NEW_BALANCE = 10000
 
   const { isLoading, apiData } = useFetchAPI("fetchAll");
 
@@ -163,7 +164,7 @@ export default function LeaderBoardPage() {
               }
 
               balanceSheet[response.Mail] =
-                balanceSheet[response.Mail] + traitEffect + stockStatus;
+                balanceSheet[response.Mail] + traitEffect + stockStatus + NEW_BALANCE;
 
               return (
                 <tr key={index}>
