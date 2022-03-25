@@ -17,7 +17,7 @@ export default function Resources() {
           routeItem1="/home"
           routeItem2="/home/#aboutus"
           routeItem3="/events"
-          style={{ position: "unset" }}
+          // style={{ position: "unset" }}
         />
       </div>
       <div className="ResourcesPageWrapper__ContentWrapper">
