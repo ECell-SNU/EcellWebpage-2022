@@ -61,6 +61,9 @@ export default function LeaderBoardPage() {
 
   return (
     <div className="LeaderBoardPageWrapper">
+      <h1 style={{ width: "100%", padding: "10px 0", textAlign: "center" }}>
+        Leaderboards
+      </h1>
       {isLoading && (
         <div
           style={{
@@ -70,7 +73,7 @@ export default function LeaderBoardPage() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor:"whitesmoke"
+            backgroundColor: "whitesmoke",
           }}
         >
           <i>Data Loading...</i>
