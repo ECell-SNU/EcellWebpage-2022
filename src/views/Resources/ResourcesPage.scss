@@ -5,9 +5,9 @@
 
 .ResourcesPageWrapper {
   width: 100%;
-  height: 100%;
+  // height: 100%;
   background-color: #01211b !important;
-
+  
   &__HeaderContainer {
     margin-left: auto;
     margin-right: auto;
@@ -15,8 +15,9 @@
     background: #01211b;
     background-repeat: repeat;
   }
-
+  
   &__ContentWrapper {
+    padding-bottom: 60px;
     width: 1170px;
     margin-left: auto;
     margin-right: auto;
@@ -25,7 +26,7 @@
   &__Tab {
     display: flex;
     justify-content: space-between;
-    padding-top: 170px;
+    padding-top: 120px;
     &__Btn1 {
       cursor: pointer;
       background: none;
