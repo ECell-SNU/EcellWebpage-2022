@@ -6,13 +6,14 @@
 .ResourcesPageWrapper {
   width: 100%;
   height: 100%;
-  background: #01211b;
+  background-color: #01211b !important;
 
   &__HeaderContainer {
     margin-left: auto;
     margin-right: auto;
     width: 1170px;
     background: #01211b;
+    background-repeat: repeat;
   }
 
   &__ContentWrapper {
