@@ -65,7 +65,7 @@ export default function LeaderBoardPage() {
       setSituation3(apiData["Situation3Items"]);
     }
   }, [apiData]);
-  console.log(apiData);
+  // console.log(apiData);
 
   return (
     <>
@@ -133,7 +133,6 @@ export default function LeaderBoardPage() {
               </table>
             </>
           )}
-
           {acquisitionItems.length > 0 && (
             <>
               <br />
@@ -255,7 +254,7 @@ export default function LeaderBoardPage() {
           )}
           <br />
 
-          {investmentItemsR2.length > 0 && (
+          {situation2.length > 0 && (
             <>
               <h2 className="LeaderBoardTitle">Investment Round 2</h2>
               <table className="Table">
@@ -276,7 +275,7 @@ export default function LeaderBoardPage() {
                     balanceSheet[response.Mail] =
                       balanceSheet[response.Mail] - getSpentInR1(Responses);
 
-                    console.log(companySheet[response.Mail]);
+                    if(companySheet[response.Mail]){
                     companySheet[response.Mail].forEach((element, index) => {
                       Responses.forEach((item) => {
                         if (element.Item === item.Item) {
@@ -285,7 +284,7 @@ export default function LeaderBoardPage() {
                             parseInt(item.Response);
                         }
                       });
-                    });
+                    });}
 
                     return (
                       <tr key={index}>
@@ -326,11 +325,12 @@ export default function LeaderBoardPage() {
                 </thead>
                 <tbody>
                   {situation2.map((response, index) => {
-                    console.log(response);
                     let HeroName = JSON.parse(response.Responses)[0].Response;
                     HeroName = JSON.parse(
                       JSON.stringify(HeroName).replace("[", "").replace("]", "")
                     );
+
+                    
 
                     let traitEffect = 0;
 
@@ -362,6 +362,131 @@ export default function LeaderBoardPage() {
                         <td>{response.Mail}</td>
                         <td>{HeroName}</td>
                         <td>{DisCheck(balanceSheet[response.Mail])} </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </>
+          )}
+
+          {acquisitionItemsR2.length > 0 && (
+            <>
+              <br />
+              <h2 className="LeaderBoardTitle">Acquisition Round 2</h2>
+              <table className="Table">
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Super hero 1</th>
+                    <th>Super hero 2</th>
+                    <th>Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {acquisitionItemsR2.map((response, index) => {
+                    const Responses = JSON.parse(response.Responses)[0]
+                      .Response;
+                    balanceSheet[response.Mail] =
+                      balanceSheet[response.Mail] - getSpentInR2(Responses);
+
+                    // console.log(
+                    //   response.Mail,
+                    //   getSpentInR2(Responses),
+                    //   balanceSheet[response.Mail] - getSpentInR2(Responses)
+                    // );
+
+                    if (balanceSheet[response.Mail]) {
+                      return (
+                        <tr key={index}>
+                          <td className="Rank">{index + 1}</td>
+                          <td>{response.Mail}</td>
+                          {Responses.map((hero, index) => {
+                            const heroName = hero.split(" - ")[0];
+                            return (
+                              <td key={index}>
+                                {heroName}({getHeroPrice(heroName)})
+                              </td>
+                            );
+                          })}
+                          {Responses.length === 1 && <td></td>}
+                          <td
+                            style={{
+                              color: BalanceCheck(balanceSheet[response.Mail]),
+                            }}
+                          >
+                            {DisCheck(balanceSheet[response.Mail])}
+                          </td>
+                        </tr>
+                      );
+                    } else {
+                      return <></>;
+                    }
+                  })}
+                </tbody>
+              </table>
+            </>
+          )}
+
+          {situation3.length > 0 && (
+            <>
+              <br />
+              <h2 className="LeaderBoardTitle">Situation 3</h2>
+              <table className="Table">
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Super hero 1</th>
+                    <th>Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {situation3.map((response, index) => {
+                    let HeroName = response.Responses;
+                    HeroName = JSON.parse(HeroName);
+                    HeroName = JSON.stringify(HeroName[0].Response);
+
+                    HeroName = JSON.parse(
+                      JSON.parse(
+                        JSON.stringify(HeroName)
+                          .replace("[", "")
+                          .replace("]", "")
+                      )
+                    );
+
+                    let traitEffect = 0;
+
+                    let stockStatus = 0;
+
+                    getHeroTraits(HeroName).forEach((trait) => {
+                      // console.log(response, trait, HeroName);
+                      if (
+                        situation1Traits[trait] &&
+                        activeTraits3.includes(trait)
+                      ) {
+                        traitEffect += -1 * situation1Traits[trait];
+                      }
+                    });
+
+                    // console.log(response.Mail, traitEffect, stockStatus);
+
+                    balanceSheet[response.Mail] =
+                      balanceSheet[response.Mail] + traitEffect + stockStatus;
+
+                    return (
+                      <tr key={index}>
+                        <td className="Rank">{index + 1}</td>
+                        <td>{response.Mail}</td>
+                        <td>{HeroName}</td>
+                        <td
+                          style={{
+                            color: BalanceCheck(balanceSheet[response.Mail]),
+                          }}
+                        >
+                          {DisCheck(balanceSheet[response.Mail])}
+                        </td>
                       </tr>
                     );
                   })}
