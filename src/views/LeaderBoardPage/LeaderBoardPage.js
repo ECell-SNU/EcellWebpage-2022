@@ -43,6 +43,14 @@ export default function LeaderBoardPage() {
     }
   }
 
+  function DisCheck(Balance) {
+    if (Balance < 0) {
+      return <p className="DisQualified">Disqualified</p>;
+    } else {
+      return <p>{Balance}</p>;
+    }
+  }
+
   const balanceSheet = {};
   const companySheet = {};
 
@@ -116,7 +124,7 @@ export default function LeaderBoardPage() {
                             color: BalanceCheck(balanceSheet[response.Mail]),
                           }}
                         >
-                          {balanceSheet[response.Mail]}
+                          {DisCheck(balanceSheet[response.Mail])}
                         </td>
                       </tr>
                     );
@@ -165,7 +173,7 @@ export default function LeaderBoardPage() {
                               color: BalanceCheck(balanceSheet[response.Mail]),
                             }}
                           >
-                            {balanceSheet[response.Mail]}
+                            {DisCheck(balanceSheet[response.Mail])}
                           </td>
                         </tr>
                       );
@@ -234,7 +242,9 @@ export default function LeaderBoardPage() {
                           style={{
                             color: BalanceCheck(balanceSheet[response.Mail]),
                           }}
-                        >{`${balanceSheet[response.Mail]}`}</td>
+                        >
+                          {DisCheck(balanceSheet[response.Mail])}
+                        </td>
                       </tr>
                     );
                   })}
@@ -288,7 +298,7 @@ export default function LeaderBoardPage() {
                             color: BalanceCheck(balanceSheet[response.Mail]),
                           }}
                         >
-                          {balanceSheet[response.Mail]}
+                          {DisCheck(balanceSheet[response.Mail])}
                         </td>
                       </tr>
                     );
@@ -347,7 +357,7 @@ export default function LeaderBoardPage() {
                         <td className="Rank">{index + 1}</td>
                         <td>{response.Mail}</td>
                         <td>{HeroName}</td>
-                        <td>{`${balanceSheet[response.Mail]}`} </td>
+                        <td>{DisCheck(balanceSheet[response.Mail])} </td>
                       </tr>
                     );
                   })}
@@ -402,7 +412,7 @@ export default function LeaderBoardPage() {
                               color: BalanceCheck(balanceSheet[response.Mail]),
                             }}
                           >
-                            {balanceSheet[response.Mail]}
+                            {DisCheck(balanceSheet[response.Mail])}
                           </td>
                         </tr>
                       );
@@ -471,7 +481,7 @@ export default function LeaderBoardPage() {
                             color: BalanceCheck(balanceSheet[response.Mail]),
                           }}
                         >
-                          {`${balanceSheet[response.Mail]}`}{" "}
+                          {`${DisCheck(balanceSheet[response.Mail])}`}{" "}
                         </td>
                       </tr>
                     );
