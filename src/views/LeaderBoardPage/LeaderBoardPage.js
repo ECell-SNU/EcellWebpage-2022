@@ -22,7 +22,7 @@ export default function LeaderBoardPage() {
   const BALANCE = 100000;
   const NEW_BALANCE = 10000;
 
-  const { apiData } = useFetchAPI("fetchAll");
+  const { isLoading, apiData } = useFetchAPI("fetchAll");
 
   const [investmentItems, setInvestmentItems] = useState([]);
   const [investmentItemsR2, setInvestmentItemsR2] = useState([]);
@@ -61,6 +61,21 @@ export default function LeaderBoardPage() {
 
   return (
     <div className="LeaderBoardPageWrapper">
+      {isLoading && (
+        <div
+          style={{
+            height: "100vh",
+            width: "100vw",
+            position: "absolute",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor:"whitesmoke"
+          }}
+        >
+          <i>Data Loading...</i>
+        </div>
+      )}
       <div className="LeaderBoardPageWrapper__Content">
         {investmentItems.length > 0 && (
           <>
