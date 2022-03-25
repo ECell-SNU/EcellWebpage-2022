@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import useFetchAPI from "../../hooks/useFetchAPI";
-import LeaderBoardBar from "../LandingPage/Components/LeaderBoardBar/LeaderBoardBar";
+// import LeaderBoardBar from "../LandingPage/Components/LeaderBoardBar/LeaderBoardBar";
 import "./LeaderBoardPage.scss";
 import {
   activeTraits,
   activeTraits2,
-  companyStatusR1,
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  // companyStatusR1,
   situation1Traits,
 } from "./Utils/constants";
 import getCompanyCost from "./Utils/getCompanyCost";
@@ -20,12 +21,24 @@ export default function LeaderBoardPage() {
   const BALANCE = 100000;
   const NEW_BALANCE = 10000
 
-  const { isLoading, apiData } = useFetchAPI("fetchAll");
+  const { apiData } = useFetchAPI("fetchAll");
 
   const [investmentItems, setInvestmentItems] = useState([]);
   const [investmentItemsR2, setInvestmentItemsR2] = useState([]);
   const [acquisitionItems, setAcquisitionItems] = useState([]);
   const [situation1, setSituation1] = useState([]);
+
+  function BalanceCheck(Balance) {
+    console.log(Balance > 50000);
+    // switch (Balance) {
+    //   case Balance > 50000:
+    //     return <p>Green</p>;
+    //   case Balance <= 50000 && Balance > 30000:
+    //     return <p>Yellow</p>;
+    //   default:
+    //     return <p>black</p>;
+    // }
+  }
 
   const balanceSheet = {};
   const companySheet = {};
@@ -43,8 +56,8 @@ export default function LeaderBoardPage() {
   return (
     <div className="LeaderBoardPageWrapper">
       <div className="LeaderBoardPageWrapper__Content">
-        <h2>Investment Round</h2>
-        <table>
+        <h2 className="LeaderBoardTitle">Investment Round</h2>
+        <table className="Table">
           <thead>
             <tr>
               <th>Rank</th>
@@ -63,14 +76,14 @@ export default function LeaderBoardPage() {
               companySheet[response.Mail] = Responses;
               return (
                 <tr key={index}>
-                  <td>{index + 1}</td>
+                  <td className="Rank">{index + 1}</td>
                   <td>{response.Mail}</td>
                   {Responses.map((item) => (
                     <td key={item.Item}>
                       {item.Response} * {getCompanyCost(item.Item)}
                     </td>
                   ))}
-                  <td>{balanceSheet[response.Mail]}</td>
+                  <td>{BalanceCheck(balanceSheet[response.Mail])}</td>
                 </tr>
               );
             })}
@@ -78,9 +91,9 @@ export default function LeaderBoardPage() {
         </table>
 
         <br />
-        <h2>Acquisition Round</h2>
+        <h2 className="LeaderBoardTitle">Acquisition Round</h2>
 
-        <table>
+        <table className="Table">
           <thead>
             <tr>
               <th>Rank</th>
@@ -105,7 +118,7 @@ export default function LeaderBoardPage() {
               if (balanceSheet[response.Mail]) {
                 return (
                   <tr key={index}>
-                    <td>{index + 1}</td>
+                    <td className="Rank">{index + 1}</td>
                     <td>{response.Mail}</td>
                     {Responses.map((hero, index) => {
                       const heroName = hero.split(" - ")[0];
@@ -127,9 +140,9 @@ export default function LeaderBoardPage() {
         </table>
 
         <br />
-        <h2>Situation 1</h2>
+        <h2 className="LeaderBoardTitle">Situation 1</h2>
 
-        <table>
+        <table className="Table">
           <thead>
             <tr>
               <th>Rank</th>
@@ -168,7 +181,7 @@ export default function LeaderBoardPage() {
 
               return (
                 <tr key={index}>
-                  <td>{index + 1}</td>
+                  <td className="Rank">{index + 1}</td>
                   <td>{response.Mail}</td>
                   <td>{HeroName}</td>
                   <td>{`${balanceSheet[response.Mail]}`}</td>
@@ -179,8 +192,8 @@ export default function LeaderBoardPage() {
         </table>
 
         <br />
-        <h2>Investment Round 2</h2>
-        <table>
+        <h2 className="LeaderBoardTitle">Investment Round 2</h2>
+        <table className="Table">
           <thead>
             <tr>
               <th>Rank</th>
@@ -208,7 +221,7 @@ export default function LeaderBoardPage() {
 
               return (
                 <tr key={index}>
-                  <td>{index + 1}</td>
+                  <td className="Rank">{index + 1}</td>
                   <td>{response.Mail}</td>
                   {Responses.map((item) => (
                     <td key={item.Item}>
@@ -223,9 +236,9 @@ export default function LeaderBoardPage() {
         </table>
 
         <br />
-        <h2>Situation 2</h2>
+        <h2 className="LeaderBoardTitle">Situation 2</h2>
 
-        <table>
+        <table className="Table">
           <thead>
             <tr>
               <th>Rank</th>
@@ -264,7 +277,7 @@ export default function LeaderBoardPage() {
 
               return (
                 <tr key={index}>
-                  <td>{index + 1}</td>
+                  <td className="Rank">{index + 1}</td>
                   <td>{response.Mail}</td>
                   <td>{HeroName}</td>
                   <td>{`${balanceSheet[response.Mail]}`} </td>
