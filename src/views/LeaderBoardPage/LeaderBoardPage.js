@@ -90,7 +90,11 @@ export default function LeaderBoardPage() {
               balanceSheet[response.Mail] =
                 balanceSheet[response.Mail] - getSpentInR2(Responses);
 
-              console.log(response.Mail + " " + balanceSheet[response.Mail]);
+              // console.log(
+              //   response.Mail,
+              //   getSpentInR2(Responses),
+              //   balanceSheet[response.Mail] - getSpentInR2(Responses)
+              // );
 
               if (balanceSheet[response.Mail]) {
                 return (
@@ -137,38 +141,32 @@ export default function LeaderBoardPage() {
 
               let traitEffect = 0;
 
+              let stockStatus = 0;
+
               getHeroTraits(HeroName).forEach((trait) => {
-                // console.log(HeroName, trait);
                 if (situation1Traits[trait] && activeTraits.includes(trait)) {
                   traitEffect += situation1Traits[trait];
                 }
               });
 
-              // console.log(traitEffect);
-
-              balanceSheet[response.Mail] =
-                balanceSheet[response.Mail] - traitEffect;
-
               if (companySheet[response.Mail]) {
                 companySheet[response.Mail].forEach((item) => {
-                  // console.log(
-                  //   response.Mail +
-                  //     " " +
-                  //     getCompanyStatusR1(item.Item.split(" - ")[0]) +
-                  //     " " +
-                  //     item.Response +
-                  //     " " +
-                  //     getCompanyStatusR1(item.Item.split(" - ")[0]) *
-                  //       item.Response
-                  // );
-                  traitEffect +=
+                  console.log(
+                    response.Mail +
+                      " " +
+                      getCompanyStatusR1(item.Item.split(" - ")[0]) *
+                        item.Response
+                  );
+                  stockStatus +=
                     getCompanyStatusR1(item.Item.split(" - ")[0]) *
                     item.Response;
                 });
               }
 
+              console.log(traitEffect);
+              console.log(stockStatus);
               balanceSheet[response.Mail] =
-                balanceSheet[response.Mail] + traitEffect;
+                balanceSheet[response.Mail] + traitEffect + stockStatus;
 
               return (
                 <tr key={index}>
