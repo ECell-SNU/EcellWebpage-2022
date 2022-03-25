@@ -60,16 +60,13 @@ export default function LeaderBoardPage() {
   // console.log(apiData);
 
   return (
-    <div className="LeaderBoardPageWrapper">
-      <h1 style={{ width: "100%", padding: "10px 0", textAlign: "center" }}>
-        Leaderboards
-      </h1>
+    <>
       {isLoading && (
         <div
           style={{
             height: "100vh",
             width: "100vw",
-            position: "absolute",
+            position: "fixed",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -79,85 +76,41 @@ export default function LeaderBoardPage() {
           <i>Data Loading...</i>
         </div>
       )}
-      <div className="LeaderBoardPageWrapper__Content">
-        {investmentItems.length > 0 && (
-          <>
-            <h2 className="LeaderBoardTitle">Investment Round</h2>
-            <table className="Table">
-              <thead>
-                <tr>
-                  <th>S.No</th>
-                  <th>Name</th>
-                  <th>Oscorp</th>
-                  <th>Stark</th>
-                  <th>Daily Bugle</th>
-                  <th>Nelson & Murdock</th>
-                  <th>Balance</th>
-                </tr>
-              </thead>
-              <tbody>
-                {investmentItems.map((response, index) => {
-                  const Responses = JSON.parse(response.Responses);
-                  balanceSheet[response.Mail] =
-                    BALANCE - getSpentInR1(Responses);
-                  companySheet[response.Mail] = Responses;
-                  return (
-                    <tr key={index}>
-                      <td className="Rank">{index + 1}</td>
-                      <td>{response.Mail}</td>
-                      {Responses.map((item) => (
-                        <td key={item.Item}>
-                          {item.Response} * {getCompanyCost(item.Item)}
-                        </td>
-                      ))}
-                      <td
-                        style={{
-                          color: BalanceCheck(balanceSheet[response.Mail]),
-                        }}
-                      >
-                        {balanceSheet[response.Mail]}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </>
-        )}
-        {acquisitionItems.length > 0 && (
-          <>
-            <br />
-            <h2 className="LeaderBoardTitle">Acquisition Round</h2>
-            <table className="Table">
-              <thead>
-                <tr>
-                  <th>S.No</th>
-                  <th>Name</th>
-                  <th>Super hero 1</th>
-                  <th>Super hero 2</th>
-                  <th>Balance</th>
-                </tr>
-              </thead>
-              <tbody>
-                {acquisitionItems.map((response, index) => {
-                  const Responses = JSON.parse(response.Responses)[0].Response;
-                  balanceSheet[response.Mail] =
-                    balanceSheet[response.Mail] - getSpentInR2(Responses);
-
-                  if (balanceSheet[response.Mail]) {
+      <div className="LeaderBoardPageWrapper">
+        <h1 style={{ width: "100%", padding: "10px 0", textAlign: "center" }}>
+          Leaderboards
+        </h1>
+        <div className="LeaderBoardPageWrapper__Content">
+          {investmentItems.length > 0 && (
+            <>
+              <h2 className="LeaderBoardTitle">Investment Round</h2>
+              <table className="Table">
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Oscorp</th>
+                    <th>Stark</th>
+                    <th>Daily Bugle</th>
+                    <th>Nelson & Murdock</th>
+                    <th>Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {investmentItems.map((response, index) => {
+                    const Responses = JSON.parse(response.Responses);
+                    balanceSheet[response.Mail] =
+                      BALANCE - getSpentInR1(Responses);
+                    companySheet[response.Mail] = Responses;
                     return (
                       <tr key={index}>
                         <td className="Rank">{index + 1}</td>
                         <td>{response.Mail}</td>
-                        {Responses.map((hero, index) => {
-                          const heroName = hero.split(" - ")[0];
-                          return (
-                            <td key={index}>
-                              {heroName}({getHeroPrice(heroName)})
-                            </td>
-                          );
-                        })}
-                        {Responses.length === 1 && <td></td>}
+                        {Responses.map((item) => (
+                          <td key={item.Item}>
+                            {item.Response} * {getCompanyCost(item.Item)}
+                          </td>
+                        ))}
                         <td
                           style={{
                             color: BalanceCheck(balanceSheet[response.Mail]),
@@ -167,232 +120,169 @@ export default function LeaderBoardPage() {
                         </td>
                       </tr>
                     );
-                  } else {
-                    return <></>;
-                  }
-                })}
-              </tbody>
-            </table>
-          </>
-        )}
+                  })}
+                </tbody>
+              </table>
+            </>
+          )}
+          {acquisitionItems.length > 0 && (
+            <>
+              <br />
+              <h2 className="LeaderBoardTitle">Acquisition Round</h2>
+              <table className="Table">
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Super hero 1</th>
+                    <th>Super hero 2</th>
+                    <th>Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {acquisitionItems.map((response, index) => {
+                    const Responses = JSON.parse(response.Responses)[0]
+                      .Response;
+                    balanceSheet[response.Mail] =
+                      balanceSheet[response.Mail] - getSpentInR2(Responses);
 
-        {situation1.length > 0 && (
-          <>
-            <br />
-            <h2 className="LeaderBoardTitle">Situation 1</h2>
-            <table className="Table">
-              <thead>
-                <tr>
-                  <th>S.No</th>
-                  <th>Name</th>
-                  <th>Super hero 1</th>
-                  <th>Balance</th>
-                </tr>
-              </thead>
-              <tbody>
-                {situation1.map((response, index) => {
-                  let HeroName = JSON.parse(response.Responses)[0].Response;
-                  HeroName = JSON.parse(
-                    JSON.stringify(HeroName).replace("[", "").replace("]", "")
-                  );
-
-                  let traitEffect = 0;
-
-                  let stockStatus = 0;
-
-                  getHeroTraits(HeroName).forEach((trait) => {
-                    if (
-                      situation1Traits[trait] &&
-                      activeTraits.includes(trait)
-                    ) {
-                      traitEffect += situation1Traits[trait];
+                    if (balanceSheet[response.Mail]) {
+                      return (
+                        <tr key={index}>
+                          <td className="Rank">{index + 1}</td>
+                          <td>{response.Mail}</td>
+                          {Responses.map((hero, index) => {
+                            const heroName = hero.split(" - ")[0];
+                            return (
+                              <td key={index}>
+                                {heroName}({getHeroPrice(heroName)})
+                              </td>
+                            );
+                          })}
+                          {Responses.length === 1 && <td></td>}
+                          <td
+                            style={{
+                              color: BalanceCheck(balanceSheet[response.Mail]),
+                            }}
+                          >
+                            {balanceSheet[response.Mail]}
+                          </td>
+                        </tr>
+                      );
+                    } else {
+                      return <></>;
                     }
-                  });
+                  })}
+                </tbody>
+              </table>
+            </>
+          )}
 
-                  if (companySheet[response.Mail]) {
-                    companySheet[response.Mail].forEach((item) => {
-                      stockStatus +=
-                        getCompanyStatusR1(item.Item.split(" - ")[0]) *
-                        item.Response;
-                    });
-                  }
+          {situation1.length > 0 && (
+            <>
+              <br />
+              <h2 className="LeaderBoardTitle">Situation 1</h2>
+              <table className="Table">
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Super hero 1</th>
+                    <th>Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {situation1.map((response, index) => {
+                    let HeroName = JSON.parse(response.Responses)[0].Response;
+                    HeroName = JSON.parse(
+                      JSON.stringify(HeroName).replace("[", "").replace("]", "")
+                    );
 
-                  balanceSheet[response.Mail] =
-                    balanceSheet[response.Mail] +
-                    traitEffect +
-                    stockStatus +
-                    NEW_BALANCE;
+                    let traitEffect = 0;
 
-                  return (
-                    <tr key={index}>
-                      <td className="Rank">{index + 1}</td>
-                      <td>{response.Mail}</td>
-                      <td>{HeroName}</td>
-                      <td
-                        style={{
-                          color: BalanceCheck(balanceSheet[response.Mail]),
-                        }}
-                      >{`${balanceSheet[response.Mail]}`}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </>
-        )}
-        <br />
+                    let stockStatus = 0;
 
-        {situation2.length > 0 && (
-          <>
-            <h2 className="LeaderBoardTitle">Investment Round 2</h2>
-            <table className="Table">
-              <thead>
-                <tr>
-                  <th>S.No</th>
-                  <th>Name</th>
-                  <th>Oscorp</th>
-                  <th>Stark</th>
-                  <th>Daily Bugle</th>
-                  <th>Nelson & Murdock</th>
-                  <th>Balance</th>
-                </tr>
-              </thead>
-              <tbody>
-                {investmentItemsR2.map((response, index) => {
-                  const Responses = JSON.parse(response.Responses);
-                  balanceSheet[response.Mail] =
-                    balanceSheet[response.Mail] - getSpentInR1(Responses);
-                  companySheet[response.Mail].forEach((element, index) => {
-                    Responses.forEach((item) => {
-                      if (element.Item === item.Item) {
-                        companySheet[response.Mail][index].Response =
-                          parseInt(element.Response) + parseInt(item.Response);
+                    getHeroTraits(HeroName).forEach((trait) => {
+                      if (
+                        situation1Traits[trait] &&
+                        activeTraits.includes(trait)
+                      ) {
+                        traitEffect += situation1Traits[trait];
                       }
                     });
-                  });
 
-                  return (
-                    <tr key={index}>
-                      <td className="Rank">{index + 1}</td>
-                      <td>{response.Mail}</td>
-                      {Responses.map((item) => (
-                        <td key={item.Item}>
-                          {item.Response} * {getCompanyCost(item.Item)}
-                        </td>
-                      ))}
-                      <td
-                        style={{
-                          color: BalanceCheck(balanceSheet[response.Mail]),
-                        }}
-                      >
-                        {balanceSheet[response.Mail]}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </>
-        )}
-
-        {situation1.length > 0 && (
-          <>
-            <br />
-            <h2 className="LeaderBoardTitle">Situation 2</h2>
-            <table className="Table">
-              <thead>
-                <tr>
-                  <th>S.No</th>
-                  <th>Name</th>
-                  <th>Super hero 1</th>
-                  <th>Balance</th>
-                </tr>
-              </thead>
-              <tbody>
-                {situation1.map((response, index) => {
-                  let HeroName = JSON.parse(response.Responses)[0].Response;
-                  HeroName = JSON.parse(
-                    JSON.stringify(HeroName).replace("[", "").replace("]", "")
-                  );
-
-                  let traitEffect = 0;
-
-                  let stockStatus = 0;
-
-                  getHeroTraits(HeroName).forEach((trait) => {
-                    if (
-                      situation1Traits[trait] &&
-                      activeTraits2.includes(trait)
-                    ) {
-                      traitEffect += situation1Traits[trait];
+                    if (companySheet[response.Mail]) {
+                      companySheet[response.Mail].forEach((item) => {
+                        stockStatus +=
+                          getCompanyStatusR1(item.Item.split(" - ")[0]) *
+                          item.Response;
+                      });
                     }
-                  });
 
-                  if (companySheet[response.Mail]) {
-                    companySheet[response.Mail].forEach((item) => {
-                      stockStatus +=
-                        getCompanyStatusR2(item.Item.split(" - ")[0]) *
-                        item.Response;
-                    });
-                  }
+                    balanceSheet[response.Mail] =
+                      balanceSheet[response.Mail] +
+                      traitEffect +
+                      stockStatus +
+                      NEW_BALANCE;
 
-                  balanceSheet[response.Mail] =
-                    balanceSheet[response.Mail] + traitEffect + stockStatus;
-
-                  return (
-                    <tr key={index}>
-                      <td className="Rank">{index + 1}</td>
-                      <td>{response.Mail}</td>
-                      <td>{HeroName}</td>
-                      <td>{`${balanceSheet[response.Mail]}`} </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </>
-        )}
-
-        {acquisitionItemsR2.length > 0 && (
-          <>
-            <br />
-            <h2 className="LeaderBoardTitle">Acquisition Round 2</h2>
-            <table className="Table">
-              <thead>
-                <tr>
-                  <th>S.No</th>
-                  <th>Name</th>
-                  <th>Super hero 1</th>
-                  <th>Super hero 2</th>
-                  <th>Balance</th>
-                </tr>
-              </thead>
-              <tbody>
-                {acquisitionItemsR2.map((response, index) => {
-                  const Responses = JSON.parse(response.Responses)[0].Response;
-                  balanceSheet[response.Mail] =
-                    balanceSheet[response.Mail] - getSpentInR2(Responses);
-
-                  // console.log(
-                  //   response.Mail,
-                  //   getSpentInR2(Responses),
-                  //   balanceSheet[response.Mail] - getSpentInR2(Responses)
-                  // );
-
-                  if (balanceSheet[response.Mail]) {
                     return (
                       <tr key={index}>
                         <td className="Rank">{index + 1}</td>
                         <td>{response.Mail}</td>
-                        {Responses.map((hero, index) => {
-                          const heroName = hero.split(" - ")[0];
-                          return (
-                            <td key={index}>
-                              {heroName}({getHeroPrice(heroName)})
-                            </td>
-                          );
-                        })}
-                        {Responses.length === 1 && <td></td>}
+                        <td>{HeroName}</td>
+                        <td
+                          style={{
+                            color: BalanceCheck(balanceSheet[response.Mail]),
+                          }}
+                        >{`${balanceSheet[response.Mail]}`}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </>
+          )}
+          <br />
+
+          {situation2.length > 0 && (
+            <>
+              <h2 className="LeaderBoardTitle">Investment Round 2</h2>
+              <table className="Table">
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Oscorp</th>
+                    <th>Stark</th>
+                    <th>Daily Bugle</th>
+                    <th>Nelson & Murdock</th>
+                    <th>Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {investmentItemsR2.map((response, index) => {
+                    const Responses = JSON.parse(response.Responses);
+                    balanceSheet[response.Mail] =
+                      balanceSheet[response.Mail] - getSpentInR1(Responses);
+                    companySheet[response.Mail].forEach((element, index) => {
+                      Responses.forEach((item) => {
+                        if (element.Item === item.Item) {
+                          companySheet[response.Mail][index].Response =
+                            parseInt(element.Response) +
+                            parseInt(item.Response);
+                        }
+                      });
+                    });
+
+                    return (
+                      <tr key={index}>
+                        <td className="Rank">{index + 1}</td>
+                        <td>{response.Mail}</td>
+                        {Responses.map((item) => (
+                          <td key={item.Item}>
+                            {item.Response} * {getCompanyCost(item.Item)}
+                          </td>
+                        ))}
                         <td
                           style={{
                             color: BalanceCheck(balanceSheet[response.Mail]),
@@ -402,79 +292,196 @@ export default function LeaderBoardPage() {
                         </td>
                       </tr>
                     );
-                  } else {
-                    return <></>;
-                  }
-                })}
-              </tbody>
-            </table>
-          </>
-        )}
+                  })}
+                </tbody>
+              </table>
+            </>
+          )}
 
-        {situation3.length > 0 && (
-          <>
-            <br />
-            <h2 className="LeaderBoardTitle">Situation 3</h2>
-            <table className="Table">
-              <thead>
-                <tr>
-                  <th>S.No</th>
-                  <th>Name</th>
-                  <th>Super hero 1</th>
-                  <th>Balance</th>
-                </tr>
-              </thead>
-              <tbody>
-                {situation3.map((response, index) => {
-                  let HeroName = response.Responses;
-                  HeroName = JSON.parse(HeroName);
-                  HeroName = JSON.stringify(HeroName[0].Response);
-
-                  HeroName = JSON.parse(
-                    JSON.parse(
+          {situation1.length > 0 && (
+            <>
+              <br />
+              <h2 className="LeaderBoardTitle">Situation 2</h2>
+              <table className="Table">
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Super hero 1</th>
+                    <th>Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {situation1.map((response, index) => {
+                    let HeroName = JSON.parse(response.Responses)[0].Response;
+                    HeroName = JSON.parse(
                       JSON.stringify(HeroName).replace("[", "").replace("]", "")
-                    )
-                  );
+                    );
 
-                  let traitEffect = 0;
+                    let traitEffect = 0;
 
-                  let stockStatus = 0;
+                    let stockStatus = 0;
 
-                  getHeroTraits(HeroName).forEach((trait) => {
-                    // console.log(response, trait, HeroName);
-                    if (
-                      situation1Traits[trait] &&
-                      activeTraits3.includes(trait)
-                    ) {
-                      traitEffect += -1 * situation1Traits[trait];
+                    getHeroTraits(HeroName).forEach((trait) => {
+                      if (
+                        situation1Traits[trait] &&
+                        activeTraits2.includes(trait)
+                      ) {
+                        traitEffect += situation1Traits[trait];
+                      }
+                    });
+
+                    if (companySheet[response.Mail]) {
+                      companySheet[response.Mail].forEach((item) => {
+                        stockStatus +=
+                          getCompanyStatusR2(item.Item.split(" - ")[0]) *
+                          item.Response;
+                      });
                     }
-                  });
 
-                  // console.log(response.Mail, traitEffect, stockStatus);
+                    balanceSheet[response.Mail] =
+                      balanceSheet[response.Mail] + traitEffect + stockStatus;
 
-                  balanceSheet[response.Mail] =
-                    balanceSheet[response.Mail] + traitEffect + stockStatus;
+                    return (
+                      <tr key={index}>
+                        <td className="Rank">{index + 1}</td>
+                        <td>{response.Mail}</td>
+                        <td>{HeroName}</td>
+                        <td>{`${balanceSheet[response.Mail]}`} </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </>
+          )}
 
-                  return (
-                    <tr key={index}>
-                      <td className="Rank">{index + 1}</td>
-                      <td>{response.Mail}</td>
-                      <td>{HeroName}</td>
-                      <td
-                        style={{
-                          color: BalanceCheck(balanceSheet[response.Mail]),
-                        }}
-                      >
-                        {`${balanceSheet[response.Mail]}`}{" "}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </>
-        )}
+          {acquisitionItemsR2.length > 0 && (
+            <>
+              <br />
+              <h2 className="LeaderBoardTitle">Acquisition Round 2</h2>
+              <table className="Table">
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Super hero 1</th>
+                    <th>Super hero 2</th>
+                    <th>Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {acquisitionItemsR2.map((response, index) => {
+                    const Responses = JSON.parse(response.Responses)[0]
+                      .Response;
+                    balanceSheet[response.Mail] =
+                      balanceSheet[response.Mail] - getSpentInR2(Responses);
+
+                    // console.log(
+                    //   response.Mail,
+                    //   getSpentInR2(Responses),
+                    //   balanceSheet[response.Mail] - getSpentInR2(Responses)
+                    // );
+
+                    if (balanceSheet[response.Mail]) {
+                      return (
+                        <tr key={index}>
+                          <td className="Rank">{index + 1}</td>
+                          <td>{response.Mail}</td>
+                          {Responses.map((hero, index) => {
+                            const heroName = hero.split(" - ")[0];
+                            return (
+                              <td key={index}>
+                                {heroName}({getHeroPrice(heroName)})
+                              </td>
+                            );
+                          })}
+                          {Responses.length === 1 && <td></td>}
+                          <td
+                            style={{
+                              color: BalanceCheck(balanceSheet[response.Mail]),
+                            }}
+                          >
+                            {balanceSheet[response.Mail]}
+                          </td>
+                        </tr>
+                      );
+                    } else {
+                      return <></>;
+                    }
+                  })}
+                </tbody>
+              </table>
+            </>
+          )}
+
+          {situation3.length > 0 && (
+            <>
+              <br />
+              <h2 className="LeaderBoardTitle">Situation 3</h2>
+              <table className="Table">
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Super hero 1</th>
+                    <th>Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {situation3.map((response, index) => {
+                    let HeroName = response.Responses;
+                    HeroName = JSON.parse(HeroName);
+                    HeroName = JSON.stringify(HeroName[0].Response);
+
+                    HeroName = JSON.parse(
+                      JSON.parse(
+                        JSON.stringify(HeroName)
+                          .replace("[", "")
+                          .replace("]", "")
+                      )
+                    );
+
+                    let traitEffect = 0;
+
+                    let stockStatus = 0;
+
+                    getHeroTraits(HeroName).forEach((trait) => {
+                      // console.log(response, trait, HeroName);
+                      if (
+                        situation1Traits[trait] &&
+                        activeTraits3.includes(trait)
+                      ) {
+                        traitEffect += -1 * situation1Traits[trait];
+                      }
+                    });
+
+                    // console.log(response.Mail, traitEffect, stockStatus);
+
+                    balanceSheet[response.Mail] =
+                      balanceSheet[response.Mail] + traitEffect + stockStatus;
+
+                    return (
+                      <tr key={index}>
+                        <td className="Rank">{index + 1}</td>
+                        <td>{response.Mail}</td>
+                        <td>{HeroName}</td>
+                        <td
+                          style={{
+                            color: BalanceCheck(balanceSheet[response.Mail]),
+                          }}
+                        >
+                          {`${balanceSheet[response.Mail]}`}{" "}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
