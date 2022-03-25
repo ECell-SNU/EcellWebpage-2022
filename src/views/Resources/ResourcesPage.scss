@@ -8,8 +8,15 @@
   height: 100%;
   background: #01211b;
 
+  &__HeaderContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1170px;
+    background: #01211b;
+  }
+
   &__ContentWrapper {
-    width: 1050px;
+    width: 1170px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -17,28 +24,40 @@
   &__Tab {
     display: flex;
     justify-content: space-between;
+    padding-top: 170px;
     &__Btn1 {
       cursor: pointer;
       background: none;
       border: none;
       color: white;
       font-size: 16px;
-      font-weight: 600;
+      font-weight: 700;
       border-bottom: 2px solid white;
       padding-bottom: 2px;
     }
   }
 
-  &__TabContentContainer__TabOneContent {
-    color: white;
+  &__TabContentContainer__TabContent {
+    h2 {
+      color: #00ffaa;
+      font-size: xx-large;
+      font-weight: 700;
+      margin-top: 10vh;
+    }
   }
 
-  &__TabContentContainer__TabTwoContent {
+  &__TabContentContainer__TabContent {
     color: white;
+    opacity: 78%;
   }
 
   &__TabContentContainer__TabThreeContent {
-    color: white;
+    h2 {
+      color: #00ffaa;
+      font-size: xx-large;
+      font-weight: 700;
+      margin-top: 10vh;
+    }
   }
 }
 
@@ -50,4 +69,27 @@
   font-weight: 400;
   opacity: 30%;
   border-bottom: none;
+}
+
+.ResourceContent {
+  &__title {
+    color: white;
+    opacity: 100% !important;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 40px;
+  }
+  &__desc {
+    color: white;
+    opacity: 78%;
+    margin-top: 10px;
+    line-height: 200.5%;
+    font-weight: 400;
+    max-width: 900px;
+  }
+}
+
+.TabHeader {
+  font-family: Ragnarok;
+  letter-spacing: 5px;
 }
