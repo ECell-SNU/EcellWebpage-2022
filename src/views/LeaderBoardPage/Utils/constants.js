@@ -70,9 +70,45 @@ export const activeTraits = [
   "Narcissist",
 ];
 
+export const activeTraits2 = [
+  "Foresight",
+  "QuickWitted",
+  "Perfectionist",
+  "Negotiator",
+  "Shortsighted",
+  "BadRelationsAndNetworking",
+  "Amateur",
+  "Impulsive",
+];
+
+export const activeTraits3 = [
+  "Analytical",
+  "Foresight",
+  "LevelHeaded",
+  "QuickWitted",
+  "Manipulative",
+  "BadRelationsAndNetworking",
+  "Shortsighted",
+  "TechnologicallyDisabled",
+];
+
 export const companyStatusR1 = {
   Oscorp: -2000,
   Stark: 5600,
   DailyBugle: 0,
   NelsonMurdock: 1800,
+};
+
+export const companyStatusR2 = {
+  Oscorp: 0,
+  Stark: -3500,
+  DailyBugle: 3000,
+  NelsonMurdock: 800,
+};
+
+export const companyStatusR3 = {
+  Oscorp: 2800,
+  Stark: -1800,
+  DailyBugle: 2000,
+  NelsonMurdock: 1000,
 };
