@@ -15,7 +15,7 @@ export default function getSpentInR1(items) {
         spent += Price.DailyBugle * parseInt(item.Response);
         break;
 
-      case "Nelson & Murdock":
+      case "Nelson & Murdoc":
         spent += Price.NelsonMurdock * parseInt(item.Response);
         break;
 

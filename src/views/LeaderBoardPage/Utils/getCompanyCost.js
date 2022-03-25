@@ -8,7 +8,7 @@ export default function getCompanyCost(name) {
       return Price.Stark;
     case "Daily Bugle":
       return Price.DailyBugle;
-    case "Nelson & Murdock":
+    case "Nelson & Murdoc":
       return Price.NelsonMurdock;
     default:
       return 0;
