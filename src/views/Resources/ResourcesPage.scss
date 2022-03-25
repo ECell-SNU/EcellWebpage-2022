@@ -8,8 +8,15 @@
   height: 100%;
   background: #01211b;
 
+  &__HeaderContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1170px;
+    background: #01211b;
+  }
+
   &__ContentWrapper {
-    width: 1050px;
+    width: 1170px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -17,6 +24,7 @@
   &__Tab {
     display: flex;
     justify-content: space-between;
+    margin-top: 170px;
     &__Btn1 {
       cursor: pointer;
       background: none;

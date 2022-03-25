@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Header from "../../components/Header/Header.js";
 import "./ResourcesPage.scss";
 export default function Resources() {
   const [currentTab, setCurrentTab] = useState(1);
@@ -8,6 +9,16 @@ export default function Resources() {
   };
   return (
     <div className="ResourcesPageWrapper">
+      <div className="ResourcesPageWrapper__HeaderContainer">
+        <Header
+          navItem1="Home"
+          navItem2="About Us"
+          navItem3="Ragnarok '22"
+          routeItem1="/home"
+          routeItem2="/home/#aboutus"
+          routeItem3="/events"
+        />
+      </div>
       <div className="ResourcesPageWrapper__ContentWrapper">
         <div className="ResourcesPageWrapper__Tab">
           <button
