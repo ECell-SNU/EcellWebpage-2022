@@ -55,7 +55,7 @@ export default function LeaderBoardPage() {
       setAcquisitionItemsR2(apiData["AcquisitionItems2"]);
       setSituation1(apiData["Situation1Items"]);
       setSituation2(apiData["Situation2Items"]);
-      setSituation2(apiData["Situation3Items"]);
+      setSituation3(apiData["Situation3Items"]);
     }
   }, [apiData]);
   // console.log(apiData);
@@ -96,10 +96,8 @@ export default function LeaderBoardPage() {
             })}
           </tbody>
         </table>
-
         <br />
         <h2 className="LeaderBoardTitle">Acquisition Round</h2>
-
         <table className="Table">
           <thead>
             <tr>
@@ -145,10 +143,8 @@ export default function LeaderBoardPage() {
             })}
           </tbody>
         </table>
-
         <br />
         <h2 className="LeaderBoardTitle">Situation 1</h2>
-
         <table className="Table">
           <thead>
             <tr>
@@ -200,7 +196,6 @@ export default function LeaderBoardPage() {
             })}
           </tbody>
         </table>
-        Situation3Items
         <br />
         <h2 className="LeaderBoardTitle">Investment Round 2</h2>
         <table className="Table">
@@ -244,10 +239,8 @@ export default function LeaderBoardPage() {
             })}
           </tbody>
         </table>
-
         <br />
         <h2 className="LeaderBoardTitle">Situation 2</h2>
-
         <table className="Table">
           <thead>
             <tr>
@@ -296,11 +289,8 @@ export default function LeaderBoardPage() {
             })}
           </tbody>
         </table>
-
-
         <br />
         <h2 className="LeaderBoardTitle">Acquisition Round 2</h2>
-
         <table className="Table">
           <thead>
             <tr>
@@ -346,11 +336,8 @@ export default function LeaderBoardPage() {
             })}
           </tbody>
         </table>
-
-       
         <br />
         <h2 className="LeaderBoardTitle">Situation 3</h2>
-
         <table className="Table">
           <thead>
             <tr>
@@ -361,29 +348,30 @@ export default function LeaderBoardPage() {
             </tr>
           </thead>
           <tbody>
-            {situation1.map((response, index) => {
-              let HeroName = JSON.parse(response.Responses)[0].Response;
+            {situation3.map((response, index) => {
+              let HeroName = response.Responses;
+              HeroName = JSON.parse(HeroName);
+              HeroName = JSON.stringify(HeroName[0].Response);
+
               HeroName = JSON.parse(
-                JSON.stringify(HeroName).replace("[", "").replace("]", "")
+                JSON.parse(
+                  JSON.stringify(HeroName).replace("[", "").replace("]", "")
+                )
               );
 
               let traitEffect = 0;
 
               let stockStatus = 0;
 
+              
               getHeroTraits(HeroName).forEach((trait) => {
+                // console.log(response, trait, HeroName);
                 if (situation1Traits[trait] && activeTraits3.includes(trait)) {
-                  traitEffect += situation1Traits[trait];
+                  traitEffect += -1 * situation1Traits[trait];
                 }
               });
 
-              if (companySheet[response.Mail]) {
-                companySheet[response.Mail].forEach((item) => {
-                  stockStatus +=
-                    getCompanyStatusR2(item.Item.split(" - ")[0]) *
-                    item.Response;
-                });
-              }
+              // console.log(response.Mail, traitEffect, stockStatus);
 
               balanceSheet[response.Mail] =
                 balanceSheet[response.Mail] + traitEffect + stockStatus;
@@ -399,7 +387,6 @@ export default function LeaderBoardPage() {
             })}
           </tbody>
         </table>
-
       </div>
     </div>
   );
