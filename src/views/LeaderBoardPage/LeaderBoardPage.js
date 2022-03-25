@@ -29,19 +29,19 @@ export default function LeaderBoardPage() {
   const [acquisitionItems, setAcquisitionItems] = useState([]);
   const [acquisitionItemsR2, setAcquisitionItemsR2] = useState([]);
   const [situation1, setSituation1] = useState([]);
+  // eslint-disable-next-line
   const [situation2, setSituation2] = useState([]);
   const [situation3, setSituation3] = useState([]);
 
   function BalanceCheck(Balance) {
-    // console.log(Balance > 50000);
-    // switch (Balance) {
-    //   case Balance > 50000:
-    //     return <p>Green</p>;
-    //   case Balance <= 50000 && Balance > 30000:
-    //     return <p>Yellow</p>;
-    //   default:
-    //     return <p>black</p>;
-    // }
+
+    if (Balance > 50000) {
+      return "green";
+    } else if (Balance <= 50000 && Balance > 30000) {
+      return "ff9800";
+    } else {
+      return "red";
+    }
   }
 
   const balanceSheet = {};
@@ -67,7 +67,7 @@ export default function LeaderBoardPage() {
         <table className="Table">
           <thead>
             <tr>
-              <th>Rank</th>
+              <th>S.No</th>
               <th>Name</th>
               <th>Oscorp</th>
               <th>Stark</th>
@@ -90,7 +90,13 @@ export default function LeaderBoardPage() {
                       {item.Response} * {getCompanyCost(item.Item)}
                     </td>
                   ))}
-                  <td>{BalanceCheck(balanceSheet[response.Mail])}</td>
+                  <td
+                    style={{
+                      color: BalanceCheck(balanceSheet[response.Mail]),
+                    }}
+                  >
+                    {balanceSheet[response.Mail]}
+                  </td>
                 </tr>
               );
             })}
@@ -101,7 +107,7 @@ export default function LeaderBoardPage() {
         <table className="Table">
           <thead>
             <tr>
-              <th>Rank</th>
+              <th>S.No</th>
               <th>Name</th>
               <th>Super hero 1</th>
               <th>Super hero 2</th>
@@ -114,11 +120,6 @@ export default function LeaderBoardPage() {
               balanceSheet[response.Mail] =
                 balanceSheet[response.Mail] - getSpentInR2(Responses);
 
-              // console.log(
-              //   response.Mail,
-              //   getSpentInR2(Responses),
-              //   balanceSheet[response.Mail] - getSpentInR2(Responses)
-              // );
 
               if (balanceSheet[response.Mail]) {
                 return (
@@ -134,7 +135,13 @@ export default function LeaderBoardPage() {
                       );
                     })}
                     {Responses.length === 1 && <td></td>}
-                    <td>{balanceSheet[response.Mail]}</td>
+                    <td
+                      style={{
+                        color: BalanceCheck(balanceSheet[response.Mail]),
+                      }}
+                    >
+                      {balanceSheet[response.Mail]}
+                    </td>
                   </tr>
                 );
               } else {
@@ -148,7 +155,7 @@ export default function LeaderBoardPage() {
         <table className="Table">
           <thead>
             <tr>
-              <th>Rank</th>
+              <th>S.No</th>
               <th>Name</th>
               <th>Super hero 1</th>
               <th>Balance</th>
@@ -190,7 +197,11 @@ export default function LeaderBoardPage() {
                   <td className="Rank">{index + 1}</td>
                   <td>{response.Mail}</td>
                   <td>{HeroName}</td>
-                  <td>{`${balanceSheet[response.Mail]}`}</td>
+                  <td
+                    style={{
+                      color: BalanceCheck(balanceSheet[response.Mail]),
+                    }}
+                  >{`${balanceSheet[response.Mail]}`}</td>
                 </tr>
               );
             })}
@@ -201,7 +212,7 @@ export default function LeaderBoardPage() {
         <table className="Table">
           <thead>
             <tr>
-              <th>Rank</th>
+              <th>S.No</th>
               <th>Name</th>
               <th>Oscorp</th>
               <th>Stark</th>
@@ -233,7 +244,13 @@ export default function LeaderBoardPage() {
                       {item.Response} * {getCompanyCost(item.Item)}
                     </td>
                   ))}
-                  <td>{balanceSheet[response.Mail]}</td>
+                  <td
+                    style={{
+                      color: BalanceCheck(balanceSheet[response.Mail]),
+                    }}
+                  >
+                    {balanceSheet[response.Mail]}
+                  </td>
                 </tr>
               );
             })}
@@ -244,7 +261,7 @@ export default function LeaderBoardPage() {
         <table className="Table">
           <thead>
             <tr>
-              <th>Rank</th>
+              <th>S.No</th>
               <th>Name</th>
               <th>Super hero 1</th>
               <th>Balance</th>
@@ -294,7 +311,7 @@ export default function LeaderBoardPage() {
         <table className="Table">
           <thead>
             <tr>
-              <th>Rank</th>
+              <th>S.No</th>
               <th>Name</th>
               <th>Super hero 1</th>
               <th>Super hero 2</th>
@@ -327,7 +344,13 @@ export default function LeaderBoardPage() {
                       );
                     })}
                     {Responses.length === 1 && <td></td>}
-                    <td>{balanceSheet[response.Mail]}</td>
+                    <td
+                      style={{
+                        color: BalanceCheck(balanceSheet[response.Mail]),
+                      }}
+                    >
+                      {balanceSheet[response.Mail]}
+                    </td>
                   </tr>
                 );
               } else {
@@ -341,7 +364,7 @@ export default function LeaderBoardPage() {
         <table className="Table">
           <thead>
             <tr>
-              <th>Rank</th>
+              <th>S.No</th>
               <th>Name</th>
               <th>Super hero 1</th>
               <th>Balance</th>
@@ -363,7 +386,6 @@ export default function LeaderBoardPage() {
 
               let stockStatus = 0;
 
-              
               getHeroTraits(HeroName).forEach((trait) => {
                 // console.log(response, trait, HeroName);
                 if (situation1Traits[trait] && activeTraits3.includes(trait)) {
@@ -381,7 +403,13 @@ export default function LeaderBoardPage() {
                   <td className="Rank">{index + 1}</td>
                   <td>{response.Mail}</td>
                   <td>{HeroName}</td>
-                  <td>{`${balanceSheet[response.Mail]}`} </td>
+                  <td
+                    style={{
+                      color: BalanceCheck(balanceSheet[response.Mail]),
+                    }}
+                  >
+                    {`${balanceSheet[response.Mail]}`}{" "}
+                  </td>
                 </tr>
               );
             })}
