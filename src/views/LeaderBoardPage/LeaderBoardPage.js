@@ -37,7 +37,7 @@ export default function LeaderBoardPage() {
     if (Balance > 50000) {
       return "green";
     } else if (Balance <= 50000 && Balance > 30000) {
-      return "  ff9800";
+      return "#ff9800";
     } else {
       return "red";
     }
@@ -275,16 +275,17 @@ export default function LeaderBoardPage() {
                     balanceSheet[response.Mail] =
                       balanceSheet[response.Mail] - getSpentInR1(Responses);
 
-                    if(companySheet[response.Mail]){
-                    companySheet[response.Mail].forEach((element, index) => {
-                      Responses.forEach((item) => {
-                        if (element.Item === item.Item) {
-                          companySheet[response.Mail][index].Response =
-                            parseInt(element.Response) +
-                            parseInt(item.Response);
-                        }
+                    if (companySheet[response.Mail]) {
+                      companySheet[response.Mail].forEach((element, index) => {
+                        Responses.forEach((item) => {
+                          if (element.Item === item.Item) {
+                            companySheet[response.Mail][index].Response =
+                              parseInt(element.Response) +
+                              parseInt(item.Response);
+                          }
+                        });
                       });
-                    });}
+                    }
 
                     return (
                       <tr key={index}>
@@ -330,8 +331,6 @@ export default function LeaderBoardPage() {
                       JSON.stringify(HeroName).replace("[", "").replace("]", "")
                     );
 
-                    
-
                     let traitEffect = 0;
 
                     let stockStatus = 0;
@@ -361,7 +360,13 @@ export default function LeaderBoardPage() {
                         <td className="Rank">{index + 1}</td>
                         <td>{response.Mail}</td>
                         <td>{HeroName}</td>
-                        <td>{DisCheck(balanceSheet[response.Mail])} </td>
+                        <td
+                          style={{
+                            color: BalanceCheck(balanceSheet[response.Mail]),
+                          }}
+                        >
+                          {DisCheck(balanceSheet[response.Mail])}{" "}
+                        </td>
                       </tr>
                     );
                   })}

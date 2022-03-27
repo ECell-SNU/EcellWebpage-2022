@@ -7,10 +7,10 @@ export default function EventPage() {
       <Header
         navItem1="Home"
         navItem2="About Us"
-        navItem3="Resources"
+        navItem3="Team"
         routeItem1="/home"
         routeItem2="/home/#aboutus"
-        routeItem3="/events/resources"
+        routeItem3="/teams"
       />
 
       <div className="ContentWrapper">
@@ -25,7 +25,7 @@ export default function EventPage() {
         </div>
       </div>
       <a href="/events/leaderboard" className="ContentWrapper__RegBtn">
-        Begin Now
+        View winners
       </a>
     </div>
   );
