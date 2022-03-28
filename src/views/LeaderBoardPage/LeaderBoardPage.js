@@ -98,15 +98,15 @@ export default function LeaderBoardPage() {
         </h1>
         <div className="ResultsDivWrapper">
           <div className="ResultsDivWrapper__notFirstPlace">
-            <img src={Second}></img>
+            <img src={Second} alt="secondPlace"></img>
             <p>Bhanu Satwik</p>
           </div>
           <div className="ResultsDivWrapper__firstPlace">
-            <img src={First}></img>
+            <img src={First} alt="firstPlace"></img>
             <p>Aryan Sethia</p>
           </div>
           <div className="ResultsDivWrapper__notFirstPlace">
-            <img src={Third}></img>
+            <img src={Third} alt="thirdPlace"></img>
             <p>Harsh Yadav</p>
           </div>
         </div>
