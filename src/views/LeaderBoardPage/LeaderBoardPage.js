@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import useFetchAPI from "../../hooks/useFetchAPI";
+import First from "../../Assets/Illustration/First.svg";
+import Second from "../../Assets/Illustration/Second.svg";
+import Third from "../../Assets/Illustration/Third.svg";
 // import LeaderBoardBar from "../LandingPage/Components/LeaderBoardBar/LeaderBoardBar";
 import "./LeaderBoardPage.scss";
 import {
@@ -88,6 +91,24 @@ export default function LeaderBoardPage() {
         <h1 style={{ width: "100%", padding: "10px 0", textAlign: "center" }}>
           Leaderboards
         </h1>
+        <div className="ResultsDivWrapper">
+          <div className="ResultsDivWrapper__notFirstPlace">
+            <img src={Second}></img>
+            <p>Bhanu Satwik</p>
+          </div>
+          <div className="ResultsDivWrapper__firstPlace">
+            <img src={First}></img>
+            <p>Aryan Sethia</p>
+          </div>
+          <div className="ResultsDivWrapper__notFirstPlace">
+            <img src={Third}></img>
+            <p>Harsh Yadav</p>
+          </div>
+        </div>
+        <div className="Btncontainer">
+          {" "}
+          <button className="gameFlowCTA">View Rounds</button>
+        </div>
         <div className="LeaderBoardPageWrapper__Content">
           {investmentItems.length > 0 && (
             <>

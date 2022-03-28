@@ -43,3 +43,36 @@ tbody {
 .MoneyBare {
   color: yellow;
 }
+
+.ResultsDivWrapper {
+  display: flex;
+  margin-top: 70px;
+  margin-bottom: 60px;
+  justify-content: center;
+  gap: 90px;
+  align-items: center;
+
+  &__firstPlace {
+    p {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: 700;
+      font-size: 22px;
+    }
+  }
+
+  &__notFirstPlace {
+    p {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+  }
+}
+
+.Btncontainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
