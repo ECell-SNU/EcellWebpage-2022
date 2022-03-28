@@ -32,9 +32,14 @@ export default function LeaderBoardPage() {
   const [acquisitionItems, setAcquisitionItems] = useState([]);
   const [acquisitionItemsR2, setAcquisitionItemsR2] = useState([]);
   const [situation1, setSituation1] = useState([]);
-  // eslint-disable-next-line
+  const [viewState, setViewState] = useState(true);
   const [situation2, setSituation2] = useState([]);
   const [situation3, setSituation3] = useState([]);
+
+  function showRounds() {
+    setViewState(!viewState);
+    console.log(viewState);
+  }
 
   function BalanceCheck(Balance) {
     if (Balance > 50000) {
@@ -88,8 +93,8 @@ export default function LeaderBoardPage() {
         </div>
       )}
       <div className="LeaderBoardPageWrapper">
-        <h1 style={{ width: "100%", padding: "10px 0", textAlign: "center" }}>
-          Leaderboards
+        <h1 style={{ width: "100%", padding: "30px 0", textAlign: "center" }}>
+          Results
         </h1>
         <div className="ResultsDivWrapper">
           <div className="ResultsDivWrapper__notFirstPlace">
@@ -107,9 +112,20 @@ export default function LeaderBoardPage() {
         </div>
         <div className="Btncontainer">
           {" "}
-          <button className="gameFlowCTA">View Rounds</button>
+          <button
+            onClick={() => showRounds()}
+            className="Btncontainer__gameFlowCTA"
+          >
+            View Rounds
+          </button>
         </div>
-        <div className="LeaderBoardPageWrapper__Content">
+        <div
+          className={
+            viewState
+              ? "LeaderBoardPageWrapper__Content HideDiv"
+              : "LeaderBoardPageWrapper__Content"
+          }
+        >
           {investmentItems.length > 0 && (
             <>
               <h2 className="LeaderBoardTitle">Investment Round</h2>

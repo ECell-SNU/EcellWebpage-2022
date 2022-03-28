@@ -46,8 +46,8 @@ tbody {
 
 .ResultsDivWrapper {
   display: flex;
-  margin-top: 70px;
-  margin-bottom: 60px;
+  margin-top: 50px;
+  margin-bottom: 40px;
   justify-content: center;
   gap: 90px;
   align-items: center;
@@ -75,4 +75,32 @@ tbody {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+
+  &__gameFlowCTA {
+    color: black;
+    font-weight: 600;
+    border: 2px solid #09c788;
+    color: #09c788;
+    background: none;
+    border-radius: 8px;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-right: 1.4rem;
+    padding-left: 1.4rem;
+    font-size: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  &__gameFlowCTA:hover {
+    transition: all 0.3s;
+    color: black;
+    background: #01f7a5;
+    border: 2px solid #01f7a5;
+  }
+}
+
+.HideDiv {
+  transition: all 0.3s;
+  display: none;
 }
