@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import useFetchAPI from "../../hooks/useFetchAPI";
+import First from "../../Assets/Illustration/First.svg";
+import Second from "../../Assets/Illustration/Second.svg";
+import Third from "../../Assets/Illustration/Third.svg";
 // import LeaderBoardBar from "../LandingPage/Components/LeaderBoardBar/LeaderBoardBar";
 import "./LeaderBoardPage.scss";
 import {
@@ -29,15 +32,20 @@ export default function LeaderBoardPage() {
   const [acquisitionItems, setAcquisitionItems] = useState([]);
   const [acquisitionItemsR2, setAcquisitionItemsR2] = useState([]);
   const [situation1, setSituation1] = useState([]);
-  // eslint-disable-next-line
+  const [viewState, setViewState] = useState(true);
   const [situation2, setSituation2] = useState([]);
   const [situation3, setSituation3] = useState([]);
+
+  function showRounds() {
+    setViewState(!viewState);
+    console.log(viewState);
+  }
 
   function BalanceCheck(Balance) {
     if (Balance > 50000) {
       return "green";
     } else if (Balance <= 50000 && Balance > 30000) {
-      return "  ff9800";
+      return "#ff9800";
     } else {
       return "red";
     }
@@ -85,10 +93,39 @@ export default function LeaderBoardPage() {
         </div>
       )}
       <div className="LeaderBoardPageWrapper">
-        <h1 style={{ width: "100%", padding: "10px 0", textAlign: "center" }}>
-          Leaderboards
+        <h1 style={{ width: "100%", padding: "30px 0", textAlign: "center" }}>
+          Results
         </h1>
-        <div className="LeaderBoardPageWrapper__Content">
+        <div className="ResultsDivWrapper">
+          <div className="ResultsDivWrapper__notFirstPlace">
+            <img src={Second} alt="secondPlace"></img>
+            <p>Bhanu Satwik</p>
+          </div>
+          <div className="ResultsDivWrapper__firstPlace">
+            <img src={First} alt="firstPlace"></img>
+            <p>Aryan Sethia</p>
+          </div>
+          <div className="ResultsDivWrapper__notFirstPlace">
+            <img src={Third} alt="thirdPlace"></img>
+            <p>Harsh Yadav</p>
+          </div>
+        </div>
+        <div className="Btncontainer">
+          {" "}
+          <button
+            onClick={() => showRounds()}
+            className="Btncontainer__gameFlowCTA"
+          >
+            View Rounds
+          </button>
+        </div>
+        <div
+          className={
+            viewState
+              ? "LeaderBoardPageWrapper__Content HideDiv"
+              : "LeaderBoardPageWrapper__Content"
+          }
+        >
           {investmentItems.length > 0 && (
             <>
               <h2 className="LeaderBoardTitle">Investment Round</h2>
@@ -275,16 +312,17 @@ export default function LeaderBoardPage() {
                     balanceSheet[response.Mail] =
                       balanceSheet[response.Mail] - getSpentInR1(Responses);
 
-                    if(companySheet[response.Mail]){
-                    companySheet[response.Mail].forEach((element, index) => {
-                      Responses.forEach((item) => {
-                        if (element.Item === item.Item) {
-                          companySheet[response.Mail][index].Response =
-                            parseInt(element.Response) +
-                            parseInt(item.Response);
-                        }
+                    if (companySheet[response.Mail]) {
+                      companySheet[response.Mail].forEach((element, index) => {
+                        Responses.forEach((item) => {
+                          if (element.Item === item.Item) {
+                            companySheet[response.Mail][index].Response =
+                              parseInt(element.Response) +
+                              parseInt(item.Response);
+                          }
+                        });
                       });
-                    });}
+                    }
 
                     return (
                       <tr key={index}>
@@ -330,8 +368,6 @@ export default function LeaderBoardPage() {
                       JSON.stringify(HeroName).replace("[", "").replace("]", "")
                     );
 
-                    
-
                     let traitEffect = 0;
 
                     let stockStatus = 0;
@@ -361,7 +397,13 @@ export default function LeaderBoardPage() {
                         <td className="Rank">{index + 1}</td>
                         <td>{response.Mail}</td>
                         <td>{HeroName}</td>
-                        <td>{DisCheck(balanceSheet[response.Mail])} </td>
+                        <td
+                          style={{
+                            color: BalanceCheck(balanceSheet[response.Mail]),
+                          }}
+                        >
+                          {DisCheck(balanceSheet[response.Mail])}{" "}
+                        </td>
                       </tr>
                     );
                   })}
