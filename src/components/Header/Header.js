@@ -162,7 +162,7 @@ export default function Header({
           <ul className="HeaderContainer__secondary-nav__social-medias">
             <li>
               <a
-                href="https://www.instagram.com/ecellsnu/?utm_medium=copy_link"
+                href="https://www.instagram.com/ecellsnioe/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -76,7 +76,7 @@ export default function TeamPage() {
             <ul className="TeamPageNavbar__social-media">
               <li>
                 <a
-                  href="https://www.instagram.com/ecellsnu/?utm_medium=copy_link"
+                  href="https://www.instagram.com/ecellsnioe/"
                   className="TeamPageNavbar__social-media__icon"
                 >
                   <img src={instagram} alt="instagram logo" />

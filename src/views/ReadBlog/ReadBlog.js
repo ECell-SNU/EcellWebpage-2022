@@ -34,7 +34,7 @@ export default function ReadBlog() {
     },
     {
       icon: instagram,
-      link: "https://www.instagram.com/ecellsnu/?utm_medium=copy_link",
+      link: "https://www.instagram.com/ecellsnioe/",
     },
     {
       icon: share,
@@ -53,7 +53,7 @@ export default function ReadBlog() {
     },
     {
       icon: instaD,
-      link: "https://www.instagram.com/ecellsnu/?utm_medium=copy_link",
+      link: "https://www.instagram.com/ecellsnioe/",
     },
     {
       icon: shareD,

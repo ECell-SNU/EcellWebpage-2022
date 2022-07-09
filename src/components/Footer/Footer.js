@@ -52,7 +52,7 @@ export default function Footer() {
             <ul className="FooterContainer__elements__socials">
               <li>
                 <a
-                  href="https://www.instagram.com/ecellsnu/?utm_medium=copy_link"
+                  href="https://www.instagram.com/ecellsnioe/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -109,7 +109,7 @@ export default function Footer() {
             <ul className="FooterContainer__elements__socials--mobile">
               <li>
                 <a
-                  href="https://www.instagram.com/ecellsnu/?utm_medium=copy_link"
+                  href="https://www.instagram.com/ecellsnioe/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
