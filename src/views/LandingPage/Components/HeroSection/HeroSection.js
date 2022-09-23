@@ -3,6 +3,7 @@ import React from "react";
 import { useMediaQuery } from "react-responsive";
 import "./HeroSection.scss";
 import LandingIllustration from "../../../../Assets/Illustration/Landing-Illustration.svg";
+import Logo from "../../../../Assets/icons/light_logo.svg"
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function HeroSection(props) {
@@ -14,6 +15,7 @@ function HeroSection(props) {
     <section className="HeroSectionWrapper">
       <div className="HeroSectionWrapper__content-container">
         <div className="HeroSectionWrapper__content">
+          <img alt="logo" className="HeroSectionWrapper__content--logo" src={Logo} />
           <h1 className="HeroSectionWrapper__Title">
             A platform for students and
             <div className="HeroSectionWrapper__Title__Rotator">

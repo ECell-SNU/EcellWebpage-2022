@@ -16,6 +16,9 @@
 
   &__content {
     width: 500px;
+    img {
+      display: none;
+    }
   }
 
   &__Title {
@@ -53,10 +56,10 @@
 
     &__Button {
       border: 2px solid var(--primary-color);
-      border-radius: 11px;
+      border-radius:11px;
       color: var(--primary-color);
       font-weight: 600;
-      font-size: 14px;
+      font-size: 10px;
       cursor: pointer;
       background: rgba(0, 0, 0, 0);
       text-decoration: none;
@@ -87,9 +90,14 @@
     }
     &__content {
       width: 100%;
+      img {
+        display: block;
+        width: 8em;
+        margin-bottom: 10px;
+      }
     }
     &__Title {
-      font-size: 33px;
+      font-size: 29px;
     }
 
     &__Description {
@@ -99,7 +107,7 @@
 
     &__Button-container {
       &__Button {
-        font-size: 13px;
+        font-size: 12px;
       }
     }
   }

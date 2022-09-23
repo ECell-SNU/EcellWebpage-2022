@@ -1,23 +1,17 @@
 import "./TeamPage.scss";
-import krishSec from "../../Assets/image/krshnSec.jpeg";
-import vernAsec from "../../Assets/image/verAsec.jpeg";
-import aarAsec from "../../Assets/image/aarAsec.jpeg";
-import abhaTrea from "../../Assets/image/abhaTreas.jpeg";
-import shauFc from "../../Assets/image/shaurFc.jpg";
-// import sample1 from "../../Assets/image/sampleImages/sample1.jpg";
+import revanthTreasurer from "../../Assets/image/teamLeads/revanth.jpeg";
+import santhosh from "../../Assets/image/teamLeads/santhosh.png";
+import prabhavFC from "../../Assets/image/prabhav.jpeg";
+import siddhiEng from "../../Assets/image/teamLeads/siddhiSingh.jpg";
+import devanshMk from "../../Assets/image/teamLeads/devansh.jpg";
+import anya from "../../Assets/image/teamLeads/anya.png";
+import sakshi from "../../Assets/image/teamLeads/sakshi.png";
 import instagram from "../../Assets/icons/logo-instagram.svg";
 import twitter from "../../Assets/icons/logo-twitter.svg";
 import facebook from "../../Assets/icons/logo-facebook.svg";
-import AgaashEngagement from "../../Assets/image/teamLeads/AgaashEngagement.jpg";
-import AnanyaContent from "../../Assets/image/teamLeads/AnanyaContent.jpg";
-import IshitaPR from "../../Assets/image/teamLeads/IshitaPR.png";
-import NirmitDesVid from "../../Assets/image/teamLeads/NirmitDesVid.jpg";
 import PalakDesVid from "../../Assets/image/teamLeads/PalakDesVid.jpeg";
-import SakshamMarketing from "../../Assets/image/teamLeads/SakshamMarketing.jpg";
 import SmritiEngagement from "../../Assets/image/teamLeads/SmritiEngagement.jpg";
-import PrathamWebDev from "../../Assets/image/teamLeads/Pratham.jpg";
 import PrachiMarketing from "../../Assets/image/teamLeads/Prachi.jpg";
-import LavanyaCotent from "../../Assets/image/teamLeads/Lavanya.jpg";
 import AryamanPr from "../../Assets/image/teamLeads/Aryaman.jpg";
 // import SabavatWebDev from "../../Assets/image/teamLeads/Sabavat.jpeg"
 import SabavatWebDev2 from "../../Assets/image/teamLeads/Sabavat2.jpeg";
@@ -111,36 +105,36 @@ export default function TeamPage() {
           <div className="TeamPageHeading">The Core</div>
           <motion.div className="TeamPageWrapper__grid1">
             <TeamMember
-              MemberName={"Krishna Madhur"}
+              MemberName={"Akshat Sabavat"}
               Memberposition={"Secretary"}
-              imageSrc={krishSec}
+              imageSrc={SabavatWebDev2}
               imageSrcAlt={"Sec"}
             />
 
             <TeamMember
-              MemberName={"Vernika Samadhiya"}
+              MemberName={"Prachi Tiwari"}
               Memberposition={"Associate Secretary"}
-              imageSrc={vernAsec}
+              imageSrc={PrachiMarketing}
               imageSrcAlt={"ASec"}
             />
 
             <TeamMember
-              MemberName={"Aarushi Dhir"}
+              MemberName={"Aryaman Gupta"}
               Memberposition={"Associate Secretary"}
-              imageSrc={aarAsec}
+              imageSrc={AryamanPr}
               imageSrcAlt={"ASec"}
             />
             <TeamMember
-              MemberName={"Abharika Mohanty"}
+              MemberName={"Revanth"}
               Memberposition={"Treasurer"}
-              imageSrc={abhaTrea}
+              imageSrc={revanthTreasurer}
               imageSrcAlt={"Trea"}
             />
 
             <TeamMember
-              MemberName={"Shaurya Vaid"}
+              MemberName={"Prabhav Pandey"}
               Memberposition={"Freshman Co-ordinator"}
-              imageSrc={shauFc}
+              imageSrc={prabhavFC}
               imageSrcAlt={"Fc"}
             />
           </motion.div>
@@ -153,87 +147,53 @@ export default function TeamPage() {
         >
           <div className="TeamPageHeading leadsTitle">Team Leads</div>
           <div className="TeamPageWrapper__grid1">
-            <TeamMember
-              MemberName={"Ananya Panda"}
-              Memberposition={"Content"}
-              imageSrc={AnanyaContent}
-              imageSrcAlt={"ContentLead1"}
-            />
 
             <TeamMember
-              MemberName={"Nirmit Jindal"}
-              Memberposition={"Design & Videography"}
-              imageSrc={NirmitDesVid}
-              imageSrcAlt={"DesVidLead1"}
-            />
-
-            <TeamMember
-              MemberName={"Agaash S.B."}
-              Memberposition={"Engagement"}
-              imageSrc={AgaashEngagement}
+              MemberName={"Siddhi Singh"}
+              Memberposition={"Engagement Lead"}
+              imageSrc={siddhiEng}
               imageSrcAlt={"EngLead1"}
             />
 
             <TeamMember
-              MemberName={"Lavanya Kaushik"}
-              Memberposition={"Content"}
-              imageSrc={LavanyaCotent}
+              MemberName={"Devansh Kapoor"}
+              Memberposition={"Marketing Lead"}
+              imageSrc={devanshMk}
               imageSrcAlt={"ContentLead2"}
             />
-
-            <TeamMember
-              MemberName={"Palak Jain"}
-              Memberposition={"Design & Videography"}
-              imageSrc={PalakDesVid}
-              imageSrcAlt={"DesVidLead2"}
-            />
-
             <TeamMember
               MemberName={"Smriti Vohra"}
-              Memberposition={"Engagement"}
+              Memberposition={"Marketing Lead"}
               imageSrc={SmritiEngagement}
               imageSrcAlt={"EngLead2"}
             />
 
             <TeamMember
-              MemberName={"Saksham Premi"}
-              Memberposition={"Marketing"}
-              imageSrc={SakshamMarketing}
-              imageSrcAlt={"MktLead1"}
-            />
-
-            <TeamMember
-              MemberName={"Ishita Satyam"}
-              Memberposition={"PR"}
-              imageSrc={IshitaPR}
-              imageSrcAlt={"PrLead1"}
-            />
-
-            <TeamMember
-              MemberName={"Pratham Aggarwal"}
-              Memberposition={"Web Development"}
-              imageSrc={PrathamWebDev}
+              MemberName={"AB Santhosh"}
+              Memberposition={"Web Development Lead"}
+              imageSrc={santhosh}
               imageSrcAlt={"WdLead1"}
             />
+
             <TeamMember
-              MemberName={"Prachi Tiwari"}
-              Memberposition={"Marketing"}
-              imageSrc={PrachiMarketing}
-              imageSrcAlt={"MktLead2"}
+              MemberName={"Palak Jain"}
+              Memberposition={"Design Lead"}
+              imageSrc={PalakDesVid}
+              imageSrcAlt={"DesVidLead2"}
             />
 
             <TeamMember
-              MemberName={"Aryaman Gupta"}
-              Memberposition={"PR"}
-              imageSrc={AryamanPr}
+              MemberName={"Anya Kalra"}
+              Memberposition={"Decor Lead"}
+              imageSrc={anya}
+              imageSrcAlt={"decor"}
+            />
+
+            <TeamMember
+              MemberName={"Sakshi Jaiswal"}
+              Memberposition={"PR Lead"}
+              imageSrc={sakshi}
               imageSrcAlt={"PrLead2"}
-            />
-
-            <TeamMember
-              MemberName={"Akshat Sabavat"}
-              Memberposition={"Web Development"}
-              imageSrc={SabavatWebDev2}
-              imageSrcAlt={"WdLead2"}
             />
           </div>
         </motion.section>
