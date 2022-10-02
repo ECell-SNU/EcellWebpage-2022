@@ -7,6 +7,10 @@
     color: var(--primary-color);
     font-weight: 600;
     margin-bottom: 5px;
+
+    p{
+      color: var(--backgroundColour);
+    }
   }
 
   &__title {
